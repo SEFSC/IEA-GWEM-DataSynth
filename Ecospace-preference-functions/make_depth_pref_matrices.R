@@ -102,7 +102,7 @@ write.csv(depth_mat, "./Ecospace-preference-functions/output-for-Ecospace/depth-
 factor = 1.5
 w = 11 * factor
 h = 8.5 * factor
-png("./Ecospace-preference-functions/plot-depth-pref_vary-x-axis.png", width = w, height = h, units = 'in', res = 600)
+png("./Ecospace-preference-functions/figures/plot-depth-pref_vary-x-axis.png", width = w, height = h, units = 'in', res = 600)
 par(mfrow = c(6, 10), adj=0)
 for (i in 1:nrow(adj_depths)){
   min = as.numeric(adj_depths$min[i])
@@ -144,7 +144,7 @@ dev.off()
 factor = 1.5
 w = 11 * factor
 h = 8.5 * factor
-png("./Ecospace-preference-functions/plot-depth-pref_standardized-x-axis.png", width = w, height = h, units = 'in', res = 600)
+png("./Ecospace-preference-functions/figures/plot-depth-pref_standardized-x-axis.png", width = w, height = h, units = 'in', res = 600)
 par(mfrow = c(6, 10), adj=0)
 for (i in 1:nrow(adj_depths)){
   min = as.numeric(adj_depths$min[i])
