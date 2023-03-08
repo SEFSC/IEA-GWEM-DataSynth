@@ -1,0 +1,65 @@
+EwE_num,EwE_name,no_lower_limit,min,q1,q2,max,n_spp,Notes
+6,Blacktip shark,n,0,25,75,100,2,
+7,Dusky shark,n,5,100,300,400,2,
+8,Sandbar shark,n,5,125,375,500,2,
+9,Lrg. coastal sharks,n,0,10,100,200,19,
+10,Lrg. oceanic sharks,n,20,200,551,734,10,
+11,Atl. sharpnose shark,n,0,40,210,280,2,
+12,Small coastal sharks,y,0,0,50,181,7,
+13,Yellowfin tuna,n,10,40,120,250,2,"Thunnus albacares depth range 1 - 250 m (Ref. 6390), usually 1 - 100 m  https://www.fishbase.se/summary/SpeciesSummary.php?ID=143&AT=yellowfin+tuna"
+14,Bluefin tuna,n,10,40,120,985,3,"depth range 0 - 985 m (Ref. 55291), usually 0 - 100 m. https://www.fishbase.se/summary/SpeciesSummary.php?ID=147&AT=bluefin+tuna"
+15,Other tunas,n,10,65,195,260,1,
+16,Billfish,n,40,50,150,200,6,
+17,Swordfish,n,40,100,600,2878,1,
+18,Pelagic coastal piscivores,y,0,10,20,100,45,
+19,Amberjack,n,3,18,72,360,4,"For greater AJ. Seriola dumerili. depth range 1 - 360 m (Ref. 11441), usually 18 - 72 m (Ref. 9626). https://www.fishbase.se/summary/SpeciesSummary.php?ID=1005&AT=amberjack"
+21,King mackerel (0-1yr),n,5,10,30,140,1,"Scomberomorus cavalla. Depth range 5 - 140 m (Ref. 36484), usually 5 - 15 m (Ref. 40849). https://www.fishbase.se/summary/SpeciesSummary.php?ID=120&AT=king+mackerel"
+22,King mackerel (1+yr),n,5,10,30,140,1,
+23,Spanish mackerel (0-1yr),n,5,10,30,60,2,
+24,Spanish mackerel (1+yr),n,5,16,30,60,2,
+25,Skates-rays,y,0,33,93,200,18,
+26,Gag grouper (0-3yr),n,0,20,40,80,2,
+27,Gag grouper (3+yr),n,10,62,128,160,1,
+28,Red grouper (0-3yr),n,0,20,40,60,3,
+28,Red grouper (3+yr),n,10,62,128,160,1,
+30,Yellowedge grouper (0-3yr),n,90,158,292,360,1,
+31,Yellowedge grouper (3+yr),n,90,158,292,360,1,
+32,Goliath grouper,n,2,25,75,120,3,
+33,Deep-water grouper,n,38,149,372,483,3,
+34,Shallow-water grouper,n,0,10,40,80,15,
+35,Red snapper (0yr),n,0,5,30,60,3,"Broken in to groups based on expert opinion. Fishbase: Marine; reef-associated; depth range 10 - 190 m (Ref. 55), usually 30 - 130 m (Ref. 55). https://www.fishbase.se/summary/SpeciesSummary.php?ID=1423&AT=red+snapper"
+36,Red snapper (1-2yr),n,5,20,80,120,1,
+37,Red snapper (3+yr),n,20,55,145,190,1,
+38,Vermilion snapper,n,25,40,100,300,2,"depth range 40 - 300 m (Ref. 9626), usually 40 - 100 m (Ref. 9626). https://www.fishbase.se/summary/SpeciesSummary.php?ID=213&AT=vermillion+snapper"
+39,Mutton snapper,n,0,30,78,95,2,
+40,Other snapper,y,0,83,170,214,18,
+41,Inshore coastal piscivores,y,0,0,5,25,3,
+42,Sea trout,y,0,0,5,15,4,
+43,Oceanic piscivores,n,32,255,701,924,12,
+44,Benthic piscivores,n,5,102,288,381,17,
+45,Reef piscivores,n,5,32,86,113,18,
+46,Reef invert. fdrs.,n,5,39,93,120,95,
+47,Dem. cstl. invrt. fdrs.,y,0,0,20,50,39,
+49,Bnthc. cstl. invrt. fdrs.,y,0,0,20,207,53,
+50,Tilefish,n,49,124,273,500,10,
+51,Gray triggerfish,n,0,25,75,100,2,
+52,Coastal omnivores,y,0,0,20,40,27,
+53,Reef omnivores,n,2,15,41,54,36,
+55,Lrg. oceanic planktivores,n,6,146,428,568,5,
+57,Sardine-herring-scad,n,4,50,143,189,26,
+"58,59,60,61,62",Menhaden,y,0,0,25,60,2,"Gulf menhaden. Brevoortia patronus. Marine; pelagic-neritic; depth range 0 - 50 m (Ref. 188). Occur inshore in summer, but at least some moving into deeper waters from October (Mississippi Delta area). Feed in dense schools, filtering phytoplankton, but probably also feed at the bottom. Apparently breed in winter (October to February, with a peak in January). Salinity tolerance range from 0.1-60 ppt, but the commercial catch is mostly from 5.0-24 ppt. Make inshore-offshore movements (Ref. 34923). Larvae stay in offshore waters for 3-5 weeks before moving into estuaries where they grow into adults (Ref. 34923). "
+63,Anchovy-silverside-killifish,y,0,0,20,39,8,
+64,Mullet,y,0,45,135,180,6,
+65,Butterfish,n,12,87,238,313,4,
+48,Red drum,y,0,0,5,25,1,Opinion
+66,Cephalopod,,,,,,,
+67,Pink shrimp,n,0,11,36,330,1,https://www.sealifebase.ca/summary/Penaeus-duorarum.html
+68,Brown shrimp,n,0,27,54,200,1,"Penaeus aztecus - Benthic; depth range 0 - 200 m (Ref. 356), usually 27 - 54 m (Ref. 8).  https://www.sealifebase.ca/summary/Penaeus-subtilis.html"
+69,White shrimp,n,0,15,30,119,2,Sealfife base lookup for Penaeus setiferus and P. schmitti. https://www.sealifebase.ca/summary/Penaeus-setiferus.html https://www.sealifebase.ca/summary/Penaeus-schmitti.html
+70,Crab,y,0,0,35,90,1,"Based on blue crab Callinectes apidus. Benthopelagic; freshwater; brackish; depth range 0 - 90 m (Ref. 109245), usually 0 - 35 m (Ref. 367). https://www.sealifebase.ca/summary/Callinectes-sapidus.html"
+71,Sessile epifauna,y,0,0,3,90,,"Includes oysters, mussels, corals, limpets, chitons. "
+72,Mobile epifauna,y,0,0,10,100,,"Includes lobsters, hermit crabs, gastropods, scallops, shrimps"
+73,Zooplankton,,,,,,,
+74,Infauna,,,,,,,
+75,Algae,,,,,,,
+76,Seagrass,y,0,0,5,12,,"Turtle grass, Thalassia testudinum  0-10 m.  Manatee grass Syringodium filiforme 0-5 m. Shoal grass Halodule wrightii 0-15 m.  https://www.sealifebase.ca/summary/Thalassia-testudinum.html https://www.sealifebase.ca/summary/Syringodium-filiforme.html"

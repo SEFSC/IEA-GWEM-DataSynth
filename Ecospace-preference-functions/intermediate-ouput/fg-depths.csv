@@ -1,0 +1,55 @@
+"EwE_num","EwE_name","min","q1","q2","max","mean","sd","n_spp"
+"06","Blacktip shark",0,25,75,100,50,25,2
+"07","Dusky shark",0,100,300,400,200,100,2
+"08","Sandbar shark",0,125,375,500,250,125,2
+"09","Large coastal sharks",2,227,679,904,453,226,19
+"10","Large oceanic sharks",0,184,551,734,367,183,10
+"11","Atlantic sharpnose shark",0,70,210,280,140,70,2
+"12","Small coastal sharks",7,51,137,181,94,44,7
+"13","Yellowfin tuna",1,63,188,250,126,62,2
+"14","Bluefin tuna",0,246,739,985,492,246,3
+"15","Other tunas",0,65,195,260,130,65,1
+"16","Billfish",0,50,150,200,100,50,6
+"17","Swordfish",0,200,600,800,400,200,1
+"18","Pelagic coastal piscivores",5,41,114,151,78,37,45
+"19","Amberjack",28,82,190,245,136,54,4
+"20","Cobia",0,300,900,1200,600,300,1
+"21,22","King mackerel (0-1yr)",5,39,106,140,72,34,1
+"21,22","King mackerel (1+yr)",5,39,106,140,72,34,2
+"23,24","Spanish mackerel (0-1yr)",10,16,29,35,22,6,2
+"23,24","Spanish mackerel (1+yr)",10,16,29,35,22,6,2
+"25","Skates-rays",3,33,93,124,63,30,18
+"26,27","Gag grouper (0-3yr)",30,62,128,160,95,32,2
+"26,27","Gag grouper (3+yr)",30,62,128,160,95,32,1
+"28,29","Red grouper (0-3yr)",5,86,249,330,168,81,3
+"28,29","Red grouper (3+yr)",5,86,249,330,168,81,1
+"30,31","Yellowedge grouper (0-3yr)",90,158,292,360,225,68,1
+"30,31","Yellowedge grouper (3+yr)",90,158,292,360,225,68,1
+"32","Goliath grouper",0,25,75,100,50,25,3
+"33","Deep-water grouper",38,149,372,483,261,111,3
+"34","Shallow-water grouper",7,38,99,129,68,31,15
+"35,36,37","Red snapper (0yr)",10,55,145,190,100,45,3
+"35,36,37","Red snapper (1-2yr)",10,55,145,190,100,45,1
+"35,36,37","Red snapper (3+yr)",10,55,145,190,100,45,1
+"38","Vermilion snapper",40,105,235,300,170,65,2
+"39","Mutton snapper",25,42,78,95,60,18,2
+"40","Other snapper",40,83,170,214,127,43,18
+"41","Inshore coastal piscivores",0,14,41,55,27,14,3
+"42","Sea trout",6,13,28,35,20,7,4
+"43","Oceanic piscivores",32,255,701,924,478,223,12
+"44","Benthic piscivores",9,102,288,381,195,93,17
+"45","Reef piscivores",5,32,86,113,59,27,18
+"46","Reef invertebrate feeders",12,39,93,120,66,27,95
+"47","Demersal coastal invertebrate feeders",6,29,74,97,51,23,39
+"49","Benthic coastal invertebrate feeders",8,58,157,207,108,50,53
+"50","Tilefish",49,124,273,348,198,75,10
+"51","Gray triggerfish",0,25,75,100,50,25,2
+"52","Coastal omnivores",3,33,94,124,64,30,27
+"53","Reef omnivores",2,15,41,54,28,13,36
+"54","Surface pelagics",0,5,15,19,10,5,14
+"55","Large oceanic planktivores",6,146,428,568,287,140,5
+"57","Sardine-herring-scad",4,50,143,189,96,46,26
+"58,59,60,61,62","Menhaden (0yr)",0,12,38,50,25,12,2
+"63","Anchovy-silverside-killifish",1,10,30,39,20,10,8
+"64","Mullet",0,45,135,180,90,45,6
+"65","Butterfish",12,87,238,313,162,75,4
