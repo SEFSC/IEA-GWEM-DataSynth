@@ -12,7 +12,6 @@
 ## Analyzing Bathymetric and Topographic Data in R. PLoS ONE 8(9): e73051. 
 ## doi:10.1371/journal.pone.0073051
 
-
 rm(list=ls()); graphics.off()
 library('marmap')
 library('raster')
