@@ -1,0 +1,26 @@
+[general] 
+creator=R package 'raster' 
+created= 2018-03-24 16:05:01 
+[georeference] 
+nrows= 9601 
+ncols= 24001 
+xmin= -98.000416665 
+ymin= 23.000416665 
+xmax= -77.999663335 
+ymax= 31.001217995 
+projection= +proj=longlat +datum=NAD83 +ellps=GRS80 +towgs84=0,0,0 
+[data] 
+datatype= FLT8S 
+byteorder= little 
+nbands= 1 
+bandorder= BIL 
+categorical= FALSE 
+minvalue= 0.0299999993294477 
+maxvalue= 95505.7578125 
+nodatavalue= -1.7e+308 
+[legend] 
+legendtype=  
+values=  
+color=  
+[description] 
+layername= dist_to_HB 
