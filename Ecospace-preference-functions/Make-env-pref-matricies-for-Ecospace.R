@@ -2,13 +2,13 @@
 rm(list=ls()); gc(); windows()
 
 
-fg_prefs <- read.csv("./Ecospace-preference-functions/intermediate-ouput/")
+fg_pref <- read.csv("./Ecospace-preference-functions/intermediate-ouput/fg-env-preference-parameters-adjusted.csv")
 
 #------------------------------------------------------------------------------
 ##
 ## Logistic function
 
-max <- 100
+max <- 500
 
 
 doublelogistic <- function(max, min_abs, min_prf, max_prf, max_abs){ 
@@ -49,16 +49,17 @@ doublelogistic <- function(max, min_abs, min_prf, max_prf, max_abs){
 
 
 ## Plot depth with varying X-axis (depth) --------------------------------------
-factor = 1.8
-w = 11 * factor
-h = 8.5 * factor
-png("./Ecospace-preference-functions/figures/Dbl-logistic-depth-pref_vary-x-axis.png", width = w, height = h, units = 'in', res = 600)
+factor = 1
+w = 8.5 * factor
+h = 11 * factor
+pdf("./Ecospace-preference-functions/figures/Depth-pref-dbl-logistic.pdf", width = w, height = h, 
+    onefile = T)
 
-par(mfrow=c(7,9))
-for(j in 1:nrow(fg_pref)){
-  p1 <- fg_pref$DepthMin[j]
+par(mfrow=c(6,6))
+for(j in 1:36){
+  p1 <- fg_pref$DepthMin[j] - 1
   p2 <- fg_pref$DepthPrefMin[j] + 1
-  p3 <- fg_pref$DepthPrefMax[j]
+  p3 <- fg_pref$DepthPrefMax[j] - 1
   p4 <- fg_pref$DepthMax[j] + 1
   
   pref_func <- doublelogistic(max = 400, p1, p2, p3, p4)
@@ -68,7 +69,29 @@ for(j in 1:nrow(fg_pref)){
   plot(pref_func$x, pref_func$y, 
        main = paste(fg_pref$EwE_num[j], fg_pref$EwE_name[j]),
        type = "l", ylab = "", xlab = "", cex.main = 1, bty = 'n',
-       xlim = c(0,max), lwd=2)
+       xlim = c(0,max), yaxt='n', lwd=2)
+  axis(side = 2, at=c(0,0.5,1))
+  abline(v = p1,  col = "red", lty = "dashed")
+  abline(v = p2,  col = "blue", lty = "dashed")
+  abline(v = p3,  col = "blue", lty = "dashed")
+  abline(v = p4,  col = "red", lty = "dashed")
+}
+
+for(j in 37:72){
+  p1 <- fg_pref$DepthMin[j] - 1
+  p2 <- fg_pref$DepthPrefMin[j] + 1
+  p3 <- fg_pref$DepthPrefMax[j] - 1
+  p4 <- fg_pref$DepthMax[j] + 1
+  
+  pref_func <- doublelogistic(max = 400, p1, p2, p3, p4)
+  
+  xlim <- p4+p4*0.15
+  xmax <- ifelse(xlim > max, max, xlim)
+  plot(pref_func$x, pref_func$y, 
+       main = paste(fg_pref$EwE_num[j], fg_pref$EwE_name[j]),
+       type = "l", ylab = "", xlab = "", cex.main = 1, bty = 'n',
+       xlim = c(0,max), yaxt='n', lwd=2)
+  axis(side = 2, at=c(0,0.5,1))
   abline(v = p1,  col = "red", lty = "dashed")
   abline(v = p2,  col = "blue", lty = "dashed")
   abline(v = p3,  col = "blue", lty = "dashed")

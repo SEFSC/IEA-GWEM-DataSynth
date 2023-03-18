@@ -19,6 +19,7 @@
 #default_db("sqlite")
 
 ##------------------------------------------------------------------------------
+rm(list=ls()); gc(); windows()
 library(aquamapsdata); default_db("sqlite")
 library(dplyr)
 library(stringr)
@@ -119,4 +120,4 @@ fg_pref$rownum  <- NULL
 
 write.csv(fg_pref, "./Ecospace-preference-functions/intermediate-ouput/fg-env-preference-parameters.csv", row.names = FALSE)
 
-#
+## End script
