@@ -1,0 +1,2779 @@
+EwE_num,EwE_name,Common,Sciname
+"01, 02",Coastal dolphins,cetacean,cetacea
+"01, 02",Coastal dolphins,dolphin,delphinidae
+"01, 02",Coastal dolphins,oceanic dolphin,delphinidae
+"01, 02",Coastal dolphins,dolphin,delphinus
+"01, 02",Coastal dolphins,whale,odontoceti
+"01, 02",Coastal dolphins,porpoise,phocoenidae
+"01, 02",Coastal dolphins,spotted dolphin,stenella frontalis
+"01, 02",Coastal dolphins,bottlenose dolphin,tursiops truncatus
+4,Seabird,wood duck,aix sponsa
+4,Seabird,american widgeon,anas americana
+4,Seabird,blue-winged teal,anas discors
+4,Seabird,mottled duck,anas fulvigula
+4,Seabird,black duck,anas rubripes
+4,Seabird,gadwall,anas strepera
+4,Seabird,pintail,anatidae
+4,Seabird,ducks and gulls,aves
+4,Seabird,lesser scaup,aythya affinis
+4,Seabird,redhead,aythya americana
+4,Seabird,canvasback,aythya valisineria
+4,Seabird,cory's shearwater,calonectris diomedea
+4,Seabird,albatross,diomedeidae
+4,Seabird,magnificent frigatebird,fregata magnificens
+4,Seabird,great frigatebird,fregata minor
+4,Seabird,american coot,fulica americana
+4,Seabird,common gallinule,gallinula galeata
+4,Seabird,common loon,gavia immer
+4,Seabird,bald eagle,haliaeetus leucocephalus
+4,Seabird,gull,laridae
+4,Seabird,ring-billed gull,laridae
+4,Seabird,herring gull,larus argentatus
+4,Seabird,audouin’s gull,larus audouinii
+4,Seabird,lesser blackbacked gull,larus fuscus
+4,Seabird,surf scoter,melanitta perspicillata
+4,Seabird,redbreasted merganser,mergus serrator
+4,Seabird,cape gannet,morus capensis
+4,Seabird,leach’s storm-petrel,oceanodroma leucorhoa
+4,Seabird,wedge-rumped storm-petrel,oceanodroma tethys
+4,Seabird,ruddy duck,oxyura jamaicensis
+4,Seabird,osprey,pandion haliaetus
+4,Seabird,white pelican,pelecanus erythrorhynchos
+4,Seabird,brown pelican,pelicanus occidentalis
+4,Seabird,double-crested cormorant,phalacrocorax auritus
+4,Seabird,neotropical cormorant,phalacrocorax olivaceus
+4,Seabird,great cormorant,phalacrocoraxc arbo
+4,Seabird,pied-billed grebe,podilymbus podiceps
+4,Seabird,sooty shearwater,puffinus griseus
+4,Seabird,audubon shearwater,puffinus lherminieri
+4,Seabird,wedgetailed shearwater,puffinus pacificus
+4,Seabird,black skimmer,rynchops niger
+4,Seabird,caspian tern,sterna caspia
+4,Seabird,common tern,sterna hirundo
+4,Seabird,royal tern,sterna maxima
+4,Seabird,gullbilled tern,sterna nilotica
+4,Seabird,sandwich tern,sterna sandvicensis
+4,Seabird,masked booby,sula dactylatra
+4,Seabird,common murre,uria aalge
+5,Sea turtle,"turtle, green sea",chelonia mydas
+5,Sea turtle,"turtle, loggerhead sea",caretta caretta
+5,Sea turtle,loggerhead,caretta caretta
+5,Sea turtle,loggerhead turtle,caretta caretta
+5,Sea turtle,green sea turtle,chelonia mydas
+5,Sea turtle,green turtle,chelonia mydas
+5,Sea turtle,sea turtle,cheloniidae
+5,Sea turtle,sea turtle,chelonioidea
+5,Sea turtle,leatherback,dermochelys coriacea
+5,Sea turtle,hawksbill turtle,eretmochelys imbricata
+5,Sea turtle,kemps ridley turtle,lepidochelys kempi
+6,Blacktip shark,blacktip shark,carcharhinus limbatus
+6,Blacktip shark,"shark, blacktip",carcharhinus limbatus
+7,Dusky shark,dusky shark,carcharhinus obscurus
+7,Dusky shark,"shark, dusky",carcharhinus obscurus
+8,Sandbar shark,sandbar shark,carcharhinus plumbeus
+8,Sandbar shark,"shark, sandbar",carcharhinus plumbeus
+9,Large coastal sharks,bignose shark,carcharhinus altimus
+9,Large coastal sharks,bull shark,carcharhinus leucas
+9,Large coastal sharks,great hammerhead,sphyrna mokarran
+9,Large coastal sharks,hammerhead shark genus,sphyrna
+9,Large coastal sharks,hammerhead shark genus,sphyrna spp
+9,Large coastal sharks,lemon shark,negaprion brevirostris
+9,Large coastal sharks,night shark,carcharhinus signatus
+9,Large coastal sharks,reef shark,carcharhinus perezi
+9,Large coastal sharks,sand tiger,odontaspis taurus
+9,Large coastal sharks,scalloped hammerhead,sphyrna lewini
+9,Large coastal sharks,scalloped hammerhead shark,na
+9,Large coastal sharks,"shark, bull",carcharhinus leucas
+9,Large coastal sharks,"shark, great hammerhead",sphyrna mokarran
+9,Large coastal sharks,"shark, hammerhead",sphyrnidae
+9,Large coastal sharks,"shark, lemon",negaprion brevirostris
+9,Large coastal sharks,"shark, scalloped hammerhead",sphyrna lewini
+9,Large coastal sharks,"shark, silky",carcharhinus falciformis
+9,Large coastal sharks,"shark, spinner",carcharhinus brevipinna
+9,Large coastal sharks,"shark, tiger",galeocerdo cuvier
+9,Large coastal sharks,silky shark,carcharhinus falciformis
+9,Large coastal sharks,sixgill shark,hexanchus griseus
+9,Large coastal sharks,smalleye hammerhead,sphyrna tudes
+9,Large coastal sharks,smooth hammerhead,sphyrna zygaena
+9,Large coastal sharks,spinner shark,carcharhinus brevipinna
+9,Large coastal sharks,tiger shark,galeocerdo cuvier
+9,Large coastal sharks,copper shark,carcharhinus brachyurus
+9,Large coastal sharks,sand tiger,carcharias taurus
+9,Large coastal sharks,sand tiger shark,carcharias taurus
+9,Large coastal sharks,tiger shark,galeocerdo cuvieri
+9,Large coastal sharks,sand tiger,odontaspididae
+9,Large coastal sharks,hammerhead,sphyrna sp
+9,Large coastal sharks,hammerhead,sphyrnidae
+10,Large oceanic sharks,blue shark,prionace glauca
+10,Large oceanic sharks,mackerel shark family,lamnidae
+10,Large oceanic sharks,mako shark,na
+10,Large oceanic sharks,oceanic whitetip shark,carcharhinus longimanus
+10,Large oceanic sharks,"shark, bigeye thresher",alopias superciliosus
+10,Large oceanic sharks,"shark, longfin mako",isurus paucus
+10,Large oceanic sharks,"shark, porbeagle",lamna nasus
+10,Large oceanic sharks,"shark, shortfin mako",isurus oxyrinchus
+10,Large oceanic sharks,"shark, thresher",alopias vulpinus
+10,Large oceanic sharks,shortfin mako,isurus oxyrinchus
+10,Large oceanic sharks,thresher shark,alopias vulpinus
+10,Large oceanic sharks,bigeye thresher,alopias superciliosus
+10,Large oceanic sharks,common thresher shark,alopias vulpinus
+10,Large oceanic sharks,great white shark,carcharodon carcharias
+10,Large oceanic sharks,porbeagle,lamna nasus
+11,Atlantic sharpnose shark,atlantic sharpnose shark,rhizoprionodon terraenovae
+11,Atlantic sharpnose shark,"shark, atlantic sharpnose",rhizoprionodon terraenovae
+11,Atlantic sharpnose shark,sharpnose shark,na
+11,Atlantic sharpnose shark,milk shark,rhizoprionodon acutus
+12,Small coastal sharks,black dogfish,centroscyllium fabricii
+12,Small coastal sharks,blacknose shark,carcharhinus acronotus
+12,Small coastal sharks,bonnethead,sphyrna tiburo
+12,Small coastal sharks,dogfish shark,squalidae
+12,Small coastal sharks,finetooth shark,carcharhinus isodon
+12,Small coastal sharks,florida smoothhound,mustelus norrisi
+12,Small coastal sharks,"shark, blacknose",carcharhinus acronotus
+12,Small coastal sharks,"shark, bonnethead",sphyrna tiburo
+12,Small coastal sharks,"shark, finetooth",carcharhinus isodon
+12,Small coastal sharks,smalltail shark,carcharhinus porosus
+12,Small coastal sharks,smooth dogfish,mustelus canis
+12,Small coastal sharks,smoothhound genus,mustelus
+12,Small coastal sharks,smoothhound genus,mustelus spp
+12,Small coastal sharks,spiny dogfish,squalus acanthias
+12,Small coastal sharks,blackspot shark,carcharhinus sealei
+12,Small coastal sharks,soupfin shark,galeorhinus galeus
+12,Small coastal sharks,gummy shark,mustelus antarcticus
+12,Small coastal sharks,common smoothhound,mustelus mustelus
+12,Small coastal sharks,whitespot smoothhound,mustelus palumbes
+12,Small coastal sharks,narrownose smoothhound,mustelus schmitti
+12,Small coastal sharks,smoothhound,mustelus sp
+12,Small coastal sharks,port jackson shark,peterodontus portusjacksoni
+12,Small coastal sharks,small requiem shark,rhizoprionodon sp
+12,Small coastal sharks,bonnethead shark,sphyrna tiburo
+12,Small coastal sharks,dogfish,squalidae
+12,Small coastal sharks,dogfish,squaliformes
+12,Small coastal sharks,shortnose spurdog,squalus megalops
+12,Small coastal sharks,dogfish,squalus sp
+12,Small coastal sharks,sharptooth houndshark,triakis megalopterus
+13,Yellowfin tuna,"tuna, yellowfin",thunnus albacares
+13,Yellowfin tuna,yellowfin tuna,thunnus albacares
+14,Bluefin tuna,bluefin tuna,thunnus thynnus
+14,Bluefin tuna,"tuna, bluefin",thunnus thynnus
+14,Bluefin tuna,southern bluefin tuna,thunnus maccoyii
+14,Bluefin tuna,atlantic bluefin tuna,thunnus thynnus
+15,Other tunas,albacore,thunnus alalunga
+15,Other tunas,bigeye tuna,thunnus obesus
+15,Other tunas,blackfin tuna,thunnus atlanticus
+15,Other tunas,skipjack tuna,euthynnus pelamis
+15,Other tunas,skipjack tuna,katsuwonus pelamis
+15,Other tunas,"tuna, albacore",thunnus alalunga
+15,Other tunas,"tuna, bigeye",thunnus obesus
+15,Other tunas,"tuna, blackfin",thunnus atlanticus
+15,Other tunas,"tuna, skipjack",euthynnus pelamis
+15,Other tunas,albacore tuna,thunnus alalunga
+16,Billfish,billfish family,istiophoridae
+16,Billfish,billfishes,istiophoridae
+16,Billfish,blue marlin,makaira nigricans
+16,Billfish,longbill spearfish,tetrapturus pfluegeri
+16,Billfish,"marlin, blue",makaira nigricans
+16,Billfish,"marlin, white",tetrapturus albidus
+16,Billfish,sailfish,istiophorus platypterus
+16,Billfish,white marlin,tetrapturus albidus
+16,Billfish,billfish,istiophoridae
+16,Billfish,atlantic sailfish,istiophorus albicans
+16,Billfish,sailfish,istiophorus orientalis
+16,Billfish,indo-pacific sailfish,istiophorus platypterus
+16,Billfish,shortbill spearfish,tetrapturus anguistirostris
+16,Billfish,striped marlin,tetrapturus audax
+17,Swordfish,swordfish,xiphias gladius
+17,Swordfish,swordfish,xiphias gladias
+18,Pelagic coastal piscivores,agujon,tylosurus acus
+18,Pelagic coastal piscivores,almaco jack,seriola rivoliana
+18,Pelagic coastal piscivores,atlantic bonito,sarda sarda
+18,Pelagic coastal piscivores,atlantic mackerel,scomber scombrus
+18,Pelagic coastal piscivores,atlantic needlefish,strongylura marina
+18,Pelagic coastal piscivores,atlantic tarpon,megalops atlanticus
+18,Pelagic coastal piscivores,banded rudderfish,seriola zonata
+18,Pelagic coastal piscivores,bar jack,caranx ruber
+18,Pelagic coastal piscivores,"bass, striped",morone saxatilis
+18,Pelagic coastal piscivores,black jack,caranx lugubris
+18,Pelagic coastal piscivores,blue runner,caranx crysos
+18,Pelagic coastal piscivores,bluefish,pomatomus saltatrix
+18,Pelagic coastal piscivores,bluntnose jack,hemicaranx amblyrhynchus
+18,Pelagic coastal piscivores,bonefish,albula vulpes
+18,Pelagic coastal piscivores,"bonito, atlantic",sarda sarda
+18,Pelagic coastal piscivores,bullet mackerel,auxis rochei
+18,Pelagic coastal piscivores,cero,scomberomorus regalis
+18,Pelagic coastal piscivores,chub mackerel,scomber japonicus
+18,Pelagic coastal piscivores,common snook,centropomus undecimalis
+18,Pelagic coastal piscivores,cottonmouth jack,uraspis secunda
+18,Pelagic coastal piscivores,crevalle jack,caranx hippos
+18,Pelagic coastal piscivores,dolphin,coryphaena hippurus
+18,Pelagic coastal piscivores,dolphin genus,coryphaena spp
+18,Pelagic coastal piscivores,dolphin genus,coryphaena
+18,Pelagic coastal piscivores,dolphinfish,coryphaena
+18,Pelagic coastal piscivores,flat needlefish,ablennes hians
+18,Pelagic coastal piscivores,frigate mackerel,auxis thazard
+18,Pelagic coastal piscivores,gars,lepisosteidae
+18,Pelagic coastal piscivores,horse-eye jack,caranx latus
+18,Pelagic coastal piscivores,houndfish,tylosurus crocodilus
+18,Pelagic coastal piscivores,hybrid striped bass,na
+18,Pelagic coastal piscivores,hybrid striped bass,morone saxatilis x chrysops
+18,Pelagic coastal piscivores,jack family,carangidae
+18,Pelagic coastal piscivores,jack genus,caranx
+18,Pelagic coastal piscivores,jack genus,caranx spp
+18,Pelagic coastal piscivores,"jack, almaco",seriola rivoliana
+18,Pelagic coastal piscivores,"jack, bar",caranx ruber
+18,Pelagic coastal piscivores,"jack, black",caranx lugubris
+18,Pelagic coastal piscivores,"jack, crevalle",caranx hippos
+18,Pelagic coastal piscivores,"jack, horse-eye",caranx latus
+18,Pelagic coastal piscivores,"jack, yellow",caranx bartholomaei
+18,Pelagic coastal piscivores,jacks,carangidae
+18,Pelagic coastal piscivores,ladyfish,elops saurus
+18,Pelagic coastal piscivores,little tunny,euthynnus alletteratus
+18,Pelagic coastal piscivores,mackerel (scomber),scomber
+18,Pelagic coastal piscivores,"mackerel, cero",scomberomorus regalis
+18,Pelagic coastal piscivores,"mackerel, chub",scomber japonicus
+18,Pelagic coastal piscivores,marlinsucker,remora osteochir
+18,Pelagic coastal piscivores,needlefish family,belonidae
+18,Pelagic coastal piscivores,needlefish genus,tylosurus
+18,Pelagic coastal piscivores,needlefish genus,tylosurus spp
+18,Pelagic coastal piscivores,"needlefish, atlantic",strongylura marina
+18,Pelagic coastal piscivores,pacific bonito,na
+18,Pelagic coastal piscivores,pilotfish,naucrates ductor
+18,Pelagic coastal piscivores,pompano dolphin,coryphaena equisetis
+18,Pelagic coastal piscivores,rainbow runner,elagatis bipinnulata
+18,Pelagic coastal piscivores,redfin needlefish,strongylura notata
+18,Pelagic coastal piscivores,remora,remora remora
+18,Pelagic coastal piscivores,remora family,echeneidae
+18,Pelagic coastal piscivores,remora genus,remora
+18,Pelagic coastal piscivores,"rudderfish, banded",seriola zonata
+18,Pelagic coastal piscivores,"runner, blue",caranx crysos
+18,Pelagic coastal piscivores,"runner, rainbow",elagatis bipinnulata
+18,Pelagic coastal piscivores,sharksucker,echeneis naucrates
+18,Pelagic coastal piscivores,sharksucker genus,echeneis
+18,Pelagic coastal piscivores,snook,centropomus undecimalis
+18,Pelagic coastal piscivores,snook genus,centropomus spp
+18,Pelagic coastal piscivores,snook genus,centropomus
+18,Pelagic coastal piscivores,"snook, unidentified",na
+18,Pelagic coastal piscivores,spearfish remora,remora brachyptera
+18,Pelagic coastal piscivores,striped bass,morone saxatilis
+18,Pelagic coastal piscivores,suckers,catostomidae
+18,Pelagic coastal piscivores,tarpon,megalops atlanticus
+18,Pelagic coastal piscivores,tarpon family,elopidae
+18,Pelagic coastal piscivores,tarpon snook,centropomus pectinatus
+18,Pelagic coastal piscivores,tripletail,lobotes surinamensis
+18,Pelagic coastal piscivores,"tuna, little tunny",euthynnus alletteratus
+18,Pelagic coastal piscivores,wahoo,acanthocybium solandri
+18,Pelagic coastal piscivores,whitefin sharksucker,echeneis neucratoides
+18,Pelagic coastal piscivores,yellow jack,caranx bartholomaei
+18,Pelagic coastal piscivores,mediterranean sand smelt,atherina hepsetus
+18,Pelagic coastal piscivores,bullet tuna,auxis rochei
+18,Pelagic coastal piscivores,frigate tuna,auxis sp
+18,Pelagic coastal piscivores,frigate tuna,auxis thazard
+18,Pelagic coastal piscivores,frigate tuna,auxis thazard thazard
+18,Pelagic coastal piscivores,needlefish,belonidae
+18,Pelagic coastal piscivores,yellow jack,carangoides bartholomaei
+18,Pelagic coastal piscivores,green jack,caranx caballus
+18,Pelagic coastal piscivores,pacific crevalle jack,caranx caninus
+18,Pelagic coastal piscivores,island jack,caranx orthogrammus
+18,Pelagic coastal piscivores,blacktip trevally,caranx sem
+18,Pelagic coastal piscivores,bigeye trevally,caranx sexfasciatus
+18,Pelagic coastal piscivores,caranx,caranx sp
+18,Pelagic coastal piscivores,golden trevally,caranx speciosus
+18,Pelagic coastal piscivores,cocinero,caranx vinctus
+18,Pelagic coastal piscivores,pompano dolphinfish,coryphaena equiselis
+18,Pelagic coastal piscivores,common dolphinfish,coryphaena hippurus
+18,Pelagic coastal piscivores,dolphinfish,coryphaena hippurus
+18,Pelagic coastal piscivores,dolphinfish,coryphaena sp
+18,Pelagic coastal piscivores,dolphinfish,coryphaenidae
+18,Pelagic coastal piscivores,grenadier,coryphaenoides sp
+18,Pelagic coastal piscivores,remora,echeneidae
+18,Pelagic coastal piscivores,live sharksucker,echeneis naucrates
+18,Pelagic coastal piscivores,sharksucker,echeneis sp
+18,Pelagic coastal piscivores,mackerel tuna,euthynnus affinis
+18,Pelagic coastal piscivores,little tunny,euthynnus alleteratus
+18,Pelagic coastal piscivores,black skipjack tuna,euthynnus lineatus
+18,Pelagic coastal piscivores,mackerel tuna,euthynnus sp
+18,Pelagic coastal piscivores,sargassumfish,histrio histrio
+18,Pelagic coastal piscivores,trevally,kaiwarinus equula
+18,Pelagic coastal piscivores,atlantic tripletail,lobotes surinamensis
+18,Pelagic coastal piscivores,tripletail,lobotidae
+18,Pelagic coastal piscivores,pilot fish,naucrates ductor
+18,Pelagic coastal piscivores,salmon,oncorhynchus sp
+18,Pelagic coastal piscivores,smelt,osmeridae
+18,Pelagic coastal piscivores,pelagic,pelagic
+18,Pelagic coastal piscivores,slender suckerfish,phtheirichthys lineatus
+18,Pelagic coastal piscivores,keeled needlefish,platybelone argalus
+18,Pelagic coastal piscivores,bluefish,pomatomidae
+18,Pelagic coastal piscivores,pacific rudderfish,psenopsis anomala
+18,Pelagic coastal piscivores,rastrelliger,rastrelliger kanagurta
+18,Pelagic coastal piscivores,rastrelliger,rastrelliger sp
+18,Pelagic coastal piscivores,marlin sucker,remora osteochir
+18,Pelagic coastal piscivores,shark sucker,remora remora
+18,Pelagic coastal piscivores,remora,remora sp
+18,Pelagic coastal piscivores,remora,remora sp
+18,Pelagic coastal piscivores,white suckerfish,remorina albescens
+18,Pelagic coastal piscivores,remora,rhombochirus sp
+18,Pelagic coastal piscivores,salmon,salmo salar
+18,Pelagic coastal piscivores,salmon,salmonidae
+18,Pelagic coastal piscivores,trout,salmonidae
+18,Pelagic coastal piscivores,pacific bonito,sarda chiliensis
+18,Pelagic coastal piscivores,striped bonito,sarda orientalis
+18,Pelagic coastal piscivores,bonito,sarda spp
+18,Pelagic coastal piscivores,blue mackerel,scomber australasicus
+18,Pelagic coastal piscivores,atlantic chub mackerel,scomber colias
+18,Pelagic coastal piscivores,pacific chub mackerel,scomber japonicus
+18,Pelagic coastal piscivores,mackerel,scomber sp
+18,Pelagic coastal piscivores,longfin yellowtail,seriola rivoliana
+18,Pelagic coastal piscivores,californian needlefish,strongylura exilis
+18,Pelagic coastal piscivores,needlefish,strongylura sp
+18,Pelagic coastal piscivores,timucu,strongylura timucu
+18,Pelagic coastal piscivores,cape horse mackerel,trachurus capensis
+18,Pelagic coastal piscivores,greenback horse mackerel,trachurus declivis
+18,Pelagic coastal piscivores,african horse mackerel,trachurus delagoa
+18,Pelagic coastal piscivores,japanese horse mackerel,trachurus japonicus
+18,Pelagic coastal piscivores,mediterranean horse mackerel,trachurus mediterraneus
+18,Pelagic coastal piscivores,chilean jack mackerel,trachurus murphyi
+18,Pelagic coastal piscivores,blue jack mackerel,trachurus picturatus
+18,Pelagic coastal piscivores,horse mackerel,trachurus sp
+18,Pelagic coastal piscivores,pacific jack mackerel,trachurus symmetricus
+18,Pelagic coastal piscivores,atlantic horse mackerel,trachurus trachurus
+18,Pelagic coastal piscivores,cunene horse mackerel,trachurus trecae
+18,Pelagic coastal piscivores,pacific agujon needlefish,tylosurus acus pacificus
+18,Pelagic coastal piscivores,hound needlefish,tylosurus crocodlius
+18,Pelagic coastal piscivores,needlefish,tylosurus sp
+19,Amberjack,amberjack,seriola
+19,Amberjack,amberjack genus,seriola
+19,Amberjack,amberjack genus,seriola spp
+19,Amberjack,"amberjack, greater",seriola dumerili
+19,Amberjack,"amberjack, lesser",seriola fasciata
+19,Amberjack,greater amberjack,seriola dumerili
+19,Amberjack,lesser amberjack,seriola fasciata
+19,Amberjack,yellowtail amberjack,seriola lalandi
+20,Cobia,cobia,rachycentron canadum
+"21,22",King mackerel (0-1yr),king mackerel,scomberomorus cavalla
+"21,22",King mackerel (1+yr),king mackerel (juvenile),scomberomorus cavalla
+"21,22",King mackerel (1+yr),king mackerel (adult),scomberomorus cavalla
+"23,24",Spanish mackerel (0-1yr),"mackerel, spanish",scomberomorus maculatus
+"23,24",Spanish mackerel (0-1yr),spanish mackerel,scomberomorus maculatus
+"23,24",Spanish mackerel (1+yr),atlantic spanish mackerel (juvenile),scomberomorus maculatus
+"23,24",Spanish mackerel (1+yr),atlantic spanish mackerel (adult),scomberomorus maculatus
+25,Skates-rays,atlantic guitarfish,rhinobatos lentiginosus
+25,Skates-rays,atlantic stingray,dasyatis sabina
+25,Skates-rays,bluntnose stingray,dasyatis say
+25,Skates-rays,bullnose ray,myliobatis freminvillei
+25,Skates-rays,butterfly ray genus,gymnura
+25,Skates-rays,butterfly ray genus,gymnura spp
+25,Skates-rays,chain dogfish,scyliorhinus retifer
+25,Skates-rays,clearnose skate,raja eglanteria
+25,Skates-rays,cownose ray,rhinoptera bonasus
+25,Skates-rays,devil ray,mobula hypostoma
+25,Skates-rays,eagle ray family,myliobatidae
+25,Skates-rays,electric ray family,torpedinidae
+25,Skates-rays,largetooth sawfish,pristis pristis
+25,Skates-rays,lesser electric ray,narcine brasiliensis
+25,Skates-rays,nurse shark,ginglymostoma cirratum
+25,Skates-rays,"ray,stingrays",rajiformes
+25,Skates-rays,rays,rajiformes
+25,Skates-rays,roughtail stingray,dasyatis centroura
+25,Skates-rays,roundel skate,raja texana
+25,Skates-rays,sawfish family,pristis
+25,Skates-rays,"sawfish, smalltooth",pristis pectinata
+25,Skates-rays,skate genus,raja spp
+25,Skates-rays,skate genus,raja
+25,Skates-rays,"skate, unidentified",na
+25,Skates-rays,skates,rajidae
+25,Skates-rays,smalltooth sawfish,pristis pectinata
+25,Skates-rays,smooth butterfly ray,gymnura micrura
+25,Skates-rays,southern eagle ray,myliobatis goodei
+25,Skates-rays,southern stingray,dasyatis americana
+25,Skates-rays,southern stringray,na
+25,Skates-rays,spiny butterfly ray,gymnura altavela
+25,Skates-rays,spotted eagle ray,aetobatus narinari
+25,Skates-rays,stingray family,dasyatidae
+25,Skates-rays,stingray genus,dasyatis
+25,Skates-rays,stingray genus,dasyatis spp
+25,Skates-rays,"stingray, unidentified",na
+25,Skates-rays,unidentified skate or ray,rajiformes
+25,Skates-rays,wobbegong family,na
+25,Skates-rays,yellow stingray,urolophus jamaicensis
+25,Skates-rays,eagle ray,aetobatis narinari
+25,Skates-rays,shovelnose ray,aptychotrema sp
+25,Skates-rays,batoid,batoidea
+25,Skates-rays,cape elephantfish,callorhinchus capensis
+25,Skates-rays,stingray,dasyatidae
+25,Skates-rays,longnose stingray,dasyatis guttata
+25,Skates-rays,marbled stingray,dasyatis marmorata
+25,Skates-rays,stingray,dasyatis sp
+25,Skates-rays,stingray,dasytidae
+25,Skates-rays,australian butterfly ray,gymnura australis
+25,Skates-rays,backwater butterflyray,gymnura natalensis
+25,Skates-rays,butterfly ray,gymnuridae
+25,Skates-rays,lined catshark,halaelurus lineatus
+25,Skates-rays,tiger catshark,halaelurus natalensis
+25,Skates-rays,brown shyshark,haploblepharus fuscus
+25,Skates-rays,honeycomb stingray,himantura uarnak
+25,Skates-rays,little skate,leucoraja erinacea
+25,Skates-rays,devil ray,mobula sp
+25,Skates-rays,eagle ray,myliobatidae
+25,Skates-rays,myliobatiform,myliobatiformes
+25,Skates-rays,common eagle ray,myliobatis aquila
+25,Skates-rays,australian bull ray,myliobatis australis
+25,Skates-rays,ray,myliobatoidea
+25,Skates-rays,brazilian electric ray,narcine brasiliensis
+25,Skates-rays,leopard catshark,poroderma pantherinum
+25,Skates-rays,sawfish,pristidae
+25,Skates-rays,bullray,pteromylaeus bovinus
+25,Skates-rays,pelagic stingray,pteroplatytrygon violacea
+25,Skates-rays,skate,raja sp
+25,Skates-rays,skate,rajidae
+25,Skates-rays,bowmouth guitarfish,rhina ancylostoma
+25,Skates-rays,shark ray,rhina sp
+25,Skates-rays,guitarfish,rhinobatidae
+25,Skates-rays,lesser guitarfish,rhinobatos annulatus
+25,Skates-rays,common guitarfish,rhinobatos rhinobatos
+25,Skates-rays,cownose ray,rhinoptera sp
+25,Skates-rays,giant guitarfish,rhynchobatus djiddensis
+25,Skates-rays,catshark,scyliorhinidae
+25,Skates-rays,zebra shark,stegostoma fasciatum
+25,Skates-rays,torpedo ray,torpedo sp
+25,Skates-rays,round stingray,urolophidae
+25,Skates-rays,round ray,urolophus sp
+25,Skates-rays,shortnose guitarfish,zapteryx brevirostris
+"26,27",Gag grouper (0-3yr),gag,mycteroperca microlepis
+"26,27",Gag grouper (0-3yr),gag grouper (age 0-3),mycteroperca microlepis
+"26,27",Gag grouper (3+yr),gag grouper (age 3+),mycteroperca microlepis
+"28,29",Red grouper (0-3yr),"grouper, red",epinephelus morio
+"28,29",Red grouper (0-3yr),red grouper,epinephelus morio
+"28,29",Red grouper (0-3yr),red grouper (age 0-3),epinephelus morio
+"28,29",Red grouper (3+yr),red grouper (age 3+),epinephelus morio
+"30,31",Yellowedge grouper (0-3yr),"grouper, yellowedge",epinephelus flavolimbatus
+"30,31",Yellowedge grouper (0-3yr),yellowedge grouper,epinephelus flavolimbatus
+"30,31",Yellowedge grouper (0-3yr),yellowedge grouper (age 0-3),hyporthodus flavolimbatus
+"30,31",Yellowedge grouper (3+yr),yellowedge grouper (age 3+),hyporthodus flavolimbatus
+32,Goliath grouper,goliath grouper,epinephelus itajara
+32,Goliath grouper,"grouper, goliath",na
+32,Goliath grouper,jewfish,epinephelus itajara
+32,Goliath grouper,atlantic goliath grouper,epinephelus itajara
+33,Deep-water grouper,"grouper, misty",epinephelus mystacinus
+33,Deep-water grouper,"grouper, snowy",epinephelus niveatus
+33,Deep-water grouper,"grouper, warsaw",epinephelus nigritus
+33,Deep-water grouper,misty grouper,epinephelus mystacinus
+33,Deep-water grouper,snowy grouper,epinephelus niveatus
+33,Deep-water grouper,warsaw grouper,epinephelus nigritus
+33,Deep-water grouper,misty grouper,hyporthodus mystacinus
+33,Deep-water grouper,warsaw grouper,hyporthodus nigritus
+33,Deep-water grouper,snowy grouper,hyporthodus niveatus
+34,Shallow-water grouper,black grouper,mycteroperca bonaci
+34,Shallow-water grouper,comb grouper,mycteroperca rubra
+34,Shallow-water grouper,coney,epinephelus fulvus
+34,Shallow-water grouper,graysby,epinephelus cruentatus
+34,Shallow-water grouper,"grouper, black",mycteroperca bonaci
+34,Shallow-water grouper,"grouper, marbled",epinephelus inermis
+34,Shallow-water grouper,"grouper, nassau",epinephelus striatus
+34,Shallow-water grouper,"grouper, yellowfin",mycteroperca venenosa
+34,Shallow-water grouper,"grouper, yellowmouth",mycteroperca interstitialis
+34,Shallow-water grouper,"hind, red",epinephelus guttatus
+34,Shallow-water grouper,"hind, rock",epinephelus adscensionis
+34,Shallow-water grouper,"hind, speckled",epinephelus drummondhayi
+34,Shallow-water grouper,marbled grouper,epinephelus inermis
+34,Shallow-water grouper,nassau grouper,epinephelus striatus
+34,Shallow-water grouper,red hind,epinephelus guttatus
+34,Shallow-water grouper,rock hind,epinephelus adscensionis
+34,Shallow-water grouper,scamp,mycteroperca phenax
+34,Shallow-water grouper,speckled hind,epinephelus drummondhayi
+34,Shallow-water grouper,tiger grouper,mycteroperca tigris
+34,Shallow-water grouper,yellowfin grouper,mycteroperca venenosa
+34,Shallow-water grouper,yellowmouth grouper,mycteroperca interstitialis
+34,Shallow-water grouper,graysby,cephalopholis cruentata
+34,Shallow-water grouper,coney,cephalopholis fulva
+34,Shallow-water grouper,graysby,epinephelus adscensionis
+34,Shallow-water grouper,yellowmouth grouper/scamp,mycteroperca spp
+"35,36,37",Red snapper (0yr),red snapper,lutjanus campechanus
+"35,36,37",Red snapper (0yr),"snapper, red",lutjanus campechanus
+"35,36,37",Red snapper (0yr),northern red snapper (0 - 1),lutjanus campechanus
+"35,36,37",Red snapper (1-2yr),northern red snapper (1 - 4),lutjanus campechanus
+"35,36,37",Red snapper (3+yr),northern red snapper (4+),lutjanus campechanus
+38,Vermilion snapper,"snapper, vermilion",rhomboplites aurorubens
+38,Vermilion snapper,vermilion snapper,rhomboplites aurorubens
+39,Mutton snapper,mutton snapper,lutjanus analis
+39,Mutton snapper,"snapper, mutton",lutjanus analis
+40,Other snapper,black snapper,apsilus dentatus
+40,Other snapper,blackfin snapper,lutjanus buccanella
+40,Other snapper,cubera snapper,lutjanus cyanopterus
+40,Other snapper,dog snapper,lutjanus jocu
+40,Other snapper,gray snapper,lutjanus griseus
+40,Other snapper,mahogany snapper,lutjanus mahogoni
+40,Other snapper,queen snapper,etelis oculatus
+40,Other snapper,silk snapper,lutjanus vivanus
+40,Other snapper,snapper caribbean red,lutjanus purpureus
+40,Other snapper,"snapper, black",apsilus dentatus
+40,Other snapper,"snapper, blackfin",lutjanus buccanella
+40,Other snapper,"snapper, cubera",lutjanus cyanopterus
+40,Other snapper,"snapper, dog",lutjanus jocu
+40,Other snapper,"snapper, gray",lutjanus griseus
+40,Other snapper,"snapper, mahogany",lutjanus mahogoni
+40,Other snapper,"snapper, queen",etelis oculatus
+40,Other snapper,"snapper, silk",lutjanus vivanus
+40,Other snapper,wenchman,pristipomoides aquilonaris
+41,Inshore coastal piscivores,sharpjaw bonefish,albula neoguinaica
+41,Inshore coastal piscivores,bonefish,albula vulpes
+41,Inshore coastal piscivores,bonefish,albulidae
+41,Inshore coastal piscivores,bowfin,amia calva
+41,Inshore coastal piscivores,southern meagre,argyrosomus hololepidotus
+41,Inshore coastal piscivores,mild meagre,argyrosomus inodorus
+41,Inshore coastal piscivores,japanese meagre,argyrosomus japonicus
+41,Inshore coastal piscivores,geelbek,atractoscion aequidens
+41,Inshore coastal piscivores,garfish,belone belone
+41,Inshore coastal piscivores,snook,centropomidae
+41,Inshore coastal piscivores,snook,centropomus sp
+41,Inshore coastal piscivores,common snook,centropomus undecimalis
+41,Inshore coastal piscivores,ladyfish,elopidae
+41,Inshore coastal piscivores,ladyfish,elops saurus
+41,Inshore coastal piscivores,pike,esocidae
+41,Inshore coastal piscivores,kob,johnius sp
+41,Inshore coastal piscivores,garfish,lepisosteidae
+41,Inshore coastal piscivores,tarpon,megalopidae
+41,Inshore coastal piscivores,atlantic tarpon,megalops atlantica
+41,Inshore coastal piscivores,tarpon,megalops atlanticus
+41,Inshore coastal piscivores,striped bass,morone saxatilis
+41,Inshore coastal piscivores,roosterfish,nemastistiidae
+41,Inshore coastal piscivores,meagre,sciaena aquila
+42,Sea trout,sand seatrout,cynoscion arenarius
+42,Sea trout,seatrout genus,cynoscion
+42,Sea trout,seatrout genus,cynoscion spp
+42,Sea trout,"seatrout, sand",cynoscion arenarius
+42,Sea trout,"seatrout, spotted",cynoscion nebulosus
+42,Sea trout,"seatrout, unidentified",na
+42,Sea trout,silver seatrout,cynoscion nothus
+42,Sea trout,spotted seatrout,cynoscion nebulosus
+42,Sea trout,weakfish,cynoscion regalis
+42,Sea trout,stripped weakfish,cynoscion guatucupa
+42,Sea trout,stripped weakfish,cynoscion guatupuca
+42,Sea trout,jamaican weakfish,cynoscion jamaicensis
+42,Sea trout,shortfin weakfish,cynoscion parvipinnis
+42,Sea trout,squeteague,cynoscion regalis
+42,Sea trout,seatrout,cynoscion sp
+42,Sea trout,weakfish,cynoscion sp
+43,Oceanic piscivores,atlantic cutlassfish,trichiurus lepturus
+43,Oceanic piscivores,bigscale pomfret,taractes longispinnis
+43,Oceanic piscivores,"cutlassfish, atlantic",trichiurus lepturus
+43,Oceanic piscivores,"cutlassfish, unidentified",na
+43,Oceanic piscivores,polka-dot ribbonfish,desmodema polystictum
+43,Oceanic piscivores,pomfret family,bramidae
+43,Oceanic piscivores,pomfrets,bramidae
+43,Oceanic piscivores,ribbonfish family,trachipteridae
+43,Oceanic piscivores,snake mackerel,gempylus serpens
+43,Oceanic piscivores,lancetfish,alepisauridae
+43,Oceanic piscivores,short snouted lancetfish,alepisaurus brevirostris
+43,Oceanic piscivores,longnose lancetfish,alepisaurus ferox
+43,Oceanic piscivores,longsnouted lancetfish,alepisaurus ferox
+43,Oceanic piscivores,lancetfish,alepisaurus sp
+43,Oceanic piscivores,lancetfish,alepisaurus spp
+43,Oceanic piscivores,black scabbardfish,aphanopus carbo
+43,Oceanic piscivores,scabbardfish,aphanopus sp
+43,Oceanic piscivores,black pomfret,apolectus niger
+43,Oceanic piscivores,southern rays bream,brama australis
+43,Oceanic piscivores,atlantic pomfret,brama brama
+43,Oceanic piscivores,caribbean pomfret,brama caribbea
+43,Oceanic piscivores,pacific pomfret,brama japonica
+43,Oceanic piscivores,bigtooth pomfret,brama orcini
+43,Oceanic piscivores,pomfret,brama sp
+43,Oceanic piscivores,pomfret,bramidae
+43,Oceanic piscivores,polka-dotted ribbonfish,desmodema polystictum
+43,Oceanic piscivores,ribbonfish,desmodema sp
+43,Oceanic piscivores,scabbardfish,evoxymetopon sp
+43,Oceanic piscivores,escolar,gempylidae
+43,Oceanic piscivores,escolar,lepidocybium flavobrunneum
+43,Oceanic piscivores,crested scabbardfish,lepidopus altifrons
+43,Oceanic piscivores,scabbardfish,lepidopus caudatus
+43,Oceanic piscivores,scabbardfish,lepidopus sp
+43,Oceanic piscivores,black seadevil,melanocetidae
+43,Oceanic piscivores,offshore hake,merluccius albidus
+43,Oceanic piscivores,snake mackerel,nealotus tripes
+43,Oceanic piscivores,black snake mackerel,neolatus tripes
+43,Oceanic piscivores,black pomfret,parastromateus niger
+43,Oceanic piscivores,pomfret,pteraclis sp
+43,Oceanic piscivores,pomfret,ptericombus sp
+43,Oceanic piscivores,prickly fanfish,pterycombus petersii
+43,Oceanic piscivores,oarfish,regalecidae
+43,Oceanic piscivores,oilfish,ruvettus pretiosus
+43,Oceanic piscivores,pomfret,taractes rubescens
+43,Oceanic piscivores,pomfret,taractichthys  sp
+43,Oceanic piscivores,cape snoek,thyrsites atun
+43,Oceanic piscivores,white snake mackerel,thyrsitops lepidopoides
+43,Oceanic piscivores,snake mackerel,thyrsitops sp
+43,Oceanic piscivores,ribbonfish,trachipteridae
+43,Oceanic piscivores,king-of-the-salmon,trachipterus altivelis
+43,Oceanic piscivores,ribbonfish,trachipterus arawatae
+43,Oceanic piscivores,ribbonfish,trachipterus sp
+43,Oceanic piscivores,ribbonfish,trachypterus arawatae
+43,Oceanic piscivores,cutlassfish,trichiuridae
+43,Oceanic piscivores,pearly hairtail,trichiurus auriga
+43,Oceanic piscivores,cutlassfish,trichiurus lepturus
+43,Oceanic piscivores,largehead hairtail,trichiurus lepturus
+43,Oceanic piscivores,hairtail,trichiurus sp
+43,Oceanic piscivores,dory,zeidae
+43,Oceanic piscivores,dory,zeiformes
+43,Oceanic piscivores,dwarf dory,zenion hololepis
+43,Oceanic piscivores,ribbonfish,zu cristatus
+44,Benthic piscivores,atlantic angel shark,squatina dumeril
+44,Benthic piscivores,banded shrimp eel,na
+44,Benthic piscivores,deepwater flounder,monolene sessilicauda
+44,Benthic piscivores,"flounder, southern",na
+44,Benthic piscivores,"flounder, summer",paralichthys dentatus
+44,Benthic piscivores,frogfish genus,antennarius
+44,Benthic piscivores,frogfish genus,antennarius spp
+44,Benthic piscivores,goosefish,lophius americanus
+44,Benthic piscivores,"goosefish, unidentified",na
+44,Benthic piscivores,gulf flounder,paralichthys albigutta
+44,Benthic piscivores,inshore lizardfish,synodus foetens
+44,Benthic piscivores,king snake eel,na
+44,Benthic piscivores,largescale lizardfish,saurida brasiliensis
+44,Benthic piscivores,lizardfish family,synodontidae
+44,Benthic piscivores,lizardfish genus,synodus spp
+44,Benthic piscivores,lizardfish genus,synodus
+44,Benthic piscivores,ocellated frogfish,na
+44,Benthic piscivores,offshore lizardfish,synodus poeyi
+44,Benthic piscivores,red lizardfish,synodus synodus
+44,Benthic piscivores,sand diver,synodus intermedius
+44,Benthic piscivores,sea lamprey,petromyzon marinus
+44,Benthic piscivores,shrimp eel,ophichthus gomesi
+44,Benthic piscivores,smooth flounder,pleuronectes putnami
+44,Benthic piscivores,snakefish,trachinocephalus myops
+44,Benthic piscivores,southern flounder,paralichthys lethostigma
+44,Benthic piscivores,southern stargazer,astroscopus y-graecum
+44,Benthic piscivores,spotfin flounder,cyclopsetta fimbriata
+44,Benthic piscivores,stargazer family,uranoscopidae
+44,Benthic piscivores,summer flounder,paralichthys dentatus
+44,Benthic piscivores,three-eye flounder,na
+44,Benthic piscivores,unidentified flounder or sole,pleuronectoidei
+44,Benthic piscivores,lizardfish,#N/A
+44,Benthic piscivores,flounder,ancyclopsetta sp
+44,Benthic piscivores,frogfish,antennariidae
+44,Benthic piscivores,longlure frogfish,antennarius multiocellatus
+44,Benthic piscivores,northern stargazer,astroscopus guttatus
+44,Benthic piscivores,arrowtooth flounder,atheresthes stomas
+44,Benthic piscivores,lizardfish,aulopiformes
+44,Benthic piscivores,snake eel,callechelys sp/bascanichthys sp
+44,Benthic piscivores,sea toad,chaunacidae
+44,Benthic piscivores,large-tooth flounder,citharichthys sp
+44,Benthic piscivores,mexican flounder,cyclopsetta chittendeni
+44,Benthic piscivores,spotted spoonnose eel,echiophis intertinctus
+44,Benthic piscivores,flatfish,etropus sp
+44,Benthic piscivores,large-tooth flounder,etropus sp
+44,Benthic piscivores,bigmouth flounder,hippoglossina stomata
+44,Benthic piscivores,freckled pike-conger,hoplunnis macrurus
+44,Benthic piscivores,monkfish,kathetostoma spp
+44,Benthic piscivores,lamprey,lampridiformes
+44,Benthic piscivores,anglerfish,lophiiformes
+44,Benthic piscivores,blackmouth angler,lophiomus setigerus
+44,Benthic piscivores,snake eel,myrichthys
+44,Benthic piscivores,speckled worm-eel,myrophis punctatus
+44,Benthic piscivores,pacific worm-eel,myrophis vafer
+44,Benthic piscivores,duckbill eel,nettastomatidae
+44,Benthic piscivores,snake eel,ophichthidae
+44,Benthic piscivores,marginated snake eel,ophichthus cruentifer
+44,Benthic piscivores,shrimp eel,ophichthus gomesii
+44,Benthic piscivores,shrimp eel,ophichthus sp
+44,Benthic piscivores,snake eel,ophichthus sp
+44,Benthic piscivores,lingcod,ophiodon elongatus
+44,Benthic piscivores,large-tooth flounder,paralichthyidae
+44,Benthic piscivores,fourspotted flounder,paralichthys oblongus
+44,Benthic piscivores,large-tooth flounder,paralichthys sp
+44,Benthic piscivores,flounder,paralichthys sp
+44,Benthic piscivores,speckled flounder,paralichthys woolmani
+44,Benthic piscivores,indian halibut,psettodes erumei
+44,Benthic piscivores,snake eel,pseudomyrophis sp
+44,Benthic piscivores,brazilian lizardfish,saurida brasiliensis
+44,Benthic piscivores,lizardfish,saurida caribaea
+44,Benthic piscivores,clouded lizardfish,saurida normai
+44,Benthic piscivores,shortjaw lizardfish,saurida normani
+44,Benthic piscivores,lizardfish,saurida spp
+44,Benthic piscivores,greater lizardfish,saurida tumbil
+44,Benthic piscivores,brushtooth lizardfish,saurida undosquamis
+44,Benthic piscivores,african angel shark,squatina africana
+44,Benthic piscivores,australian angel shark,squatina australis
+44,Benthic piscivores,sand devil,squatina dumeril
+44,Benthic piscivores,angel shark,squatinidae
+44,Benthic piscivores,beach flounder,syacium latifrons
+44,Benthic piscivores,largetooth flounder,syacium sp
+44,Benthic piscivores,lizardfish,synodontidae
+44,Benthic piscivores,inotted lizardfish,synodus evermanni
+44,Benthic piscivores,atlantic lizardfish,synodus sauris
+44,Benthic piscivores,shorthead lizardfish,synodus scituliceps
+44,Benthic piscivores,lizardfish,synodus sp
+44,Benthic piscivores,diamond lizardfish,synodus synodus
+44,Benthic piscivores,stargazer,uranoscopidae
+44,Benthic piscivores,atlantic stargazer,uranoscopus scaber
+45,Reef piscivores,barracuda genus,sphyraena
+45,Reef piscivores,barracuda genus,sphyraena spp
+45,Reef piscivores,barracudas,sphyraenidae
+45,Reef piscivores,bigeye soldierfish,ostichthys trachypoma
+45,Reef piscivores,blackbar soldierfish,na
+45,Reef piscivores,blackedge moray,gymnothorax nigromarginatus
+45,Reef piscivores,blacktail moray,na
+45,Reef piscivores,chain moray,echidna catenata
+45,Reef piscivores,deepwater squirrelfish,na
+45,Reef piscivores,dusky squirrelfish,holocentrus vexillarius
+45,Reef piscivores,"eel, morays",muraenidae
+45,Reef piscivores,golden tail moray,na
+45,Reef piscivores,goldentail moray,na
+45,Reef piscivores,great barracuda,sphyraena barracuda
+45,Reef piscivores,greater soapfish,rypticus saponaceus
+45,Reef piscivores,green moray,gymnothorax funebris
+45,Reef piscivores,guaguanche,sphyraena guachancho
+45,Reef piscivores,longjaw squirrelfish,na
+45,Reef piscivores,longspine squirrelfish,holocentrus rufus
+45,Reef piscivores,moray family,muraenidae
+45,Reef piscivores,"moray, unidentified",na
+45,Reef piscivores,northern sennet,sphyraena borealis
+45,Reef piscivores,ocellated moray,gymnothorax saxicola
+45,Reef piscivores,reef squirrelfish,holocentrus coruscus
+45,Reef piscivores,soapfish genus,rypticus
+45,Reef piscivores,soapfish genus,rypticus spp
+45,Reef piscivores,southern sennet,sphyraena picudilla
+45,Reef piscivores,spotted moray,gymnothorax moringa
+45,Reef piscivores,spotted soapfish,rypticus subbifrenatus
+45,Reef piscivores,squirrelfish,holocentrus adscensionis
+45,Reef piscivores,squirrelfish,holocentrus ascensionis
+45,Reef piscivores,squirrelfish family,holocentridae
+45,Reef piscivores,squirrelfish genus,holocentrus
+45,Reef piscivores,squirrelfish genus,holocentrus spp
+45,Reef piscivores,squirrelfishes,holocentridae
+45,Reef piscivores,whitespotted soapfish,rypticus maculatus
+45,Reef piscivores,saddle squirrelfish,adioryx poco
+45,Reef piscivores,squirrelfish,adioryx sp
+45,Reef piscivores,nannygai,centroberyx australis
+45,Reef piscivores,spinycheek soldierfish,corniger spinosus
+45,Reef piscivores,sea snake,elapidae
+45,Reef piscivores,moray,gymnothorax nigromarginatus
+45,Reef piscivores,honeycomb moray,gymnothorax saxicola
+45,Reef piscivores,moray,gymnothorax sp
+45,Reef piscivores,purplemouth moray,gymnothorax vicinus
+45,Reef piscivores,squirrelfish,holocentridae
+45,Reef piscivores,squirrelfish,holocentrus sp
+45,Reef piscivores,silver-cheeked toadfish,lagocephalus sceleratus
+45,Reef piscivores,mediterranean moray,muraena helena
+45,Reef piscivores,moray eel,muraenidae
+45,Reef piscivores,blackbar soldierfish,myripristis jacobus
+45,Reef piscivores,longjaw squirrelfish,neoniphon marianus
+45,Reef piscivores,cardinal soldierfish,plectrypops retrospinis
+45,Reef piscivores,soapfish,rypticus sp
+45,Reef piscivores,reef squirrelfish,sargocentron coruscum
+45,Reef piscivores,tinsel squirrelfish,sargocentron suborbitalis
+45,Reef piscivores,dusky squirrelfish,sargocentron vexillarium
+45,Reef piscivores,barracuda,sphraenidae
+45,Reef piscivores,california barracuda,sphyraena argentea
+45,Reef piscivores,guachanche barracuda,sphyraena guachancho
+45,Reef piscivores,guaguanche barracuda,sphyraena guachancho
+45,Reef piscivores,australian barracuda,sphyraena novaehollandiae
+45,Reef piscivores,red barracuda,sphyraena pinguis
+45,Reef piscivores,barracuda,sphyraena sp
+45,Reef piscivores,barracuda,sphyraenidae
+46,Reef invertebrate feeders,bank sea bass,centropristis ocyurus
+46,Reef invertebrate feeders,"bass, longtail",hemanthias leptus
+46,Reef invertebrate feeders,belted sandfish,serranus subligarius
+46,Reef invertebrate feeders,bigeye,priacanthus arenatus
+46,Reef invertebrate feeders,bigeye family,priacanthidae
+46,Reef invertebrate feeders,black grunt,na
+46,Reef invertebrate feeders,black margate,anisotremus surinamensis
+46,Reef invertebrate feeders,black sea bass,centropristis striata
+46,Reef invertebrate feeders,blackear bass,serranus atrobranchus
+46,Reef invertebrate feeders,blackear wrasse,halichoeres poeyi
+46,Reef invertebrate feeders,bluespotted cornetfish,fistularia tabacaria
+46,Reef invertebrate feeders,bluestriped grunt,haemulon sciurus
+46,Reef invertebrate feeders,bulleye,cookeolus japonicus
+46,Reef invertebrate feeders,bulleye,priacanthus cruentatus
+46,Reef invertebrate feeders,burro grunt,pomadasys crocro
+46,Reef invertebrate feeders,butter hamlet,hypoplectrus unicolor
+46,Reef invertebrate feeders,butterflyfish genus,chaetodon spp
+46,Reef invertebrate feeders,butterflyfish genus,chaetodon
+46,Reef invertebrate feeders,caesar grunt,haemulon carbonarium
+46,Reef invertebrate feeders,cardinalfish family,apogonidae
+46,Reef invertebrate feeders,clingfish family,gobiesocidae
+46,Reef invertebrate feeders,cornetfish genus,na
+46,Reef invertebrate feeders,cottonwick,haemulon melanurum
+46,Reef invertebrate feeders,creole-fish,paranthias furcifer
+46,Reef invertebrate feeders,creole fish,na
+46,Reef invertebrate feeders,creole wrasse,clepticus parrae
+46,Reef invertebrate feeders,cubbyu,equetus umbrosus
+46,Reef invertebrate feeders,foureye butterflyfish,chaetodon capistratus
+46,Reef invertebrate feeders,french grunt,haemulon flavolineatum
+46,Reef invertebrate feeders,glasseye snapper,priacanthus cruentatus
+46,Reef invertebrate feeders,glassy sweeper,na
+46,Reef invertebrate feeders,grunt family,haemulidae
+46,Reef invertebrate feeders,grunt genus,haemulon spp
+46,Reef invertebrate feeders,grunt genus,haemulon
+46,Reef invertebrate feeders,"grunt, cottonwick",haemulon melanurum
+46,Reef invertebrate feeders,"grunt, french",haemulon flavolineatum
+46,Reef invertebrate feeders,grunts,haemulidae
+46,Reef invertebrate feeders,gulf toadfish,opsanus beta
+46,Reef invertebrate feeders,high-hat,equetus acuminatus
+46,Reef invertebrate feeders,high hat,na
+46,Reef invertebrate feeders,highfin scorpionfish,pontinus rathbuni
+46,Reef invertebrate feeders,hogfish,lachnolaimus maximus
+46,Reef invertebrate feeders,jackknife-fish,equetus lanceolatus
+46,Reef invertebrate feeders,jolthead porgy,calamus bajonado
+46,Reef invertebrate feeders,knobbed porgy,calamus nodosus
+46,Reef invertebrate feeders,lane snapper,lutjanus synagris
+46,Reef invertebrate feeders,leopard toadfish,opsanus pardus
+46,Reef invertebrate feeders,littlehead porgy,calamus proridens
+46,Reef invertebrate feeders,longtail bass,hemanthias leptus
+46,Reef invertebrate feeders,margate,haemulon album
+46,Reef invertebrate feeders,mutton hamlet,epinephelus afer
+46,Reef invertebrate feeders,oyster toadfish,opsanus tau
+46,Reef invertebrate feeders,painted wrasse,halichoeres caudalis
+46,Reef invertebrate feeders,pearlfish,carapus bermudensis
+46,Reef invertebrate feeders,pearly razorfish,hemipteronotus novacula
+46,Reef invertebrate feeders,"porgy, jolthead",calamus bajonado
+46,Reef invertebrate feeders,"porgy, knobbed",calamus nodosus
+46,Reef invertebrate feeders,"porgy, littlehead",calamus proridens
+46,Reef invertebrate feeders,"porgy, whitebone",calamus leucosteus
+46,Reef invertebrate feeders,porkfish,anisotremus virginicus
+46,Reef invertebrate feeders,puddingwife,halichoeres radiatus
+46,Reef invertebrate feeders,puddingwife (wrasse),halichoeres radiatus
+46,Reef invertebrate feeders,rainbow wrasse,halichoeres pictus
+46,Reef invertebrate feeders,red barbier,hemanthias vivanus
+46,Reef invertebrate feeders,red cornetfish,na
+46,Reef invertebrate feeders,red hogfish,decodon puellaris
+46,Reef invertebrate feeders,reef butterflyfish,chaetodon sedentarius
+46,Reef invertebrate feeders,reef croaker,odontoscion dentex
+46,Reef invertebrate feeders,reef scorpionfish,scorpaenodes caribbaeus
+46,Reef invertebrate feeders,rock sea bass,centropristis philadelphica
+46,Reef invertebrate feeders,rosy razorfish,na
+46,Reef invertebrate feeders,sailors choice,haemulon parra
+46,Reef invertebrate feeders,saucereye porgy,calamus calamus
+46,Reef invertebrate feeders,school bass,na
+46,Reef invertebrate feeders,schoolmaster,lutjanus apodus
+46,Reef invertebrate feeders,scorpionfish family,scorpaenidae
+46,Reef invertebrate feeders,"scorpionfish, spinycheek",neomerinthe hemingwayi
+46,Reef invertebrate feeders,"scorpionfish, spotted",scorpaena plumieri
+46,Reef invertebrate feeders,"scorpionfish, unidentified",na
+46,Reef invertebrate feeders,scorpionfishes,scorpaenidae
+46,Reef invertebrate feeders,scup,stenotomus chrysops
+46,Reef invertebrate feeders,scups or porgies,sparidae
+46,Reef invertebrate feeders,sea bass family,serranidae
+46,Reef invertebrate feeders,sea bass genus,centropristis
+46,Reef invertebrate feeders,sea bass genus,centropristis spp
+46,Reef invertebrate feeders,"sea bass, bank",centropristis ocyurus
+46,Reef invertebrate feeders,"sea bass, black",centropristis striata
+46,Reef invertebrate feeders,"sea bass, rock",centropristis philadelphica
+46,Reef invertebrate feeders,sea bream,archosargus rhomboidalis
+46,Reef invertebrate feeders,sheepshead,archosargus probatocephalus
+46,Reef invertebrate feeders,sheepshead porgy,calamus penna
+46,Reef invertebrate feeders,sheepshead porgy,calamus pennatula
+46,Reef invertebrate feeders,short bigeye,pristigenys alta
+46,Reef invertebrate feeders,silver porgy,diplodus argenteus
+46,Reef invertebrate feeders,slippery dick,halichoeres bivittatus
+46,Reef invertebrate feeders,smallmouth grunt,haemulon chrysargyreum
+46,Reef invertebrate feeders,"snapper, lane",lutjanus synagris
+46,Reef invertebrate feeders,"snapper, schoolmaster",lutjanus apodus
+46,Reef invertebrate feeders,"snapper, yellowtail",ocyurus chrysurus
+46,Reef invertebrate feeders,spanish flag,gonioplectrus hispanus
+46,Reef invertebrate feeders,spanish grunt,haemulon macrostomum
+46,Reef invertebrate feeders,spanish hogfish,bodianus rufus
+46,Reef invertebrate feeders,spinycheek scorpionfish,neomerinthe hemingwayi
+46,Reef invertebrate feeders,spotfin butterflyfish,chaetodon ocellatus
+46,Reef invertebrate feeders,spotfin hogfish,bodianus pulchellus
+46,Reef invertebrate feeders,spotted scorpionfish,scorpaena plumieri
+46,Reef invertebrate feeders,striped grunt,haemulon striatum
+46,Reef invertebrate feeders,sunshinefish,na
+46,Reef invertebrate feeders,tattler,serranus phoebe
+46,Reef invertebrate feeders,toadfish family,batrachoididae
+46,Reef invertebrate feeders,toadfish genus,opsanus
+46,Reef invertebrate feeders,toadfish genus,opsanus spp
+46,Reef invertebrate feeders,"toadfish, unidentified",na
+46,Reef invertebrate feeders,toadfishes,batrachoididae
+46,Reef invertebrate feeders,tobaccofish,serranus tabacarius
+46,Reef invertebrate feeders,tomtate,haemulon aurolineatum
+46,Reef invertebrate feeders,trumpetfish,aulostomus maculatus
+46,Reef invertebrate feeders,white bass,morone chrysops
+46,Reef invertebrate feeders,white grunt,haemulon plumieri
+46,Reef invertebrate feeders,whitebone porgy,calamus leucosteus
+46,Reef invertebrate feeders,wrasse bass,na
+46,Reef invertebrate feeders,wrasse family,labridae
+46,Reef invertebrate feeders,wreckfish,polyprion americanus
+46,Reef invertebrate feeders,yellow bass,morone mississippiensis
+46,Reef invertebrate feeders,yellowhead wrasse,halichoeres garnoti
+46,Reef invertebrate feeders,yellowtail snapper,ocyurus chrysurus
+46,Reef invertebrate feeders,sand sea bass,#N/A
+46,Reef invertebrate feeders,mutton hamlet,alphestes afer
+46,Reef invertebrate feeders,hawkfish,amblycirrhitus pinos
+46,Reef invertebrate feeders,swallowtail seaperch,anthias anthias
+46,Reef invertebrate feeders,spectacular seaperch,anthias menezesi
+46,Reef invertebrate feeders,flamefish,apogon maculatus
+46,Reef invertebrate feeders,gobbleguts,apogon rueppellii
+46,Reef invertebrate feeders,cardinalfish,apogon sp
+46,Reef invertebrate feeders,cardinalfish,apogonidae
+46,Reef invertebrate feeders,threespine cardinalfish,apogonops anomalus
+46,Reef invertebrate feeders,western atlantic sea bream,archosargus rhomboidalis
+46,Reef invertebrate feeders,sheepshead,archosargus sp
+46,Reef invertebrate feeders,conchfish,astrapogon alatus
+46,Reef invertebrate feeders,flagfin,aulopidae
+46,Reef invertebrate feeders,sergeant baker,aulopus purpurissatus
+46,Reef invertebrate feeders,trumpetfish,aulostomidae
+46,Reef invertebrate feeders,toadfish,batrachoididae
+46,Reef invertebrate feeders,duckbill flathead,bembrops anatirostris
+46,Reef invertebrate feeders,mexican hogfish,bodianus diplotaenia
+46,Reef invertebrate feeders,hogfish,bodianus sp
+46,Reef invertebrate feeders,bogue,boops boops
+46,Reef invertebrate feeders,fusilier,caesionidae
+46,Reef invertebrate feeders,pluma porgy,calamus pennatula
+46,Reef invertebrate feeders,porgy,calamus sp
+46,Reef invertebrate feeders,pearlfish,carapidae
+46,Reef invertebrate feeders,sunfish,centrarchidae
+46,Reef invertebrate feeders,sea bass,centropristis sp
+46,Reef invertebrate feeders,scythe butterflyfish,chaetodon falcifer
+46,Reef invertebrate feeders,threebanded butterflyfish,chaetodon humeralis
+46,Reef invertebrate feeders,butterflyfish,chaetodon sp
+46,Reef invertebrate feeders,banded butterflyfish,chaetodon striatus
+46,Reef invertebrate feeders,butterflyfish,chaetodontidae
+46,Reef invertebrate feeders,santer seabream,cheimerius nufar
+46,Reef invertebrate feeders,silver seabream,chrysophrys auratus
+46,Reef invertebrate feeders,european seabass,dicentrarchus labrax
+46,Reef invertebrate feeders,lampfish,dinoperca petersi
+46,Reef invertebrate feeders,seabream,diplodus sp
+46,Reef invertebrate feeders,common two-banded seabream,diplodus vulgaris
+46,Reef invertebrate feeders,concernita fish,drepane longimanus
+46,Reef invertebrate feeders,fairy basslet,dules auriga
+46,Reef invertebrate feeders,bonnetmouth,emmelichthys nitidus
+46,Reef invertebrate feeders,bigeye,epigonus pandionis
+46,Reef invertebrate feeders,cardinalfish,epigonus sp
+46,Reef invertebrate feeders,jack-knifefish,equetus lanceolatus
+46,Reef invertebrate feeders,cornetfish,fistularia tabacaria
+46,Reef invertebrate feeders,cornetfish,fistularidae
+46,Reef invertebrate feeders,clingfish,gobiesocidae
+46,Reef invertebrate feeders,grunt,haemulidae
+46,Reef invertebrate feeders,white margate,haemulon album
+46,Reef invertebrate feeders,tomtate grunt,haemulon aurolineatum
+46,Reef invertebrate feeders,black grunt,haemulon bonariense
+46,Reef invertebrate feeders,cottonwick grunt,haemulon melanurum
+46,Reef invertebrate feeders,white grunt,haemulon plumierii
+46,Reef invertebrate feeders,grunt,haemulon sp
+46,Reef invertebrate feeders,clown wrasse,halichoeres maculipinna
+46,Reef invertebrate feeders,wrasse,halichoeres spp
+46,Reef invertebrate feeders,glasseye,heteropriacanthus cruentatus
+46,Reef invertebrate feeders,yellow-bellied hamlet,hypoplectrus aberrans
+46,Reef invertebrate feeders,yellowtail hamlet,hypoplectrus chlorurus
+46,Reef invertebrate feeders,dark hamlet,hypoplectrus nigricans
+46,Reef invertebrate feeders,dusky hamlet,hypoplectrus nigricans
+46,Reef invertebrate feeders,barred hamlet,hypoplectrus puella
+46,Reef invertebrate feeders,blacknosed butterflyfish,johnrandallia nigrirostris
+46,Reef invertebrate feeders,wrasse,labridae
+46,Reef invertebrate feeders,japanese seabass,lateolabrax japonicus
+46,Reef invertebrate feeders,barramundi,lates calcarifer
+46,Reef invertebrate feeders,schoolmaster snapper,lutjanus apodus
+46,Reef invertebrate feeders,wavyline grunt,microlepidotus inornatus
+46,Reef invertebrate feeders,pineconefish,monocentridae
+46,Reef invertebrate feeders,sea bass,moronidae
+46,Reef invertebrate feeders,toadfish,opsanus sp
+46,Reef invertebrate feeders,spotted sand bass,paralabrax maculatofasciatus
+46,Reef invertebrate feeders,kelp bass,paralabrax sp
+46,Reef invertebrate feeders,creolefish,paranthias furcifer
+46,Reef invertebrate feeders,highhat,pareques acuminatus
+46,Reef invertebrate feeders,cubbyu,pareques umbrosus
+46,Reef invertebrate feeders,flathead,platycephalidae
+46,Reef invertebrate feeders,sweetlips,plectorhinchus sp
+46,Reef invertebrate feeders,grunt,pomadasyidae
+46,Reef invertebrate feeders,seabream,pomadasyidae
+46,Reef invertebrate feeders,smallspotted grunter,pomadasys commersonnii
+46,Reef invertebrate feeders,roughneck grunt,pomadasys corvinaeformis
+46,Reef invertebrate feeders,bastard grunt,pomadasys incisus
+46,Reef invertebrate feeders,olive grunter,pomadasys olivaceum
+46,Reef invertebrate feeders,black-ear javelin,pomadasys trifasciatus
+46,Reef invertebrate feeders,longspine scorpionfish,pontinus longispinis
+46,Reef invertebrate feeders,bigeye,priacanthidae
+46,Reef invertebrate feeders,atlantic bigeye,priacanthus arenatus
+46,Reef invertebrate feeders,moontail bullseye,priacanthus hamrur
+46,Reef invertebrate feeders,bigeye,priacanthus sp
+46,Reef invertebrate feeders,longsnout butterflyfish,prognathodes aculeatus
+46,Reef invertebrate feeders,goldlined seabream,rhabdosargus sarba
+46,Reef invertebrate feeders,seabream,rhabdosargus sp
+46,Reef invertebrate feeders,salema porgy,sarpa salpa
+46,Reef invertebrate feeders,player scorpionfish,scorpaena histrio
+46,Reef invertebrate feeders,mushroom scorpionfish,scorpaena inermis
+46,Reef invertebrate feeders,scorpionfish,scorpaena sp
+46,Reef invertebrate feeders,scorpaenidae,scorpaenidae
+46,Reef invertebrate feeders,scorpaenidae,scorpaeniformes
+46,Reef invertebrate feeders,scorpionfish,scorpaenopsis grandicornis
+46,Reef invertebrate feeders,pygmy sea bass,serraniculus pumilio
+46,Reef invertebrate feeders,seabass,serranid
+46,Reef invertebrate feeders,sea bass,serranidae
+46,Reef invertebrate feeders,orangeback bass,serranus annularis
+46,Reef invertebrate feeders,lantern bass,serranus baldwini
+46,Reef invertebrate feeders,brown comber,serranus hepatus
+46,Reef invertebrate feeders,saddle bass,serranus notospilus
+46,Reef invertebrate feeders,harlequin bass,serranus tigrinus
+46,Reef invertebrate feeders,chalk bass,serranus tortugarum
+46,Reef invertebrate feeders,porgy,sparidae
+46,Reef invertebrate feeders,yellowfin seabream,sparus latus
+46,Reef invertebrate feeders,porgy,stenotomus sp
+46,Reef invertebrate feeders,axillary wrasse,symphodus mediterraneus
+46,Reef invertebrate feeders,tautog,tautoga onitis
+46,Reef invertebrate feeders,cunner,tautogolabrus adspersus
+46,Reef invertebrate feeders,bluehead wrasse,thalassoma bifasciatum
+46,Reef invertebrate feeders,lampfish,triphoturus mexicanus
+46,Reef invertebrate feeders,seabass,unid seabass
+46,Reef invertebrate feeders,pearly razorfish,xyrichtys novacula
+46,Reef invertebrate feeders,green razorfish,xyrichtys splendens
+46,Reef invertebrate feeders,moorish idol,zanclidae
+46,Reef invertebrate feeders,shortspine combfish,zaniolepis frenata
+47,Demersal coastal invertebrate feeders,african pompano,alectis ciliaris
+47,Demersal coastal invertebrate feeders,african pompano,alectis crinitus
+47,Demersal coastal invertebrate feeders,atlantic bumper,chloroscombrus chrysurus
+47,Demersal coastal invertebrate feeders,atlantic croaker,micropogonias furnieri
+47,Demersal coastal invertebrate feeders,atlantic croaker,micropogonias undulatus
+47,Demersal coastal invertebrate feeders,atlantic moonfish,selene setapinnis
+47,Demersal coastal invertebrate feeders,banded drum,larimus fasciatus
+47,Demersal coastal invertebrate feeders,banded pipefish,micrognathus crinitus
+47,Demersal coastal invertebrate feeders,barred grunt,conodon nobilis
+47,Demersal coastal invertebrate feeders,bigeye mojarra,eucinostomus havana
+47,Demersal coastal invertebrate feeders,black drum,pogonias cromis
+47,Demersal coastal invertebrate feeders,blackbar drum,equetus iwamotoi
+47,Demersal coastal invertebrate feeders,blue croaker,bairdiella batabana
+47,Demersal coastal invertebrate feeders,"catfish,gafftopsail",na
+47,Demersal coastal invertebrate feeders,catfishes & bullheads,ictalurus
+47,Demersal coastal invertebrate feeders,"croaker, atlantic",micropogonias undulatus
+47,Demersal coastal invertebrate feeders,"croaker, unidentified",na
+47,Demersal coastal invertebrate feeders,drum family,sciaenidae
+47,Demersal coastal invertebrate feeders,"drum, black",pogonias cromis
+47,Demersal coastal invertebrate feeders,dwarf seahorse,hippocampus zosterae
+47,Demersal coastal invertebrate feeders,florida pompano,trachinotus carolinus
+47,Demersal coastal invertebrate feeders,freshwater drum,aplodinotus grunniens
+47,Demersal coastal invertebrate feeders,gafftopsail catfish,bagre marinus
+47,Demersal coastal invertebrate feeders,goatfish family,mullidae
+47,Demersal coastal invertebrate feeders,goatfishes,mullidae
+47,Demersal coastal invertebrate feeders,grass porgy,calamus arctifrons
+47,Demersal coastal invertebrate feeders,gulf kingfish,menticirrhus littoralis
+47,Demersal coastal invertebrate feeders,hardhead catfish,arius felis
+47,Demersal coastal invertebrate feeders,irish pompano,diapterus auratus
+47,Demersal coastal invertebrate feeders,king whiting,menticirrhus
+47,Demersal coastal invertebrate feeders,kingfish genus,menticirrhus spp
+47,Demersal coastal invertebrate feeders,kingfish genus,menticirrhus
+47,Demersal coastal invertebrate feeders,"kingfish, unidentified",na
+47,Demersal coastal invertebrate feeders,leather jacket,na
+47,Demersal coastal invertebrate feeders,leatherjack,oligoplites saurus
+47,Demersal coastal invertebrate feeders,leatherjacket family,balistidae
+47,Demersal coastal invertebrate feeders,lined seahorse,hippocampus erectus
+47,Demersal coastal invertebrate feeders,littlehead porgy,calamus proridens
+47,Demersal coastal invertebrate feeders,longspine porgy,stenotomus caprinus
+47,Demersal coastal invertebrate feeders,lookdown,selene vomer
+47,Demersal coastal invertebrate feeders,mojarra family,gerreidae
+47,Demersal coastal invertebrate feeders,mojarras,gerreidae
+47,Demersal coastal invertebrate feeders,"moonfish, atlantic",selene setapinnis
+47,Demersal coastal invertebrate feeders,mottled mojarra,eucinostomus lefroyi
+47,Demersal coastal invertebrate feeders,mullet family,mugilidae
+47,Demersal coastal invertebrate feeders,mullet genus,mugil spp
+47,Demersal coastal invertebrate feeders,mullet genus,mugil
+47,Demersal coastal invertebrate feeders,northern kingfish,menticirrhus saxatilis
+47,Demersal coastal invertebrate feeders,palometa,trachinotus goodei
+47,Demersal coastal invertebrate feeders,permit,trachinotus falcatus
+47,Demersal coastal invertebrate feeders,pigfish,orthopristis chrysoptera
+47,Demersal coastal invertebrate feeders,pipefish family,syngnathidae
+47,Demersal coastal invertebrate feeders,"pompano, african",alectis ciliaris
+47,Demersal coastal invertebrate feeders,"pompano, florida",trachinotus carolinus
+47,Demersal coastal invertebrate feeders,"pompano, unidentified",na
+47,Demersal coastal invertebrate feeders,porgy family,sparidae
+47,Demersal coastal invertebrate feeders,porgy genus calamus,calamus
+47,Demersal coastal invertebrate feeders,porgy genus calamus,calamus spp.
+47,Demersal coastal invertebrate feeders,"porgy, red",pagrus pagrus
+47,Demersal coastal invertebrate feeders,"porgy,grass",na
+47,Demersal coastal invertebrate feeders,red porgy,pagrus sedecim
+47,Demersal coastal invertebrate feeders,red porgy,pagrus pagrus
+47,Demersal coastal invertebrate feeders,redeye mullet,mugil gaimardianus
+47,Demersal coastal invertebrate feeders,sea catfish family,ariidae
+47,Demersal coastal invertebrate feeders,sea catfishes,ariidae
+47,Demersal coastal invertebrate feeders,seahorse genus,hippocampus
+47,Demersal coastal invertebrate feeders,seahorse genus,hippocampus spp.
+47,Demersal coastal invertebrate feeders,shortnose sturgeon,acipenser brevirostrum
+47,Demersal coastal invertebrate feeders,silver jenny,eucinostomus gula
+47,Demersal coastal invertebrate feeders,silver perch,bairdiella chrysoura
+47,Demersal coastal invertebrate feeders,southern kingfish,menticirrhus americanus
+47,Demersal coastal invertebrate feeders,spot,leiostomus xanthurus
+47,Demersal coastal invertebrate feeders,spotfin mojarra,eucinostomus argenteus
+47,Demersal coastal invertebrate feeders,spotted drum,equetus punctatus
+47,Demersal coastal invertebrate feeders,spotted goatfish,pseudopeneus maculatus
+47,Demersal coastal invertebrate feeders,spotted goatfish,pseudupeneus maculatus
+47,Demersal coastal invertebrate feeders,star drum,stellifer lanceolatus
+47,Demersal coastal invertebrate feeders,striped croaker,bairdiella sanctaeluciae
+47,Demersal coastal invertebrate feeders,striped mojarra,diapterus plumieri
+47,Demersal coastal invertebrate feeders,unidentified porgy,na
+47,Demersal coastal invertebrate feeders,yellowfin mojarra,gerres cinereus
+47,Demersal coastal invertebrate feeders,yellowfin bream,acanthopagrus australis
+47,Demersal coastal invertebrate feeders,white bullhead,ameiurus catus
+47,Demersal coastal invertebrate feeders,west atlantic sea bream,archosargus rhomboidalis
+47,Demersal coastal invertebrate feeders,silver white croaker,argyrosomus argentatus
+47,Demersal coastal invertebrate feeders,sea catfish,ariidae
+47,Demersal coastal invertebrate feeders,hardhead sea catfish,ariopsis felis
+47,Demersal coastal invertebrate feeders,sea catfish,arius felis/bagre marinus
+47,Demersal coastal invertebrate feeders,madamango sea catfish,arius spixii
+47,Demersal coastal invertebrate feeders,coco sea catfish,bagre bagre
+47,Demersal coastal invertebrate feeders,gafftopsail sea catfish,bagre marinus
+47,Demersal coastal invertebrate feeders,perch,bairdiella sp
+47,Demersal coastal invertebrate feeders,armored catfish,callichthidae
+47,Demersal coastal invertebrate feeders,dragonet,callionymidae
+47,Demersal coastal invertebrate feeders,risso's dragonet,callionymus risso
+47,Demersal coastal invertebrate feeders,dragonet,callionymus sp
+47,Demersal coastal invertebrate feeders,morwong,cheilodactyleidae
+47,Demersal coastal invertebrate feeders,barred fingerfin,cheilodactylus pixi
+47,Demersal coastal invertebrate feeders,two-tone fingerling,chirodactylus brachydactylus
+47,Demersal coastal invertebrate feeders,pacific bumper,chloroscombrus orqueta
+47,Demersal coastal invertebrate feeders,bumper,chloroscombrus sp
+47,Demersal coastal invertebrate feeders,englishman,chrysoblephus anglicus
+47,Demersal coastal invertebrate feeders,false red stumpnose,chrysoblephus lophus
+47,Demersal coastal invertebrate feeders,slinger seabream,chrysoblephus puniceus
+47,Demersal coastal invertebrate feeders,walking catfish,clarias batrachus
+47,Demersal coastal invertebrate feeders,airbreathing catfish,clariidae
+47,Demersal coastal invertebrate feeders,barbel drum,ctenosciena gracilicirrhus
+47,Demersal coastal invertebrate feeders,carp,cyprinidae
+47,Demersal coastal invertebrate feeders,dusky morwong,dactylophora nigricans
+47,Demersal coastal invertebrate feeders,common dentex,dentex dentex
+47,Demersal coastal invertebrate feeders,pink dentex,dentex gibbosus
+47,Demersal coastal invertebrate feeders,irish mojarra,diapterus auratus
+47,Demersal coastal invertebrate feeders,irish pompano,diapterus olistostomus
+47,Demersal coastal invertebrate feeders,caitipa mojarra,diapterus rhombeus
+47,Demersal coastal invertebrate feeders,sand mojarra,diapterus rhombeus
+47,Demersal coastal invertebrate feeders,mojarra,diapterus sp
+47,Demersal coastal invertebrate feeders,mojarra,diapterus/eugerres sp
+47,Demersal coastal invertebrate feeders,white seabream,diplodus sargus
+47,Demersal coastal invertebrate feeders,snake pipefish,entelurus aequoreus
+47,Demersal coastal invertebrate feeders,silver mojarra,eucinostomus argenteus
+47,Demersal coastal invertebrate feeders,jenny mojarra,eucinostomus gula
+47,Demersal coastal invertebrate feeders,tidewater mojarra,eucinostomus harengulus
+47,Demersal coastal invertebrate feeders,slender mojarra,eucinostomus jonesii
+47,Demersal coastal invertebrate feeders,mojarra,eucinostomus sp
+47,Demersal coastal invertebrate feeders,sandflat mojarra,eucinostornus argentcus
+47,Demersal coastal invertebrate feeders,striped mojarra,eugerres plumieri
+47,Demersal coastal invertebrate feeders,white barbel,galeichthys feliceps
+47,Demersal coastal invertebrate feeders,sea catfish,galeicthys sp
+47,Demersal coastal invertebrate feeders,mojarra,gerreidae
+47,Demersal coastal invertebrate feeders,silverbelly,gerres subfasciatus
+47,Demersal coastal invertebrate feeders,northern seahorse,hippocampus hudemius
+47,Demersal coastal invertebrate feeders,lined seahorse,hippocampus hudsonius
+47,Demersal coastal invertebrate feeders,pacific seahorse,hippocampus ingens
+47,Demersal coastal invertebrate feeders,longsnout seahorse,hippocampus reidi
+47,Demersal coastal invertebrate feeders,seahorse,hippocampus sp
+47,Demersal coastal invertebrate feeders,brown hoplo,hoplosternum littorale
+47,Demersal coastal invertebrate feeders,bullhead catfish,ictaluridae
+47,Demersal coastal invertebrate feeders,bigtooth corvina,isopisthus parvipinnis
+47,Demersal coastal invertebrate feeders,silver drum,larimus argenteus
+47,Demersal coastal invertebrate feeders,drum,larimus sp
+47,Demersal coastal invertebrate feeders,ponyfish,leiognathidae
+47,Demersal coastal invertebrate feeders,slender ponyfish,leiognathus elongatus
+47,Demersal coastal invertebrate feeders,ornate ponyfish,leiognathus lineolatus
+47,Demersal coastal invertebrate feeders,spotnape ponyfish,leiognathus nuchalis
+47,Demersal coastal invertebrate feeders,offshore ponyfish,leiognathus rivulatus
+47,Demersal coastal invertebrate feeders,deep pugnose ponyfish,leiognathus ruconius
+47,Demersal coastal invertebrate feeders,ponyfish,leiognathus sp
+47,Demersal coastal invertebrate feeders,croaker,leiostomus sp
+47,Demersal coastal invertebrate feeders,spot croaker,leiostomus xanthurus
+47,Demersal coastal invertebrate feeders,pumpkinseed,lepomis gibbosus
+47,Demersal coastal invertebrate feeders,spotted sunfish,lepomis punctatus
+47,Demersal coastal invertebrate feeders,sunfish,lepomis sp
+47,Demersal coastal invertebrate feeders,white steenbras,lithognathus lithognathus
+47,Demersal coastal invertebrate feeders,sand steenbras,lithognathus mormyrus
+47,Demersal coastal invertebrate feeders,armored catfish,loricariidae
+47,Demersal coastal invertebrate feeders,king weakfish,macrodon ancylodon
+47,Demersal coastal invertebrate feeders,longspine snipefish,macroramphosus scolopax 
+47,Demersal coastal invertebrate feeders,snipefish,macrorhamphosidae
+47,Demersal coastal invertebrate feeders,snipefish,macrorhamphosus sp
+47,Demersal coastal invertebrate feeders,moonfish,mene maculata
+47,Demersal coastal invertebrate feeders,southern kingcroaker,menticirrhus americanus
+47,Demersal coastal invertebrate feeders,whiting,menticirrhus americanus
+47,Demersal coastal invertebrate feeders,gulf kingcroaker,menticirrhus littoralis
+47,Demersal coastal invertebrate feeders,surf whiting,menticirrhus littoralis
+47,Demersal coastal invertebrate feeders,northern kingfish,menticirrhus saxalitis
+47,Demersal coastal invertebrate feeders,kingcroaker,menticirrhus sp
+47,Demersal coastal invertebrate feeders,lancetail wormfish,microdesmus lanceolatus
+47,Demersal coastal invertebrate feeders,atlantic tomcod,microgadus tomcod
+47,Demersal coastal invertebrate feeders,whitemouth croaker,micropogonias furnieri
+47,Demersal coastal invertebrate feeders,croaker,micropogonias sp
+47,Demersal coastal invertebrate feeders,smallmouth bass,micropterus dolomieu
+47,Demersal coastal invertebrate feeders,largemouth bass,micropterus salmoides
+47,Demersal coastal invertebrate feeders,white perch,morone americana
+47,Demersal coastal invertebrate feeders,goatfish,mullidae
+47,Demersal coastal invertebrate feeders,mexican goatfish,mulloidichthys dentatus
+47,Demersal coastal invertebrate feeders,yellow goatfish,mulloidichthys martinicus
+47,Demersal coastal invertebrate feeders,red goatfish,mullus auratus
+47,Demersal coastal invertebrate feeders,mullet,mullus sp
+47,Demersal coastal invertebrate feeders,chinaman leatherjacket,nelusetta ayraud
+47,Demersal coastal invertebrate feeders,leatherjacket,oligoplites saurus
+47,Demersal coastal invertebrate feeders,leatherjacket,oligoplites sp
+47,Demersal coastal invertebrate feeders,knifejaw,oplegnathidae
+47,Demersal coastal invertebrate feeders,corocoro grunt,orthopristis ruber
+47,Demersal coastal invertebrate feeders,blue hottentot,pachymetopon aeneum
+47,Demersal coastal invertebrate feeders,bronze bream,pachymetopon grande
+47,Demersal coastal invertebrate feeders,axillary sea bream,pagellus acarne
+47,Demersal coastal invertebrate feeders,natal pandora,pagellus bellottii natalensis
+47,Demersal coastal invertebrate feeders,blackspot seabream,pagellus bogaraveo
+47,Demersal coastal invertebrate feeders,common pandora,pagellus erythrinus
+47,Demersal coastal invertebrate feeders,porgy,pagrus sp
+47,Demersal coastal invertebrate feeders,banded croaker,paralonchurus brasiliensis
+47,Demersal coastal invertebrate feeders,perch,percidae
+47,Demersal coastal invertebrate feeders,armored searobin,peristediidae
+47,Demersal coastal invertebrate feeders,armored searobin,peristedion altipinnis
+47,Demersal coastal invertebrate feeders,armored searobin,peristedion sp
+47,Demersal coastal invertebrate feeders,gunnel,pholidae
+47,Demersal coastal invertebrate feeders,eeltail catfish,plotosidae
+47,Demersal coastal invertebrate feeders,livebearer,poeciliidae
+47,Demersal coastal invertebrate feeders,darkedge midshipman,porichthys analis
+47,Demersal coastal invertebrate feeders,plainfin midshipman,porichthys notatus
+47,Demersal coastal invertebrate feeders,atlantic midshipman,porichthys plectrodon
+47,Demersal coastal invertebrate feeders,midshipman,porichthys porosissimus
+47,Demersal coastal invertebrate feeders,panga seabream,pterogymnus laniarius
+47,Demersal coastal invertebrate feeders,cape stumpnose,rhabdosargus holubi
+47,Demersal coastal invertebrate feeders,drum,sciaenidae
+47,Demersal coastal invertebrate feeders,sciaenid,sciaenidae
+47,Demersal coastal invertebrate feeders,sciaenidae,sciaenidae
+47,Demersal coastal invertebrate feeders,acadian redfish,sebastes fasciatus
+47,Demersal coastal invertebrate feeders,chilipepper rockfish,sebastes goodei
+47,Demersal coastal invertebrate feeders,shortbelly rockfish,sebastes jordani
+47,Demersal coastal invertebrate feeders,rose fish,sebastes marinus
+47,Demersal coastal invertebrate feeders,bocaccio rockfish,sebastes paucispinis
+47,Demersal coastal invertebrate feeders,redfish,sebastes sp
+47,Demersal coastal invertebrate feeders,redfish,sebastidae
+47,Demersal coastal invertebrate feeders,rockfish,sebastodes sp
+47,Demersal coastal invertebrate feeders,pugnose ponyfish,secutor insidiator
+47,Demersal coastal invertebrate feeders,hairfin lookdown,selene brevoortii
+47,Demersal coastal invertebrate feeders,african moonfish,selene dorsalis
+47,Demersal coastal invertebrate feeders,peruvian moonfish,selene peruviana
+47,Demersal coastal invertebrate feeders,catfish,siluriformes
+47,Demersal coastal invertebrate feeders,musselcracker seabream,sparodon durbanensis
+47,Demersal coastal invertebrate feeders,black seabream,spondyliosoma cantharus
+47,Demersal coastal invertebrate feeders,steentjie seabream,spondyliosoma emarginatum
+47,Demersal coastal invertebrate feeders,croaker,stellifer brasiliensis
+47,Demersal coastal invertebrate feeders,american stardrum,stellifer lanceolatus
+47,Demersal coastal invertebrate feeders,stardrum,stellifer sp
+47,Demersal coastal invertebrate feeders,longspine porgy,stenotomus carpinus
+47,Demersal coastal invertebrate feeders,blackmouth bass,synagrops bellus
+47,Demersal coastal invertebrate feeders,antler dragonet,synchiropus atrilabiatus
+47,Demersal coastal invertebrate feeders,pipefish,syngnathidae
+47,Demersal coastal invertebrate feeders,pipefish,syngnathiformes
+47,Demersal coastal invertebrate feeders,pipefish,syngnathinae
+47,Demersal coastal invertebrate feeders,dusky pipefish,syngnathus floridae
+47,Demersal coastal invertebrate feeders,pipefish,syngnathus folleti
+47,Demersal coastal invertebrate feeders,northern pipefish,syngnathus fuscus
+47,Demersal coastal invertebrate feeders,pelagic spiny pipefish,syngnathus phlegon
+47,Demersal coastal invertebrate feeders,gulf pipefish,syngnathus scovelli
+47,Demersal coastal invertebrate feeders,pipefish,syngnathus sp
+47,Demersal coastal invertebrate feeders,pipefish,syngnathus sp.
+47,Demersal coastal invertebrate feeders,thornfish,teraponidae
+47,Demersal coastal invertebrate feeders,tigerperch,terapontidae
+47,Demersal coastal invertebrate feeders,palometa pompano,trachinotus goodei
+47,Demersal coastal invertebrate feeders,pompano,trachinotus ovatus
+47,Demersal coastal invertebrate feeders,pompano,trachinotus sp
+47,Demersal coastal invertebrate feeders,argentine croaker,umbrina canosai
+47,Demersal coastal invertebrate feeders,sand drum,umbrina coroides
+47,Demersal coastal invertebrate feeders,yellowfin croaker,umbrina roncador
+47,Demersal coastal invertebrate feeders,fusca drum,umbrina ronchus
+47,Demersal coastal invertebrate feeders,goldband goatfish,upeneus moluccensis
+47,Demersal coastal invertebrate feeders,dwarf goatfish,upeneus parvus
+47,Demersal coastal invertebrate feeders,lookdown,vomer decliviforms
+47,Demersal coastal invertebrate feeders,moonfish,vomer setapinnis
+47,Demersal coastal invertebrate feeders,lookdown,vomer sp
+48,Red drum,"drum, red",sciaenops ocellatus
+48,Red drum,red drum,sciaenops ocellatus
+49,Benthic coastal invertebrate feeders,american eel,anguilla rostrata
+49,Benthic coastal invertebrate feeders,atlantic threadfin,polydactylus octonemus
+49,Benthic coastal invertebrate feeders,bandtail searobin,prionotus ophryas
+49,Benthic coastal invertebrate feeders,barbfish,scorpaena brasiliensis
+49,Benthic coastal invertebrate feeders,batfish family,ogcocephalidae
+49,Benthic coastal invertebrate feeders,bay whiff,citharichthys spilopterus
+49,Benthic coastal invertebrate feeders,bearded brotula,brotula barbata
+49,Benthic coastal invertebrate feeders,bigeye searobin,prionotus rubio
+49,Benthic coastal invertebrate feeders,bigeye searobin,prionotus longispinosus
+49,Benthic coastal invertebrate feeders,bighead searobin,prionotus tribulus
+49,Benthic coastal invertebrate feeders,blackcheek tongue,na
+49,Benthic coastal invertebrate feeders,blackwing searobin,prionotus rubio
+49,Benthic coastal invertebrate feeders,blotched cusk-eel,ophidion grayi
+49,Benthic coastal invertebrate feeders,blotched snake eel,callechelys muraena
+49,Benthic coastal invertebrate feeders,"brotula, bearded",brotula barbata
+49,Benthic coastal invertebrate feeders,carolina hake,urophycis earlli
+49,Benthic coastal invertebrate feeders,code goby,gobiosoma robustum
+49,Benthic coastal invertebrate feeders,conger eel,conger oceanicus
+49,Benthic coastal invertebrate feeders,conger eel family,congridae
+49,Benthic coastal invertebrate feeders,cusk,brosme brosme
+49,Benthic coastal invertebrate feeders,cusk-eels,ophidiidae
+49,Benthic coastal invertebrate feeders,cusk eel family,na
+49,Benthic coastal invertebrate feeders,dusky flounder,syacium papillosum
+49,Benthic coastal invertebrate feeders,dwarf sand perch,diplectrum bivittatum
+49,Benthic coastal invertebrate feeders,"eel, american",anguilla rostrata
+49,Benthic coastal invertebrate feeders,"eel, conger",conger oceanicus
+49,Benthic coastal invertebrate feeders,eelpout family,zoarcidae
+49,Benthic coastal invertebrate feeders,eels,anguilliformes
+49,Benthic coastal invertebrate feeders,"eels, snake",ophichthidae
+49,Benthic coastal invertebrate feeders,"flounder, witch",glyptocephalus cynoglossus
+49,Benthic coastal invertebrate feeders,flying gurnard,dactylopterus volitans
+49,Benthic coastal invertebrate feeders,frillfin goby,na
+49,Benthic coastal invertebrate feeders,goby family,gobiidae
+49,Benthic coastal invertebrate feeders,goldspotted eel,myrichthys ocellatus
+49,Benthic coastal invertebrate feeders,gray flounder,etropus rimosus
+49,Benthic coastal invertebrate feeders,gulf hake,urophycis cirrata
+49,Benthic coastal invertebrate feeders,gulf stream flounder,citharichthys arctifrons
+49,Benthic coastal invertebrate feeders,hake genus,urophycis spp.
+49,Benthic coastal invertebrate feeders,hake genus,urophycis
+49,Benthic coastal invertebrate feeders,"hake, atlantic, red/white",urophycis
+49,Benthic coastal invertebrate feeders,"hake, white",urophycis tenuis
+49,Benthic coastal invertebrate feeders,hogchoker,trinectes maculatus
+49,Benthic coastal invertebrate feeders,lefteye flounder family,bothidae
+49,Benthic coastal invertebrate feeders,lefteye flounder genus,paralichthys spp.
+49,Benthic coastal invertebrate feeders,lefteye flounder genus,paralichthys
+49,Benthic coastal invertebrate feeders,leopard searobin,prionotus scitulus
+49,Benthic coastal invertebrate feeders,lined sole,achirus lineatus
+49,Benthic coastal invertebrate feeders,lyre goby,evorthodus lyricus
+49,Benthic coastal invertebrate feeders,mottled jawfish,na
+49,Benthic coastal invertebrate feeders,naked sole,gymnachirus melas
+49,Benthic coastal invertebrate feeders,neon goby,gobiosoma oceanops
+49,Benthic coastal invertebrate feeders,northern searobin,prionotus carolinus
+49,Benthic coastal invertebrate feeders,ocellated flounder,ancylopsetta quadrocellata
+49,Benthic coastal invertebrate feeders,palespotted eel,ophichthus puncticeps
+49,Benthic coastal invertebrate feeders,polka-dot batfish,ogcocephalus radiatus
+49,Benthic coastal invertebrate feeders,red hake,urophycis chuss
+49,Benthic coastal invertebrate feeders,righteye flounder family,pleuronectidae
+49,Benthic coastal invertebrate feeders,sand lance genus,ammodytes spp.
+49,Benthic coastal invertebrate feeders,sand lance genus,ammodytes
+49,Benthic coastal invertebrate feeders,sand perch,diplectrum formosum
+49,Benthic coastal invertebrate feeders,sand perch genus,diplectrum
+49,Benthic coastal invertebrate feeders,sand perch genus,diplectrum spp.
+49,Benthic coastal invertebrate feeders,sculpins,cottidae
+49,Benthic coastal invertebrate feeders,searobin family,triglidae
+49,Benthic coastal invertebrate feeders,searobin genus,prionotus spp.
+49,Benthic coastal invertebrate feeders,searobin genus,prionotus
+49,Benthic coastal invertebrate feeders,"searobin, unidentified",na
+49,Benthic coastal invertebrate feeders,searobins,triglidae
+49,Benthic coastal invertebrate feeders,sharptail eel,na
+49,Benthic coastal invertebrate feeders,shoal flounder,syacium gunteri
+49,Benthic coastal invertebrate feeders,shorttail snake eel,callechelys guiniensis
+49,Benthic coastal invertebrate feeders,sleeper cusk-eel,na
+49,Benthic coastal invertebrate feeders,smallmouth flounder,na
+49,Benthic coastal invertebrate feeders,snailfish family,cyclopteridae
+49,Benthic coastal invertebrate feeders,snake eel family,ophichthidae
+49,Benthic coastal invertebrate feeders,sole family,soleidae
+49,Benthic coastal invertebrate feeders,southern hake,urophycis floridana
+49,Benthic coastal invertebrate feeders,spiny searobin,prionotus alatus
+49,Benthic coastal invertebrate feeders,sponge goby,evermannichthys spongicola
+49,Benthic coastal invertebrate feeders,spotted whiff,citharichthys macrops
+49,Benthic coastal invertebrate feeders,sturgeons,acipenseridae
+49,Benthic coastal invertebrate feeders,thread eel,na
+49,Benthic coastal invertebrate feeders,threadfin genus,polydactylus spp.
+49,Benthic coastal invertebrate feeders,threadfin genus,polydactylus
+49,Benthic coastal invertebrate feeders,tonguefish genus,symphurus spp.
+49,Benthic coastal invertebrate feeders,tricorn batfish,zalieutes mcgintyi
+49,Benthic coastal invertebrate feeders,unidentified eel,anguilliformes
+49,Benthic coastal invertebrate feeders,unidentified eel,anguilloidei
+49,Benthic coastal invertebrate feeders,whiff genus,citharichthys spp.
+49,Benthic coastal invertebrate feeders,whiff genus,citharichthys
+49,Benthic coastal invertebrate feeders,whip eel,bascanichthys scuticaris
+49,Benthic coastal invertebrate feeders,yellow conger,hildebrandia flava
+49,Benthic coastal invertebrate feeders,searobin,#N/A
+49,Benthic coastal invertebrate feeders,cusk eel,abyssobrotula galatheae
+49,Benthic coastal invertebrate feeders,blackspot bandfish,acanthocepola limbata
+49,Benthic coastal invertebrate feeders,american sole,achiridae
+49,Benthic coastal invertebrate feeders,american sand lance,ammodytes americanus
+49,Benthic coastal invertebrate feeders,northern sand lance,ammodytes dubius
+49,Benthic coastal invertebrate feeders,sand lance,ammodytes sp
+49,Benthic coastal invertebrate feeders,sand lance,ammodytidae
+49,Benthic coastal invertebrate feeders,lancelet,amphioxiformes
+49,Benthic coastal invertebrate feeders,ocellated flounder,ancylopsetta ommata
+49,Benthic coastal invertebrate feeders,eel,anguilla sp
+49,Benthic coastal invertebrate feeders,eel,anguillidae
+49,Benthic coastal invertebrate feeders,eel,anguilliform
+49,Benthic coastal invertebrate feeders,finless eel,apterichthus equatorialis
+49,Benthic coastal invertebrate feeders,conger,ariosoma opisthophthalma
+49,Benthic coastal invertebrate feeders,cape scaldfish,arnoglossus capensis
+49,Benthic coastal invertebrate feeders,mud sole,austroglossus pectoralis
+49,Benthic coastal invertebrate feeders,frillfin goby,bathygobius soporator
+49,Benthic coastal invertebrate feeders,horned searobin,bellator militaris
+49,Benthic coastal invertebrate feeders,lefteye flounder,bothidae
+49,Benthic coastal invertebrate feeders,eyed flounder,bothus ocellatus
+49,Benthic coastal invertebrate feeders,lancelet,brachiostomidae
+49,Benthic coastal invertebrate feeders,lancelet,branchiostoma platae
+49,Benthic coastal invertebrate feeders,lancelet,branchiostoma sp
+49,Benthic coastal invertebrate feeders,brotula,brotula barbata
+49,Benthic coastal invertebrate feeders,brotula,brotula sp
+49,Benthic coastal invertebrate feeders,brotula,brotulidae
+49,Benthic coastal invertebrate feeders,brotula,bythitidae
+49,Benthic coastal invertebrate feeders,gurnard,cephalacanthus sp
+49,Benthic coastal invertebrate feeders,red bandfish,cepola macrophthalma
+49,Benthic coastal invertebrate feeders,bandfish,cepolidae
+49,Benthic coastal invertebrate feeders,gurnard,chelidonichthys sp
+49,Benthic coastal invertebrate feeders,spotted cuskeel,chilara taylori
+49,Benthic coastal invertebrate feeders,conger,chlopsis taiwanensis
+49,Benthic coastal invertebrate feeders,pacific sanddab,citharichthys sordidus
+49,Benthic coastal invertebrate feeders,european conger,conger conger
+49,Benthic coastal invertebrate feeders,american conger,conger oceanicus
+49,Benthic coastal invertebrate feeders,argentine conger,conger orbygnianus
+49,Benthic coastal invertebrate feeders,conger,conger sp
+49,Benthic coastal invertebrate feeders,conger,congridae
+49,Benthic coastal invertebrate feeders,pallid goby,coryphopterus eidolon
+49,Benthic coastal invertebrate feeders,bridled goby,coryphopterus glaucofraenum
+49,Benthic coastal invertebrate feeders,bandtail goby,coryphopterus thrix
+49,Benthic coastal invertebrate feeders,sculpin,cottidae
+49,Benthic coastal invertebrate feeders,sculpin,cottiform
+49,Benthic coastal invertebrate feeders,sculpin,cottoidea 
+49,Benthic coastal invertebrate feeders,wrymouth,cryptacanthodes masculatus
+49,Benthic coastal invertebrate feeders,darter goby,ctenogobius boleosoma
+49,Benthic coastal invertebrate feeders,tonguefish,cynoglossidae
+49,Benthic coastal invertebrate feeders,sand tonguefish,cynoglossus capensis
+49,Benthic coastal invertebrate feeders,flying gurnard,dactyloptena sp
+49,Benthic coastal invertebrate feeders,flying gurnard,dactylopteridae
+49,Benthic coastal invertebrate feeders,inshore sand perch,diplectrum pacificum
+49,Benthic coastal invertebrate feeders,sand perch,diplectrum sp
+49,Benthic coastal invertebrate feeders,sleeper goby,eleotridae
+49,Benthic coastal invertebrate feeders,fourbeard rockling,enchelyopus cimbrius
+49,Benthic coastal invertebrate feeders,american spiny flounder,engyophrys senta
+49,Benthic coastal invertebrate feeders,fringed flounder,etropus crossotus
+49,Benthic coastal invertebrate feeders,smallmouth flounder,etropus microstomus
+49,Benthic coastal invertebrate feeders,gray flounder,etropus sp
+49,Benthic coastal invertebrate feeders,grey gurnard,eutrigla gurnardus
+49,Benthic coastal invertebrate feeders,cod,gadidae
+49,Benthic coastal invertebrate feeders,atlantic cod,gadus morhua
+49,Benthic coastal invertebrate feeders,threadfin,galeoides sp
+49,Benthic coastal invertebrate feeders,shrimp flounder,gastropsetta frontalis
+49,Benthic coastal invertebrate feeders,kingklip,genypterus capensis
+49,Benthic coastal invertebrate feeders,rock ling,genypterus tigerinus
+49,Benthic coastal invertebrate feeders,goldspot goby,gnatholepis thompsoni
+49,Benthic coastal invertebrate feeders,goby,gobiidae
+49,Benthic coastal invertebrate feeders,darter goby,gobionellus bolesoma
+49,Benthic coastal invertebrate feeders,highfin goby,gobionellus hastata
+49,Benthic coastal invertebrate feeders,goby,gobionellus munizi
+49,Benthic coastal invertebrate feeders,naked goby,gobiosoma bosci
+49,Benthic coastal invertebrate feeders,goby,gobiosoma sp
+49,Benthic coastal invertebrate feeders,cleaning goby,gobiosoma sp.
+49,Benthic coastal invertebrate feeders,black goby,gobius niger
+49,Benthic coastal invertebrate feeders,goby,gobius sp
+49,Benthic coastal invertebrate feeders,sand eel,gonorynchus gonorynchus
+49,Benthic coastal invertebrate feeders,whiting,haletta semifaciata
+49,Benthic coastal invertebrate feeders,pancake batfish,halieutichthys aculeatus
+49,Benthic coastal invertebrate feeders,american plaice,hippoglossoides platessoides
+49,Benthic coastal invertebrate feeders,blue goby,ioglossus calliurus
+49,Benthic coastal invertebrate feeders,carol's gurnard,lepidotrigla carolae
+49,Benthic coastal invertebrate feeders,fawn cusk eel,lepophidium cervinum
+49,Benthic coastal invertebrate feeders,blackedge cusk eel,lepophidium graellsi
+49,Benthic coastal invertebrate feeders,mottled cusk eel,lepophidium jeannae
+49,Benthic coastal invertebrate feeders,fawn cusk eel,lepophidium profundorum
+49,Benthic coastal invertebrate feeders,cusk eel,lepophidium sp
+49,Benthic coastal invertebrate feeders,snake eel,leptocephalus sp
+49,Benthic coastal invertebrate feeders,yellowtail flounder,limanda ferruginea
+49,Benthic coastal invertebrate feeders,common dab,limanda limanda
+49,Benthic coastal invertebrate feeders,dab,limanda sp
+49,Benthic coastal invertebrate feeders,crested goby,lophogobius cyprinoides
+49,Benthic coastal invertebrate feeders,flat-headed goby,luciogobius gutattus
+49,Benthic coastal invertebrate feeders,ocean pout,macrozoarces americanus
+49,Benthic coastal invertebrate feeders,haddock,melanogrammus aeglefinus
+49,Benthic coastal invertebrate feeders,whiting,merlangius merlangius
+49,Benthic coastal invertebrate feeders,hake,merlucciidae
+49,Benthic coastal invertebrate feeders,silver hake,merluccius bilinearis
+49,Benthic coastal invertebrate feeders,cape hake,merluccius capensis
+49,Benthic coastal invertebrate feeders,peruvian hake,merluccius gayi
+49,Benthic coastal invertebrate feeders,argentine hake,merluccius hubbsi
+49,Benthic coastal invertebrate feeders,european hake,merluccius merluccius
+49,Benthic coastal invertebrate feeders,north pacific hake,merluccius productus
+49,Benthic coastal invertebrate feeders,hake,merluccius sp
+49,Benthic coastal invertebrate feeders,seminole goby,microgobius carri
+49,Benthic coastal invertebrate feeders,clown goby,microgobius gulosus
+49,Benthic coastal invertebrate feeders,blue whiting,micromesistius poutassou
+49,Benthic coastal invertebrate feeders,ling,molva molva
+49,Benthic coastal invertebrate feeders,sand perch,mugiloididae
+49,Benthic coastal invertebrate feeders,pike conger,muraenesocidae
+49,Benthic coastal invertebrate feeders,longhorn sculpin,myoxocephalus octodecemspinosis
+49,Benthic coastal invertebrate feeders,shorthorn sculpin,myoxocephalus scorpius
+49,Benthic coastal invertebrate feeders,threadfin bream,nemipteridae
+49,Benthic coastal invertebrate feeders,japanese threadfin bream,nemipterus japonicus
+49,Benthic coastal invertebrate feeders,mauvelip threadfin bream,nemipterus mesoprion
+49,Benthic coastal invertebrate feeders,notchedfin threadfin bream,nemipterus peronii
+49,Benthic coastal invertebrate feeders,threadfin bream,nemipterus sp
+49,Benthic coastal invertebrate feeders,golden threadfin bream,nemipterus virgatus
+49,Benthic coastal invertebrate feeders,batfish,ogcocephalidae
+49,Benthic coastal invertebrate feeders,shortnose batfish,ogcocephalus nasutus
+49,Benthic coastal invertebrate feeders,brotula/cusk eel,ophidiidae
+49,Benthic coastal invertebrate feeders,band cusk eel,ophidion holbrooki
+49,Benthic coastal invertebrate feeders,striped cusk eel,ophidion marginatum
+49,Benthic coastal invertebrate feeders,cusk eel,ophidion sp
+49,Benthic coastal invertebrate feeders,crested cusk eel,ophidion welshi
+49,Benthic coastal invertebrate feeders,cusk,ophiidae
+49,Benthic coastal invertebrate feeders,jawfish,opistognathidae
+49,Benthic coastal invertebrate feeders,yellowhead jawfish,opistognathus aurifrons
+49,Benthic coastal invertebrate feeders,moustache jawfish,opistognathus lonchurus
+49,Benthic coastal invertebrate feeders,spotfin jawfish,opistognathus robinsi
+49,Benthic coastal invertebrate feeders,jawfish,opistognathus sp
+49,Benthic coastal invertebrate feeders,tonguesole,paraplagusia unicolor
+49,Benthic coastal invertebrate feeders,threadfin bream,pentapodus sp
+49,Benthic coastal invertebrate feeders,hake,phycidae
+49,Benthic coastal invertebrate feeders,greater forkbeard,phycis blennoides
+49,Benthic coastal invertebrate feeders,starry flounder,platichthys stellatus
+49,Benthic coastal invertebrate feeders,yellowtail flounder,pleuronectes ferruginus
+49,Benthic coastal invertebrate feeders,plaice,pleuronectes platessa
+49,Benthic coastal invertebrate feeders,righteye flounder,pleuronectidae
+49,Benthic coastal invertebrate feeders,flatfish,pleuronectiformes
+49,Benthic coastal invertebrate feeders,pollock,pollachius pollachius
+49,Benthic coastal invertebrate feeders,saithe,pollachius virens
+49,Benthic coastal invertebrate feeders,yellow bobo,polydactylus opercularis
+49,Benthic coastal invertebrate feeders,barbu threadfin,polydactylus virginicus
+49,Benthic coastal invertebrate feeders,threadfin,polynemidae
+49,Benthic coastal invertebrate feeders,threadfin,polynemus sp
+49,Benthic coastal invertebrate feeders,barred searobin,prionotus martis
+49,Benthic coastal invertebrate feeders,bluewing searobin,prionotus punctatus
+49,Benthic coastal invertebrate feeders,bluespotted searobin,prionotus roseus
+49,Benthic coastal invertebrate feeders,searobin,prionotus sp
+49,Benthic coastal invertebrate feeders,shortwing searobin,prionotus stearnsi
+49,Benthic coastal invertebrate feeders,winter flounder,pseudopleuronectes americanus
+49,Benthic coastal invertebrate feeders,small-toothed flounder,pseudorhombus jenynsii
+49,Benthic coastal invertebrate feeders,blue goby,ptereleotris calliurus
+49,Benthic coastal invertebrate feeders,cusk-eel,raneya fluminensis
+49,Benthic coastal invertebrate feeders,windowpane,scophthalamus aquosus
+49,Benthic coastal invertebrate feeders,turbot,scophthalmidae
+49,Benthic coastal invertebrate feeders,smoothhead scorpionfish,scorpaena calcarata
+49,Benthic coastal invertebrate feeders,cabezon,scorpaenichthys marmoratus
+49,Benthic coastal invertebrate feeders,smelt-whiting,sillaginidae
+49,Benthic coastal invertebrate feeders,smelt-whiting,sillago sp
+49,Benthic coastal invertebrate feeders,sole,soleidae
+49,Benthic coastal invertebrate feeders,snake blenny,stichaeidae
+49,Benthic coastal invertebrate feeders,dusky flounder,syacium sp
+49,Benthic coastal invertebrate feeders,blackcheek tonguefish,symphurus plagiusa
+49,Benthic coastal invertebrate feeders,tonguefish,symphurus sp
+49,Benthic coastal invertebrate feeders,tesselated tonguefish,symphurus tessellatus
+49,Benthic coastal invertebrate feeders,spottail tonguefish,symphurus urospilus
+49,Benthic coastal invertebrate feeders,sea scorpion,taurulus bubalis
+49,Benthic coastal invertebrate feeders,weaverfish,trachinus draco
+49,Benthic coastal invertebrate feeders,weaver,trachinus sp
+49,Benthic coastal invertebrate feeders,tub gurnard,trigla lucerna
+49,Benthic coastal invertebrate feeders,sea robin,triglid sp
+49,Benthic coastal invertebrate feeders,sea robin,triglidae
+49,Benthic coastal invertebrate feeders,whiting-pout,trisopterus luscus
+49,Benthic coastal invertebrate feeders,pouting/poor cod,trisopterus sp
+49,Benthic coastal invertebrate feeders,codling,urophycis brasiliensis
+49,Benthic coastal invertebrate feeders,hake,urophycis mistacea
+49,Benthic coastal invertebrate feeders,spotted codling,urophycis regia
+49,Benthic coastal invertebrate feeders,spotted hake,urophycis regia
+49,Benthic coastal invertebrate feeders,hake,urophycis sp
+49,Benthic coastal invertebrate feeders,white hake,urophycis tenuis
+49,Benthic coastal invertebrate feeders,eelpout,zoarcidae
+50,Tilefish,blackline tilefish,caulolatilus cyanops
+50,Tilefish,blueline tilefish,caulolatilus microps
+50,Tilefish,goldface tilefish,na
+50,Tilefish,sand tilefish,malacanthus plumieri
+50,Tilefish,tilefish,lopholatilus chamaeleonticeps
+50,Tilefish,tilefish family,malacanthidae
+50,Tilefish,"tilefish, blackline",caulolatilus cyanops
+50,Tilefish,"tilefish, blueline",caulolatilus microps
+50,Tilefish,"tilefish, golden",na
+50,Tilefish,"tilefish, goldface",caulolatilus chrysops
+50,Tilefish,"tilefish, sand",malacanthus plumieri
+50,Tilefish,tilefishes,malacanthidae
+50,Tilefish,silver horsehead,branchiostegus argentatus
+50,Tilefish,golden tilefish,lopholatilus chamaeleonticeps
+50,Tilefish,great northern tilefish,lopholatilus chamaeleonticeps
+50,Tilefish,tilefish,malacanthidae
+51,Gray triggerfish,gray triggerfish,balistes capriscus
+51,Gray triggerfish,"triggerfish, gray",balistes capriscus
+52,Coastal omnivores,atlantic spadefish,chaetodipterus faber
+52,Coastal omnivores,ballonfish,diodon holocanthus
+52,Coastal omnivores,bandtail puffer,sphoeroides spengleri
+52,Coastal omnivores,blunthead puffer,sphoeroides pachygaster
+52,Coastal omnivores,boxfish genus,lactophrys
+52,Coastal omnivores,boxfish genus,lactophrys spp.
+52,Coastal omnivores,boxfishes,ostraciidae
+52,Coastal omnivores,burrfish genus,chilomycterus
+52,Coastal omnivores,burrfish genus,chilomycterus spp.
+52,Coastal omnivores,checkered puffer,sphoeroides testudineus
+52,Coastal omnivores,"filefish, unidentified",na
+52,Coastal omnivores,honeycomb cowfish,acanthostracion polygonius
+52,Coastal omnivores,honeycomb cowfish,lactophrys polygonia
+52,Coastal omnivores,least puffer,sphoeroides parvus
+52,Coastal omnivores,marbled puffer,sphoeroides dorsalis
+52,Coastal omnivores,northern puffer,sphoeroides maculatus
+52,Coastal omnivores,ocean triggerfish,canthidermis sufflamen
+52,Coastal omnivores,oceanic puffer,lagocephalus lagocephalus
+52,Coastal omnivores,oceanic puffer,lagocephalus
+52,Coastal omnivores,orange filefish,aluterus schoepfi
+52,Coastal omnivores,pinfish,lagodon rhomboides
+52,Coastal omnivores,planehead filefish,monacanthus hispidus
+52,Coastal omnivores,porcupinefish,diodon hystrix
+52,Coastal omnivores,puffer family,tetraodontidae
+52,Coastal omnivores,puffer genus,sphoeroides
+52,Coastal omnivores,"puffer, unidentified",na
+52,Coastal omnivores,puffers,na
+52,Coastal omnivores,rough triggerfish,canthidermis maculata
+52,Coastal omnivores,sargassum triggerfish,xanthichthys ringens
+52,Coastal omnivores,scrawled cowfish,lactophrys quadricornis
+52,Coastal omnivores,scrawled cowfish,acanthostracion quadricornis
+52,Coastal omnivores,scrawled filefish,aluterus scriptus
+52,Coastal omnivores,smooth puffer,lagocephalus laevigatus
+52,Coastal omnivores,smooth trunkfish,lactophrys triqueter
+52,Coastal omnivores,southern puffer,sphoeroides nephelus
+52,Coastal omnivores,spadefishes,ephippidae
+52,Coastal omnivores,spottail pinfish,diplodus holbrooki
+52,Coastal omnivores,spotted burrfish,chilomycterus atinga
+52,Coastal omnivores,spotted trunkfish,lactophrys bicaudalis
+52,Coastal omnivores,striped burrfish,chilomycterus schoepfi
+52,Coastal omnivores,"triggerfish, ocean",canthidermis sufflamen
+52,Coastal omnivores,trunkfish,lactophrys trigonus
+52,Coastal omnivores,unicorn filefish,aluterus monoceros
+52,Coastal omnivores,web burrfish,na
+52,Coastal omnivores,whitespotted filefish,cantherhines macrocerus
+52,Coastal omnivores,scrawled filefish,alutera scripta
+52,Coastal omnivores,orange filefish,aluterus schoepfii
+52,Coastal omnivores,filefish,aluterus sp
+52,Coastal omnivores,puffer,arothron sp
+52,Coastal omnivores,tetraodontidae,blaasops
+52,Coastal omnivores,white-spotted filefish,cantherhines mucrocerus
+52,Coastal omnivores,orangespotted filefish,cantherhines pullus
+52,Coastal omnivores,orange-spotted filefish,cantherhines pullus
+52,Coastal omnivores,filefish,cantherhines sp
+52,Coastal omnivores,sharpnose puffer,canthigaster rostrata
+52,Coastal omnivores,burrfish,chilomycterus schoepfi
+52,Coastal omnivores,burrfish,chilomycterus sp
+52,Coastal omnivores,balloonfish,diodon holocanthus
+52,Coastal omnivores,longspine porcupinefish,diodon holocanthus
+52,Coastal omnivores,longspined porcupinefish,diodon holocanthus
+52,Coastal omnivores,spot-fin porcupinefish,diodon hystrix
+52,Coastal omnivores,porcupinefish,diodon sp
+52,Coastal omnivores,porcupinefish,diodontidae
+52,Coastal omnivores,spadefish,ephippidae
+52,Coastal omnivores,trunkfish,lactophrys sp
+52,Coastal omnivores,buffalo trunkfish,lactophrys trigonus
+52,Coastal omnivores,longhorn cowfish,lactoria cornuta
+52,Coastal omnivores,roundbelly cowfish,lactoria diaphana
+52,Coastal omnivores,cowfish,lactoria sp
+52,Coastal omnivores,smooth blaasop,lagocephalus inermis
+52,Coastal omnivores,puffer,lagocephalus sp
+52,Coastal omnivores,filefish,monacanthidae
+52,Coastal omnivores,fringed filefish,monacanthus ciliatus
+52,Coastal omnivores,filefish,monacanthus sp
+52,Coastal omnivores,slender filefish,monacanthus tuckeri
+52,Coastal omnivores,blue tipalia,oreochromis aureus
+52,Coastal omnivores,mozambique tilapia,oreochromis mossambicus
+52,Coastal omnivores,boxfish,ostraciidae
+52,Coastal omnivores,boxfish,ostraciontidae
+52,Coastal omnivores,redtail filefish,pervagor melanocephalus
+52,Coastal omnivores,guinean puffer,sphoeroides marmoratus
+52,Coastal omnivores,puffer,sphoeroides sp
+52,Coastal omnivores,bearded puffer,sphoeroides tyleri
+52,Coastal omnivores,planehead filefish,stephanolepis hispidus
+52,Coastal omnivores,pygmy filefish,stephanolepis setifer
+52,Coastal omnivores,puffer,tetraodontidae
+52,Coastal omnivores,turretfish,tetrasomus concantenatus
+52,Coastal omnivores,modest filefish,thamnaconus modestoides
+52,Coastal omnivores,spotted tilapia,tilapia mariae
+52,Coastal omnivores,tilapia,tilapia sp
+52,Coastal omnivores,triplespine,triacanthidae
+53,Reef omnivores,angelfish family,pomacanthidae
+53,Reef omnivores,angelfish family,centropyge
+53,Reef omnivores,angelfishes,chaetodontidae
+53,Reef omnivores,beaugregory,pomacentrus leucostictus
+53,Reef omnivores,bermuda chub,kyphosus sectatrix
+53,Reef omnivores,black durgon,melichthys niger
+53,Reef omnivores,blue angelfish,holacanthus bermudensis
+53,Reef omnivores,blue parrotfish,scarus coeruleus
+53,Reef omnivores,blue tang,acanthurus coeruleus
+53,Reef omnivores,butterflyfishes,chaetodontidae
+53,Reef omnivores,cherubfish,centropyge argi
+53,Reef omnivores,chubs,coregonus
+53,Reef omnivores,cocoa damselfish,na
+53,Reef omnivores,damselfish family,pomacentridae
+53,Reef omnivores,doctorfish,acanthurus chirurgus
+53,Reef omnivores,eelgrass blenny,stathmonotus stahli
+53,Reef omnivores,emerald parrotfish,nicholsina usta
+53,Reef omnivores,french angelfish,pomacanthus paru
+53,Reef omnivores,gray angelfish,pomacanthus arcuatus
+53,Reef omnivores,gulf surgeonfish,acanthurus randalli
+53,Reef omnivores,midnight parrotfish,scarus coelestinus
+53,Reef omnivores,ocean surgeon,acanthurus bahianus
+53,Reef omnivores,ocean surgeonfish,na
+53,Reef omnivores,parrotfish family,scaridae
+53,Reef omnivores,"parrotfish, unidentified",na
+53,Reef omnivores,parrotfishes,scaridae
+53,Reef omnivores,princess parrotfish,scarus taeniopterus
+53,Reef omnivores,purple reeffish,na
+53,Reef omnivores,queen angelfish,holacanthus ciliaris
+53,Reef omnivores,queen parrotfish,scarus vetula
+53,Reef omnivores,queen triggerfish,balistes vetula
+53,Reef omnivores,rainbow parrotfish,scarus guacamaia
+53,Reef omnivores,redband parrotfish,sparisoma aurofrenatum
+53,Reef omnivores,redfin parrotfish,sparisoma rubripinne
+53,Reef omnivores,redtail parrotfish,sparisoma chrysopterum
+53,Reef omnivores,rock beauty,holacanthus tricolor
+53,Reef omnivores,sea chub genus,kyphosus
+53,Reef omnivores,sea chub genus,kyphosus spp.
+53,Reef omnivores,sea chubs,kyphosidae
+53,Reef omnivores,sergeant major,abudefduf saxatilis
+53,Reef omnivores,spotlight parrotfish,na
+53,Reef omnivores,stoplight parrotfish,sparisoma viride
+53,Reef omnivores,striped parrotfish,scarus croicensis
+53,Reef omnivores,surgeonfish genus,acanthurus spp.
+53,Reef omnivores,surgeonfish genus,acanthurus
+53,Reef omnivores,surgeonfishes,acanthuridae
+53,Reef omnivores,"triggerfish, queen",balistes vetula
+53,Reef omnivores,unicornfish,eumecichthys fiski
+53,Reef omnivores,yellow chub,kyphosus incisor
+53,Reef omnivores,parrotfish,#N/A
+53,Reef omnivores,night sergeant,abudefduf taurus
+53,Reef omnivores,ocean surgeonfish,acanthunus bahianus
+53,Reef omnivores,surgeonfish,acanthuridae
+53,Reef omnivores,surgeonfish,acanthurus sp
+53,Reef omnivores,blenny,blenniidae
+53,Reef omnivores,seaweed blenny,blennius marmoreus
+53,Reef omnivores,pike blenny,chaenopsidae
+53,Reef omnivores,striped blenny,chasmodes bosquianus
+53,Reef omnivores,florida blenny,chasmodes saburrae
+53,Reef omnivores,blue chromis,chromis cyanea
+53,Reef omnivores,yellowtail reeffish,chromis enchrysurus
+53,Reef omnivores,sunshine chromis,chromis insolatus
+53,Reef omnivores,brown chromis,chromis multilineata
+53,Reef omnivores,purple reeffish,chromis scotti
+53,Reef omnivores,chromis,chromis sp
+53,Reef omnivores,pearl blenny,entomacrodus nigricans
+53,Reef omnivores,blue angelfish,holacanthus isabelita
+53,Reef omnivores,feather blenny,hypsoblennius hentz
+53,Reef omnivores,sea chub,kyphosidae
+53,Reef omnivores,bermuda sea chub,kyphosus sectatrix
+53,Reef omnivores,sea chub,kyphosus sp
+53,Reef omnivores,sea chub,kyphosus sp.
+53,Reef omnivores,blenny,labrisomidae
+53,Reef omnivores,mimic blenny,labrisomus guppyi
+53,Reef omnivores,downy blenny,labrisomus kalisherae
+53,Reef omnivores,hairy blenny,labrisomus nuchipinnis
+53,Reef omnivores,halfmoon,medialuna californiensis
+53,Reef omnivores,yellowtail damselfish,microspathodon chrysurus
+53,Reef omnivores,unicornfish,naso sp
+53,Reef omnivores,rockskipper,parablennius marmoratus
+53,Reef omnivores,angelfish,pomacanthidae
+53,Reef omnivores,damselfish,pomacentridae
+53,Reef omnivores,damselfish,pomacentrus sp
+53,Reef omnivores,scalyfin,pomanocerotidae
+53,Reef omnivores,yellowtail surgeonfish,prionurus punctatus
+53,Reef omnivores,parrotfish,scaridae
+53,Reef omnivores,molly miller,scartella cristata
+53,Reef omnivores,striped parrotfish,scarus iseri
+53,Reef omnivores,parrotfish,scarus sp
+53,Reef omnivores,sweep,scorpididae
+53,Reef omnivores,rabbitfish,siganus sp
+53,Reef omnivores,bucktooth parrotfish,sparisoma radians
+53,Reef omnivores,parrotfish,sparisoma sp
+53,Reef omnivores,dusky damselfish,stegastes adustus
+53,Reef omnivores,brazilian damselfish,stegastes fuscus
+53,Reef omnivores,beaugregory,stegastes leucostictus
+53,Reef omnivores,threespot damselfish,stegastes planifrons
+53,Reef omnivores,cocoa damselfish,stegastes variabilis
+53,Reef omnivores,hairtail blenny,xiphasia setifer
+54,Surface pelagics,atlantic flyingfish,cypselurus melanurus
+54,Surface pelagics,atlantic flyingfish,cypselurus heterurus
+54,Surface pelagics,balao,hemiramphus balao
+54,Surface pelagics,ballyhoo,hemiramphus brasiliensis
+54,Surface pelagics,clearwing flyingfish,na
+54,Surface pelagics,flyingfish family,exocoetidae
+54,Surface pelagics,flyingfishes,exocoetidae
+54,Surface pelagics,hemiramphus genus,hemiramphus spp.
+54,Surface pelagics,silverstripe halfbeak,hyporhamphus unifasciatus
+54,Surface pelagics,beloniformes,beloniformes
+54,Surface pelagics,margined flyingfish,cheilopogon cyanopterus
+54,Surface pelagics,atlantic flyingfish,cheilopogon melanurus
+54,Surface pelagics,bennett's flyingfish,cheilopogon pinnatibarbatus
+54,Surface pelagics,flyingfish,cheilopogon sp
+54,Surface pelagics,pacific saury,cololabis saira
+54,Surface pelagics,cleawing flyingfish,cypselurus
+54,Surface pelagics,clearwing flyingfish,cypselurus comatus
+54,Surface pelagics,bearded flyingfish,cypselurus cyanopterus
+54,Surface pelagics,flyingfish,cypselurus sp
+54,Surface pelagics,flying halfbeak,euleptorhamphus velox
+54,Surface pelagics,flyingfish,exocoetidae
+54,Surface pelagics,oceanic two-wing flyingfish,exocoetus obtusirostris
+54,Surface pelagics,flyingfish,exocoetus sp
+54,Surface pelagics,flyingfish,exocoetus volitans
+54,Surface pelagics,tropical two-wing flyingfish,exocoetus volitans
+54,Surface pelagics,halfbeak,hemiramphidae
+54,Surface pelagics,balao halfbeak,hemiramphus balao
+54,Surface pelagics,ballyhoo halfbeak,hemiramphus brasiliensis
+54,Surface pelagics,halfbeak,hemiramphus sp
+54,Surface pelagics,common halfbeak,hemiramphus unifasciatus
+54,Surface pelagics,fourwing flyingfish,hirundichthys affinis
+54,Surface pelagics,coromandel flyingfish,hirundichthys coromandelensis
+54,Surface pelagics,atlantic black wing flyingfish,hirundichthys rondeletii
+54,Surface pelagics,halfbeak,hyporhamphus sp
+54,Surface pelagics,halfbeak,hyporhamphus sp.
+54,Surface pelagics,halfbeak,hyporhamphus spp.
+54,Surface pelagics,common halfbeak,hyporhamphus unifasciatus
+54,Surface pelagics,smallwing flyingfish,oxyphorhamphus micropterus micropterus
+54,Surface pelagics,bigwing flyingfish,oxyporhamphus micropterus
+54,Surface pelagics,bigwing halfbeak,oxyporhamphus micropterus
+54,Surface pelagics,halfbeak,oxyporhamphus sp
+54,Surface pelagics,sailfin flyingfish,parexocoetus brachypterus
+54,Surface pelagics,flyingfish,parexocoetus hillianus
+54,Surface pelagics,bluntnose flyingfish,prognichthys occidentalis
+54,Surface pelagics,western blunthose flyingfish,prognichthys occidentalis
+54,Surface pelagics,saury,scomberesocidae
+54,Surface pelagics,atlantic saury,scomberesox saurus
+55,Large oceanic planktivores,manta,manta birostris
+55,Large oceanic planktivores,manta family,mobulidae
+55,Large oceanic planktivores,mola family,molidae
+55,Large oceanic planktivores,basking shark,cetorhinus maximus
+55,Large oceanic planktivores,giant oceanic manta ray,manta birostris
+55,Large oceanic planktivores,manta ray,manta birostris
+55,Large oceanic planktivores,ocean sunfish,masturus lanceolatus
+55,Large oceanic planktivores,manta ray,mobulidae
+55,Large oceanic planktivores,ocean sunfish,mola mola
+55,Large oceanic planktivores,mola,molidae
+55,Large oceanic planktivores,whale,mysticeti
+55,Large oceanic planktivores,slender sunfish,ranzania laevis
+56,Oceanic planktivores,black driftfish,hyperoglyphe bythites
+56,Oceanic planktivores,spotted driftfish,na
+57,Sardine-herring-scad,alewife,alosa pseudoharengus
+57,Sardine-herring-scad,atlantic herring,clupea harengus
+57,Sardine-herring-scad,atlantic thread herring,opisthonema oglinum
+57,Sardine-herring-scad,bigeye cigarfish,cubiceps pauciradiatus
+57,Sardine-herring-scad,bigeye scad,selar crumenophthalmus
+57,Sardine-herring-scad,false pilchard,harengula clupeola
+57,Sardine-herring-scad,gizzard shad,dorosoma cepedianum
+57,Sardine-herring-scad,herring family,clupeidae
+57,Sardine-herring-scad,herring genus,alosa spp.
+57,Sardine-herring-scad,herring genus,alosa
+57,Sardine-herring-scad,"herring, atlantic thread",opisthonema oglinum
+57,Sardine-herring-scad,herrings,clupeidae
+57,Sardine-herring-scad,mackerel scad,decapterus macarellus
+57,Sardine-herring-scad,redtail scad,decapterus tabl
+57,Sardine-herring-scad,rough scad,trachurus lathami
+57,Sardine-herring-scad,round herring,etrumeus teres
+57,Sardine-herring-scad,round scad,decapterus punctatus
+57,Sardine-herring-scad,"sardine, spanish",sardinella aurita
+57,Sardine-herring-scad,"scad, bigeye",selar crumenophthalmus
+57,Sardine-herring-scad,scads,decapterus
+57,Sardine-herring-scad,scaled sardine,harengula jaguana
+57,Sardine-herring-scad,scaled sardine,harengula pensacolae
+57,Sardine-herring-scad,"shad, american",alosa sapidissima
+57,Sardine-herring-scad,"shad, gizzard",dorosoma cepedianum
+57,Sardine-herring-scad,"shad, hickory",alosa mediocris
+57,Sardine-herring-scad,"shad, threadfin",dorosoma petenense
+57,Sardine-herring-scad,skipjack herring,alosa chrysochloris
+57,Sardine-herring-scad,spanish sardine,sardinella aurita
+57,Sardine-herring-scad,spanish sardine,sardinella anchovia
+57,Sardine-herring-scad,threadfin shad,dorosoma petenense
+57,Sardine-herring-scad,herring,#N/A
+57,Sardine-herring-scad,sardine,#N/A
+57,Sardine-herring-scad,blueback herring,alosa aestivalis
+57,Sardine-herring-scad,allis shad,alosa alosa
+57,Sardine-herring-scad,skipjack shad,alosa chrysochloris
+57,Sardine-herring-scad,american shad,alosa sapidissima
+57,Sardine-herring-scad,shad,alosa sp
+57,Sardine-herring-scad,sardinella,amblygaster sp
+57,Sardine-herring-scad,australian herring,arripis georgianus
+57,Sardine-herring-scad,shrimp scad,atule kalla
+57,Sardine-herring-scad,yellowtail scad,atule mate
+57,Sardine-herring-scad,dogtooth herring,chirocentrodon bleekerianus
+57,Sardine-herring-scad,amberstripe scad,decapterus hypodus
+57,Sardine-herring-scad,redtail scad,decapterus kurroides
+57,Sardine-herring-scad,shortfin scad,decapterus macrosoma
+57,Sardine-herring-scad,japanese scad,decapterus maruadsi
+57,Sardine-herring-scad,amberstripe scad,decapterus muroadsi
+57,Sardine-herring-scad,mackerel scad,decapterus pinnulatus
+57,Sardine-herring-scad,indian scad,decapterus russelli
+57,Sardine-herring-scad,scad,decapterus sp
+57,Sardine-herring-scad,roughear scad,decapterus tabl
+57,Sardine-herring-scad,american gizzard shad,dorosoma cepedianum
+57,Sardine-herring-scad,shad,dorosoma sp
+57,Sardine-herring-scad,red-eye round herring,etrumeus sadina
+57,Sardine-herring-scad,round herring,etrumeus sp
+57,Sardine-herring-scad,red-eye round herring,etrumeus teres
+57,Sardine-herring-scad,whitehead's round herring,etrumeus whiteheadi
+57,Sardine-herring-scad,false herring,harengula clupeola
+57,Sardine-herring-scad,redear herring,harengula humeralis
+57,Sardine-herring-scad,redear sardine,harengula humeralis
+57,Sardine-herring-scad,scaled herring,harengula jaguana
+57,Sardine-herring-scad,herring,harengula pensacolae
+57,Sardine-herring-scad,herring,harengula sp
+57,Sardine-herring-scad,pacific flatiron herring,harengula thrissina
+57,Sardine-herring-scad,sardinella,harengula zunasi
+57,Sardine-herring-scad,bluestripe herring,herklotsicthyes quadrimaculatus
+57,Sardine-herring-scad,kelee shad,hilsa kelee
+57,Sardine-herring-scad,dwarf round herring,jenkinsia lamprotaenia
+57,Sardine-herring-scad,round herring,jenkinsia sp
+57,Sardine-herring-scad,sardinella,juvenile sardinella
+57,Sardine-herring-scad,capelin,mallotus villosus
+57,Sardine-herring-scad,torpedo scad,megalaspis cordyla
+57,Sardine-herring-scad,guiana longfin herring,odontognathus mucronatus
+57,Sardine-herring-scad,pacific thread herring,ophistonema libertate
+57,Sardine-herring-scad,thread herring,ophistonema spp
+57,Sardine-herring-scad,thread herring,opisthonema
+57,Sardine-herring-scad,pacific thread herring,opisthonema libertate
+57,Sardine-herring-scad,thread herring,opisthonema oglinum
+57,Sardine-herring-scad,caille,pellona harroweri
+57,Sardine-herring-scad,sprat,rhinosardinia bahiensis
+57,Sardine-herring-scad,european pilchard,sardina pilchardus
+57,Sardine-herring-scad,sardinella,sardinella anchovia
+57,Sardine-herring-scad,round sardinella,sardinella aurita
+57,Sardine-herring-scad,brazilian sardinella,sardinella brasiliensis
+57,Sardine-herring-scad,bali sardinella,sardinella lemuru
+57,Sardine-herring-scad,indian oil sardine,sardinella longiceps
+57,Sardine-herring-scad,madeiran sardinella,sardinella maderensis
+57,Sardine-herring-scad,sardinella,sardinella sp
+57,Sardine-herring-scad,south american pilchard,sardinops caeruleus
+57,Sardine-herring-scad,australian pilchard,sardinops neopilchardus
+57,Sardine-herring-scad,south african pilchard,sardinops ocellatus
+57,Sardine-herring-scad,south american pilchard,sardinops sagax
+57,Sardine-herring-scad,pilchard,sardinops sp
+57,Sardine-herring-scad,scad,selar sp
+57,Sardine-herring-scad,yellowstripe scad,selaroides leptolepis
+57,Sardine-herring-scad,sprat,sprattus sprattus
+"58,59,60,61,62",Menhaden (0yr),atlantic menhaden,brevoortia tyrannus
+"58,59,60,61,62",Menhaden (0yr),finescale menhaden,brevoortia gunteri
+"58,59,60,61,62",Menhaden (0yr),gulf menhaden,brevoortia patronus
+"58,59,60,61,62",Menhaden (0yr),menhaden,brevoortia
+"58,59,60,61,62",Menhaden (0yr),menhaden genus,brevoortia spp.
+"58,59,60,61,62",Menhaden (0yr),menhaden genus,brevoortia
+"58,59,60,61,62",Menhaden (0yr),yellowfin menhaden,brevoortia smithi
+63,Anchovy-silverside-killifish,anchovy family,engraulidae
+63,Anchovy-silverside-killifish,atlantic silverside,menidia menidia
+63,Anchovy-silverside-killifish,bay anchovy,anchoa mitchilli
+63,Anchovy-silverside-killifish,bay anchovy,anchoa mitchelli
+63,Anchovy-silverside-killifish,dusky anchovy,anchoa lyolepis
+63,Anchovy-silverside-killifish,goldspotted killifish,floridichthys carpio
+63,Anchovy-silverside-killifish,gulf killifish,fundulus grandis
+63,Anchovy-silverside-killifish,hardhead silverside,atherinomorus stipes
+63,Anchovy-silverside-killifish,inland silverside,menidia beryllina
+63,Anchovy-silverside-killifish,key anchovy,anchoa cayorum
+63,Anchovy-silverside-killifish,killifish family,cyprinodontidae
+63,Anchovy-silverside-killifish,killifishes,na
+63,Anchovy-silverside-killifish,rough silverside,membras martinica
+63,Anchovy-silverside-killifish,sailfin molly,poecilia latipinna
+63,Anchovy-silverside-killifish,sheepshead minnow,cyprinodon variegatus
+63,Anchovy-silverside-killifish,silverside family,atherinidae
+63,Anchovy-silverside-killifish,silverside genus,menidia spp.
+63,Anchovy-silverside-killifish,silverside genus,menidia
+63,Anchovy-silverside-killifish,striped anchovy,anchoa hepsetus
+63,Anchovy-silverside-killifish,striped killifish,fundulus majalis
+63,Anchovy-silverside-killifish,diamond killifish,adinia xenica
+63,Anchovy-silverside-killifish,glassfish,ambassidae
+63,Anchovy-silverside-killifish,anchovy,anchoa
+63,Anchovy-silverside-killifish,longfinger anchovy,anchoa filifera
+63,Anchovy-silverside-killifish,anchovy,anchoa guineensis
+63,Anchovy-silverside-killifish,broad-striped anchovy,anchoa hepsetus
+63,Anchovy-silverside-killifish,marini's anchovy,anchoa marini
+63,Anchovy-silverside-killifish,anchovy,anchoa sp
+63,Anchovy-silverside-killifish,broadband anchovy,anchoviella lepidentostole
+63,Anchovy-silverside-killifish,anchovy,anchoviella mitchilli
+63,Anchovy-silverside-killifish,anchovy,anchoviella sp
+63,Anchovy-silverside-killifish,cape silverside,atherina breviceps
+63,Anchovy-silverside-killifish,sand smelt,atherina presbyter
+63,Anchovy-silverside-killifish,silverside,atherina sp
+63,Anchovy-silverside-killifish,silverside,atherinidae
+63,Anchovy-silverside-killifish,topsmelt silverside,atherinops affinis
+63,Anchovy-silverside-killifish,neotropical silverside,atherinopsidae
+63,Anchovy-silverside-killifish,chubsucker,catostomidae
+63,Anchovy-silverside-killifish,characin,characidae
+63,Anchovy-silverside-killifish,cichlid,cichlidae
+63,Anchovy-silverside-killifish,minnow,cyprinidae
+63,Anchovy-silverside-killifish,sheepshead minnow,cyprinodon variegatus variegatus
+63,Anchovy-silverside-killifish,killifish,cyprinodontidae
+63,Anchovy-silverside-killifish,minnow,cyprinodontidae
+63,Anchovy-silverside-killifish,fat sleeper,dormitator maculatus
+63,Anchovy-silverside-killifish,shorthead anchovy,encrasicholina heteroloba
+63,Anchovy-silverside-killifish,anchovy,engraulidae
+63,Anchovy-silverside-killifish,argentine anchovy,engraulis anchoita
+63,Anchovy-silverside-killifish,australian anchovy,engraulis australis
+63,Anchovy-silverside-killifish,south african anchovy,engraulis capensis
+63,Anchovy-silverside-killifish,anchovy,engraulis devisi
+63,Anchovy-silverside-killifish,european anchovy,engraulis encrasicolus
+63,Anchovy-silverside-killifish,japanese anchovy,engraulis japonica
+63,Anchovy-silverside-killifish,california anchovy,engraulis mordax
+63,Anchovy-silverside-killifish,anchovy,engraulis sp
+63,Anchovy-silverside-killifish,killifish,floridichthys sp
+63,Anchovy-silverside-killifish,killifish,fundulidae
+63,Anchovy-silverside-killifish,marsh killifish,fundulus confluentus
+63,Anchovy-silverside-killifish,mummichog,fundulus heteroclitus
+63,Anchovy-silverside-killifish,longnose killifish,fundulus similis
+63,Anchovy-silverside-killifish,killifish,fundulus sp
+63,Anchovy-silverside-killifish,western mosquitofish,gambusia affinis
+63,Anchovy-silverside-killifish,eastern mosquitofish,gambusia holbrooki
+63,Anchovy-silverside-killifish,mosquitofish,gambusia sp
+63,Anchovy-silverside-killifish,yucatan flagfish,garmanella pulchra
+63,Anchovy-silverside-killifish,stickleback,gasterosteidae
+63,Anchovy-silverside-killifish,pearl cichlid,geophagus brasiliensis
+63,Anchovy-silverside-killifish,jewel fish,hemichromis letourneuxi
+63,Anchovy-silverside-killifish,least killifish,heterandria formosa
+63,Anchovy-silverside-killifish,reef silverside,hypoatherina harringtonensis
+63,Anchovy-silverside-killifish,rainwater killifish,lucania parva
+63,Anchovy-silverside-killifish,atlantic sabertooth anchovy,lycengraulis grossidens
+63,Anchovy-silverside-killifish,silverside,menidia
+63,Anchovy-silverside-killifish,tidewater silverside,menidia peninsulae
+63,Anchovy-silverside-killifish,silverside,menidia sp
+63,Anchovy-silverside-killifish,silversides,menidia sp.
+63,Anchovy-silverside-killifish,emerald shiner,notropis atherinoides
+63,Anchovy-silverside-killifish,livebearer,poecilia spp
+63,Anchovy-silverside-killifish,spotsided livebearer,poecilia vivipara
+63,Anchovy-silverside-killifish,black crappie,pomoxis nigromaculatus
+63,Anchovy-silverside-killifish,crappies,pomoxis sp
+63,Anchovy-silverside-killifish,anchovy,stolephorus sp
+63,Anchovy-silverside-killifish,thryssa,thryssa sp
+63,Anchovy-silverside-killifish,orangemouth anchovy,thryssa vitrirostris
+63,Anchovy-silverside-killifish,brazilian silverside,xenomelaniris brasiliensis
+64,Mullet,fantail mullet,mugil trichodon
+64,Mullet,fantail mullet,mugil gyrans
+64,Mullet,"mullet, striped (liza)",mugil cephalus
+64,Mullet,"mullet, white",mugil curema
+64,Mullet,mullets,mugilidae
+64,Mullet,striped mullet,mugil cephalus
+64,Mullet,white mullet,mugil curema
+64,Mullet,milkfish,chanos chanos
+64,Mullet,grey mullet,crenimugil labrosus
+64,Mullet,south african mullet,liza richardsonii
+64,Mullet,moonyfish,monodactylidae
+64,Mullet,moony,monodactylus sp
+64,Mullet,flathead grey mullet,mugil cephalus
+64,Mullet,gray mullet,mugil cephalus
+64,Mullet,mullet,mugil gyrans
+64,Mullet,mullet,mugil sp
+64,Mullet,mullet,mugilidae
+64,Mullet,striped red mullet,mullus surmuletus
+64,Mullet,bluetail mullet,valamugil buchanani
+65,Butterfish,butterfish,peprilus triacanthus
+65,Butterfish,butterfish family,stromateidae
+65,Butterfish,gulf butterfish,peprilus burti
+65,Butterfish,harvestfish,peprilus alepidotus
+65,Butterfish,american harvestfish,peprilus alepidotus
+65,Butterfish,pacific harvestfish,peprilus medius
+65,Butterfish,american harvestfish,peprilus paru
+65,Butterfish,pacific butterfish,peprilus simillimus
+65,Butterfish,butterfish,peprilus sp
+65,Butterfish,atlantic butterfish,peprilus triacanthus
+65,Butterfish,butterfish,poronotus sp
+65,Butterfish,butterfish,stromateidae
+66,Cephalopod,octopus,octopodidae
+66,Cephalopod,"squid,atlantic brief",na
+66,Cephalopod,squids,loliginidae
+66,Cephalopod,squid,abraliopsis sp
+66,Cephalopod,european common squid,alloteuthis subulata
+66,Cephalopod,sharpear enope squid,ancistrocheirus lesueurii
+66,Cephalopod,greater argonaut,argonauta argo
+66,Cephalopod,argonaut,argonauta sp
+66,Cephalopod,argonaut,argonautidae
+66,Cephalopod,cephalopod,cephalopoda
+66,Cephalopod,squid,chirotheuthis sp
+66,Cephalopod,comb-finned squid,chtenopteryx sicula
+66,Cephalopod,coleoid,coleoidea
+66,Cephalopod,glass squid,cranchiidae
+66,Cephalopod,cephalopod,decapodiformes
+66,Cephalopod,longfin squid,doryteuthis sp
+66,Cephalopod,jumbo squid,dosidicus gigas
+66,Cephalopod,curled octopus,eledone cirrhosa
+66,Cephalopod,squid,enoploteuthidae
+66,Cephalopod,squid,enoploteuthis sp
+66,Cephalopod,gonate squid,gonatopsis borealis
+66,Cephalopod,slender squid,gonatus californiensis
+66,Cephalopod,gonate squid,gonatus sp
+66,Cephalopod,gonate squid,gonatus spp.
+66,Cephalopod,oceanic squid,gonatus steenstrupi
+66,Cephalopod,octopus,hailphron atlanticus
+66,Cephalopod,seven-arm octopus,haliphron atlanticus
+66,Cephalopod,old bobtail squid,heteroteuthis dispar
+66,Cephalopod,cock-eyed squid,histioteuthidae
+66,Cephalopod,flowervase jewell squid,histioteuthis dofleini
+66,Cephalopod,cock-eyed squid,histioteuthis sp
+66,Cephalopod,cock-eyed squid,histiotheuthis heteropsis
+66,Cephalopod,glassy flying squid,hyaloteuthis pelagica
+66,Cephalopod,southern shortfin squid,illex coindetii
+66,Cephalopod,boreal squid,illex illecebrosus
+66,Cephalopod,shortfin squid,illex sp
+66,Cephalopod,octopus,japetella diaphana
+66,Cephalopod,octopus,japetella heati
+66,Cephalopod,octopus,japetella sp
+66,Cephalopod,reinhardt's cranch-squid,liocranchia reinharti
+66,Cephalopod,pencil squid,loliginidae
+66,Cephalopod,market squid,loligo opalescens
+66,Cephalopod,longfin inshore squid,loligo pealeii
+66,Cephalopod,slender inshore squid,loligo plei
+66,Cephalopod,inshore squid,loligo sanpaulensis
+66,Cephalopod,pencil squid,loligo sp
+66,Cephalopod,european squid,loligo vulgaris
+66,Cephalopod,atlantic brief squid,lolliguncula brevis
+66,Cephalopod,whip-lash squid,mastigoteuthis dentata
+66,Cephalopod,whip-lash squid,mastigoteuthis sp
+66,Cephalopod,octopod,octopoda
+66,Cephalopod,octopod,octopodidae
+66,Cephalopod,rüppell's octopus squid,octopoteuthis sicula
+66,Cephalopod,squid,octopoteuthis sp
+66,Cephalopod,baird's octopus,octopus bairdi
+66,Cephalopod,octopus,octopus sp
+66,Cephalopod,common octopus,octopus vulgaris
+66,Cephalopod,squid,octoteuthis sp
+66,Cephalopod,arrow squid,ommastrephes sp
+66,Cephalopod,arrow squid,ommastrephidae
+66,Cephalopod,hooked squid,onychoteuthidae
+66,Cephalopod,common clubhook squid,onychoteuthis banksii
+66,Cephalopod,hooked squid,onychoteuthis sp
+66,Cephalopod,clubhook squid,onykia robusta
+66,Cephalopod,clubhook squid,onykia sp
+66,Cephalopod,flapjack octopus,opisthoteuthis sp
+66,Cephalopod,atlantic bird squid,ornithoteuthis antillarum
+66,Cephalopod,squid,pholidoteuthis boschmaii
+66,Cephalopod,ovalbone cuttlefish,sepia elliptica
+66,Cephalopod,common cuttlefish,sepia officinalis
+66,Cephalopod,cuttlefish,sepia sp
+66,Cephalopod,bobtail squid,sepietta sp
+66,Cephalopod,cuttlefish,sepiida
+66,Cephalopod,reef squid,sepioidea
+66,Cephalopod,atlantic bobtail,sepiola atlantica
+66,Cephalopod,reef squid,sepioteuthis
+66,Cephalopod,purpleback squid,sthenoteuthis oualaniensis
+66,Cephalopod,orangeback squid,sthenoteuthis pteropus
+66,Cephalopod,squid,teuthoidea
+66,Cephalopod,diamondback squid,thysanoteuthis rombus
+66,Cephalopod,european flying squid,todarodes sagittatus
+66,Cephalopod,lesser flying squid,todaropsis eblanae
+66,Cephalopod,common blanket octopus,tremoctopus violaceus
+66,Cephalopod,vampire squid,vampyroteuthis infernalis
+67,Pink shrimp,"shrimp, pink",penaeus duorarum
+67,Pink shrimp,pink shrimp,farfantepenaeus duorarum
+67,Pink shrimp,pink shrimp,farfantepenaeus sp
+67,Pink shrimp,pink shrimp,penaeus duorarum
+68,Brown shrimp,"shrimp, brown",penaeus aztecus
+68,Brown shrimp,brown shrimp,farfantepenaeus aztecus
+68,Brown shrimp,northern brown shrimp,penaeus aztecus
+69,White shrimp,"shrimp, white",penaeus setiferus
+69,White shrimp,white shrimp,litopenaeus setiferus
+69,White shrimp,northern white shrimp,penaeus setiferus
+70,Crab,"crab, blue",callinectes sapidus
+70,Crab,"crab, blue, peeler",callinectes sapidus
+70,Crab,"crab, blue, soft",callinectes sapidus
+70,Crab,"crab, blue, soft and peeler",callinectes sapidus
+70,Crab,crabs,decapoda
+70,Crab,blue crab,callinectes danae
+70,Crab,rugose swimming crab,callinectes exasperatus
+70,Crab,ornate blue crab,callinectes ornatus
+70,Crab,blue crab,callinectes sapidus
+70,Crab,lesser blue crab,callinectes similis
+70,Crab,blue crab,callinectes sp
+71,Sessile epifauna,corals,anthozoa
+71,Sessile epifauna,"oyster, eastern",crassostrea virginica
+71,Sessile epifauna,sea squirts,urochordata
+71,Sessile epifauna,"sponge, glove",spongia cheiris
+71,Sessile epifauna,"sponge, grass",spongia graminea
+71,Sessile epifauna,"sponge, sheepswool",hippospongia lachne
+71,Sessile epifauna,"sponge, wire",spongia sterea
+71,Sessile epifauna,"sponge, yellow",spongia barbara
+71,Sessile epifauna,sponges,porifera
+71,Sessile epifauna,sea anemone,actiniaria
+71,Sessile epifauna,gorgonian,alcyonacea
+71,Sessile epifauna,red dead man's fingers,alcyonium palmatum
+71,Sessile epifauna,anthozoa,anthozoa
+71,Sessile epifauna,coral,anthozoa
+71,Sessile epifauna,hard coral,anthozoa
+71,Sessile epifauna,black coral,antipatharia
+71,Sessile epifauna,sea squirt,ascidiacea
+71,Sessile epifauna,scorched mussel,brachidontes exustus
+71,Sessile epifauna,bryozoa,bryozoa
+71,Sessile epifauna,slipper snail,calyptraeidae
+71,Sessile epifauna,sea squirt,ciona intestinalis
+71,Sessile epifauna,barnacle,cirripedia
+71,Sessile epifauna,american cupped oyster,crassostrea virginica
+71,Sessile epifauna,tunicate,doliolidae
+71,Sessile epifauna,ribbed mussel,geukensia demissa
+71,Sessile epifauna,hydroid,hydroida
+71,Sessile epifauna,pelagic gooseneck barnacle,lepas anatifera
+71,Sessile epifauna,maxillopod,maxillopoda
+71,Sessile epifauna,mussel,mytilidae
+71,Sessile epifauna,blue mussel,mytilus edulis
+71,Sessile epifauna,oyster,ostreidae
+71,Sessile epifauna,limpet,patellogastropoda
+71,Sessile epifauna,sea pen,pennatulacea
+71,Sessile epifauna,pen shell,pinnidae
+71,Sessile epifauna,chiton,polyplacophora
+71,Sessile epifauna,sponge,porifera
+71,Sessile epifauna,protochordate,protochordata
+71,Sessile epifauna,tunicate,pyrosoma sp
+71,Sessile epifauna,tunicate,pyrosomidae
+71,Sessile epifauna,tunicate,thaliacea
+71,Sessile epifauna,tunicate,tunicate
+71,Sessile epifauna,urochordate,urochordata
+71,Sessile epifauna,zoantharia,zoantharia
+72,Mobile epifauna,"crab, deepsea golden",geryon fenneri
+72,Mobile epifauna,"crab, florida stone claws",menippe mercenaria
+72,Mobile epifauna,"crab, horseshoe",limulus polyphemus
+72,Mobile epifauna,crabs ,na
+72,Mobile epifauna,echinoderm,echinodermata
+72,Mobile epifauna,"lobster, caribbean spiny",panulirus argus
+72,Mobile epifauna,"lobster, slipper",scyllaridae
+72,Mobile epifauna,"mantis shrimp,sea scorpion",na
+72,Mobile epifauna,mantis shrimps,stomatopoda
+72,Mobile epifauna,"scallop, bay",argopecten irradians
+72,Mobile epifauna,"scallop, calico",argopecten gibbus
+72,Mobile epifauna,scallops,pectinidae
+72,Mobile epifauna,sea cucumber,holothuroidea
+72,Mobile epifauna,sea urchins,strongylocentrotus
+72,Mobile epifauna,shellfish,crustacea
+72,Mobile epifauna,"shellfish,unclassified,marine,ornamental",na
+72,Mobile epifauna,"shrimp, marine, other","decapoda, dendrobranchiata"
+72,Mobile epifauna,"shrimp, pinkspot",penaeus brasiliensis
+72,Mobile epifauna,"shrimp, rock",sicyonia
+72,Mobile epifauna,"shrimp, royal red",pleoticus robustus
+72,Mobile epifauna,"shrimp, seabob",xiphopenaeus kroyeri
+72,Mobile epifauna,"shrimp,atlantic & gulf,roughneck",na
+72,Mobile epifauna,snails (conchs),strombus
+72,Mobile epifauna,starfish,asteriidae
+72,Mobile epifauna,"whelk, lightning",busycon sinistrum
+72,Mobile epifauna,anomura,anomura
+72,Mobile epifauna,sea hare,aplysiidae
+72,Mobile epifauna,speckled swimming crab,arenaeus cribrarius
+72,Mobile epifauna,squareback crab,armases sp
+72,Mobile epifauna,sea star,asteroidea
+72,Mobile epifauna,horse crab,atelecyclidae
+72,Mobile epifauna,horse crab,atelecyclus sp
+72,Mobile epifauna,sea snail,atlantidae
+72,Mobile epifauna,swimming crab,bathynectes sp
+72,Mobile epifauna,whelk,buccinidae
+72,Mobile epifauna,channeled whelk,busycon canaliculatum
+72,Mobile epifauna,flame box crab,calappa flammea
+72,Mobile epifauna,box crab,calappa ocellata
+72,Mobile epifauna,box crab,calappa sp
+72,Mobile epifauna,yellow box crab,calappa sulcata
+72,Mobile epifauna,box crab,calappidae
+72,Mobile epifauna,atlantic rock crab,cancer irroratus
+72,Mobile epifauna,pygmy rock crab,cancer oregonensis
+72,Mobile epifauna,rock crab,cancer sp
+72,Mobile epifauna,cancer crab,cancridae
+72,Mobile epifauna,green crab,carcinus maenas
+72,Mobile epifauna,swimming crab,charybdis hoplites
+72,Mobile epifauna,swimming crab,charybdis smithii
+72,Mobile epifauna,top shell,cittarium pica
+72,Mobile epifauna,thinstripe hermit crab,clibanarius vittatus
+72,Mobile epifauna,crab,corystoides abbreviatus
+72,Mobile epifauna,gastropod,cyclichnidae
+72,Mobile epifauna,crab,cyrtograpsus affinis
+72,Mobile epifauna,hermit crab,dardanus pectinatus
+72,Mobile epifauna,hermit crab,diogenidae
+72,Mobile epifauna,hermit crab,diogeninae
+72,Mobile epifauna,sponge crab,dromiidae
+72,Mobile epifauna,sea urchin,echinoida
+72,Mobile epifauna,reef lobster,enoplometopidae
+72,Mobile epifauna,vase crab,epialtidae
+72,Mobile epifauna,olivepit porcelain crab,euceramus sp
+72,Mobile epifauna,portunid crab,euphylax dovii
+72,Mobile epifauna,squat lobster,galathea dispersa
+72,Mobile epifauna,squat lobster,galatheidae
+72,Mobile epifauna,snail,gastropod
+72,Mobile epifauna,gastropod,gastropoda
+72,Mobile epifauna,giant red mysid,gnathophausia ingens
+72,Mobile epifauna,crab,goneplacidae
+72,Mobile epifauna,mantis shrimp,gonodactylidae
+72,Mobile epifauna,mantis shrimp,gonodactylus bredini
+72,Mobile epifauna,marsh crab,grapsidae
+72,Mobile epifauna,dolly varden crab,hepatus epheliticus
+72,Mobile epifauna,sea cucumber,holothuria
+72,Mobile epifauna,slender sea star,leptasterias tenera
+72,Mobile epifauna,spider crab,leucippa pentagona
+72,Mobile epifauna,purse crab,leucosiidae
+72,Mobile epifauna,thinstripe hermit crab,libinarius vittatus
+72,Mobile epifauna,longnose spider crab,libinia dubia
+72,Mobile epifauna,common spider crab,libinia emarginata
+72,Mobile epifauna,spider crab,libinia sp
+72,Mobile epifauna,spider crab,libinia spinosa
+72,Mobile epifauna,horseshoe crab,limulidae
+72,Mobile epifauna,atlantic horseshoe crab,limulus polyphemus
+72,Mobile epifauna,horseshoe crab,limulus sp
+72,Mobile epifauna,snail,littorinimorpha
+72,Mobile epifauna,hermit crab,loxopagurus loxochelis
+72,Mobile epifauna,mantis shrimp,lysiosquilla glabriuscula
+72,Mobile epifauna,mantis shrimp,lysiosquilla scabricauda
+72,Mobile epifauna,mantis shrimp,lysiosquilla sp
+72,Mobile epifauna,mantis shrimp,lysiosquillidae
+72,Mobile epifauna,crab,macropipus sp
+72,Mobile epifauna,spider crab,majidae
+72,Mobile epifauna,gulf stone crab,menippe adina
+72,Mobile epifauna,florida stone crab,menippe mercenaria
+72,Mobile epifauna,urugavian lobster,metanephrops rubellus
+72,Mobile epifauna,ruby red mithrax crab,mithrax sculptus
+72,Mobile epifauna,clinging crab,mithrax sp
+72,Mobile epifauna,west indian spider crab,mithrax spinosissimus
+72,Mobile epifauna,squat lobster,munida sp
+72,Mobile epifauna,frog snail,muricidae
+72,Mobile epifauna,mantis shrimp,nannosquillidae
+72,Mobile epifauna,moon snail,naticidae
+72,Mobile epifauna,nebalia,nebalia sp
+72,Mobile epifauna,rough rock crab,nectocarcinus integrifrons
+72,Mobile epifauna,mantis shrimp,neogonodactylus sp
+72,Mobile epifauna,shark eye,neverita duplicata
+72,Mobile epifauna,nudibranch,nudibranch
+72,Mobile epifauna,mantis shrimp,odontodactylidae
+72,Mobile epifauna,brittle star,ophiuroidea
+72,Mobile epifauna,florida lady crab,ovalipes floridanus
+72,Mobile epifauna,lady crab,ovalipes ocellatus
+72,Mobile epifauna,squeaking crab,ovalipes quadulpensis
+72,Mobile epifauna,lady crab,ovalipes sp
+72,Mobile epifauna,crab,ovalipes trimaculatus
+72,Mobile epifauna,sea snail,oxygirus keraudrenii
+72,Mobile epifauna,hermit crab,paguridae
+72,Mobile epifauna,shrimp/hermit crabs,paguridae/shrimp
+72,Mobile epifauna,hermit crab,paguroidea
+72,Mobile epifauna,palmate hermit crab,pagurus impressus
+72,Mobile epifauna,long-claw hermit crab,pagurus longicarpus
+72,Mobile epifauna,flat-clawed hermit crab,pagurus pollicaris
+72,Mobile epifauna,hermit crab,pagurus sp
+72,Mobile epifauna,stilt crab,palicidae
+72,Mobile epifauna,mantis shrimp,parasquilla coccinea
+72,Mobile epifauna,elbow crab,parthenopidae
+72,Mobile epifauna,purse crab,persephona punctata
+72,Mobile epifauna,porcelain crab,petrolisthes galathinus
+72,Mobile epifauna,beaded hairy crab,pilumnus pannosus
+72,Mobile epifauna,spineback hairy crab,pilumnus sayi
+72,Mobile epifauna,massive urn crab,pitho aculeata
+72,Mobile epifauna,oval urn crab,pitho anisodon
+72,Mobile epifauna,pelagic red crab,pleuroncodes planipes
+72,Mobile epifauna,red crab,pleuroncodes sp
+72,Mobile epifauna,long-eyed swimming crab,podophthalmus vigil
+72,Mobile epifauna,sea snail,polinices duplicata
+72,Mobile epifauna,porcelain crab,porcellanidae
+72,Mobile epifauna,swimming crab,portunidae
+72,Mobile epifauna,flatface swimming crab,portunus depressifrons
+72,Mobile epifauna,harbor crab,portunus depurator
+72,Mobile epifauna,portunid crab,portunus floridanus
+72,Mobile epifauna,iridescent swimming crab,portunus gibbesii
+72,Mobile epifauna,redhair swimming crab,portunus ordwayi
+72,Mobile epifauna,three-spot swimming crab,portunus sanguinolentus 
+72,Mobile epifauna,sargassum swimming crab,portunus sayi
+72,Mobile epifauna,swimming crab,portunus sp
+72,Mobile epifauna,longspine swimming crab,portunus spinicarpus
+72,Mobile epifauna,blotched swimming crab,portunus spinimanus
+72,Mobile epifauna,swimming crab,portunus xantussi affinis
+72,Mobile epifauna,snail,potamididae
+72,Mobile epifauna,mantis shrimp,pseudosquilla ciliata
+72,Mobile epifauna,mantis shrimp,pseudosquillidae
+72,Mobile epifauna,hermit crab,pterochirus sp
+72,Mobile epifauna,sea spider,pycnogonida
+72,Mobile epifauna,frog crab,rananoides sp
+72,Mobile epifauna,frog,ranidae
+72,Mobile epifauna,muricate frog crab,ranilia muricata
+72,Mobile epifauna,frog crab,raninidae
+72,Mobile epifauna,crab,raninoidae
+72,Mobile epifauna,baby ear,sinum perspectivum
+72,Mobile epifauna,mantis shrimp,squilla biformis
+72,Mobile epifauna,mantis shrimp,squilla chydaea
+72,Mobile epifauna,mantis shrimp,squilla emprisa
+72,Mobile epifauna,mantis shrimp,squilla empusa
+72,Mobile epifauna,mantis shrimp,squilla empusa larvae
+72,Mobile epifauna,mantis shrimp,squilla mantis
+72,Mobile epifauna,mantis shrimp,squilla neglecta
+72,Mobile epifauna,mantis shrimp,squilla sp
+72,Mobile epifauna,mantis shrimp,squillidae
+72,Mobile epifauna,lobster-like crust,stenopodidea
+72,Mobile epifauna,arrow crab,stenorhynchus seticornis
+72,Mobile epifauna,mantis shrimp,stomatopoda
+72,Mobile epifauna,conch,strombidae
+72,Mobile epifauna,queen conch,strombus gigas
+72,Mobile epifauna,snail,struthiolaridae
+72,Mobile epifauna,furry lobster,synaxidae
+72,Mobile epifauna,mud lobster,thalassinidae
+72,Mobile epifauna,american lobster,homarus americanus
+72,Mobile epifauna,lobster,nephropidae
+72,Mobile epifauna,lobster,palinura sp
+72,Mobile epifauna,spiny lobster,palinuridae
+72,Mobile epifauna,caribbean spiny lobster,panulirus argus
+72,Mobile epifauna,spiny lobster,panulirus sp
+72,Mobile epifauna,slipper lobster,scyllaridae
+72,Mobile epifauna,spanish slipper lobster,scyllarides aequinoctialis
+72,Mobile epifauna,ridged slipper lobster,scyllarides nodifer
+72,Mobile epifauna,chace slipper lobster,scyllarus crenatus
+72,Mobile epifauna,slipper lobster,scyllarus sp
+72,Mobile epifauna,shrimp,acetes americanus
+72,Mobile epifauna,shrimp,acetes chinensis
+72,Mobile epifauna,shrimp,acetes sp
+72,Mobile epifauna,snapping shrimp,alpheidae
+72,Mobile epifauna,bigclaw snapping shrimp,alpheus heterochaelis
+72,Mobile epifauna,bigclaw snapping shrimp,alpheus heterochelis
+72,Mobile epifauna,green snapping shrimp,alpheus normanni
+72,Mobile epifauna,pistol shrimp,alpheus sp
+72,Mobile epifauna,amphipod,amphipoda
+72,Mobile epifauna,gamba shrimp,aristeidae
+72,Mobile epifauna,argentine stiletto shrimp,artemesia longinaris
+72,Mobile epifauna,freshwater crayfish,astacidae
+72,Mobile epifauna,crayfish,astacoidea
+72,Mobile epifauna,shrimp,atyidae
+72,Mobile epifauna,lobster shrimp,axiidae
+72,Mobile epifauna,amphipod,batea catharinensis
+72,Mobile epifauna,false cerith,batillarium minima
+72,Mobile epifauna,shrimp,benthesicymidae
+72,Mobile epifauna,horn snail,bittium sp
+72,Mobile epifauna,amphipod,brachyscelidae
+72,Mobile epifauna,amphipod,brachyscelus crusculum
+72,Mobile epifauna,amphipod,bracyscelidae
+72,Mobile epifauna,crayfish,cambaridae
+72,Mobile epifauna,caprellid amphipod,caprellidae
+72,Mobile epifauna,caridean shrimp,caridea
+72,Mobile epifauna,cerith,cerithiidae
+72,Mobile epifauna,isopod,cirolana sp
+72,Mobile epifauna,amphipod,corophium sp
+72,Mobile epifauna,sand shrimp,crangon crangon
+72,Mobile epifauna,sand shrimp,crangon septemspinosa
+72,Mobile epifauna,sand shrimp,crangon sp
+72,Mobile epifauna,prawn,crangonidae
+72,Mobile epifauna,sand shrimp,crangonidae
+72,Mobile epifauna,hooded shrimp,cumacea
+72,Mobile epifauna,isopod,cyathura sp
+72,Mobile epifauna,isopod,cymothidae
+72,Mobile epifauna,amphipod,cyphocarididae
+72,Mobile epifauna,ostracod,cypridae
+72,Mobile epifauna,cypris,cypris sp
+72,Mobile epifauna,prawn,dendrobranchiata
+72,Mobile epifauna,isopod,erichsonella attenuata
+72,Mobile epifauna,mud crab,eurypanopeus depressus
+72,Mobile epifauna,mud crab,eurypanopeus sp
+72,Mobile epifauna,isopod,excirolana
+72,Mobile epifauna,yellowleg shrimp,farfantepenaeus californiensis
+72,Mobile epifauna,gammarid amphipod,gammaridae
+72,Mobile epifauna,amphipod,gammarus sp
+72,Mobile epifauna,prawn,haliporoides sp
+72,Mobile epifauna,amphipod,hemithyphis sp
+72,Mobile epifauna,amphipod,hemithyphis tenuimanus
+72,Mobile epifauna,nylon shrimp,heterocarpoides laevicarina
+72,Mobile epifauna,nylon shrimp,heterocarpus ensifer
+72,Mobile epifauna,nylon shrimp,heterocarpus vicarius
+72,Mobile epifauna,false zostera shrimp,hippolyte pleuracanthus
+72,Mobile epifauna,broken-back shrimp,hippolyte sp
+72,Mobile epifauna,zostera shrimp,hippolyte zostericola
+72,Mobile epifauna,cleaner shrimp,hippolytidae
+72,Mobile epifauna,hyperiid amphipod,hyperiidea
+72,Mobile epifauna,isopod,idotea metallica
+72,Mobile epifauna,isopod,idotea resecata
+72,Mobile epifauna,isopod,isopoda
+72,Mobile epifauna,sargassum shrimp,latreutes focurum
+72,Mobile epifauna,sargassum shrimp,latreutes parvulus
+72,Mobile epifauna,brown glass shrimp,leander tenuicornis
+72,Mobile epifauna,lesser glass shrimp,leptochela gracilis
+72,Mobile epifauna,combclaw shrimp,leptochela serratorbita
+72,Mobile epifauna,isopod,livoneca sp
+72,Mobile epifauna,lucifer shrimp,lucifer faxoni
+72,Mobile epifauna,prawn,lucifer sp
+72,Mobile epifauna,prawn,luciferinae
+72,Mobile epifauna,peppermint shrimp,lysmata sp
+72,Mobile epifauna,peppermint shrimp,lysmata wurdemanni
+72,Mobile epifauna,ohio shrimp,macrobrachium ohione
+72,Mobile epifauna,margin shell,marginellidae
+72,Mobile epifauna,king prawn,melicertus latisulcatus
+72,Mobile epifauna,velvet shrimp,metapenaeopsis goodei
+72,Mobile epifauna,velvet shrimp,metapenaeopsis sp
+72,Mobile epifauna,prawn,metapenaeus sp
+72,Mobile epifauna,microcrustacean,microcrustacean
+72,Mobile epifauna,mysid shrimp,mysidae
+72,Mobile epifauna,mud snail,nassariidae
+72,Mobile epifauna,natantia,natantia
+72,Mobile epifauna,opossum shrimp,neomysis americana
+72,Mobile epifauna,crab,neopanope sp
+72,Mobile epifauna,mud crab,neopanopeus
+72,Mobile epifauna,shrimp,neopontonides beaufortensis
+72,Mobile epifauna,nerite,neritinidae
+72,Mobile epifauna,caridean shrimp,ogyrididae
+72,Mobile epifauna,pelagic shrimp,oplophoridae
+72,Mobile epifauna,seed shrimp,ostracoda
+72,Mobile epifauna,daggerblade grass shrimp,palaemonetes pugio
+72,Mobile epifauna,grass shrimp,palaemonetes sp
+72,Mobile epifauna,common grass shrimp,palaemonetes vulgaris
+72,Mobile epifauna,palaemonid shrimp,palaemonidae
+72,Mobile epifauna,pandalid shrimp,pandalidae
+72,Mobile epifauna,pink shrimp,pandalus borealis
+72,Mobile epifauna,pandalid shrimp,pandalus sp
+72,Mobile epifauna,mud crab,panopeidae
+72,Mobile epifauna,mud crab,panopeus herbstii
+72,Mobile epifauna,mud crab,panopeus sp
+72,Mobile epifauna,guinea shrimp,parapenaeus atlantica
+72,Mobile epifauna,deep-water rose shrimp,parapenaeus longirostris
+72,Mobile epifauna,hyperiid amphipod,parapronoe clausoides
+72,Mobile epifauna,glass shrimp,pasiphaeidae
+72,Mobile epifauna,shrimp,peisos petrunkevitchi
+72,Mobile epifauna,sergestid shrimp,peisos spp
+72,Mobile epifauna,red spotted shrimp,penaeus braziliensis
+72,Mobile epifauna,peracarid,peracarida
+72,Mobile epifauna,shrimp,periclemenes sp
+72,Mobile epifauna,amphipod,phronima sedentaria
+72,Mobile epifauna,amphipod,phronima sp
+72,Mobile epifauna,amphipod,phronimidae
+72,Mobile epifauna,amphipod,phrosina semilunata
+72,Mobile epifauna,amphipod,phrosinidae
+72,Mobile epifauna,pea crab,pinnixa brevipolex
+72,Mobile epifauna,pea crab,pinnixa cylindrica
+72,Mobile epifauna,pea crab,pinnotheridae
+72,Mobile epifauna,hyperiid amphipod,platyscelidae
+72,Mobile epifauna,hyperiid amphipod,platyscelus ovoides
+72,Mobile epifauna,hyperiid amphipod,platyscelus sp
+72,Mobile epifauna,argentine red shrimp,pleoticus muelleri
+72,Mobile epifauna,shrimp,plesionika sp
+72,Mobile epifauna,crayfish,procambarus alleni
+72,Mobile epifauna,crayfish,procambarus sp
+72,Mobile epifauna,caridean shrimp,processa sp
+72,Mobile epifauna,caridean shrimp,processidae
+72,Mobile epifauna,amphipod,pronoidae
+72,Mobile epifauna,mud crab,pseudomedaeus agassizi
+72,Mobile epifauna,mud crab,pseudomedaeus sp
+72,Mobile epifauna,harris mud crab,rhithropanopeus harrisii
+72,Mobile epifauna,penaeid shrimp,rimapenaeus sp
+72,Mobile epifauna,sergestid shrimp,sergestes lucens
+72,Mobile epifauna,sergestid shrimp,sergestes sp
+72,Mobile epifauna,sergestid shrimp,sergestidae
+72,Mobile epifauna,sergestoid,sergestoidea
+72,Mobile epifauna,isopod,serolis sp
+72,Mobile epifauna,prawn,shrimp
+72,Mobile epifauna,shrimp,shrimp
+72,Mobile epifauna,brown rock shrimp,sicyonia brevirostris
+72,Mobile epifauna,lesser rock shrimp,sicyonia dorsalis
+72,Mobile epifauna,rock shrimp,sicyonia galeata
+72,Mobile epifauna,rock shrimp,sicyonia sp
+72,Mobile epifauna,rock shrimp,sicyonidae
+72,Mobile epifauna,rock shrimp,sicyoninae
+72,Mobile epifauna,kolobri shrimp,solenocera agassizi
+72,Mobile epifauna,dwarf humpback shrimp,solenocera atlantidis
+72,Mobile epifauna,ridgeback shrimp,solenocera choprai
+72,Mobile epifauna,deep-sea mud shrimp,solenocera sp
+72,Mobile epifauna,deep-sea mud shrimp,solenoceridae
+72,Mobile epifauna,speckled snapping shrimp,synalpheus fritzmuelleri
+72,Mobile epifauna,tanaid,tanaidacea
+72,Mobile epifauna,amphipod,themisto compressa
+72,Mobile epifauna,arrow shrimp,tozeuma carolinense
+72,Mobile epifauna,roughback shrimp,trachypenaeus constrictus
+72,Mobile epifauna,roughneck shrimp,trachypenaeus constrictus
+72,Mobile epifauna,roughback shrimp,trachypenaeus similis
+72,Mobile epifauna,roughback shrimp,trachypenaeus sp
+72,Mobile epifauna,amphipod,tyvidae
+72,Mobile epifauna,mud crab,xanthidae
+72,Mobile epifauna,atlantic seabob,xiphopenaeus kroyeri
+73,Zooplankton,jellyfish,scyphosa
+73,Zooplankton,catfish eggs,catfish eggs
+73,Zooplankton,fish larvae,dactylopterus volitans larvae
+73,Zooplankton,larval fish,fingerling
+73,Zooplankton,fish egg,fish egg
+73,Zooplankton,fish larvae,fish larvae
+73,Zooplankton,fish larvae and eggs,fish larvae and eggs
+73,Zooplankton,larval fish,juv/larval fish
+73,Zooplankton,juvenile/larval fish,juvenile/larval fish
+73,Zooplankton,larval fish,larval fish
+73,Zooplankton,ctenophore,ctenophora
+73,Zooplankton,siphonophore,diphyidae
+73,Zooplankton,gelatinous material,gelatinous material
+73,Zooplankton,medusa,medusa
+73,Zooplankton,comb jelly,mnemiidae
+73,Zooplankton,jellyfish,scyphozoa
+73,Zooplankton,siphonophore,siphonophora
+73,Zooplankton,anomura zoea,anomura zoea
+73,Zooplankton,crab larvae,brachyura megalopa
+73,Zooplankton,crab larvae,brachyura zooea
+73,Zooplankton,calanoid copepod,calanoidea
+73,Zooplankton,heteropod,carinariidae
+73,Zooplankton,sea butterfly,cavolinia sp
+73,Zooplankton,sea butterfly,cavolinia uncinata
+73,Zooplankton,sea butterfly,cavoliniidae
+73,Zooplankton,cephalopod larvae,cephalopod larvae
+73,Zooplankton,shrimp larvae,cerataspis monstrosa larvae
+73,Zooplankton,shrimp larvae,cerataspis sp
+73,Zooplankton,chaetognath,chaetognatha
+73,Zooplankton,barnacle larvae,cirripedia larvae
+73,Zooplankton,water flea,cladocera
+73,Zooplankton,pteropod,clio sp
+73,Zooplankton,copepod egg,copepod egg
+73,Zooplankton,copepod,copepoda
+73,Zooplankton,crab larvae,crab larvae
+73,Zooplankton,crab megalopa,crab megalopa
+73,Zooplankton,crab megalopa and zoea,crab megalopa and zoea
+73,Zooplankton,crab zoea,crab zoea
+73,Zooplankton,crustacean larvae,crustacean larvae
+73,Zooplankton,cyclopoid copepod,cyclopoida
+73,Zooplankton,cypris larvae,cypris larvae
+73,Zooplankton,decapod larvae,decapod larvae
+73,Zooplankton,crab larvae,dromiidae megalopa
+73,Zooplankton,egg,egg
+73,Zooplankton,krill,euphausiacea
+73,Zooplankton,gastropod egg,gastropod egg
+73,Zooplankton,gastropod larvae,gastropod larvae
+73,Zooplankton,gelatinous zooplankton,gelatinous zooplankton
+73,Zooplankton,crustacean larvae,glaucothoe
+73,Zooplankton,harpacticoid copepod,harpacticoida
+73,Zooplankton,harpacticoida nauplii,harpacticoida nauplii
+73,Zooplankton,hermit crab larvae,hermit crab larvae
+73,Zooplankton,heteropod,heteropoda
+73,Zooplankton,invertebrate egg,invertebrate egg
+73,Zooplankton,invertebrate larvae,invertebrate larvae
+73,Zooplankton,isopod larvae,isopod larvae
+73,Zooplankton,larvacean,larvacea
+73,Zooplankton,larvae,larvae
+73,Zooplankton,crustacean larvae,larval crustacean
+73,Zooplankton,larval lobster,larval lobster
+73,Zooplankton,larval natantia,larval natantia
+73,Zooplankton,larval mantis shrimp,larval squilla empusa
+73,Zooplankton,larval mantis shrimp,larval stomatopod
+73,Zooplankton,sea flea,leptostraca
+73,Zooplankton,megalopa,megalopa
+73,Zooplankton,crab megalopa,megalopa brachyura
+73,Zooplankton,mesopelagic crustacean,mesopelagic crustacean
+73,Zooplankton,mollusk egg,mollusk egg
+73,Zooplankton,mollusk larvae,mollusk larvae
+73,Zooplankton,nauplii,nauplii
+73,Zooplankton,nudibranch egg,nudibranch egg
+73,Zooplankton,opisthobranch,opisthobranchia
+73,Zooplankton,crab megalopa,parthenope granulata
+73,Zooplankton,crab larvae,parthenope sp larvae
+73,Zooplankton,sea snail,pelagic gastropod
+73,Zooplankton,pelagic polychaete,pelagic polychaete
+73,Zooplankton,pelecypod larvae,pelecypod larvae
+73,Zooplankton,shrimp larvae,penaeopsis megalops
+73,Zooplankton,lobster larvae,phyllosoma larvae
+73,Zooplankton,flotsam crab,planes sp
+73,Zooplankton,planktonic invertebrate,planktonic invertebrate
+73,Zooplankton,copepod,poecilostomatoida
+73,Zooplankton,polychaete larvae,polychaete larvae
+73,Zooplankton,crab larvae,porcellanid crab larvae
+73,Zooplankton,crab larvae,portunidae megalopa
+73,Zooplankton,pteropod,pteropoda
+73,Zooplankton,sea slug,pterotrachea sp
+73,Zooplankton,crab larvae,ranimidae megalops
+73,Zooplankton,crab larvae,raninidae megalopa
+73,Zooplankton,salp,salpidae
+73,Zooplankton,scyllarid larvae,scyllarid larvae
+73,Zooplankton,shrimp larvae,shrimp larvae
+73,Zooplankton,shrimp postlarvae,shrimp postlarvae
+73,Zooplankton,spiny lobster larvae,spiny lobster larvae
+73,Zooplankton,crustacean larvae,squilla larvae
+73,Zooplankton,stomatopod larvae,stomatopod larvae
+73,Zooplankton,tadpole larvae,tadpole larvae
+73,Zooplankton,tunicate,tunicata
+73,Zooplankton,crab megalopa,unid megalopae
+73,Zooplankton,veliger,veliger
+73,Zooplankton,zoea,zoea
+73,Zooplankton,zooplankton,zooplankton
+73,Zooplankton,zooplankton,zooplantkon
+74,Infauna,"clam, quahog",mercenaria
+74,Infauna,"clam, sunray venus",macrocallista nimbosa
+74,Infauna,clams or bivalves,bivalvia
+74,Infauna,pointed venus,anomalocardia auberiana
+74,Infauna,ark clam,arcidae
+74,Infauna,red-brown ark clam,barbatia cancellaria
+74,Infauna,bivalve,bivalvia
+74,Infauna,clam,bivalvia
+74,Infauna,shell,bivalvia
+74,Infauna,egg cockle,cardiidae
+74,Infauna,jackknife clam,ensis directus
+74,Infauna,egg cockle,laevicardium leavigatum
+74,Infauna,egg cockle,laevicardium mortomi
+74,Infauna,macoma clam,macoma balthica
+74,Infauna,northern quahog,mercenaria mercenaria
+74,Infauna,surf clam,mulinia lateralis
+74,Infauna,soft-shell clam,mya arenaria
+74,Infauna,scallop,pectinidae
+74,Infauna,pelecypod,pelecypoda
+74,Infauna,false angel wing,petricolaria pholadiformis
+74,Infauna,jackknife clam,pharidae
+74,Infauna,piddock,pholadidae
+74,Infauna,purplish tagelus,solecurtidae
+74,Infauna,razor clam,solenidae
+74,Infauna,surf clam,spisula solidissima
+74,Infauna,razor clam,tegelus plebeius
+74,Infauna,tellin,tellina sp
+74,Infauna,tellin,tellinidae
+74,Infauna,venus clam,veneridae
+74,Infauna,clam,yoldiidae
+74,Infauna,mole crab,albunea paretii
+74,Infauna,mole crab,albunea sp
+74,Infauna,burrowing sand crab,albuneidae
+74,Infauna,polychaete,alciopidae
+74,Infauna,annelid,annelida
+74,Infauna,fairy tubeworm,annelida
+74,Infauna,priapuloid,annelida
+74,Infauna,gaudy asaphis,asaphis deflorata
+74,Infauna,lamp shell,brachiopoda
+74,Infauna,mud shrimp,callianassa setimanus
+74,Infauna,mud shrimp,callianassa sp
+74,Infauna,mud shrimp,callianassidae
+74,Infauna,beach ghost shrimp,callichirus islagrande
+74,Infauna,polychaete,diopatra cuprea tube
+74,Infauna,spoon worm,echiura
+74,Infauna,mole crab,emertia sp
+74,Infauna,bristle worm,glycera americana
+74,Infauna,bloodworm,glycera dibranchiata
+74,Infauna,bloodworm,glycera sp
+74,Infauna,hemichordate,hemichordata
+74,Infauna,mole crab,hippidae
+74,Infauna,ribbon worm,lineidae
+74,Infauna,macrobenthos,macrobenthos
+74,Infauna,nematode,nematoda
+74,Infauna,ribbon worm,nemertea
+74,Infauna,nereidiform,nereidiform
+74,Infauna,ragworm,nereis diversicolor
+74,Infauna,nereis,nereis sp
+74,Infauna,polychaete,ophelia denticulata
+74,Infauna,annelid,opheliidae
+74,Infauna,polychaete,polychaeta
+74,Infauna,ribbon worm,rhynchocoela
+74,Infauna,arrowworm,sagitta sp
+74,Infauna,scaphopod,scaphopoda
+74,Infauna,tube worm,siboglinidae
+74,Infauna,peanut worm,sipunculida
+74,Infauna,peanut worm larvae,sipunculida larvae
+74,Infauna,deep-sea mud shrimp,solenocera hextii
+74,Infauna,polychaete,terebellidae
+74,Infauna,mud lobster,thalassina sp
+74,Infauna,mud shrimp,thalassinidea
+74,Infauna,trematode,trematoda
+74,Infauna,mud shrimp,upogebia affinis
+74,Infauna,mud shrimp,upogebia sp
+74,Infauna,mud shrimp,upogebiidae
+75,Algae,algae,algae
+75,Algae,filamentous algae,algae
+75,Algae,seaweed,algae
+75,Algae,green algae,chara sp
+75,Algae,green algae,chlorophyta
+75,Algae,calcareous algae,corallinales
+75,Algae,coraline,corallinales
+75,Algae,cyanobacteria,cyanophyta
+75,Algae,epiphytic algae,epiphytic algae
+75,Algae,rockweed,fucus sp
+75,Algae,green algae,halimeda sp
+75,Algae,macroalgae,macroalgae
+75,Algae,giant kelp,macrocystis pyrifera
+75,Algae,brown algae,phaeophyceae
+75,Algae,red algae,rhodophyta
+75,Algae,sargassum,sargassum sp
+75,Algae,red algae,sphyridia filamentosa
+75,Algae,ulva,ulva sp
+76,Seagrass,seaweeds,phaeophyta
+76,Seagrass,grass,alismatales
+76,Seagrass,plant,alismatales
+76,Seagrass,plant matter,alismatales
+76,Seagrass,seagrass,alismatales
+76,Seagrass,vascular plant matter,alismatales
+76,Seagrass,angiosperm,angiosperm
+76,Seagrass,slender seagrass,cymodocea nodosa
+76,Seagrass,seagrass,diplanthera wrightii
+76,Seagrass,water hyacinth,eichornia crassipes
+76,Seagrass,epiphyte,epiphyte
+76,Seagrass,seagrass,gramineae
+76,Seagrass,shoal grass,halodule beaudettei
+76,Seagrass,shoal grass,halodule beaudettei 
+76,Seagrass,seagrass,halodule sp
+76,Seagrass,shoal grass,halodule wrightii
+76,Seagrass,macrophyte,macrophyta
+76,Seagrass,marine plant matter,marine plant matter
+76,Seagrass,spermatophyte,phanerogamae
+76,Seagrass,surfgrass,phyllospadix
+76,Seagrass,widgeon grass,ruppia sp
+76,Seagrass,smooth cordgrass,spartina alterniflora 
+76,Seagrass,saltmeadow cordgrass,spartina patens
+76,Seagrass,spermatophyte,spermatophyte
+76,Seagrass,manatee grass,syringodium filiforme
+76,Seagrass,manatee grass,syringodium sp
+76,Seagrass,turtle grass,thalassia sp
+76,Seagrass,turtle grass,thalassia testudinum
+76,Seagrass,vegetation,vegetation
+76,Seagrass,common eelgrass,zostera marinata
+76,Seagrass,eel grass,zostera sp
+77,Phytoplankton,diatom,bacillariophyceae
+77,Phytoplankton,protozoa,ciliates
+77,Phytoplankton,dinoflagellate,dinoflagellata
+77,Phytoplankton,foraminifera,foraminifera
+77,Phytoplankton,phytoplankton,phytoplankton
+77,Phytoplankton,primary producer,primary producer
+78,Detritus,bark,angiosperm
+78,Detritus,bird feathers,aves feathers
+78,Detritus,calcareous debris,calcareous debris
+78,Detritus,detritus,detritus
+78,Detritus,fecal pellets,detritus
+78,Detritus,plant detritus,detritus
+78,Detritus,eel grass seed,eel grass seed
+78,Detritus,fish scale,fish scale
+78,Detritus,mud,mud
+78,Detritus,organic matter,organic matter
+78,Detritus,raja egg case,raja egg case
+78,Detritus,shark egg,shark egg
+78,Detritus,shark egg case,shark egg case
