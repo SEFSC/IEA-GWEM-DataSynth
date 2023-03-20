@@ -10,10 +10,10 @@ fg_pref <- read.csv("./Ecospace-preference-functions/intermediate-ouput/fg-env-p
 
 doublelogistic <- function(max, min_abs, min_prf, max_prf, max_abs){ 
   #max = 400
-  min_abs = fg_pref$DepthMin[j]
-  min_prf = fg_pref$DepthPrefMin[j]
-  max_prf = fg_pref$DepthPrefMax[j]
-  max_abs = fg_pref$DepthMax[j] + 1
+  #min_abs = fg_pref$DepthMin[j]
+  #min_prf = fg_pref$DepthPrefMin[j]
+  #max_prf = fg_pref$DepthPrefMax[j]
+  #max_abs = fg_pref$DepthMax[j]
   
   mid <- min_prf + (max_prf - min_prf) / 2 ## Midpoint. Change from increasing to decreasing logistic function
   x1  <- seq(0, mid)
@@ -46,17 +46,15 @@ doublelogistic <- function(max, min_abs, min_prf, max_prf, max_abs){
 
 
 ## Plot depth with varying X-axis (depth) --------------------------------------
-max <- 400
-
 plot_preference_function <- function(p1, p2, p3, p4, fg_num, fg_name,
-                                     max = 400, scale_xaxis = 'y') {
+                                     max = 400, xmin = 0, scale_xaxis = 'y') {
   pref_func <- doublelogistic(max = 400, p1, p2, p3, p4)
   xlim <- ifelse(p4 < max, p4+p4*0.15, max)
   xmax <- ifelse(scale_xaxis == 'y', xlim, max)
   plot(pref_func$x, pref_func$y, 
        main = paste(fg_num, fg_name),
        type = "l", ylab = "", xlab = "", cex.main = 1, bty = 'n',
-       xlim = c(0, xmax), yaxt='n', lwd=2)
+       xlim = c(xmin, xmax), yaxt='n', lwd=2)
   axis(side = 2, at=c(0,0.5,1))
   abline(v = p1,  col = "red", lty = "dashed")
   abline(v = p2,  col = "blue", lty = "dashed")
@@ -71,6 +69,7 @@ pdf("./Ecospace-preference-functions/figures/Depth-pref-dbl-logistic_xaxis-set.p
     onefile = T)
 par(mfrow=c(6,6))
 
+max <- 400
 for(j in 1:36){
   p1 <- fg_pref$DepthMin[j] 
   p2 <- fg_pref$DepthPrefMin[j] 
@@ -101,10 +100,9 @@ dev.off()
 ## Temperature -----------------------------------------------------------------
 pdf("./Ecospace-preference-functions/figures/Temp-pref-dbl-logistic.pdf", width = w, height = h, 
     onefile = T)
-par(mfrow=c(6,6))
 
 max = 34
-
+par(mfrow=c(6,6))
 for(j in 1:36){
   p1 <- fg_pref$TempMin[j] 
   p2 <- fg_pref$TempPrefMin[j] 
@@ -127,6 +125,39 @@ for(j in 37:72){
                            fg_name = fg_pref$EwE_name[j],
                            max = max, 
                            scale_xaxis = 'n')
+}
+dev.off()
+
+
+## Salinity -----------------------------------------------------------------
+pdf("./Ecospace-preference-functions/figures/Salinity-pref-dbl-logistic.pdf", width = w, height = h, 
+    onefile = T)
+
+max(fg_pref$SalinityMax[j])
+max = 38
+par(mfrow=c(6,6))
+for(j in 1:36){
+  p1 <- fg_pref$SalinityMin[j] 
+  p2 <- fg_pref$SalinityPrefMin[j] 
+  p3 <- fg_pref$SalinityPrefMax[j] 
+  p4 <- fg_pref$SalinityMax[j] 
+  plot_preference_function(p1, p2, p3, p4, 
+                           fg_num = fg_pref$EwE_num[j], 
+                           fg_name = fg_pref$EwE_name[j],
+                           max = max, xmin = 15,
+                           scale_xaxis = 'y')
+}
+
+for(j in 37:72){
+  p1 <- fg_pref$SalinityMin[j] 
+  p2 <- fg_pref$SalinityPrefMin[j] 
+  p3 <- fg_pref$SalinityPrefMax[j] 
+  p4 <- fg_pref$SalinityMax[j] 
+  plot_preference_function(p1, p2, p3, p4, 
+                           fg_num = fg_pref$EwE_num[j], 
+                           fg_name = fg_pref$EwE_name[j],
+                           max = max, xmin = 15,
+                           scale_xaxis = 'y')
 }
 dev.off()
 
