@@ -1,0 +1,399 @@
+﻿<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Gulf of Mexico Fishery Management Council</origin>
+        <pubdate>20040301</pubdate>
+        <title>Coral Essential Fish Habitat for the Gulf of Mexico</title>
+        <geoform>vector digital data</geoform>
+        <othercit>Gulf of Mexico Fishery Management Council. 2004. Final Environmental Impact Statement for the Generic Amendment to the following fishery management plans of the Gulf of Mexico: Shrimp Fishery of the Gulf of Mexico, Red Drum Fishery of the Gulf of Mexico, Reef Fish Fishery of the Gulf of Mexico, Stone Crab Fishery of the Gulf of Mexico, Coral and Coral Reef Fishery of the Gulf of Mexico, Spiny Lobster Fishery of the Gulf of Mexico and South Atlantic; Coastal Migratory Pelagic Resources of the Gulf of Mexico and South Atlantic. Gulf of Mexico Fishery Management Council, The Commons at Rivergate, 3018 U.S.Highway301 N., Suite 1000, Tampa, Florida 33619.</othercit>
+        <onlink>http://www.nmfs.noaa.gov/</onlink>
+        <onlink>http://sero.nmfs.noaa.gov/maps_gis_data/</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Essential fish habitat (EFH) for Gulf of Mexico Corals consists of the following waters and substrate areas in the Gulf of Mexico: the total distribution of coral species and life stages throughout the Gulf of Mexico including: coral reefs in the North and South Tortugas Ecological Reserves, East and West Flower Garden Banks, McGrail Bank, and the southern portion of Pulley Ridge; hard bottom areas scattered along the pinnacles and banks from Texas to Mississippi, at the shelf edge and at the Florida Middle Grounds, the southwest tip of the Florida reef tract, and predominant patchy hard bottom offshore of Florida from approximately Crystal River south to the Florida Keys. Essential fish habitat (EFH) consists of known distributions of species in the fishery management unit (GMFMC 2004). Location of coral, dated 2014, is based on the 2005 identification and description of EFH for Coral and Coral Reefs.</abstract>
+      <purpose>The purpose of these data is to visually represent the textual description of the overall extent of EFH for the Coral Fishery Management Plan which contains all species of the class Hydrozoa and the class Anthozoa.</purpose>
+      <supplinf>Section 303(a)(7) of the Magnuson-Stevens Fishery Management and Conservation Act (16 U.S.C. 1801 et seq) requires the National Marine Fisheries Service and regional fishery management councils to (1) describe and identify EFH for managed fisheries; (2) minimize to the extent practicable the adverse effects of fishing on such EFH; and (3) encourage the conservation and enhancement of such EFH.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20040301</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-97.318499</westbc>
+        <eastbc>-80.386780</eastbc>
+        <northbc>30.013123</northbc>
+        <southbc>24.409805</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>EIS</themekey>
+        <themekey>habitat</themekey>
+        <themekey>essential fish habitat</themekey>
+        <themekey>Hydrozoa</themekey>
+        <themekey>fishery management plan</themekey>
+        <themekey>Magnuson-Stevens Fishery Conservation and Management Act</themekey>
+        <themekey>EFH</themekey>
+        <themekey>Anthozoa</themekey>
+        <themekey>environmental impact statement</themekey>
+        <themekey>coral</themekey>
+        <themekey>Gulf of Mexico Fishery Management Council</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Categories</themekt>
+        <themekey>environment</themekey>
+        <themekey>biota</themekey>
+        <themekey>oceans</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information Systems</placekt>
+        <placekey>southeast U.S.</placekey>
+        <placekey>Alabama</placekey>
+        <placekey>Texas</placekey>
+        <placekey>Florida</placekey>
+        <placekey>Mississippi</placekey>
+        <placekey>Louisiana</placekey>
+        <placekey>Gulf of Mexcio</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>Users are advised that the spatial representation of essential fish habitat is for informational purposes only and should not be solely relied on for regulatory purposes. Implementing regulations [50 CFR 600.815(a)(1)(iv)(B)] specify if there are differences between the descriptions of EFH in text and maps the textual description is ultimately determinative of the limits of EFH as described in the Amendment (GMFMC 2005)</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>NOAA National Marine Fisheries Service</cntorg>
+          <cntper>Essential Fish Habitat Coordinator</cntper>
+        </cntorgp>
+        <cntpos>Habitat Conservation Division</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>263 13th Avenue South</address>
+          <city>Saint Petersburg</city>
+          <state>FL</state>
+          <postal>33701</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>727-824-5317</cntvoice>
+        <cntfax>727-824-5300</cntfax>
+        <cntemail>david.dale@noaa.gov</cntemail>
+        <hours>Monday - Friday 8:00-4:30</hours>
+      </cntinfo>
+    </ptcontac>
+    <datacred>MRAG Americas and GIS Solutions, Inc. completed the GIS analysis and produced maps for the EIS and Amendment. 2014 coral locations for Florida Keys taken from Unified Florida Reef Tract provided by FWC-FWRI (Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute), and for the Texas banks from H. Nash and Gulf of Mexico Fishery Managment Council.</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.1.3497</native>
+    <crossref>
+      <citeinfo>
+        <origin>NOAA National Ocean Service</origin>
+        <pubdate>19851201</pubdate>
+        <title>Gulf of Mexico Coastal and Ocean Zones Strategic Assessment: Data Atlas</title>
+        <geoform>atlas</geoform>
+        <othercit>Cite as: NOAA, 1985. Gulf of Mexico Coastal and Ocean Zones Strategic Assessment: Data Atlas. National Oceanic and Atmospheric Administration Strategic Environmental Assessment Division, Rockville, MD December 1985.</othercit>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Gulf of Mexico Fishery Management Council</origin>
+        <origin>NOAA National Marine Fisheries Serivce, Southeast Region</origin>
+        <pubdate>20050301</pubdate>
+        <title>Generic Amendment Number Three for Addressing Essential Fish Habitat Requirements for the Fishery Management Plans of the Gulf of Mexico.</title>
+        <geoform>document</geoform>
+        <pubinfo>
+          <pubplace>Tampa, Florida</pubplace>
+          <publish>Gulf of Mexico Fishery Management Council</publish>
+        </pubinfo>
+        <othercit>Gulf of Mexico Fishery Management Council. 2005. Generic Amendment Number 3 for Addressing Essential Fish Habitat Requirements, Habitat Areas of Particular Concern, and Adverse Effects of Fishing in the following Fishery Management Plans of the Gulf of Mexico: Shrimp Fishery of the Gulf of Mexico, Red Drum Fishery of the Gulf of Mexico, Reef Fish Fishery of the Gulf of Mexico, Stone Crab Fishery of the Gulf of Mexico, Coral and Coral Reef Fishery of the Gulf of Mexico, Spiny Lobster Fishery of the Gulf of Mexico and South Atlantic, Coastal Migratory Pelagic Resources of the Gulf of Mexico and South Atlantic. Gulf of Mexico Fishery Management Council, The Commons at Rivergate, 3018 U.S.Highway301 N., Suite 1000, Tampa, Florida 33619.</othercit>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <logic>Not applicable</logic>
+    <complete>The purpose of these data is to visually represent the textual description of the overall extent of EFH for the Coral Fishery Management Plan which contains all species of the class Anthozoa and the class Hydrozoa. Seven species of coral of the class Hydrozoa and 311 species of the class Anthozoa are referred to specifically in the fishery management plan as occuring in the Gulf of Mexico and/or South Atlantic waters.</complete>
+    <lineage>
+      <procstep>
+        <procdesc>The Functional Relationship Analysis in GMFMC 2004 was utilized to select habitat polygons that fit within the criteria identified that each species and lifestage utilizes in growth to maturity. Each habitat polygon was selected or not selected based upon each variable. EFH maps were derived selecting higher density polygons from the Functional Relationship Analysis from species and lifestages in which no density information was available from the NOAA Atlas (i.e. if species and lifestage density was represented by a map in the NOAA Atlas, that species and lifestage was not incorporated into the mapping). The following data were used to create these data: Seagrass from Florida Fish and Wildlife Research Institute (FWRI) and Texas Natural Resources Information System (TNRIS), Marshes from FWRI and US Geological Survey, Mangroves from FWRI, Oysters from FWRI and TNRIS, Coral from FWRI, Coral from the NOAA Data Atlas, and Summarized Sediments. Bathymetry from FWRI. Bathymetry depth contours were acquired from the Florida Marine Resource Institute (FMRI). Each EFH boundary was clipped south of the EEZ along the Texas/Mexico boarder and south of the Gulf of Mexico/South Atlantic Fisheries Management Council boundary along the Florida Keys. The intercoucnil boundary (along the Florida Keys) was generated from legal descriptions downloaded from the Federal Register. An adjustment was made for Grand Lake and White Lake in southwest Louisiana, which were initially mis-identified as estuarine and later re-classified as non-estuarine, based on U.S. Fish and Wildlife Service National Wetlands Inventory data. Thus, those lake were not considered for identification as EFH for red drum, reef fish, coastal migratory pelagics, shrimp and stone crab fishery management units. Several layers with the selected polygons were mapped as a composite represention of EFH for each fishery management unit. The maps depicting these density and habitat utilization data were deliberated by the GMFMC in developing the textual (regulatory) descriptions of essential fish habitat for Gulf of Mexico Fishery Management Plans.</procdesc>
+        <procdate>unknown</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>Photo Science (formerly GIS Solutions)</cntorg>
+            </cntorgp>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>10033 MLK Street North, Suite 200</address>
+              <city>St. Petersburg</city>
+              <state>FL</state>
+              <postal>33716</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>7275769500</cntvoice>
+            <cntfax>7275769600</cntfax>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Hardcopy maps from the NOAA Atlas (NOAA, 1985) were scanned by Greenhorne &amp; O'Mara to a high resolution (300 dpi) TIFF image. Each digital image then underwent geo-rectification. The polygonal data were digitized and converted to shapefiles.</procdesc>
+        <procdate>unknown</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>MRAG Americas</cntorg>
+            </cntorgp>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>10051 5th Street North, Suite 105</address>
+              <city>St. Petersburg</city>
+              <state>FL</state>
+              <postal>33702</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>7275639070</cntvoice>
+            <cntfax>7275630207</cntfax>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>The layers representing the composite EFH were merged into a single shapefile for each fishery management unit. The new shapefile was reprojected to NAD 1983 Albers and edited to match the textual identification and description of EFH using ArcGIS' editing environment. Any inland water bodies mistakenly included in the previously delivered layers were extracted also using the "Edit Clip" function in ArcGIS' editing environment. In order to fill the gaps within the EFH that were caused by previous digitizing errors, a large overlapping polygon was created inside of the existing EFH boundaries. This polygon was digitized manually to cover from just inside of the seaward boundary to the northern extent of the EFH. After filling in the gaps, any "dangling" polygons extending beyond the seaward boundary were identifed and removed. To obtain a single feature representing the entire EFH for each fishery management unit, the updated EFH was clipped to a master polygon representing the extent of the entire Gulf of Mexico. Once this clip was completed, the result was a "dissolved" polygon consisting of one feature rather than 10-40 thousand individual polygons. The new EFH polygon was then clipped to the land boundary feature using the ArcGIS' editing environment. This resulted in an EFH polygon that is exactly coinicident with the land boundary. During the creation of these data, the land boundary (coast line) feature used was "camra_mrgis_gulf_shore_100.shp" (1:100,000) from FWC/FMRI (Florida Fish Wildlife Conservation Commission, Florida Marine Research Institute) . Finally, the area in square kilometers and the perimeter in meters was calculated in ArcGIS and listed in the EFH attribute table for each fishery management unit.</procdesc>
+        <procdate>20080101</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>National Coastal Data Development Center</cntorg>
+            </cntorgp>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>Building 1100, Suite 101</address>
+              <city>Stenis Space Center</city>
+              <state>MS</state>
+              <postal>39529</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>228-688-2936</cntvoice>
+            <cntfax>228-688-2010</cntfax>
+            <cntemail>ncddc@noaa.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Location of coral, dated 2014, is based on the 2005 identification and description of EFH for Coral and Coral Reefs. The Unified Florida Reef Tract data from FWC/FMRI (http://myfwc.com/research/) was merged with the 2005 coral EFH layer, and clipped to the Gulf of Mexico and South Atlantic council boundary. The Texas bank data was delineated from sidescan sonar by H. Nash and Gulf of Mexico Fishery Managment Council staff, and replaced the coral areas in the 2005 coral EFH layer.</procdesc>
+        <procdate>20140530</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>Department of Commerce (DOC), National Oceanic and Atmospheric Administration (NOAA), National Marine Fisheries Service (NMFS)</cntorg>
+              <cntper>GIS Coordinator</cntper>
+            </cntorgp>
+            <cntpos>GIS Coordinator</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>263 13th Ave S</address>
+              <city>St. Petersburg</city>
+              <state>FL</state>
+              <postal>33701</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>727-824-5312</cntvoice>
+            <cntfax>727-824-5309</cntfax>
+            <cntemail>nmfs.ser.gis.coordinator@noaa.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>3974</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geograph>
+        <latres>8.9831528411952133e-009</latres>
+        <longres>8.9831528411952133e-009</longres>
+        <geogunit>Decimal Degrees</geogunit>
+      </geograph>
+      <geodetic>
+        <horizdn>D North American 1983</horizdn>
+        <ellips>GRS 1980</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257222101</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Coral_EFH_GOM</enttypl>
+        <enttypd>Esri description of data type</enttypd>
+        <enttypds>Esri</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FID_UFRT_K</attrlabl>
+        <attrdef>ID from Unified Florida Reef Track data</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Source</attrlabl>
+        <attrdef>Original mapping project reference </attrdef>
+        <attrdefs>FWC</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Zone</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>GeoForm</attrlabl>
+        <attrdef>This field retains the original source data classification values </attrdef>
+        <attrdefs>Original source layer</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>GeoformDet</attrlabl>
+        <attrdef>This field retains the original source data classification values for Geoform Detail</attrdef>
+        <attrdefs>Original source layer</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>GeoformD_1</attrlabl>
+        <attrdef>This field retains the original source data classification values for Geoform Detail2</attrdef>
+        <attrdefs>Original source layer</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>BioCover</attrlabl>
+        <attrdef>This field retains the original source data classification values for Bio Cover</attrdef>
+        <attrdefs>Orginal source layer</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>BioCoverDe</attrlabl>
+        <attrdef>This field retains the original source data classification values for bio cover detail</attrdef>
+        <attrdefs>Orginal source layer </attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PercentBio</attrlabl>
+        <attrdef>This field retains the original source data classification values for percent bio cover</attrdef>
+        <attrdefs>Orginal source layer </attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PercentCor</attrlabl>
+        <attrdef>This field retains the original source data classification values for percent coral cover</attrdef>
+        <attrdefs>Orginal source layer </attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>CMECS_Geo</attrlabl>
+        <attrdef>CMECS Geoform cross-walk </attrdef>
+      </attr>
+      <attr>
+        <attrlabl>CMECS_Bio</attrlabl>
+        <attrdef>CMECS Biological Cover cross-walk </attrdef>
+      </attr>
+      <attr>
+        <attrlabl>ClassLv0</attrlabl>
+        <attrdef>Unified Classification Level 0. This is the coarsest (most general) thematic level.</attrdef>
+        <attrdefs>FWC</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ClassLv1</attrlabl>
+        <attrdef>Unified Classification Level 1</attrdef>
+        <attrdefs>FWC</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ClassLv2</attrlabl>
+        <attrdef>Unified Classification Level 2</attrdef>
+        <attrdefs>FWC</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ClassLv3</attrlabl>
+        <attrdef>Unified Classification Level 3</attrdef>
+        <attrdefs>FWC</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ClassLv4</attrlabl>
+        <attrdef>Unified Classification Level 4. This is the most detailed thematic classification level.</attrdef>
+        <attrdefs>FWC</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>AggKey</attrlabl>
+        <attrdef>Aggregation Key</attrdef>
+        <attrdefs>FWC</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Bio_des</attrlabl>
+        <attrdef>Biogeographic Description</attrdef>
+        <attrdefs>FWC</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Ancil1</attrlabl>
+        <attrdef>Ancillary Information detailing integration edits </attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Ancil2</attrlabl>
+        <attrdef>Ancillary Information detailing integration edits </attrdef>
+      </attr>
+      <attr>
+        <attrlabl>AncilNotes</attrlabl>
+        <attrdef>Ancillary Information detailing integration edits </attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Area_Name</attrlabl>
+        <attrdef>name of Texas coral bank</attrdef>
+        <attrdefs>Nash</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Id</attrlabl>
+        <attrdef>unique identifier</attrdef>
+        <attrdefs>corresponds to FID</attrdefs>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20140605</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>NOAA National Marine Fisheries Serivce</cntorg>
+          <cntper>Essential Fish Habitat Coordinator</cntper>
+        </cntorgp>
+        <cntpos>Essential Fish Habitat Coordinator</cntpos>
+        <cntaddr>
+          <addrtype>unknown</addrtype>
+          <city>Saint Petersburg</city>
+          <state>FL</state>
+          <postal>33701</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>727-824-5317</cntvoice>
+        <hours>Monday - Friday 8:00-4:30 Eastern</hours>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

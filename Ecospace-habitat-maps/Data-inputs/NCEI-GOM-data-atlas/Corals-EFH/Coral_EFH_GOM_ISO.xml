@@ -1,0 +1,788 @@
+﻿<MD_Metadata xmlns="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <language>
+    <LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng" codeSpace="ISO639-2">eng</LanguageCode>
+  </language>
+  <characterSet>
+    <MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+  </characterSet>
+  <hierarchyLevel>
+    <MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</MD_ScopeCode>
+  </hierarchyLevel>
+  <hierarchyLevelName>
+    <gco:CharacterString>dataset</gco:CharacterString>
+  </hierarchyLevelName>
+  <contact>
+    <CI_ResponsibleParty>
+      <individualName>
+        <gco:CharacterString>Essential Fish Habitat Coordinator</gco:CharacterString>
+      </individualName>
+      <organisationName>
+        <gco:CharacterString>NOAA National Marine Fisheries Serivce</gco:CharacterString>
+      </organisationName>
+      <positionName>
+        <gco:CharacterString>Essential Fish Habitat Coordinator</gco:CharacterString>
+      </positionName>
+      <contactInfo>
+        <CI_Contact>
+          <phone>
+            <CI_Telephone>
+              <voice>
+                <gco:CharacterString>727-824-5317</gco:CharacterString>
+              </voice>
+            </CI_Telephone>
+          </phone>
+          <address>
+            <CI_Address>
+              <city>
+                <gco:CharacterString>Saint Petersburg</gco:CharacterString>
+              </city>
+              <administrativeArea>
+                <gco:CharacterString>FL</gco:CharacterString>
+              </administrativeArea>
+              <postalCode>
+                <gco:CharacterString>33701</gco:CharacterString>
+              </postalCode>
+              <country>
+                <Country codeList="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" codeListValue="US" codeSpace="ISO3166-1">US</Country>
+              </country>
+            </CI_Address>
+          </address>
+          <hoursOfService>
+            <gco:CharacterString>Monday - Friday 8:00-4:30 Eastern</gco:CharacterString>
+          </hoursOfService>
+        </CI_Contact>
+      </contactInfo>
+      <role>
+        <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact" codeSpace="ISOTC211/19115">pointOfContact</CI_RoleCode>
+      </role>
+    </CI_ResponsibleParty>
+  </contact>
+  <dateStamp>
+    <gco:Date>2014-06-05</gco:Date>
+  </dateStamp>
+  <metadataStandardName>
+    <gco:CharacterString>ISO 19139 Geographic Information - Metadata - Implementation Specification</gco:CharacterString>
+  </metadataStandardName>
+  <metadataStandardVersion>
+    <gco:CharacterString>2007</gco:CharacterString>
+  </metadataStandardVersion>
+  <spatialRepresentationInfo>
+    <MD_VectorSpatialRepresentation>
+      <topologyLevel>
+        <MD_TopologyLevelCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_TopologyLevelCode" codeListValue="geometryOnly" codeSpace="ISOTC211/19115">geometryOnly</MD_TopologyLevelCode>
+      </topologyLevel>
+      <geometricObjects>
+        <MD_GeometricObjects>
+          <geometricObjectType>
+            <MD_GeometricObjectTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_GeometricObjectTypeCode" codeListValue="composite" codeSpace="ISOTC211/19115">composite</MD_GeometricObjectTypeCode>
+          </geometricObjectType>
+          <geometricObjectCount>
+            <gco:Integer>3974</gco:Integer>
+          </geometricObjectCount>
+        </MD_GeometricObjects>
+      </geometricObjects>
+    </MD_VectorSpatialRepresentation>
+  </spatialRepresentationInfo>
+  <referenceSystemInfo>
+    <MD_ReferenceSystem>
+      <referenceSystemIdentifier>
+        <RS_Identifier>
+          <code>
+            <gco:CharacterString>4269</gco:CharacterString>
+          </code>
+          <codeSpace>
+            <gco:CharacterString>EPSG</gco:CharacterString>
+          </codeSpace>
+          <version>
+            <gco:CharacterString>8.2.6</gco:CharacterString>
+          </version>
+        </RS_Identifier>
+      </referenceSystemIdentifier>
+    </MD_ReferenceSystem>
+  </referenceSystemInfo>
+  <identificationInfo>
+    <MD_DataIdentification>
+      <citation>
+        <CI_Citation>
+          <title>
+            <gco:CharacterString>Coral Essential Fish Habitat for the Gulf of Mexico</gco:CharacterString>
+          </title>
+          <date>
+            <CI_Date>
+              <date>
+                <gco:Date>2004-03-01</gco:Date>
+              </date>
+              <dateType>
+                <CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+              </dateType>
+            </CI_Date>
+          </date>
+          <citedResponsibleParty>
+            <CI_ResponsibleParty>
+              <organisationName>
+                <gco:CharacterString>Gulf of Mexico Fishery Management Council</gco:CharacterString>
+              </organisationName>
+              <role>
+                <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator" codeSpace="ISOTC211/19115">originator</CI_RoleCode>
+              </role>
+            </CI_ResponsibleParty>
+          </citedResponsibleParty>
+          <presentationForm>
+            <CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital" codeSpace="ISOTC211/19115">mapDigital</CI_PresentationFormCode>
+          </presentationForm>
+          <otherCitationDetails>
+            <gco:CharacterString>Gulf of Mexico Fishery Management Council. 2004. Final Environmental Impact Statement for the Generic Amendment to the following fishery management plans of the Gulf of Mexico: Shrimp Fishery of the Gulf of Mexico, Red Drum Fishery of the Gulf of Mexico, Reef Fish Fishery of the Gulf of Mexico, Stone Crab Fishery of the Gulf of Mexico, Coral and Coral Reef Fishery of the Gulf of Mexico, Spiny Lobster Fishery of the Gulf of Mexico and South Atlantic; Coastal Migratory Pelagic Resources of the Gulf of Mexico and South Atlantic. Gulf of Mexico Fishery Management Council, The Commons at Rivergate, 3018 U.S.Highway301 N., Suite 1000, Tampa, Florida 33619.</gco:CharacterString>
+          </otherCitationDetails>
+        </CI_Citation>
+      </citation>
+      <abstract>
+        <gco:CharacterString>Essential fish habitat (EFH) for Gulf of Mexico Corals consists of the following waters and substrate areas in the Gulf of Mexico: the total distribution of coral species and life stages throughout the Gulf of Mexico including: coral reefs in the North and South Tortugas Ecological Reserves, East and West Flower Garden Banks, McGrail Bank, and the southern portion of Pulley Ridge; hard bottom areas scattered along the pinnacles and banks from Texas to Mississippi, at the shelf edge and at the Florida Middle Grounds, the southwest tip of the Florida reef tract, and predominant patchy hard bottom offshore of Florida from approximately Crystal River south to the Florida Keys. Essential fish habitat (EFH) consists of known distributions of species in the fishery management unit (GMFMC 2004). Location of coral, dated 2014, is based on the 2005 identification and description of EFH for Coral and Coral Reefs.</gco:CharacterString>
+      </abstract>
+      <purpose>
+        <gco:CharacterString>The purpose of these data is to visually represent the textual description of the overall extent of EFH for the Coral Fishery Management Plan which contains all species of the class Hydrozoa and the class Anthozoa.</gco:CharacterString>
+      </purpose>
+      <credit>
+        <gco:CharacterString>MRAG Americas and GIS Solutions, Inc. completed the GIS analysis and produced maps for the EIS and Amendment. 2014 coral locations for Florida Keys taken from Unified Florida Reef Tract provided by FWC-FWRI (Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute), and for the Texas banks from H. Nash and Gulf of Mexico Fishery Managment Council.</gco:CharacterString>
+      </credit>
+      <status>
+        <MD_ProgressCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ProgressCode" codeListValue="completed" codeSpace="ISOTC211/19115">completed</MD_ProgressCode>
+      </status>
+      <pointOfContact>
+        <CI_ResponsibleParty>
+          <individualName>
+            <gco:CharacterString>Essential Fish Habitat Coordinator</gco:CharacterString>
+          </individualName>
+          <organisationName>
+            <gco:CharacterString>NOAA National Marine Fisheries Service</gco:CharacterString>
+          </organisationName>
+          <positionName>
+            <gco:CharacterString>Habitat Conservation Division</gco:CharacterString>
+          </positionName>
+          <contactInfo>
+            <CI_Contact>
+              <phone>
+                <CI_Telephone>
+                  <voice>
+                    <gco:CharacterString>727-824-5317</gco:CharacterString>
+                  </voice>
+                  <facsimile>
+                    <gco:CharacterString>727-824-5300</gco:CharacterString>
+                  </facsimile>
+                </CI_Telephone>
+              </phone>
+              <address>
+                <CI_Address>
+                  <deliveryPoint>
+                    <gco:CharacterString>263 13th Avenue South</gco:CharacterString>
+                  </deliveryPoint>
+                  <city>
+                    <gco:CharacterString>Saint Petersburg</gco:CharacterString>
+                  </city>
+                  <administrativeArea>
+                    <gco:CharacterString>FL</gco:CharacterString>
+                  </administrativeArea>
+                  <postalCode>
+                    <gco:CharacterString>33701</gco:CharacterString>
+                  </postalCode>
+                  <country>
+                    <Country codeList="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" codeListValue="US" codeSpace="ISO3166-1">US</Country>
+                  </country>
+                  <electronicMailAddress>
+                    <gco:CharacterString>david.dale@noaa.gov</gco:CharacterString>
+                  </electronicMailAddress>
+                </CI_Address>
+              </address>
+              <hoursOfService>
+                <gco:CharacterString>Monday - Friday 8:00-4:30</gco:CharacterString>
+              </hoursOfService>
+            </CI_Contact>
+          </contactInfo>
+          <role>
+            <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact" codeSpace="ISOTC211/19115">pointOfContact</CI_RoleCode>
+          </role>
+        </CI_ResponsibleParty>
+      </pointOfContact>
+      <resourceMaintenance>
+        <MD_MaintenanceInformation>
+          <maintenanceAndUpdateFrequency>
+            <MD_MaintenanceFrequencyCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="asNeeded" codeSpace="ISOTC211/19115">asNeeded</MD_MaintenanceFrequencyCode>
+          </maintenanceAndUpdateFrequency>
+        </MD_MaintenanceInformation>
+      </resourceMaintenance>
+      <descriptiveKeywords>
+        <MD_Keywords>
+          <keyword>
+            <gco:CharacterString>southeast U.S.</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Alabama</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Texas</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Florida</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Mississippi</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Louisiana</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Gulf of Mexcio</gco:CharacterString>
+          </keyword>
+          <type>
+            <MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="place" codeSpace="ISOTC211/19115">place</MD_KeywordTypeCode>
+          </type>
+          <thesaurusName>
+            <CI_Citation>
+              <title>
+                <gco:CharacterString>Geographic Names Information Systems</gco:CharacterString>
+              </title>
+              <date>
+                <CI_Date>
+                  <date>
+                    <gco:Date>2005-03-01</gco:Date>
+                  </date>
+                  <dateType>
+                    <CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+                  </dateType>
+                </CI_Date>
+              </date>
+            </CI_Citation>
+          </thesaurusName>
+        </MD_Keywords>
+      </descriptiveKeywords>
+      <descriptiveKeywords>
+        <MD_Keywords>
+          <keyword>
+            <gco:CharacterString>EIS</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>habitat</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>essential fish habitat</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Hydrozoa</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>fishery management plan</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Magnuson-Stevens Fishery Conservation and Management Act</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>EFH</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Anthozoa</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>environmental impact statement</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>coral</gco:CharacterString>
+          </keyword>
+          <keyword>
+            <gco:CharacterString>Gulf of Mexico Fishery Management Council</gco:CharacterString>
+          </keyword>
+          <type>
+            <MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme" codeSpace="ISOTC211/19115">theme</MD_KeywordTypeCode>
+          </type>
+        </MD_Keywords>
+      </descriptiveKeywords>
+      <descriptiveKeywords>
+        <MD_Keywords>
+          <keyword>
+            <gco:CharacterString>Downloadable Data</gco:CharacterString>
+          </keyword>
+          <thesaurusName uuidref="723f6998-058e-11dc-8314-0800200c9a66" />
+        </MD_Keywords>
+      </descriptiveKeywords>
+      <resourceConstraints>
+        <MD_Constraints>
+          <useLimitation>
+            <gco:CharacterString>Users are advised that the spatial representation of essential fish habitat is for informational purposes only and should not be solely relied on for regulatory purposes. Implementing regulations [50 CFR 600.815(a)(1)(iv)(B)] specify if there are differences between the descriptions of EFH in text and maps the textual description is ultimately determinative of the limits of EFH as described in the Amendment (GMFMC 2005)</gco:CharacterString>
+          </useLimitation>
+        </MD_Constraints>
+      </resourceConstraints>
+      <aggregationInfo>
+        <MD_AggregateInformation>
+          <aggregateDataSetName>
+            <CI_Citation>
+              <title>
+                <gco:CharacterString>Gulf of Mexico Coastal and Ocean Zones Strategic Assessment: Data Atlas</gco:CharacterString>
+              </title>
+              <date>
+                <CI_Date>
+                  <date>
+                    <gco:Date>1985-12-01</gco:Date>
+                  </date>
+                  <dateType>
+                    <CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+                  </dateType>
+                </CI_Date>
+              </date>
+              <citedResponsibleParty>
+                <CI_ResponsibleParty>
+                  <organisationName>
+                    <gco:CharacterString>NOAA National Ocean Service</gco:CharacterString>
+                  </organisationName>
+                  <role>
+                    <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator" codeSpace="ISOTC211/19115">originator</CI_RoleCode>
+                  </role>
+                </CI_ResponsibleParty>
+              </citedResponsibleParty>
+              <presentationForm>
+                <CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapHardcopy" codeSpace="ISOTC211/19115">mapHardcopy</CI_PresentationFormCode>
+              </presentationForm>
+              <otherCitationDetails>
+                <gco:CharacterString>Cite as: NOAA, 1985. Gulf of Mexico Coastal and Ocean Zones Strategic Assessment: Data Atlas. National Oceanic and Atmospheric Administration Strategic Environmental Assessment Division, Rockville, MD December 1985.</gco:CharacterString>
+              </otherCitationDetails>
+            </CI_Citation>
+          </aggregateDataSetName>
+          <associationType>
+            <DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_AssociationTypeCode" codeListValue="crossReference" codeSpace="ISOTC211/19115">crossReference</DS_AssociationTypeCode>
+          </associationType>
+        </MD_AggregateInformation>
+      </aggregationInfo>
+      <aggregationInfo>
+        <MD_AggregateInformation>
+          <aggregateDataSetName>
+            <CI_Citation>
+              <title>
+                <gco:CharacterString>Generic Amendment Number Three for Addressing Essential Fish Habitat Requirements for the Fishery Management Plans of the Gulf of Mexico.</gco:CharacterString>
+              </title>
+              <date>
+                <CI_Date>
+                  <date>
+                    <gco:Date>2005-03-01</gco:Date>
+                  </date>
+                  <dateType>
+                    <CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+                  </dateType>
+                </CI_Date>
+              </date>
+              <citedResponsibleParty>
+                <CI_ResponsibleParty>
+                  <organisationName>
+                    <gco:CharacterString>Gulf of Mexico Fishery Management Council</gco:CharacterString>
+                  </organisationName>
+                  <role>
+                    <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator" codeSpace="ISOTC211/19115">originator</CI_RoleCode>
+                  </role>
+                </CI_ResponsibleParty>
+              </citedResponsibleParty>
+              <citedResponsibleParty>
+                <CI_ResponsibleParty>
+                  <organisationName>
+                    <gco:CharacterString>NOAA National Marine Fisheries Serivce, Southeast Region</gco:CharacterString>
+                  </organisationName>
+                  <role>
+                    <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator" codeSpace="ISOTC211/19115">originator</CI_RoleCode>
+                  </role>
+                </CI_ResponsibleParty>
+              </citedResponsibleParty>
+              <citedResponsibleParty>
+                <CI_ResponsibleParty>
+                  <organisationName>
+                    <gco:CharacterString>Gulf of Mexico Fishery Management Council</gco:CharacterString>
+                  </organisationName>
+                  <contactInfo>
+                    <CI_Contact>
+                      <address>
+                        <CI_Address>
+                          <deliveryPoint>
+                            <gco:CharacterString>Tampa, Florida</gco:CharacterString>
+                          </deliveryPoint>
+                        </CI_Address>
+                      </address>
+                    </CI_Contact>
+                  </contactInfo>
+                  <role>
+                    <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher" codeSpace="ISOTC211/19115">publisher</CI_RoleCode>
+                  </role>
+                </CI_ResponsibleParty>
+              </citedResponsibleParty>
+              <presentationForm>
+                <CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="documentHardcopy" codeSpace="ISOTC211/19115">documentHardcopy</CI_PresentationFormCode>
+              </presentationForm>
+              <otherCitationDetails>
+                <gco:CharacterString>Gulf of Mexico Fishery Management Council. 2005. Generic Amendment Number 3 for Addressing Essential Fish Habitat Requirements, Habitat Areas of Particular Concern, and Adverse Effects of Fishing in the following Fishery Management Plans of the Gulf of Mexico: Shrimp Fishery of the Gulf of Mexico, Red Drum Fishery of the Gulf of Mexico, Reef Fish Fishery of the Gulf of Mexico, Stone Crab Fishery of the Gulf of Mexico, Coral and Coral Reef Fishery of the Gulf of Mexico, Spiny Lobster Fishery of the Gulf of Mexico and South Atlantic, Coastal Migratory Pelagic Resources of the Gulf of Mexico and South Atlantic. Gulf of Mexico Fishery Management Council, The Commons at Rivergate, 3018 U.S.Highway301 N., Suite 1000, Tampa, Florida 33619.</gco:CharacterString>
+              </otherCitationDetails>
+            </CI_Citation>
+          </aggregateDataSetName>
+          <associationType>
+            <DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_AssociationTypeCode" codeListValue="crossReference" codeSpace="ISOTC211/19115">crossReference</DS_AssociationTypeCode>
+          </associationType>
+        </MD_AggregateInformation>
+      </aggregationInfo>
+      <spatialRepresentationType>
+        <MD_SpatialRepresentationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector" codeSpace="ISOTC211/19115">vector</MD_SpatialRepresentationTypeCode>
+      </spatialRepresentationType>
+      <language>
+        <LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng" codeSpace="ISO639-2">eng</LanguageCode>
+      </language>
+      <characterSet>
+        <MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+      </characterSet>
+      <topicCategory>
+        <MD_TopicCategoryCode>environment</MD_TopicCategoryCode>
+      </topicCategory>
+      <topicCategory>
+        <MD_TopicCategoryCode>biota</MD_TopicCategoryCode>
+      </topicCategory>
+      <topicCategory>
+        <MD_TopicCategoryCode>oceans</MD_TopicCategoryCode>
+      </topicCategory>
+      <environmentDescription>
+        <gco:CharacterString>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.1.3497</gco:CharacterString>
+      </environmentDescription>
+      <extent>
+        <EX_Extent>
+          <description>
+            <gco:CharacterString>publication date</gco:CharacterString>
+          </description>
+          <temporalElement>
+            <EX_TemporalExtent>
+              <extent>
+                <gml:TimeInstant gml:id="ID0E3JAC">
+                  <gml:timePosition>2004-03-01</gml:timePosition>
+                </gml:TimeInstant>
+              </extent>
+            </EX_TemporalExtent>
+          </temporalElement>
+        </EX_Extent>
+      </extent>
+      <extent>
+        <EX_Extent>
+          <geographicElement>
+            <EX_GeographicBoundingBox>
+              <extentTypeCode>
+                <gco:Boolean>true</gco:Boolean>
+              </extentTypeCode>
+              <westBoundLongitude>
+                <gco:Decimal>-97.318499</gco:Decimal>
+              </westBoundLongitude>
+              <eastBoundLongitude>
+                <gco:Decimal>-80.38678</gco:Decimal>
+              </eastBoundLongitude>
+              <southBoundLatitude>
+                <gco:Decimal>24.409805</gco:Decimal>
+              </southBoundLatitude>
+              <northBoundLatitude>
+                <gco:Decimal>30.013123</gco:Decimal>
+              </northBoundLatitude>
+            </EX_GeographicBoundingBox>
+          </geographicElement>
+        </EX_Extent>
+      </extent>
+      <supplementalInformation>
+        <gco:CharacterString>Section 303(a)(7) of the Magnuson-Stevens Fishery Management and Conservation Act (16 U.S.C. 1801 et seq) requires the National Marine Fisheries Service and regional fishery management councils to (1) describe and identify EFH for managed fisheries; (2) minimize to the extent practicable the adverse effects of fishing on such EFH; and (3) encourage the conservation and enhancement of such EFH.</gco:CharacterString>
+      </supplementalInformation>
+    </MD_DataIdentification>
+  </identificationInfo>
+  <distributionInfo>
+    <MD_Distribution>
+      <distributionFormat>
+        <MD_Format>
+          <name>
+            <gco:CharacterString>Shapefile</gco:CharacterString>
+          </name>
+          <version>
+            <gco:CharacterString>ArcGIS 9 and above</gco:CharacterString>
+          </version>
+        </MD_Format>
+      </distributionFormat>
+      <transferOptions>
+        <MD_DigitalTransferOptions>
+          <transferSize>
+            <gco:Real>6.076</gco:Real>
+          </transferSize>
+          <onLine>
+            <CI_OnlineResource>
+              <linkage>
+                <URL>http://www.nmfs.noaa.gov/</URL>
+              </linkage>
+              <function>
+                <CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information" codeSpace="ISOTC211/19115">information</CI_OnLineFunctionCode>
+              </function>
+            </CI_OnlineResource>
+          </onLine>
+          <onLine>
+            <CI_OnlineResource>
+              <linkage>
+                <URL>http://sero.nmfs.noaa.gov/maps_gis_data/</URL>
+              </linkage>
+              <function>
+                <CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download" codeSpace="ISOTC211/19115">download</CI_OnLineFunctionCode>
+              </function>
+            </CI_OnlineResource>
+          </onLine>
+        </MD_DigitalTransferOptions>
+      </transferOptions>
+    </MD_Distribution>
+  </distributionInfo>
+  <dataQualityInfo>
+    <DQ_DataQuality>
+      <scope>
+        <DQ_Scope>
+          <level>
+            <MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</MD_ScopeCode>
+          </level>
+        </DQ_Scope>
+      </scope>
+      <report>
+        <DQ_ConceptualConsistency>
+          <measureDescription>
+            <gco:CharacterString>Not applicable</gco:CharacterString>
+          </measureDescription>
+          <result gco:nilReason="missing" />
+        </DQ_ConceptualConsistency>
+      </report>
+      <report>
+        <DQ_CompletenessOmission>
+          <measureDescription>
+            <gco:CharacterString>The purpose of these data is to visually represent the textual description of the overall extent of EFH for the Coral Fishery Management Plan which contains all species of the class Anthozoa and the class Hydrozoa. Seven species of coral of the class Hydrozoa and 311 species of the class Anthozoa are referred to specifically in the fishery management plan as occuring in the Gulf of Mexico and/or South Atlantic waters.</gco:CharacterString>
+          </measureDescription>
+          <result gco:nilReason="missing" />
+        </DQ_CompletenessOmission>
+      </report>
+      <lineage>
+        <LI_Lineage>
+          <processStep>
+            <LI_ProcessStep>
+              <description>
+                <gco:CharacterString>The Functional Relationship Analysis in GMFMC 2004 was utilized to select habitat polygons that fit within the criteria identified that each species and lifestage utilizes in growth to maturity. Each habitat polygon was selected or not selected based upon each variable. EFH maps were derived selecting higher density polygons from the Functional Relationship Analysis from species and lifestages in which no density information was available from the NOAA Atlas (i.e. if species and lifestage density was represented by a map in the NOAA Atlas, that species and lifestage was not incorporated into the mapping). The following data were used to create these data: Seagrass from Florida Fish and Wildlife Research Institute (FWRI) and Texas Natural Resources Information System (TNRIS), Marshes from FWRI and US Geological Survey, Mangroves from FWRI, Oysters from FWRI and TNRIS, Coral from FWRI, Coral from the NOAA Data Atlas, and Summarized Sediments. Bathymetry from FWRI. Bathymetry depth contours were acquired from the Florida Marine Resource Institute (FMRI). Each EFH boundary was clipped south of the EEZ along the Texas/Mexico boarder and south of the Gulf of Mexico/South Atlantic Fisheries Management Council boundary along the Florida Keys. The intercoucnil boundary (along the Florida Keys) was generated from legal descriptions downloaded from the Federal Register. An adjustment was made for Grand Lake and White Lake in southwest Louisiana, which were initially mis-identified as estuarine and later re-classified as non-estuarine, based on U.S. Fish and Wildlife Service National Wetlands Inventory data. Thus, those lake were not considered for identification as EFH for red drum, reef fish, coastal migratory pelagics, shrimp and stone crab fishery management units. Several layers with the selected polygons were mapped as a composite represention of EFH for each fishery management unit. The maps depicting these density and habitat utilization data were deliberated by the GMFMC in developing the textual (regulatory) descriptions of essential fish habitat for Gulf of Mexico Fishery Management Plans.</gco:CharacterString>
+              </description>
+              <processor>
+                <CI_ResponsibleParty>
+                  <organisationName>
+                    <gco:CharacterString>Photo Science (formerly GIS Solutions)</gco:CharacterString>
+                  </organisationName>
+                  <contactInfo>
+                    <CI_Contact>
+                      <phone>
+                        <CI_Telephone>
+                          <voice>
+                            <gco:CharacterString>7275769500</gco:CharacterString>
+                          </voice>
+                          <facsimile>
+                            <gco:CharacterString>7275769600</gco:CharacterString>
+                          </facsimile>
+                        </CI_Telephone>
+                      </phone>
+                      <address>
+                        <CI_Address>
+                          <deliveryPoint>
+                            <gco:CharacterString>10033 MLK Street North, Suite 200</gco:CharacterString>
+                          </deliveryPoint>
+                          <city>
+                            <gco:CharacterString>St. Petersburg</gco:CharacterString>
+                          </city>
+                          <administrativeArea>
+                            <gco:CharacterString>FL</gco:CharacterString>
+                          </administrativeArea>
+                          <postalCode>
+                            <gco:CharacterString>33716</gco:CharacterString>
+                          </postalCode>
+                          <country>
+                            <Country codeList="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" codeListValue="US" codeSpace="ISO3166-1">US</Country>
+                          </country>
+                        </CI_Address>
+                      </address>
+                    </CI_Contact>
+                  </contactInfo>
+                  <role>
+                    <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="processor" codeSpace="ISOTC211/19115">processor</CI_RoleCode>
+                  </role>
+                </CI_ResponsibleParty>
+              </processor>
+            </LI_ProcessStep>
+          </processStep>
+          <processStep>
+            <LI_ProcessStep>
+              <description>
+                <gco:CharacterString>Hardcopy maps from the NOAA Atlas (NOAA, 1985) were scanned by Greenhorne &amp; O'Mara to a high resolution (300 dpi) TIFF image. Each digital image then underwent geo-rectification. The polygonal data were digitized and converted to shapefiles.</gco:CharacterString>
+              </description>
+              <processor>
+                <CI_ResponsibleParty>
+                  <organisationName>
+                    <gco:CharacterString>MRAG Americas</gco:CharacterString>
+                  </organisationName>
+                  <contactInfo>
+                    <CI_Contact>
+                      <phone>
+                        <CI_Telephone>
+                          <voice>
+                            <gco:CharacterString>7275639070</gco:CharacterString>
+                          </voice>
+                          <facsimile>
+                            <gco:CharacterString>7275630207</gco:CharacterString>
+                          </facsimile>
+                        </CI_Telephone>
+                      </phone>
+                      <address>
+                        <CI_Address>
+                          <deliveryPoint>
+                            <gco:CharacterString>10051 5th Street North, Suite 105</gco:CharacterString>
+                          </deliveryPoint>
+                          <city>
+                            <gco:CharacterString>St. Petersburg</gco:CharacterString>
+                          </city>
+                          <administrativeArea>
+                            <gco:CharacterString>FL</gco:CharacterString>
+                          </administrativeArea>
+                          <postalCode>
+                            <gco:CharacterString>33702</gco:CharacterString>
+                          </postalCode>
+                          <country>
+                            <Country codeList="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" codeListValue="US" codeSpace="ISO3166-1">US</Country>
+                          </country>
+                        </CI_Address>
+                      </address>
+                    </CI_Contact>
+                  </contactInfo>
+                  <role>
+                    <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="processor" codeSpace="ISOTC211/19115">processor</CI_RoleCode>
+                  </role>
+                </CI_ResponsibleParty>
+              </processor>
+            </LI_ProcessStep>
+          </processStep>
+          <processStep>
+            <LI_ProcessStep>
+              <description>
+                <gco:CharacterString>The layers representing the composite EFH were merged into a single shapefile for each fishery management unit. The new shapefile was reprojected to NAD 1983 Albers and edited to match the textual identification and description of EFH using ArcGIS' editing environment. Any inland water bodies mistakenly included in the previously delivered layers were extracted also using the "Edit Clip" function in ArcGIS' editing environment. In order to fill the gaps within the EFH that were caused by previous digitizing errors, a large overlapping polygon was created inside of the existing EFH boundaries. This polygon was digitized manually to cover from just inside of the seaward boundary to the northern extent of the EFH. After filling in the gaps, any "dangling" polygons extending beyond the seaward boundary were identifed and removed. To obtain a single feature representing the entire EFH for each fishery management unit, the updated EFH was clipped to a master polygon representing the extent of the entire Gulf of Mexico. Once this clip was completed, the result was a "dissolved" polygon consisting of one feature rather than 10-40 thousand individual polygons. The new EFH polygon was then clipped to the land boundary feature using the ArcGIS' editing environment. This resulted in an EFH polygon that is exactly coinicident with the land boundary. During the creation of these data, the land boundary (coast line) feature used was "camra_mrgis_gulf_shore_100.shp" (1:100,000) from FWC/FMRI (Florida Fish Wildlife Conservation Commission, Florida Marine Research Institute) . Finally, the area in square kilometers and the perimeter in meters was calculated in ArcGIS and listed in the EFH attribute table for each fishery management unit.</gco:CharacterString>
+              </description>
+              <dateTime>
+                <gco:DateTime>2008-01-01T00:00:00</gco:DateTime>
+              </dateTime>
+              <processor>
+                <CI_ResponsibleParty>
+                  <organisationName>
+                    <gco:CharacterString>National Coastal Data Development Center</gco:CharacterString>
+                  </organisationName>
+                  <contactInfo>
+                    <CI_Contact>
+                      <phone>
+                        <CI_Telephone>
+                          <voice>
+                            <gco:CharacterString>228-688-2936</gco:CharacterString>
+                          </voice>
+                          <facsimile>
+                            <gco:CharacterString>228-688-2010</gco:CharacterString>
+                          </facsimile>
+                        </CI_Telephone>
+                      </phone>
+                      <address>
+                        <CI_Address>
+                          <deliveryPoint>
+                            <gco:CharacterString>Building 1100, Suite 101</gco:CharacterString>
+                          </deliveryPoint>
+                          <city>
+                            <gco:CharacterString>Stenis Space Center</gco:CharacterString>
+                          </city>
+                          <administrativeArea>
+                            <gco:CharacterString>MS</gco:CharacterString>
+                          </administrativeArea>
+                          <postalCode>
+                            <gco:CharacterString>39529</gco:CharacterString>
+                          </postalCode>
+                          <country>
+                            <Country codeList="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" codeListValue="US" codeSpace="ISO3166-1">US</Country>
+                          </country>
+                          <electronicMailAddress>
+                            <gco:CharacterString>ncddc@noaa.gov</gco:CharacterString>
+                          </electronicMailAddress>
+                        </CI_Address>
+                      </address>
+                    </CI_Contact>
+                  </contactInfo>
+                  <role>
+                    <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="processor" codeSpace="ISOTC211/19115">processor</CI_RoleCode>
+                  </role>
+                </CI_ResponsibleParty>
+              </processor>
+            </LI_ProcessStep>
+          </processStep>
+          <processStep>
+            <LI_ProcessStep>
+              <description>
+                <gco:CharacterString>Location of coral, dated 2014, is based on the 2005 identification and description of EFH for Coral and Coral Reefs. The Unified Florida Reef Tract data from FWC/FMRI (http://myfwc.com/research/) was merged with the 2005 coral EFH layer, and clipped to the Gulf of Mexico and South Atlantic council boundary. The Texas bank data was delineated from sidescan sonar by H. Nash and Gulf of Mexico Fishery Managment Council staff, and replaced the coral areas in the 2005 coral EFH layer.</gco:CharacterString>
+              </description>
+              <rationale>
+                <gco:CharacterString>The coral data from these two sources was deemed to more accurately represent actual coral locations.</gco:CharacterString>
+              </rationale>
+              <dateTime>
+                <gco:DateTime>2014-05-30T00:00:00</gco:DateTime>
+              </dateTime>
+              <processor>
+                <CI_ResponsibleParty>
+                  <individualName>
+                    <gco:CharacterString>GIS Coordinator</gco:CharacterString>
+                  </individualName>
+                  <organisationName>
+                    <gco:CharacterString>Department of Commerce (DOC), National Oceanic and Atmospheric Administration (NOAA), National Marine Fisheries Service (NMFS)</gco:CharacterString>
+                  </organisationName>
+                  <positionName>
+                    <gco:CharacterString>GIS Coordinator</gco:CharacterString>
+                  </positionName>
+                  <contactInfo>
+                    <CI_Contact>
+                      <phone>
+                        <CI_Telephone>
+                          <voice>
+                            <gco:CharacterString>727-824-5312</gco:CharacterString>
+                          </voice>
+                          <facsimile>
+                            <gco:CharacterString>727-824-5309</gco:CharacterString>
+                          </facsimile>
+                        </CI_Telephone>
+                      </phone>
+                      <address>
+                        <CI_Address>
+                          <deliveryPoint>
+                            <gco:CharacterString>263 13th Ave S</gco:CharacterString>
+                          </deliveryPoint>
+                          <city>
+                            <gco:CharacterString>St. Petersburg</gco:CharacterString>
+                          </city>
+                          <administrativeArea>
+                            <gco:CharacterString>FL</gco:CharacterString>
+                          </administrativeArea>
+                          <postalCode>
+                            <gco:CharacterString>33701</gco:CharacterString>
+                          </postalCode>
+                          <country>
+                            <Country codeList="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" codeListValue="US" codeSpace="ISO3166-1">US</Country>
+                          </country>
+                          <electronicMailAddress>
+                            <gco:CharacterString>nmfs.ser.gis.coordinator@noaa.gov</gco:CharacterString>
+                          </electronicMailAddress>
+                        </CI_Address>
+                      </address>
+                    </CI_Contact>
+                  </contactInfo>
+                  <role>
+                    <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="processor" codeSpace="ISOTC211/19115">processor</CI_RoleCode>
+                  </role>
+                </CI_ResponsibleParty>
+              </processor>
+            </LI_ProcessStep>
+          </processStep>
+        </LI_Lineage>
+      </lineage>
+    </DQ_DataQuality>
+  </dataQualityInfo>
+  <metadataMaintenance>
+    <MD_MaintenanceInformation>
+      <maintenanceAndUpdateFrequency>
+        <MD_MaintenanceFrequencyCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="asNeeded" codeSpace="ISOTC211/19115">asNeeded</MD_MaintenanceFrequencyCode>
+      </maintenanceAndUpdateFrequency>
+    </MD_MaintenanceInformation>
+  </metadataMaintenance>
+</MD_Metadata>

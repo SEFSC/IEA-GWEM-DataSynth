@@ -16,7 +16,7 @@ rm(list=ls()); graphics.off()
 library('marmap')
 library('raster')
 
-dir_depth = "./Ecospace-habitat-maps/Depth_maps/"
+dir_depth = "./Ecospace-habitat-maps/Depth-maps/"
 
 
 ## Parameters: bounded area and resoluations
