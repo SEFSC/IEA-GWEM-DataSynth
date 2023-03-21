@@ -115,4 +115,3 @@ plot(scaled_HB, main = "Hard bottom (scaled inverse distance squared)", colNA = 
 dev.off()
 
 
-
