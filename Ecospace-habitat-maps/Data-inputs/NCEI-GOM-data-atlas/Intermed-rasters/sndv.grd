@@ -1,13 +1,13 @@
 [general]
 creator=R package 'raster'
-created=2023-03-20 21:17:45
+created=2023-03-22 11:28:20
 [data]
 datatype=FLT4S
 byteorder=little
 nbands=1
 bandorder=BIL
 categorical=FALSE
-minvalue=0
+minvalue=-99
 maxvalue=100
 nodatavalue=-3.4e+38
 [legend]
@@ -17,11 +17,11 @@ color=
 [description]
 layername=layer
 [georeference]
-nrows=52
+nrows=53
 ncols=131
-xmin=-98.067307692
-ymin=24
-xmax=-80.4326923069999
-ymax=31.0000000001527
+xmin=-98
+ymin=23.9265270233154
+xmax=-80.4999991804361
+ymax=31.0066800266504
 projection=+proj=longlat +datum=WGS84 +no_defs
 wkt=GEOGCRS["unknown",    DATUM["World Geodetic System 1984",        ELLIPSOID["WGS 84",6378137,298.257223563,            LENGTHUNIT["metre",1]],        ID["EPSG",6326]],    PRIMEM["Greenwich",0,        ANGLEUNIT["degree",0.0174532925199433],        ID["EPSG",8901]],    CS[ellipsoidal,2],        AXIS["longitude",east,            ORDER[1],            ANGLEUNIT["degree",0.0174532925199433,                ID["EPSG",9122]]],        AXIS["latitude",north,            ORDER[2],            ANGLEUNIT["degree",0.0174532925199433,                ID["EPSG",9122]]]]

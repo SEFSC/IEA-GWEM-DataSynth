@@ -4,7 +4,7 @@ rm(list=ls()); gc(); windows()
 
 fg_pref <- read.csv("./Ecospace-preference-functions/intermediate-ouput/fg-env-preference-parameters-adjusted.csv")
 
-#------------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 ##
 ## Logistic function
 
@@ -16,8 +16,8 @@ doublelogistic <- function(max, min_abs, min_prf, max_prf, max_abs){
   #max_abs = fg_pref$DepthMax[j]
   
   mid <- min_prf + (max_prf - min_prf) / 2 ## Midpoint. Change from increasing to decreasing logistic function
-  x1  <- seq(0, mid)
-  x2  <- seq(mid + 1, max)
+  x1  <- seq(0, mid, by = 1)
+  x2  <- seq(mid + 1, max, by = 1)
   r1  <- min_prf - min_abs ## Range size from 10% to 90%
   r2  <- max_abs - max_prf 
   C1  <- min_abs + r1 / 2
@@ -44,6 +44,46 @@ doublelogistic <- function(max, min_abs, min_prf, max_prf, max_abs){
   return(out)
 }
 
+## -----------------------------------------------------------------------------
+##
+## Make depth preferences
+
+driver = "Depth"
+
+## Make depth preferences
+fg_pref$EwE_name; nrow(fg_pref)
+
+## Make depth preference matrix
+depth_mat = matrix(nrow = 1203, ncol = nrow(fg_pref))
+row.names(depth_mat) = c("Name", "Left_limit", "Right_limit", 1:1200)
+colnames(depth_mat) = fg_pref$EwE_name
+#maxmapdepth = 1083
+
+## Make grid
+steps = 1200
+for (i in 1:ncol(depth_mat)){
+  #  i = 2
+  absmin = fg_pref$DepthMin[i]
+  prfmin = fg_pref$DepthPrefMin[i]
+  prfmax = fg_pref$DepthPrefMax[i]
+  absmax = fg_pref$DepthMax[i]
+  
+  pref_func <- doublelogistic(max = steps, absmin, prfmin, prfmax, absmax)
+  
+  name = paste0(driver, "_", fg_pref$EwE_num[i], "_", 
+                gsub("[[:space:]]", "-", fg_pref$EwE_name[i]))
+  print(name)
+  outvec = c(name, 0, steps, pref_func$y)
+  depth_mat[ ,i] = outvec
+}
+
+## Write out depth matrix for Ecospace
+write.csv(depth_mat, "./out/Depth_pref_matrix_1200-cells-for-Ecospace.csv", row.names = T)
+
+
+
+## -----------------------------------------------------------------------------
+## Make plots
 
 ## Plot depth with varying X-axis (depth) --------------------------------------
 plot_preference_function <- function(p1, p2, p3, p4, fg_num, fg_name,

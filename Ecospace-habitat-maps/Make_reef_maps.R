@@ -61,7 +61,7 @@ dist_to_AR = raster(paste0(dir_in, "dist_to_AR"))
 dist_to_HB = raster(paste0(dir_in, "dist_to_HB"))
 
 ## Read in depth
-depth = raster("./global-data/basemap_depth_8min-14sqkm-52x131.asc")
+depth = raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
 dim(depth);extent(depth)
 
 ## Take inverse distance
