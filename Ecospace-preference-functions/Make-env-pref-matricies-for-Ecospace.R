@@ -1,23 +1,20 @@
 
 rm(list=ls()); gc(); windows()
-
-
 fg_pref <- read.csv("./Ecospace-preference-functions/intermediate-ouput/fg-env-preference-parameters-adjusted.csv")
+dir_out <- "./Ecospace-preference-functions/output-for-Ecospace/"
 
 ## -----------------------------------------------------------------------------
 ##
 ## Logistic function
 
-doublelogistic <- function(max, min_abs, min_prf, max_prf, max_abs){ 
-  #max = 400
-  #min_abs = fg_pref$DepthMin[j]
-  #min_prf = fg_pref$DepthPrefMin[j]
-  #max_prf = fg_pref$DepthPrefMax[j]
-  #max_abs = fg_pref$DepthMax[j]
-  
-  mid <- min_prf + (max_prf - min_prf) / 2 ## Midpoint. Change from increasing to decreasing logistic function
-  x1  <- seq(0, mid, by = 1)
-  x2  <- seq(mid + 1, max, by = 1)
+doublelogistic <- function(max = 400, steps = 400, min_abs, min_prf, max_prf, max_abs){ 
+
+  #j = 2; max = 30; steps = 1200; min_abs = fg_pref$TempMin[j]; min_prf = fg_pref$TempPrefMin[j]; max_prf = fg_pref$TempPrefMax[j]; max_abs = fg_pref$TempMax[j]
+  mid_prf <- min_prf + (max_prf - min_prf) / 2 ## Midpoint. Change from increasing to decreasing logistic function
+  mid <- ifelse(mid_prf > max, max, mid_prf)
+  step_size <-  max / steps
+  x1  <- seq(0, mid-step_size, by = step_size)
+  x2  <- seq(mid, max, by = step_size)
   r1  <- min_prf - min_abs ## Range size from 10% to 90%
   r2  <- max_abs - max_prf 
   C1  <- min_abs + r1 / 2
@@ -41,14 +38,18 @@ doublelogistic <- function(max, min_abs, min_prf, max_prf, max_abs){
   y1 <- f1(x1)
   y2 <- f2(x2)
   out <- data.frame(x = c(x1, x2), y = c(y1, y2))
+  out <- out[1:steps, ] 
   return(out)
 }
 
 ## -----------------------------------------------------------------------------
 ##
-## Make depth preferences
+## Make matrices for Ecospace
 
+## Depth -----------------------------------------------------------------------
 driver = "Depth"
+max = 551
+n_steps = 1200
 
 ## Make depth preferences
 fg_pref$EwE_name; nrow(fg_pref)
@@ -59,8 +60,7 @@ row.names(depth_mat) = c("Name", "Left_limit", "Right_limit", 1:1200)
 colnames(depth_mat) = fg_pref$EwE_name
 #maxmapdepth = 1083
 
-## Make grid
-steps = 1200
+## Loop through functional groupos
 for (i in 1:ncol(depth_mat)){
   #  i = 2
   absmin = fg_pref$DepthMin[i]
@@ -68,17 +68,81 @@ for (i in 1:ncol(depth_mat)){
   prfmax = fg_pref$DepthPrefMax[i]
   absmax = fg_pref$DepthMax[i]
   
-  pref_func <- doublelogistic(max = steps, absmin, prfmin, prfmax, absmax)
+  pref_func <- doublelogistic(max = max, steps = n_steps, absmin, prfmin, prfmax, absmax)
   
   name = paste0(driver, "_", fg_pref$EwE_num[i], "_", 
                 gsub("[[:space:]]", "-", fg_pref$EwE_name[i]))
   print(name)
-  outvec = c(name, 0, steps, pref_func$y)
-  depth_mat[ ,i] = outvec
+  outvec = c(name, 0, max, pref_func$y)
+  depth_mat[ ,i] = outvec[1:1203]
 }
 
 ## Write out depth matrix for Ecospace
-write.csv(depth_mat, "./out/Depth_pref_matrix_1200-cells-for-Ecospace.csv", row.names = T)
+write.csv(depth_mat, paste0(dir_out, driver, "-pref-func-", ncol(depth_mat), "fg-", "max", max, "-", n_steps, "L.csv"), row.names = T)
+
+## -----------------------------------------------------------------------------
+## Temperature 
+driver = "Temp"
+max = 30
+n_steps = 1200
+
+## Make preference matrix
+pref_mat = matrix(nrow = 1203, ncol = nrow(fg_pref))
+row.names(pref_mat) = c("Name", "Left_limit", "Right_limit", 1:1200)
+colnames(pref_mat) = fg_pref$EwE_name
+
+## Loop through functional groupos
+for (i in 1:ncol(pref_mat)){
+  #  i = 2
+  absmin = fg_pref$TempMin[i]
+  prfmin = fg_pref$TempPrefMin[i]
+  prfmax = fg_pref$TempPrefMax[i]
+  absmax = fg_pref$TempMax[i]
+  
+  pref_func <- doublelogistic(max = max, steps = n_steps, absmin, prfmin, prfmax, absmax)
+  
+  name = paste0(driver, "_", fg_pref$EwE_num[i], "_", 
+                gsub("[[:space:]]", "-", fg_pref$EwE_name[i]))
+  print(name)
+  outvec = c(name, 0, max, pref_func$y)
+  pref_mat[ ,i] = outvec[1:1203]
+}
+
+## Write out depth matrix for Ecospace
+write.csv(pref_mat, paste0(dir_out, driver, "-pref-func-", ncol(depth_mat), "fg-", "max", max, "-", n_steps, "L.csv"), row.names = T)
+
+## -----------------------------------------------------------------------------
+## Salinity 
+driver = "Sal"
+max = 37
+n_steps = 1200
+
+## Make preference matrix
+pref_mat = matrix(nrow = 1203, ncol = nrow(fg_pref))
+row.names(pref_mat) = c("Name", "Left_limit", "Right_limit", 1:1200)
+colnames(pref_mat) = fg_pref$EwE_name
+
+## Loop through functional groupos
+for (i in 1:ncol(pref_mat)){
+  #  i = 2
+  absmin = fg_pref$SalinityMinMin[i]
+  prfmin = fg_pref$SalinityPrefMin[i]
+  prfmax = fg_pref$SalinityPrefMax[i]
+  absmax = fg_pref$SalinityMax[i]
+  
+  pref_func <- doublelogistic(max = max, steps = n_steps, absmin, prfmin, prfmax, absmax)
+  
+  name = paste0(driver, "_", fg_pref$EwE_num[i], "_", 
+                gsub("[[:space:]]", "-", fg_pref$EwE_name[i]))
+  print(name)
+  outvec = c(name, 0, max, pref_func$y)
+  pref_mat[ ,i] = outvec[1:1203]
+}
+
+## Write out depth matrix for Ecospace
+write.csv(pref_mat, paste0(dir_out, driver, "-pref-func-", ncol(depth_mat), "fg-", "max", max, "-", n_steps, "L.csv"), row.names = T)
+
+
 
 
 
@@ -86,9 +150,11 @@ write.csv(depth_mat, "./out/Depth_pref_matrix_1200-cells-for-Ecospace.csv", row.
 ## Make plots
 
 ## Plot depth with varying X-axis (depth) --------------------------------------
+max = 400
+
 plot_preference_function <- function(p1, p2, p3, p4, fg_num, fg_name,
                                      max = 400, xmin = 0, scale_xaxis = 'y') {
-  pref_func <- doublelogistic(max = 400, p1, p2, p3, p4)
+  pref_func <- doublelogistic(max = max, steps = max, p1, p2, p3, p4)
   xlim <- ifelse(p4 < max, p4+p4*0.15, max)
   xmax <- ifelse(scale_xaxis == 'y', xlim, max)
   plot(pref_func$x, pref_func$y, 
