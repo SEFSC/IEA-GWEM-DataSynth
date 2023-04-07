@@ -66,7 +66,9 @@ dim(depth);extent(depth)
 
 ## Take inverse distance
 inv_AR = calc(dist_to_AR, fun = function(x) {1 / x}) 
-inv_HB = calc(dist_to_HB, fun = function(x) {1 / sqrt(x)})
+#inv_HB = calc(dist_to_HB, fun = function(x) {1 / sqrt(x)})
+inv_HB = calc(dist_to_HB, fun = function(x) {1 / x})
+
 ##--> ARs use 1/x proxy
 ##--> HBs use 1/sqrt(x) proxy
 
@@ -96,7 +98,7 @@ scaled_HB = calc(resamp_HB, fun = function(x) {
 ## Write out habitat maps------------------------------------------------------
 dir_out = "./Ecospace-habitat-maps/Output-for-ecospace/"
 writeRaster(scaled_AR, paste0(dir_out, "scaled-inv-dist-AR_div-x"), format = "ascii", overwrite=T)
-writeRaster(scaled_HB, paste0(dir_out, "scaled-inv-dist-HB_div-sqrt-x"), format = "ascii", overwrite=T)
+writeRaster(scaled_HB, paste0(dir_out, "scaled-inv-dist-HB_div-x"), format = "ascii", overwrite=T)
 
 
 ## Plots ------------------------------------------------------------------------

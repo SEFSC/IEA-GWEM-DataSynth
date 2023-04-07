@@ -39,21 +39,21 @@ seabed  = sf::st_read(paste0(dir_in, "Sediments/usSEABED_GOM_Sediments.shp"))
 ##            in code positions 1,2,3,4 respectively; see the dbSEABED web sites for a suitable ESRI legend. 
 
 ## Rasterize polygons
-rckv_rawdat <- rasterize(seabed, depth, field = "gom_rckv") ## Takes awhile
-gvlv_rawdat <- rasterize(seabed, depth, field = "gom_gvlv") ## Takes awhile
-sndv_rawdat <- rasterize(seabed, depth, field = "gom_sndv") ## Takes awhile
-mudv_rawdat <- rasterize(seabed, depth, field = "gom_mudv") ## Takes awhile
+rckv_rawdat <- raster::rasterize(seabed, depth, field = "gom_rckv") ## Takes awhile
+gvlv_rawdat <- raster::rasterize(seabed, depth, field = "gom_gvlv") ## Takes awhile
+sndv_rawdat <- raster::rasterize(seabed, depth, field = "gom_sndv") ## Takes awhile
+mudv_rawdat <- raster::rasterize(seabed, depth, field = "gom_mudv") ## Takes awhile
 
 ## Write out rasters and read back (rasterizing is slow)
-writeRaster(rckv_rawdat, paste0(dir_in, "Intermed-rasters/rckv"), overwrite=TRUE)
-writeRaster(gvlv_rawdat, paste0(dir_in, "Intermed-rasters/gvlv"), overwrite=TRUE)
-writeRaster(sndv_rawdat, paste0(dir_in, "Intermed-rasters/sndv"), overwrite=TRUE)
-writeRaster(mudv_rawdat, paste0(dir_in, "Intermed-rasters/mudv"), overwrite=TRUE)
+raster::writeRaster(rckv_rawdat, paste0(dir_in, "Intermed-rasters/rckv"), overwrite=TRUE)
+raster::writeRaster(gvlv_rawdat, paste0(dir_in, "Intermed-rasters/gvlv"), overwrite=TRUE)
+raster::writeRaster(sndv_rawdat, paste0(dir_in, "Intermed-rasters/sndv"), overwrite=TRUE)
+raster::writeRaster(mudv_rawdat, paste0(dir_in, "Intermed-rasters/mudv"), overwrite=TRUE)
 
-rckv <- raster(paste0(dir_in, "Intermed-rasters/rckv"))
-gvlv <- raster(paste0(dir_in, "Intermed-rasters/gvlv"))
-sndv <- raster(paste0(dir_in, "Intermed-rasters/sndv"))
-mudv <- raster(paste0(dir_in, "Intermed-rasters/mudv"))
+rckv <- raster::raster(paste0(dir_in, "Intermed-rasters/rckv"))
+gvlv <- raster::raster(paste0(dir_in, "Intermed-rasters/gvlv"))
+sndv <- raster::raster(paste0(dir_in, "Intermed-rasters/sndv"))
+mudv <- raster::raster(paste0(dir_in, "Intermed-rasters/mudv"))
 
 ## Change -99 to NA
 rckv[rckv < 0] <- NA
@@ -68,10 +68,10 @@ sndv <- sndv / max(values(sndv), na.rm=T)
 mudv <- mudv / max(values(mudv), na.rm=T)
 
 ## Write out ASCII files for ecospace
-writeRaster(rckv, paste0(dir_out, "/seabed-sedcomp-rock"),   format = 'ascii', overwrite=TRUE)
-writeRaster(gvlv, paste0(dir_out, "/seabed-sedcomp-gravel"), format = 'ascii', overwrite=TRUE)
-writeRaster(sndv, paste0(dir_out, "/seabed-sedcomp-sand"),   format = 'ascii', overwrite=TRUE)
-writeRaster(mudv, paste0(dir_out, "/seabed-sedcomp-mud"),    format = 'ascii', overwrite=TRUE)
+raster::writeRaster(rckv, paste0(dir_out, "/seabed-sedcomp-rock"),   format = 'ascii', overwrite=TRUE)
+raster::writeRaster(gvlv, paste0(dir_out, "/seabed-sedcomp-gravel"), format = 'ascii', overwrite=TRUE)
+raster::writeRaster(sndv, paste0(dir_out, "/seabed-sedcomp-sand"),   format = 'ascii', overwrite=TRUE)
+raster::writeRaster(mudv, paste0(dir_out, "/seabed-sedcomp-mud"),    format = 'ascii', overwrite=TRUE)
 
 ## Figure
 png(paste0(dir_fig, "Ecospace-seabed-types.png"), 
@@ -81,23 +81,30 @@ plot(rckv, colNA = "gray", main = "Rock"); plot(gvlv, colNA = "gray", main = "Gr
 plot(sndv, colNA = "gray", main = "Sand");  plot(mudv, colNA = "gray", main = "Mud");  
 dev.off()
 
-## -----------------------------------------------------------------------------
-## Corals 
+################################################################################
+## 
+## Corals Essential Fish Habitat
 
 shp_corals <- sf::st_read("./Ecospace-habitat-maps/Data-inputs/NCEI-GOM-data-atlas/Corals-EFH/Coral_EFH_GOM.shp")
-unique(shp_corals$BioCover)
-unique(shp_corals$BioCoverDe)
-unique(shp_corals$PercentBio)
-factor(shp_corals$PercentBio)
+str(shp_corals)
+shp_corals$const = 1
+coral_ras <- raster::rasterize(shp_corals, depth, field = "const")
 
-st_cast(shp_corals, "POLYGON")
+## Write out ASCII files for ecospace
+raster::writeRaster(coral_ras, paste0(dir_out, "/coral-hab"),   format = 'ascii', overwrite=TRUE)
 
-live_coral <- subset(shp_corals, shp_corals$BioCover=="LIVE CORAL")
-##live_coral <- st_cast(live_coral, "POLYGON")
-unique(live_coral$PercentBio)
-live_coral$PercentBioIndex[live_coral$PercentBio=="10%-50%"]  <- 0.5
-live_coral$PercentBioIndex[live_coral$PercentBio=="50%-90%"]  <- 1
+## Figure
+png(paste0(dir_fig, "Ecospace-coral-hab.png"), 
+    width = 6, height = 4, units = "in", res=1200)
+plot(coral_ras, main="Coral habitat")
+dev.off()
 
-coral_ras <- rasterize(live_coral, depth, field = "PercentBioIndex", fun = "first")
-coral_ras
-plot(coral_ras)
+################################################################################
+## 
+## Seagrass
+shp_sav <- sf::st_read("./Ecospace-habitat-maps/Data-inputs/NCEI-GOM-data-atlas/SAV/Seagrass_ALFLMSTX.shp")
+shp_sav$const = 1
+sav_ras <- raster::rasterize(shp_sav, depth, field = "const")
+
+plot(sav_ras, main="Seagrass habitat")
+plot(shp_sav["const"])
