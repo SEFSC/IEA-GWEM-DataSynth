@@ -108,3 +108,14 @@ sav_ras <- raster::rasterize(shp_sav, depth, field = "const")
 
 plot(sav_ras, main="Seagrass habitat")
 plot(shp_sav["const"])
+
+################################################################################
+## 
+## HMS
+shp_hms <- sf::st_read("./Ecospace-habitat-maps/Data-inputs/NCEI-GOM-data-atlas/HMS-EFH/ahms_efh.shp")
+shp_hms$const = 1
+plot(shp_hms["DDBOX"])
+shp_hms$DDBOX <- as.factor(shp_hms$DDBOX)
+bluefin <- subset(shp_hms, shp_hms$DDBOX == "Bluefin Tuna")
+plot(bluefin["DDBOX"])
+unique(shp_hms$DDBOX)
