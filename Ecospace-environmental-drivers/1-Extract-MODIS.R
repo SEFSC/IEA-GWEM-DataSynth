@@ -4,14 +4,14 @@ library('curl')
 library('raster')
 library('rerddap')
 
-#######################################################################################################
-# SETUP
-#######################################################################################################
+##------------------------------------------------------------------------------
+## SETUP
+
 bbox.gom = c(-98,-80.5,24,31)
 bbox = bbox.gom
 
 dir.modis = "./Ecospace-environmental-drivers/MODIS/"
-vars = c("cfl", "chla", "PIC", "POC", "sst")
+vars = c("cfl", "chla", "PIC", "POC")
 overwrite = 'y' ## Do we want to over write?
 
 for (i in 1:length(vars)){
@@ -30,38 +30,8 @@ varlist = varlist[-nrow(varlist),]
 print(varlist)
 
 
-#checking sea surface temp dataset IDs
-#tmp = info('erdMH1sstdmdayR20190SQ')
-
-#ERDDAP datasetID                         result
-#----------------                         -------------
-# erdMH1sstd1day                          found, 2003-2019 deprecated
-# erdMH1sstd1day_Lon0360                  not found
-# erdMH1sstd1dayR20190                    found, 2019-present
-# erdMH1sstd1dayR20190_Lon0360            not found
-# erdMH1sstd1dayR20190NotMasked           found, 2019-present
-# erdMH1sstd1dayR20190NotMasked_Lon0360   not found
-# erdMH1sstd1dayR20190SQ                  not found
-# erdMH1sstd1dayR20190SQ_Lon0360          not found
-
-# erdMH1sstd8day                          found, 2003-2019 deprecated
-# erdMH1sstd8day_Lon0360                  not found
-# erdMH1sstd8dayR20190                    not found
-# erdMH1sstd8dayR20190_Lon0360            not found
-# erdMH1sstd8dayR20190SQ                  not found
-# erdMH1sstd8dayR20190SQ_Lon0360          not found
-
-# erdMH1sstdmday                          found, 2003-2019 deprecated 
-# erdMH1sstdmday_Lon0360                  not found
-# erdMH1sstdmdayR20190                    not found
-# erdMH1sstdmdayR20190_Lon0360            not found
-# erdMH1sstdmdayR20190SQ                  not found
-# erdMH1sstdmdayR20190SQ_Lon0360          not found
-
-
-#######################################################################################################
-# PROCESS MODIS DATA FROM NOAA ERDDAP SERVER https://coastwatch.pfeg.noaa.gov/erddap/index.html
-#######################################################################################################
+##------------------------------------------------------------------------------
+## PROCESS MODIS DATA FROM NOAA ERDDAP SERVER https://coastwatch.pfeg.noaa.gov/erddap/index.html
 
 for(i in 1:nrow(varlist)){
   #  i=1
@@ -71,87 +41,87 @@ for(i in 1:nrow(varlist)){
   dat.id.d = varlist$datasetID_day[i]
   #setwd(dir.out)
   
-  #get monthly composite imagery-----------------------------------------------------------------------------
+  ## Get monthly composite imagery----------------------------------------------
   erd.info1 <- griddap(info(dat.id.m),
                        latitude = c('last','last'),
                        longitude = c('last','last'))
   erd.time1 = data.frame(time=erd.info1$data$time)
   erd.time1$month = substr(erd.time1$time,6,7)
   erd.time1$yrmo = gsub("-","",substr(erd.time1$time,1,7))
-  #erd.time = erd.time[which(!erd.time$yrmo %in% gsub("X","",names(s))),]
-  
-  #GOM grid (big pull takes awhile)
+
+  ## GOM grid (big pull takes awhile)
   erd1 <- griddap(info(dat.id.m),
                   latitude = bbox[3:4],
                   longitude = bbox[1:2],
                   time = erd.time1$time[c(1,nrow(erd.time1))])
   
-  #monthly raster stack
+  ## Monthly raster stack
   s.m = stack(erd1$summary$filename,quick=T)#,varname='chlorophyll'
   names(s.m) = erd.time1$yrmo
   
-  #daily imagery-----------------------------------------------------------------------------
+  ## Daily imagery---------------------------------------------------------------
   erd.info2 <- griddap(info(dat.id.d),
                        latitude = c('last','last'),
                        longitude = c('last','last'))
-  #  ,                      time = c(erd.time1$time[nrow(erd.time1)], paste0(Sys.Date()-2,"T00:00:00Z")))
   erd.time2 = data.frame(time=erd.info2$data$time)
   erd.time2$month = substr(erd.time2$time,6,7)
   erd.time2$yrmo = gsub("-","",substr(erd.time2$time,1,7))
   erd.time2 = erd.time2[which(!erd.time2$yrmo %in% erd.time1$yrmo),]
   
-  #GOM grid (big pulls take awhile)
+  ## GOM grid (big pulls take awhile)
   erd2 <- griddap(info(dat.id.d),
                   latitude = bbox[3:4],
                   longitude = bbox[1:2],
                   time = erd.time2$time[c(1,nrow(erd.time2))])
   
-  #daily raster stack
+  ## Daily raster stack
   s.d = stack(erd2$summary$filename,quick=T)#,varname='chlorophyll'
   
-  #monthly average
+  ## Monthly average
   s.m2 = stackApply(s.d,indices=erd.time2$yrmo,fun=mean,na.rm=T)
   names(s.m2) = unique(erd.time2$yrmo)
   
-  #add to monthly stack
+  ## Add to monthly stack
   s.m3 = stack(s.m,s.m2)
   names(s.m3)
   
-  #write raster
+  ## Write raster
   writeRaster(s.m3,overwrite=T,
               paste0(dir.out,"/",varname,'_',paste(bbox,collapse="_"),"_",gsub("X","",names(s.m3)[1]),"-",gsub("X","",names(s.m3)[nlayers(s.m3)])))
   
-  #Integrate surface cholorphyll over euphotic depth-------------------------------------------------
-  
-  
+  ## Integrate surface cholorphyll over euphotic depth--------------------------
   if(varname == 'chla'){
     Zd.m = calc(s.m3, function(x) 34*(x^-0.39)) #Lee (2007) z1%
     
-    #total cholorphyll in euphotic zone from surface chlorophyll: equations 3b and 3c in Morel and Berthon (1989)
+    ## Total cholorphyll in euphotic zone from surface chlorophyll: 
+    ## equations 3b and 3c in Morel and Berthon (1989)
     Ctot = calc(s.m3,function(x) ifelse(x<=1,38*x^0.423,40.3*x^0.505))  
     
-    #euphotic depth calculated from total chlorophyll: Equation 6 in Morel and Maritorena (2001), updated equations from M&B 1989 
+    ## Euphotic depth calculated from total chlorophyll: 
+    ## Equation 6 in Morel and Maritorena (2001), updated equations from M&B 1989 
     Zehat1 = 912.5*Ctot^-0.839  #for Ze<102m
     Zehat2 = 426.3*Ctot^-0.547  #for Ze>102m
     
-    #if Ze is > 102, replace with second equation
+    ## If Ze is > 102, replace with second equation
     Zehat = Zehat1
     Zehat[] = ifelse(Zehat1[]>102,Zehat2[],Zehat[])
     
-    #mean concentration in euphotic depth
+    ## Mean concentration in euphotic depth
     Cze = Ctot/Zehat
     
-    #integrated over true euphotic depth from satellite
+    ## Integrated over true euphotic depth from satellite
     Cint = Cze*Zd.m
     names(Cint) = names(s.m3)
     
-    #write raster
+    ## Write raster
     writeRaster(Cint,overwrite=T,
                 paste0(dir.out,"/chlaxZe_",paste(bbox,collapse="_"),"_",gsub("X","",names(s.m3)[1]),"-",gsub("X","",names(s.m3)[nlayers(s.m3)])))
   }
   #rm(s.d,s.m,s.m2,s.m3,erd1,erd2,Zd.m,Ctot,Zehat1,Zehat2,Zehat,Cze,Cint,erd.info1,erd.info2,erd.time1,erd.time2);gc()
 }
 
+
+## References ------------------------------------------------------------------
 ## Lee et al., 2007
 ## Z.P. Lee, A. Weideman, J. Kindle, R. Arnone, K. Carder, C. Davis
 ## Euphotic zone depth: its derivation and implication to ocean-color remote sensing
