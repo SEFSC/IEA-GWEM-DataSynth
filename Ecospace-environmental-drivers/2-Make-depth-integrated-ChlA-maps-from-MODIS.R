@@ -2,49 +2,114 @@ rm(list=ls());rm(.SavedPlots);graphics.off();gc();windows(record=T)
 
 library('terra')
 library('marmap')
+library('stringr')
+library('viridis')
 
-dir.ras.in = "./Ecospace-environmental-drivers/MODIS/"
-depth08min <- raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
+dir.ras.in   <- "./Ecospace-environmental-drivers/MODIS/"
+dir.ras.out  <- "./Ecospace-environmental-drivers/Outputs/Bricks/"
+fld.asc.out  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/"
+dir.asc.avg  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/Averages/"
+dir.pdf.out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/"
+depth08min   <- raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
 
 
+## -----------------------------------------------------------------------------
+##
+## FUNCTION TO MAKE PDFS
+
+## Function to make file name---------------------------------------------------
+outname = function(stack, dir, env_name){
+  #  stack = ras
+  #  dir = dir.asc.out
+  #  env_name = "CHLA"
+  
+  strt = str_sub(names(stack)[1], -7)
+  stop = str_sub(names(stack)[nlayers(stack)], -7)
+  out = gsub("X","", paste0(dir, env_name, "_", strt,"-", stop))
+  return(out)
+}
+
+## Function to make PDF of maps by year-----------------------------------------
+pdf_map = function(plt.stack, colscheme = "virid", dir, env_name, maxval){
+  
+  #  plt.stack = ras
+  #  colscheme = 'virid'
+  #  dir = "./maps/"
+  #  env_name = "Nutrients"
+  #  maxval = 380
+  
+  ## Determine color scheme
+  brks = seq(0, maxval, maxval/50)
+  if(colscheme == 'turbo'){
+    color   = viridis(min(length(brks),100), option = "H")
+    colid   = "col-turbo"
+  } else if (colscheme == 'brks') {
+    colv    = c("purple4","purple", "blue", "darkblue", "cyan", "green","darkgreen", "yellow", "orange", "red", "darkred")
+    funpal  = colorRampPalette(colv,bias=2)
+    nbcols  = length(brks)-1
+    color   = funpal(nbcols) 
+    colid   = "col-brks"
+  } else {
+    color   = viridis(min(length(brks),100), option = "D")
+    colid   = "col-viridis"
+  }
+  
+  ## Make PDF  
+  pdf(paste0(outname(plt.stack, dir, env_name), ".pdf"), onefile = T)
+  
+  ras.dates = data.frame(year=substr(names(plt.stack),2,5),month=substr(names(ras),6,7))
+  raster_years = unique(ras.dates$year)
+  
+  for(y in raster_years){
+    #y = raster_years[1]
+    print(paste("Plotting",y))
+    yr.sub  = substr(names(plt.stack),2,5)
+    yr.idx  = which(yr.sub == y)
+    plt.yr  = plt.stack[[yr.idx]] 
+    par(mfrow=c(4,3),mar=c(1,1,2,0),oma=c(2,2,0,6))
+    ## Plot 12 months
+    for(i  in 1:nlayers(plt.yr)){
+      mo.sub = paste0(y, "-", substr(names(plt.yr)[[i]],6,7))
+      plot(plt.yr[[i]], legend=F, col=color, colNA='darkgray', zlim=c(0, maxval),breaks=brks,
+           main = mo.sub)
+    }
+    ##Add legend
+    par(mfrow=c(1,1),mar=c(0,0,0,0),oma=c(0,0,0,1))
+    fields::image.plot(plt.yr,legend.only=T,zlim=c(0,maxval),col=color,add=T,legend.width=1,
+                       legend.mar=4,legend.line=3,
+                       legend.lab = env_name)
+  }
+  dev.off()
+}
 
 
 ##------------------------------------------------------------------------------
 ##
-## Write out ASCII files for ChlZ - ChlA integrated euphotic depth
+## Make Ecospace env ASCII files for ChlZ - ChlA integrated euphotic depth
 
-env_driver = "chla"
+env_driver = "ChlA"
 overwrite  = 'y'
+dir.asc.out = paste0(fld.asc.out, env_driver, "/")
+if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
 ras_hires = stack(paste0(dir.ras.in, env_driver, "/chlaxZe_-98_-80.5_24_31_200301-202207"))
+
 
 ## First, crop and resample to basemap grid 
 ras = crop(ras_hires, depth08min)
 ras = resample(ras, depth08min)
-dim(depth08min); dim(ras)
+dim(depth08min); dim(ras) ## Dimensions should match
 
+## Plotcheck
 par(mfrow=c(2,1))
 plot(depth08min, colNA = 'black')
 plot(ras[[1]], colNA = 'black')
 par(mfrow=c(1,1))
 
-## Which ones need to be written out
+## Determine which ones need to be written out
 ras.dates = data.frame(year=substr(names(ras),2,5),month=substr(names(ras),6,7))
 ras.dates$yrmo = paste0(ras.dates$year, "-", ras.dates$month)
 head(ras.dates); tail(ras.dates)
 asc.need = ras.dates$yrmo
-
-#sufx = paste0("y",substr(asc.need,1,4),"_m", substr(asc.need,5,7)); head(sufx)
-#dir.asc.out = "./maps/Chl-A Euphotic Depth/08 min Chl-A Euphotic Depth/"
-#writeRaster(ras, paste0(dir.asc.out,'/', "Chla_Euphotic_Depth"), bylayer=T,suffix=sufx,format='ascii',overwrite=F)
-
-
-## Make PDF of plots
-pdf_map(ras, dir = "./maps/", env_name = "ChlZ_08min", maxval = 200)
-pdf_map(log10(ras), dir = "./maps/", env_name = "ChlZ_08min_log10", maxval = log10(390))
-
-## Average CHLA for intial map ------------------------------------------------
-mean <- stackApply(ras, indices =  rep(1,nlayers(ras)), fun = "mean", na.rm = T)
-writeRaster(mean,paste0(dir.asc.out, '0mean_CHLA_INT_EUPHOTIC_DEPTH'),bylayer=F,format='ascii',overwrite=T)
 
 ## Plot average 
 png(paste0("./maps/Mean_ChlZ.png"), width = 6, height = 8.5, units = "in", res = 1500)
@@ -81,7 +146,7 @@ layers = names(ras_hires)
 names(ras) = sub("(.{5})(.*)", "\\1.\\2", layers) ## Capture the first 5 characters as a group ((.{5})) followed by one or more characters in another capture group ((.*)) and then replace with the backreference of first group (\\1) followed by a . followed by second backreference (\\2).
 names(ras)
 
-## Get monthly averages -------------------------------------------------------
+## Get monthly averages --------------------------------------------------------
 month.stack = stack()
 for (month in mo){
   #month = "01"
@@ -99,7 +164,7 @@ plot(month.stack, colNA = 'black',
 )
 par(mfrow=c(1,1))
 
-## Combine dummy raster set (1980-2002) and data (2003-2022)
+## Combine dummy raster set (1980-2002) and data (2003-2022) -------------------
 rep.stack = stack()
 for (year in yr){
   #year = 1980
@@ -110,35 +175,45 @@ for (year in yr){
 
 ras.comb = stack(rep.stack, ras)
 
-## Write out Brick and ASCII files---------------------------------------------
-
-dir.out.brick = "./maps/Chl-A Euphotic Depth/"
-dir.out.asc   = "./maps/Chl-A Euphotic Depth/ASCII/"
-
-env_driver = "ChlA_Depth-integrated_MODIS"
+#env_driver = "ChlA_Depth-integrated_MODIS"
 start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
 stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
-writeRaster(ras.comb, paste0(dir.out.brick, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
+writeRaster(ras.comb, paste0(dir.ras.out, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
 
-## Write out ASCII files
-writeRaster(ras.comb, paste0(dir.out.asc, 'ChlA_'), bylayer=T, suffix = names(ras.comb), format = 'ascii', overwrite=T)
+## Write out files -------------------------------------------------------------
+
+## ASCII
+writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), 
+            format = 'ascii', overwrite=T)
+
+## Make PDF of plots
+pdf_map(ras, dir = dir.pdf.out, env_name = "ChlA", maxval = 200)
+pdf_map(log10(ras), dir = dir.pdf.out, env_name = "ChlA_log10", maxval = log10(390))
+
+
+## Average for intial map 
+mean <- stackApply(ras, indices =  rep(1,nlayers(ras)), fun = "mean", na.rm = T)
+writeRaster(mean, paste0(dir.asc.avg, 'avg_chla_integrated_euphotic_depth'),
+            bylayer=F, format='ascii', overwrite=T)
 
 
 
-################################################################################
-## Plot depth corrections
-visaid = depth; visaid[visaid < 1] = NA
 
-png(paste0("./maps/Depth_corrections.png"), width = 6, height = 8.5, units = "in", res = 1500)
-par(mfrow=c(3,2))
-plot(visaid, colNA = "black", main = "Depth (raw 04 min)")
-plot(maxchlz, colNA = "black", main = "Max chla (binary)")
-plot(cordepth, colNA = "black", main = "Corrected depth (04 min)")
-plot(mean, colNA = "black", main = "Mean Chla (08 min)")
-plot(depth08min, colNA = "black", main = "Corrected depth (08 min)")
-plot(log10(depth08min), colNA = "black", main = "Log 10 corrected depth")
-par(mfrow=c(1,1))
-dev.off()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
