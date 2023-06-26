@@ -23,57 +23,71 @@ outname = function(stack, dir, env_name){
 }
 
 ## Function to make PDF of maps by year-----------------------------------------
-pdf_map = function(plt.stack, colscheme = "virid", dir, env_name, maxval){
+pdf_map = function(plt.stack, colscheme = 'brks', dir = './', env_name = '', modtype = '', 
+                   mintile = 'zero', maxtile = 0.99){
+  #  plt.stack = t.surf
+  #  colscheme = 'turbo'
+  #  dir = dir.out
+  #  env_name = env_driver
+  #  modtype = "MODIS"
+  #  mintile = 0.01; maxtile = 0.99
   
-  #  plt.stack = ras
-  #  colscheme = 'virid'
-  #  dir = "./maps/"
-  #  env_name = "Nutrients"
-  #  maxval = 380
+  maxval = as.integer(round(quantile(values(plt.stack), maxtile, na.rm=T), 0)) 
+  minval = ifelse (mintile == 'zero', 0,
+                   as.integer(round(quantile(values(plt.stack), mintile, na.rm=T), 0))
+                   )
+  print(paste(env_name, "plotting range:", minval, "-", maxval))
+  #maxval = 40
   
   ## Determine color scheme
   brks = seq(0, maxval, maxval/50)
   if(colscheme == 'turbo'){
     color   = viridis(min(length(brks),100), option = "H")
     colid   = "col-turbo"
+  } else if (colscheme == 'virid'){
+    color   = viridis(min(length(brks),100), option = "D")
+    colid   = "col-viridis"
+  } else if (colscheme == 'rev-virid'){
+    color   = rev(viridis(min(length(brks),100), option = "D"))
+    colid   = "col-viridis"
   } else if (colscheme == 'brks') {
     colv    = c("purple4","purple", "blue", "darkblue", "cyan", "green","darkgreen", "yellow", "orange", "red", "darkred")
     funpal  = colorRampPalette(colv,bias=2)
     nbcols  = length(brks)-1
     color   = funpal(nbcols) 
     colid   = "col-brks"
-  } else {
-    color   = viridis(min(length(brks),100), option = "D")
-    colid   = "col-viridis"
   }
   
-  ## Make PDF  
-  pdf(paste0(outname(plt.stack, dir, env_name), ".pdf"), onefile = T)
+  ## Determine years
+  start = as.numeric(str_sub(names(plt.stack)[1], 2, 5))
+  stop  = as.numeric(str_sub(names(plt.stack)[nlayers(plt.stack)], 2, 5))
+  yrs = seq(start, stop, 1)
   
-  ras.dates = data.frame(year=substr(names(plt.stack),2,5),month=substr(names(ras),6,7))
-  raster_years = unique(ras.dates$year)
-  
-  for(y in raster_years){
-    #y = raster_years[1]
-    print(paste("Plotting",y))
-    yr.sub  = substr(names(plt.stack),2,5)
-    yr.idx  = which(yr.sub == y)
-    plt.yr  = plt.stack[[yr.idx]] 
-    par(mfrow=c(4,3),mar=c(1,1,2,0),oma=c(2,2,0,6))
+  ## Make PDF 
+  namepdf = paste0(dir, env_name, "_", modtype, "_", start, "-", stop, ".pdf")
+  pdf(namepdf, onefile = T)
+  for(y in yrs){
+    #  y = 1980
+    print(paste("Plotting", y))
+    plt.yr = raster::subset(plt.stack, grep(paste0('X', y), names(plt.stack), value = T, fixed = T))
+    
     ## Plot 12 months
+    par(mfrow=c(4,3),mar=c(1,1,2,0), oma=c(2,2,0,5))
     for(i  in 1:nlayers(plt.yr)){
-      mo.sub = paste0(y, "-", substr(names(plt.yr)[[i]],6,7))
-      plot(plt.yr[[i]], legend=F, col=color, colNA='darkgray', zlim=c(0, maxval),breaks=brks,
-           main = mo.sub)
+      plot(plt.yr[[i]], legend=F, col=color, colNA='darkgray', zlim=c(minval, maxval), breaks=brks,
+           main = names(plt.yr)[i])
     }
     ##Add legend
-    par(mfrow=c(1,1),mar=c(0,0,0,0),oma=c(0,0,0,1))
-    fields::image.plot(plt.yr,legend.only=T,zlim=c(0,maxval),col=color,add=T,legend.width=1,
+    par(mfrow=c(1,1), mar=c(0,0,0,0), oma=c(0,0,0,1))
+    fields::image.plot(plt.yr,legend.only=T, zlim=c(minval, maxval),col=color,add=T,legend.width=1,
                        legend.mar=4,legend.line=3,
                        legend.lab = env_name)
   }
   dev.off()
 }
+
+
+
 
 
 ##------------------------------------------------------------------------------
@@ -86,12 +100,12 @@ fld.asc.out  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/"
 dir.asc.avg  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/Averages/"
 dir.pdf.out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/"
 depth08min   <- raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
-date_coord_range = "-98_-80.5_24_31_200301-202207"
+date_coord_range <- "-98_-80.5_24_31_200301-202207"
 
 
 ##------------------------------------------------------------------------------
 ##
-## Make Ecospace env ASCII files for ChlZ - ChlA integrated euphotic depth
+## Make Ecospace environmental-drivers files for ChlA integrated euphotic depth
 
 env_driver = "ChlA"
 overwrite  = 'y'
@@ -121,12 +135,14 @@ asc.need = ras.dates$yrmo
 ## Average for intial map 
 mean <- stackApply(ras, indices =  rep(1,nlayers(ras)), fun = "mean", na.rm = T)
 
-par(mfrow=c(2,1)) ## Plot average 
+## Plot global average 
+par(mfrow=c(2,1)) 
 plot(mean, colNA = "black", main = "Averaged Chla Euphotic Depth")
 plot(log10(mean), colNA = "black", main = "Log10 Chla Euphotic Depth")
 par(mfrow=c(1,1))
 
-## Copy mean by month for months before data -----------------------------------
+## Create dummy months to be filled later by monthly means: 
+## copy mean by month for months before data -----------------------------------
 mo = unique(ras.dates$month)
 enddummy = min(as.numeric(ras.dates$year))-1
 yr = 1980:enddummy
@@ -139,7 +155,7 @@ for(y in yr){
   }
 }
 colnames(dummy.dates) = c("year", "month")
-dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
+dummy.dates$ym = paste(dummy.dates$year, dummy.dates$month, sep="-")
 head(dummy.dates); tail(dummy.dates)
 
 ## Replicate average for months Jan 1980 until MODIS data starts in 2003
@@ -178,14 +194,19 @@ for (year in yr){
   rep.stack = addLayer(rep.stack, xx)
 }
 
+## Combine stacks: monthly averages (rep.stack) and monthy data (ras)
 ras.comb = stack(rep.stack, ras)
-
 start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
 stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
 
 ## Write out files -------------------------------------------------------------
 ## Save raster
 writeRaster(ras.comb, paste0(dir.ras.out, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
+
+## Make PDF of plots
+## Set plotting maximum to maximum of 99th percentile by month
+pdf_map(ras.comb, colscheme = 'virid', dir = dir.pdf.out, 
+        env_name = env_driver, mintile = 'zero', maxtile = 0.99, modtype = "MODIS")
 
 ## ASCII files by month
 writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), 
@@ -194,10 +215,6 @@ writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names
 ## ASCII global average
 writeRaster(mean, paste0(dir.asc.avg, 'Avg_', env_driver),
             bylayer=F, format='ascii', overwrite=T)
-
-## Make PDF of plots
-pdf_map(ras, dir = dir.pdf.out, env_name = env_driver, maxval = 200)
-pdf_map(log10(ras), dir = dir.pdf.out, env_name = "ChlA_log10", maxval = log10(390))
 
 
 ## -----------------------------------------------------------------------------
