@@ -1,7 +1,6 @@
 rm(list=ls());rm(.SavedPlots);graphics.off();gc();windows(record=T)
 
 library('terra')
-library('marmap')
 library('stringr')
 library('viridis')
 
@@ -10,32 +9,19 @@ library('viridis')
 ##
 ## FUNCTION TO MAKE PDFS
 
-## Function to make file name---------------------------------------------------
-outname = function(stack, dir, env_name){
-  #  stack = ras
-  #  dir = dir.asc.out
-  #  env_name = "CHLA"
-  
-  strt = str_sub(names(stack)[1], -7)
-  stop = str_sub(names(stack)[nlayers(stack)], -7)
-  out = gsub("X","", paste0(dir, env_name, "_", strt,"-", stop))
-  return(out)
-}
-
 ## Function to make PDF of maps by year-----------------------------------------
 pdf_map = function(plt.stack, colscheme = 'brks', dir = './', env_name = '', modtype = '', 
-                   mintile = 'zero', maxtile = 0.99){
-  #  plt.stack = t.surf
-  #  colscheme = 'turbo'
+                   mintile = 0.01, maxtile = 0.99){
+  #  plt.stack = ras.comb
+  #  colscheme = 'virid'
   #  dir = dir.out
   #  env_name = env_driver
   #  modtype = "MODIS"
-  #  mintile = 0.01; maxtile = 0.99
+  #  mintile = 0; maxtile = .99
   
-  maxval = as.integer(round(quantile(values(plt.stack), maxtile, na.rm=T), 0)) 
+  maxval = as.numeric(quantile(values(plt.stack), maxtile, na.rm=T)) 
   minval = ifelse (mintile == 'zero', 0,
-                   as.integer(round(quantile(values(plt.stack), mintile, na.rm=T), 0))
-                   )
+                   as.numeric(quantile(values(plt.stack), mintile, na.rm=T)))
   print(paste(env_name, "plotting range:", minval, "-", maxval))
   #maxval = 40
   
@@ -87,9 +73,6 @@ pdf_map = function(plt.stack, colscheme = 'brks', dir = './', env_name = '', mod
 }
 
 
-
-
-
 ##------------------------------------------------------------------------------
 ##
 ## Set up directory paths
@@ -106,6 +89,8 @@ date_coord_range <- "-98_-80.5_24_31_200301-202207"
 ##------------------------------------------------------------------------------
 ##
 ## Make Ecospace environmental-drivers files for ChlA integrated euphotic depth
+## https://modis.gsfc.nasa.gov/data/dataprod/chlor_a.php
+## near-surface concentration of chlorophyll-a (chlor_a) in mg m-3, calculated using an empirical relationship derived from in situ measurements of chlor_a and blue-to-green band ratios of in situ remote sensing reflectances (Rrs).
 
 env_driver = "ChlA"
 overwrite  = 'y'
@@ -185,7 +170,7 @@ plot(month.stack, colNA = 'black',
 )
 par(mfrow=c(1,1))
 
-## Combine dummy raster set (1980-2002) and data (2003-2022) -------------------
+## Combine dummy raster set (1980-1992) and data (1993-2022) -------------------
 rep.stack = stack()
 for (year in yr){
   #year = 1980
@@ -219,24 +204,21 @@ writeRaster(mean, paste0(dir.asc.avg, 'Avg_', env_driver),
 
 ## -----------------------------------------------------------------------------
 ##
-## Cfl
+## Cfl: carbon florescence
+## Fluorescence Line Height, Aqua MODIS
 
 env_driver = "Cfl"
 overwrite  = 'y'
 dir.asc.out = paste0(fld.asc.out, env_driver, "/")
 if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
+
+## Read in stack
 ras_hires = stack(paste0(dir.ras.in, tolower(env_driver), "/", tolower(env_driver), "_", date_coord_range))
 
 ## First, crop and resample to basemap grid 
 ras = crop(ras_hires, depth08min)
 ras = resample(ras, depth08min)
 dim(depth08min); dim(ras) ## Dimensions should match
-
-## Plotcheck
-par(mfrow=c(2,1))
-plot(depth08min, colNA = 'black')
-plot(ras[[1]], colNA = 'black')
-par(mfrow=c(1,1))
 
 ## Determine which ones need to be written out
 ras.dates = data.frame(year=substr(names(ras),2,5),month=substr(names(ras),6,7))
@@ -246,9 +228,16 @@ asc.need = ras.dates$yrmo
 
 ## Average for intial map 
 mean <- stackApply(ras, indices =  rep(1,nlayers(ras)), fun = "mean", na.rm = T)
-plot(mean, colNA = "black", main = paste0( "Averaged ", env_driver))
 
-## Copy mean by month for months before data -----------------------------------
+## Plotcheck
+par(mfrow=c(2,2))
+plot(depth08min, colNA = 'black', main="Base/depth map")
+plot(ras[[1]], colNA = 'black', main = paste(env_driver, "first month"))
+plot(mean, colNA = "black", main = paste(env_driver, "global average"))
+par(mfrow=c(1,1))
+
+## Create dummy months to be filled later by monthly means: 
+## copy mean by month for months before data -----------------------------------
 mo = unique(ras.dates$month)
 enddummy = min(as.numeric(ras.dates$year))-1
 yr = 1980:enddummy
@@ -261,7 +250,7 @@ for(y in yr){
   }
 }
 colnames(dummy.dates) = c("year", "month")
-dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
+dummy.dates$ym = paste(dummy.dates$year, dummy.dates$month, sep="-")
 head(dummy.dates); tail(dummy.dates)
 
 ## Replicate average for months Jan 1980 until MODIS data starts in 2003
@@ -300,49 +289,51 @@ for (year in yr){
   rep.stack = addLayer(rep.stack, xx)
 }
 
-ras.comb = stack(rep.stack, ras) ## Combine stacks
-
+## Combine stacks: monthly averages (rep.stack) and monthy data (ras)
+ras.comb = stack(rep.stack, ras)
 start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
 stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
 
 ## Write out files -------------------------------------------------------------
+
+## Make PDF of plots
+## Set plotting maximum to maximum of 99th percentile by month
+pdf_map(ras.comb, colscheme = 'virid', dir = dir.pdf.out, 
+        env_name = env_driver, mintile = 0.01, maxtile = 0.99, modtype = "MODIS")
+
+
 ## Save raster
 writeRaster(ras.comb, paste0(dir.ras.out, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
 
-## Make PDF of plots
-pdf_map(ras, dir = dir.pdf.out, env_name = env_driver, maxval = max(maxValue(ras.comb)))
+## ASCII files by month
+writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), 
+            format = 'ascii', overwrite=T)
 
 ## ASCII global average
 writeRaster(mean, paste0(dir.asc.avg, 'Avg_', env_driver),
             bylayer=F, format='ascii', overwrite=T)
 
-
-## ASCII files by month
-writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), 
-            format = 'ascii', overwrite=T)
 
 
 
 ## -----------------------------------------------------------------------------
 ##
-## POC
+## POC: Particulate organic carbon concentration
+## Concentration of particulate organic carbon (POC) in mg m-3, calculated using an empirical relationship derived from in situ measurements of POC and blue-to-green band ratios of remote sensing reflectances (Rrs).
+## https://modis.gsfc.nasa.gov/data/dataprod/poc.php
 
 env_driver = "POC"
 overwrite  = 'y'
 dir.asc.out = paste0(fld.asc.out, env_driver, "/")
 if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
+
+## Read in stack
 ras_hires = stack(paste0(dir.ras.in, tolower(env_driver), "/", tolower(env_driver), "_", date_coord_range))
 
 ## First, crop and resample to basemap grid 
 ras = crop(ras_hires, depth08min)
 ras = resample(ras, depth08min)
 dim(depth08min); dim(ras) ## Dimensions should match
-
-## Plotcheck
-par(mfrow=c(2,1))
-plot(depth08min, colNA = 'black')
-plot(ras[[1]], colNA = 'black')
-par(mfrow=c(1,1))
 
 ## Determine which ones need to be written out
 ras.dates = data.frame(year=substr(names(ras),2,5),month=substr(names(ras),6,7))
@@ -352,9 +343,16 @@ asc.need = ras.dates$yrmo
 
 ## Average for intial map 
 mean <- stackApply(ras, indices =  rep(1,nlayers(ras)), fun = "mean", na.rm = T)
-plot(mean, colNA = "black", main = paste0( "Averaged ", env_driver))
 
-## Copy mean by month for months before data -----------------------------------
+## Plotcheck
+par(mfrow=c(2,2))
+plot(depth08min, colNA = 'black', main="Base/depth map")
+plot(ras[[1]], colNA = 'black', main = paste(env_driver, "first month"))
+plot(mean, colNA = "black", main = paste(env_driver, "global average"))
+par(mfrow=c(1,1))
+
+## Create dummy months to be filled later by monthly means: 
+## copy mean by month for months before data -----------------------------------
 mo = unique(ras.dates$month)
 enddummy = min(as.numeric(ras.dates$year))-1
 yr = 1980:enddummy
@@ -367,7 +365,7 @@ for(y in yr){
   }
 }
 colnames(dummy.dates) = c("year", "month")
-dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
+dummy.dates$ym = paste(dummy.dates$year, dummy.dates$month, sep="-")
 head(dummy.dates); tail(dummy.dates)
 
 ## Replicate average for months Jan 1980 until MODIS data starts in 2003
@@ -406,8 +404,8 @@ for (year in yr){
   rep.stack = addLayer(rep.stack, xx)
 }
 
-ras.comb = stack(rep.stack, ras) ## Combine stacks
-
+## Combine stacks: monthly averages (rep.stack) and monthy data (ras)
+ras.comb = stack(rep.stack, ras)
 start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
 stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
 
@@ -416,13 +414,16 @@ stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
 writeRaster(ras.comb, paste0(dir.ras.out, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
 
 ## Make PDF of plots
-pdf_map(ras, dir = dir.pdf.out, env_name = env_driver, maxval = max(maxValue(ras.comb)))
+## Set plotting maximum to maximum of 99th percentile by month
+pdf_map(ras.comb, colscheme = 'virid', dir = dir.pdf.out, 
+        env_name = env_driver, mintile = 0.01, maxtile = 0.99, modtype = "MODIS")
+
+## ASCII files by month
+writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), 
+            format = 'ascii', overwrite=T)
 
 ## ASCII global average
 writeRaster(mean, paste0(dir.asc.avg, 'Avg_', env_driver),
             bylayer=F, format='ascii', overwrite=T)
 
 
-## ASCII files by month
-writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), 
-            format = 'ascii', overwrite=T)
