@@ -104,10 +104,19 @@ dev.off()
 ## Seagrass
 shp_sav <- sf::st_read("./Ecospace-habitat-maps/Data-inputs/NCEI-GOM-data-atlas/SAV/Seagrass_ALFLMSTX.shp")
 shp_sav$const = 1
-sav_ras <- raster::rasterize(shp_sav, depth, field = "const")
-
+shp_sav2 <- shp_sav[!st_is_empty(shp_sav),,drop=FALSE] ## need to remove NAs
+sav_ras <- terra::rasterize(shp_sav2, depth, field = "const")
 plot(sav_ras, main="Seagrass habitat")
-plot(shp_sav["const"])
+
+## Write out ASCII files for ecospace
+raster::writeRaster(sav_ras, paste0(dir_out, "/seagrass-hab"),   
+                    format = 'ascii', overwrite=TRUE)
+
+## Figure
+png(paste0(dir_fig, "Ecospace-seagrass-hab.png"), 
+    width = 6, height = 4, units = "in", res=1200)
+plot(sav_ras, main="Seagrass habitat")
+dev.off()
 
 ################################################################################
 ## 
