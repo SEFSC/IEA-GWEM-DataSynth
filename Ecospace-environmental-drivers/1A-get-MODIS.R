@@ -7,7 +7,7 @@ library('rerddap')
 ##------------------------------------------------------------------------------
 ## SETUP
 
-bbox.gom = c(-98,-80.5,24,31)
+bbox.gom = c(-98, -80.5, 24, 31)
 bbox = bbox.gom
 
 dir.modis = "./Ecospace-environmental-drivers/MODIS/"
