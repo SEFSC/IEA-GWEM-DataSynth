@@ -1,9 +1,8 @@
 rm(list=ls());rm(.SavedPlots);graphics.off();gc();windows(record=T)
 
-library('terra')
-library('stringr')
-library('viridis')
-
+library(terra)
+library(stringr)
+library(viridis)
 
 ## -----------------------------------------------------------------------------
 ##
@@ -295,7 +294,6 @@ start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
 stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
 
 ## Write out files -------------------------------------------------------------
-
 ## Make PDF of plots
 ## Set plotting maximum to maximum of 99th percentile by month
 pdf_map(ras.comb, colscheme = 'virid', dir = dir.pdf.out, 
