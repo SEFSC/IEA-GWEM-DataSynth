@@ -3,20 +3,20 @@
 ## Write out ASCII files for Ecospace 
 
 rm(list=ls()); rm(.SavedPlots); graphics.off(); gc(); windows(record=T)
-library(terra)
+library(raster)
 library(viridis)
 
 ##------------------------------------------------------------------------------
 ##
 ## Set up directory paths
-
+model     = "HYCOM"
 datelabel = "1993-01 to 2020-12"
 dir.in   <- "./Ecospace-environmental-drivers/HYCOM/"
 dir.ras.out  <- "./Ecospace-environmental-drivers/Outputs/Bricks/"
 fld.asc.out  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/"
 dir.asc.avg  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/Averages/"
 dir.pdf.out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/"
-
+source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call PDF-map function
 
 ## HIRES monthly stacks
 t.surf.hycom = stack( paste0(dir.in, 'HYCOM GOM temp surface ', datelabel))
@@ -73,13 +73,14 @@ overwrite <- 'y'
 smoothed_stack_list <- list(t.surf.smoo, t.bot.smoo, t.avg.smoo, s.surf.smoo, s.bot.smoo, s.avg.smoo)
 hires_stack_list    <- list(t.surf.hycom, t.bot.hycom, t.avg.hycom, s.surf.hycom, s.bot.hycom, s.avg.hycom)
 env_dr_list <- c("Temp-surf", "Temp-bot", "Temp-avg", "Sal-surf", "Sal-bot", "Sal-avg")
+col_list <- c("turbo", "turbo", "turbo", "virid", "virid", "virid")
 
 for (i in 1:length(smoothed_stack_list)){
     # i = 1
   ## Input parameters-----------------------------------------------------------
   env_driver = env_dr_list[i]
-  ras   = smoothed_stack_list[i]
-  hires = hires_stack_list[i]
+  ras   = stack(smoothed_stack_list[i])
+  hires = stack(hires_stack_list[i])
   dir.asc.out = paste0(fld.asc.out, env_driver, "/")
   if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
   print(paste("Env. driver = ", env_driver, "| Folder:", dir.asc.out))
@@ -104,13 +105,12 @@ for (i in 1:length(smoothed_stack_list)){
   head(dummy.dates); tail(dummy.dates)
   
   ## Get monthly averages -------------------------------------------------------
-  nlayers(month.stack) ## Should be 28 or so
   month.stack = stack()
   for (month in mo){
     #month = "01"
     subset.month = raster::subset(ras, grep(paste0('.', month), names(ras), value = T, fixed = T))
     month.avg = calc(subset.month, mean)
-    names(month.avg) = paste0("Mo", month, "_avg", nlayers(subset.month),"y")
+    names(month.avg) = paste0(env_driver, "_mo", month, "_avg", nlayers(subset.month),"y")
     month.stack = addLayer(month.stack, month.avg)
   }  
   
@@ -122,16 +122,25 @@ for (i in 1:length(smoothed_stack_list)){
   par(mfrow=c(1,1))
   names(ras.comb)
   
+  ## Combine dummy raster set (1980-1992) and data (1993-2022)
+  rep.stack = stack()
+  for (year in yr){
+    #year = 1980
+    xx = month.stack
+    names(xx) = paste0(year, "_", stringr::str_sub(labels(month.stack), start=-11))
+    rep.stack = addLayer(rep.stack, xx)
+  }
+  ras.comb = stack(rep.stack, ras)
+  
   ## Write out raster
   start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
   stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
-  writeRaster(ras.comb, paste0(dir.out.brick, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
   
   ## Write out files -----------------------------------------------------------
   ## Make PDF of plots
   ## Set plotting maximum to maximum of 99th percentile by month
-  pdf_map(ras.comb, colscheme = 'virid', dir = dir.pdf.out, 
-          env_name = env_driver, mintile = 0.01, maxtile = 0.99, modtype = "MODIS")
+  pdf_map(ras.comb, colscheme = col_list[i], dir = dir.pdf.out, 
+          env_name = env_driver, mintile = 0.0001, maxtile = 0.9999, modtype = model)
   
   ## Save raster
   writeRaster(ras.comb, paste0(dir.ras.out, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
@@ -139,421 +148,7 @@ for (i in 1:length(smoothed_stack_list)){
   ## ASCII files by month
   writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), 
               format = 'ascii', overwrite=T)
-  
-  
-  
-  
-  
-  
-  ## Write out ASCII files
-  writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), format = 'ascii', overwrite=T)
   }
 
 
 
-
-
-
-
-
-
-
-## -----------------------------------------------------------------------------
-## 1) Surface temperature
-
-## Input parameters-------------------------------------
-ras   = t.surf.smoo
-hires = t.surf.hycom
-dir.asc.out = "./maps/HYCOM/ASCII/Temperature surface/"
-env_driver = "Temp_surface"
-## -----------------------------------------------------
-
-## Make dataframe of dates from raster layers
-ras.dates = data.frame(year=substr(names(hires),2,5),month=substr(names(hires),7,8))
-ras.dates$yrmo = paste0(ras.dates$year, "-", ras.dates$month)
-head(ras.dates); tail(ras.dates)
-mo = unique(ras.dates$month)
-
-## Make dataframe of year months before HYCOM data starts
-enddummy = min(as.numeric(ras.dates$year))-1
-yr = 1980:enddummy
-dummy.dates = data.frame(year = character(), month = character())
-for(y in yr){
-  for(m in mo){
-    dummy.dates = rbind(dummy.dates, c(y,m))
-  }
-}
-colnames(dummy.dates) = c("year", "month")
-dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
-head(dummy.dates); tail(dummy.dates)
-
-## Get monthly averages -------------------------------------------------------
-nlayers(month.stack) ## Should be 28 or so
-month.stack = stack()
-for (month in mo){
-  #month = "01"
-  subset.month = raster::subset(ras, grep(paste0('.', month), names(ras), value = T, fixed = T))
-  month.avg = calc(subset.month, mean)
-  names(month.avg) = paste0("Mo", month, "_avg", nlayers(subset.month),"y")
-  month.stack = addLayer(month.stack, month.avg)
-}  
-
-## Plot check
-par(mfrow=c(3,4))
-plot(month.stack, colNA = 'black', 
-     zlim=c(min(values(month.stack), na.rm=T), max(values(month.stack), na.rm=T))
-)
-par(mfrow=c(1,1))
-names(ras.comb)
-
-## Write out raster
-start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
-stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
-writeRaster(ras.comb, paste0(dir.out.brick, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
-
-## Write out ASCII files
-writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), format = 'ascii', overwrite=T)
-
-## -----------------------------------------------------------------------------
-## 2) Bottom temperature
-
-## Input parameters-------------------------------------
-ras   = t.bot.smoo
-hires = t.bot.hycom
-dir.asc.out = "./maps/HYCOM/ASCII/Temperature bottom/"
-env_driver = "Temp_bottom"
-## -----------------------------------------------------
-
-## Make dataframe of dates from raster layers
-ras.dates = data.frame(year=substr(names(hires),2,5),month=substr(names(hires),7,8))
-ras.dates$yrmo = paste0(ras.dates$year, "-", ras.dates$month)
-head(ras.dates); tail(ras.dates)
-mo = unique(ras.dates$month)
-
-## Make dataframe of year months before HYCOM data starts
-enddummy = min(as.numeric(ras.dates$year))-1
-yr = 1980:enddummy
-dummy.dates = data.frame(year = character(), month = character())
-for(y in yr){
-  for(m in mo){
-    dummy.dates = rbind(dummy.dates, c(y,m))
-  }
-}
-colnames(dummy.dates) = c("year", "month")
-dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
-head(dummy.dates); tail(dummy.dates)
-
-## Get monthly averages -------------------------------------------------------
-nlayers(month.stack) ## Should be 28 or so
-month.stack = stack()
-for (month in mo){
-  #month = "01"
-  subset.month = raster::subset(ras, grep(paste0('.', month), names(ras), value = T, fixed = T))
-  month.avg = calc(subset.month, mean)
-  names(month.avg) = paste0("Mo", month, "_avg", nlayers(subset.month),"y")
-  month.stack = addLayer(month.stack, month.avg)
-}  
-
-## Plot check
-par(mfrow=c(3,4))
-plot(month.stack, colNA = 'black', 
-     zlim=c(min(values(month.stack), na.rm=T), max(values(month.stack), na.rm=T))
-)
-
-## Combine dummy raster set (1980-1992) and data (1993-2022)
-rep.stack = stack()
-for (year in yr){
-  #year = 1980
-  xx = month.stack
-  names(xx) = paste0(year, "_", substr(labels(month.stack), 3, 8))
-  rep.stack = addLayer(rep.stack, xx)
-}
-
-ras.comb = stack(rep.stack, ras)
-
-## Write out raster
-start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
-stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
-writeRaster(ras.comb, paste0(dir.out.brick, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
-
-## Write out ASCII files
-writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, 
-            suffix = names(ras.comb), format = 'ascii', overwrite=T)
-
-
-
-## -----------------------------------------------------------------------------
-## 3) Average temperature
-
-## Input parameters-------------------------------------
-ras   = t.avg.smoo
-hires = t.avg.hycom
-dir.asc.out = "./maps/HYCOM/ASCII/Temperature average/"
-env_driver = "Temp_avg"
-## -----------------------------------------------------
-
-## Make dataframe of dates from raster layers
-ras.dates = data.frame(year=substr(names(hires),2,5),month=substr(names(hires),7,8))
-ras.dates$yrmo = paste0(ras.dates$year, "-", ras.dates$month)
-head(ras.dates); tail(ras.dates)
-mo = unique(ras.dates$month)
-
-## Make dataframe of year months before HYCOM data starts
-enddummy = min(as.numeric(ras.dates$year))-1
-yr = 1980:enddummy
-dummy.dates = data.frame(year = character(), month = character())
-for(y in yr){
-  for(m in mo){
-    dummy.dates = rbind(dummy.dates, c(y,m))
-  }
-}
-colnames(dummy.dates) = c("year", "month")
-dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
-head(dummy.dates); tail(dummy.dates)
-
-## Get monthly averages -------------------------------------------------------
-nlayers(month.stack) ## Should be 28 or so
-month.stack = stack()
-for (month in mo){
-  #month = "01"
-  subset.month = raster::subset(ras, grep(paste0('.', month), names(ras), value = T, fixed = T))
-  month.avg = calc(subset.month, mean)
-  names(month.avg) = paste0("Mo", month, "_avg", nlayers(subset.month),"y")
-  month.stack = addLayer(month.stack, month.avg)
-}  
-
-## Plot check
-par(mfrow=c(3,4))
-plot(month.stack, colNA = 'black', 
-     zlim=c(min(values(month.stack), na.rm=T), max(values(month.stack), na.rm=T))
-)
-
-## Combine dummy raster set (1980-1992) and data (1993-2022)
-rep.stack = stack()
-for (year in yr){
-  #year = 1980
-  xx = month.stack
-  names(xx) = paste0(year, "_", substr(labels(month.stack), 3, 8))
-  rep.stack = addLayer(rep.stack, xx)
-}
-
-ras.comb = stack(rep.stack, ras)
-
-## Write out raster
-start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
-stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
-writeRaster(ras.comb, paste0(dir.out.brick, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
-
-
-## Write out ASCII files
-writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, 
-            suffix = names(ras.comb), format = 'ascii', overwrite=T)
-
-## -----------------------------------------------------------------------------
-## 4) Surface salinity
-
-## Input parameters-------------------------------------
-ras   = s.surf.smoo
-hires = s.surf.hycom
-dir.asc.out = "./maps/HYCOM/ASCII/Salinity surface/"
-env_driver = "Sal_surface"
-## -----------------------------------------------------
-
-## Make dataframe of dates from raster layers
-ras.dates = data.frame(year=substr(names(hires),2,5),month=substr(names(hires),7,8))
-ras.dates$yrmo = paste0(ras.dates$year, "-", ras.dates$month)
-head(ras.dates); tail(ras.dates)
-mo = unique(ras.dates$month)
-
-## Make dataframe of year months before HYCOM data starts
-enddummy = min(as.numeric(ras.dates$year))-1
-yr = 1980:enddummy
-dummy.dates = data.frame(year = character(), month = character())
-for(y in yr){
-  for(m in mo){
-    dummy.dates = rbind(dummy.dates, c(y,m))
-  }
-}
-colnames(dummy.dates) = c("year", "month")
-dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
-head(dummy.dates); tail(dummy.dates)
-
-## Get monthly averages -------------------------------------------------------
-nlayers(month.stack) ## Should be 28 or so
-month.stack = stack()
-for (month in mo){
-  #month = "01"
-  subset.month = raster::subset(ras, grep(paste0('.', month), names(ras), value = T, fixed = T))
-  month.avg = calc(subset.month, mean)
-  names(month.avg) = paste0("Mo", month, "_avg", nlayers(subset.month),"y")
-  month.stack = addLayer(month.stack, month.avg)
-}  
-
-## Plot check
-par(mfrow=c(3,4))
-plot(month.stack, colNA = 'black', 
-     zlim=c(min(values(month.stack), na.rm=T), max(values(month.stack), na.rm=T))
-)
-
-## Combine dummy raster set (1980-1992) and data (1993-2022)
-rep.stack = stack()
-for (year in yr){
-  #year = 1980
-  xx = month.stack
-  names(xx) = paste0(year, "_", substr(labels(month.stack), 3, 8))
-  rep.stack = addLayer(rep.stack, xx)
-}
-
-ras.comb = stack(rep.stack, ras)
-
-## Write out raster
-start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
-stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
-writeRaster(ras.comb, paste0(dir.out.brick, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
-
-
-## Write out ASCII files
-writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, 
-            suffix = names(ras.comb), format = 'ascii', overwrite=T)
-
-## -----------------------------------------------------------------------------
-## 5) Bottom salinity
-
-## Input parameters-------------------------------------
-ras   = s.bot.smoo
-hires = s.bot.hycom
-dir.asc.out = "./maps/HYCOM/ASCII/Salinity bottom/"
-env_driver = "Sal_bottom"
-## -----------------------------------------------------
-
-## Make dataframe of dates from raster layers
-ras.dates = data.frame(year=substr(names(hires),2,5),month=substr(names(hires),7,8))
-ras.dates$yrmo = paste0(ras.dates$year, "-", ras.dates$month)
-head(ras.dates); tail(ras.dates)
-mo = unique(ras.dates$month)
-
-## Make dataframe of year months before HYCOM data starts
-enddummy = min(as.numeric(ras.dates$year))-1
-yr = 1980:enddummy
-dummy.dates = data.frame(year = character(), month = character())
-for(y in yr){
-  for(m in mo){
-    dummy.dates = rbind(dummy.dates, c(y,m))
-  }
-}
-colnames(dummy.dates) = c("year", "month")
-dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
-head(dummy.dates); tail(dummy.dates)
-
-## Get monthly averages -------------------------------------------------------
-nlayers(month.stack) ## Should be 28 or so
-month.stack = stack()
-for (month in mo){
-  #month = "01"
-  subset.month = raster::subset(ras, grep(paste0('.', month), names(ras), value = T, fixed = T))
-  month.avg = calc(subset.month, mean)
-  names(month.avg) = paste0("Mo", month, "_avg", nlayers(subset.month),"y")
-  month.stack = addLayer(month.stack, month.avg)
-}  
-
-## Plot check
-par(mfrow=c(3,4))
-plot(month.stack, colNA = 'black', 
-     zlim=c(min(values(month.stack), na.rm=T), max(values(month.stack), na.rm=T))
-)
-
-## Combine dummy raster set (1980-1992) and data (1993-2022)
-rep.stack = stack()
-for (year in yr){
-  #year = 1980
-  xx = month.stack
-  names(xx) = paste0(year, "_", substr(labels(month.stack), 3, 8))
-  rep.stack = addLayer(rep.stack, xx)
-}
-
-ras.comb = stack(rep.stack, ras)
-
-## Write out raster
-start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
-stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
-writeRaster(ras.comb, paste0(dir.out.brick, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
-
-
-## Write out ASCII files
-writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, 
-            suffix = names(ras.comb), format = 'ascii', overwrite=T)
-
-## -----------------------------------------------------------------------------
-## 6) Average salinity
-
-## Input parameters-------------------------------------
-ras   = s.avg.smoo
-hires = s.avg.hycom
-dir.asc.out = "./maps/HYCOM/ASCII/Salinity average/"
-env_driver = "Sal_average"
-## -----------------------------------------------------
-
-## Make dataframe of dates from raster layers
-ras.dates = data.frame(year=substr(names(hires),2,5),month=substr(names(hires),7,8))
-ras.dates$yrmo = paste0(ras.dates$year, "-", ras.dates$month)
-head(ras.dates); tail(ras.dates)
-mo = unique(ras.dates$month)
-
-## Make dataframe of year months before HYCOM data starts
-enddummy = min(as.numeric(ras.dates$year))-1
-yr = 1980:enddummy
-dummy.dates = data.frame(year = character(), month = character())
-for(y in yr){
-  for(m in mo){
-    dummy.dates = rbind(dummy.dates, c(y,m))
-  }
-}
-colnames(dummy.dates) = c("year", "month")
-dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
-head(dummy.dates); tail(dummy.dates)
-
-## Get monthly averages -------------------------------------------------------
-nlayers(month.stack) ## Should be 28 or so
-month.stack = stack()
-for (month in mo){
-  #month = "01"
-  subset.month = raster::subset(ras, grep(paste0('.', month), names(ras), value = T, fixed = T))
-  month.avg = calc(subset.month, mean)
-  names(month.avg) = paste0("Mo", month, "_avg", nlayers(subset.month),"y")
-  month.stack = addLayer(month.stack, month.avg)
-}  
-
-## Plot check
-par(mfrow=c(3,4))
-plot(month.stack, colNA = 'black', 
-     zlim=c(min(values(month.stack), na.rm=T), max(values(month.stack), na.rm=T))
-)
-
-## Combine dummy raster set (1980-1992) and data (1993-2022)
-rep.stack = stack()
-for (year in yr){
-  #year = 1980
-  xx = month.stack
-  names(xx) = paste0(year, "_", substr(labels(month.stack), 3, 8))
-  rep.stack = addLayer(rep.stack, xx)
-}
-
-ras.comb = stack(rep.stack, ras)
-
-## Write out raster
-start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
-stop  = as.numeric(str_sub(names(ras.comb)[nlayers(ras.comb)], 2, 5))
-writeRaster(ras.comb, paste0(dir.out.brick, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
-
-
-## Write out ASCII files
-writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, 
-            suffix = names(ras.comb), format = 'ascii', overwrite=T)
-
-
-################################################################################
-##
-## MAKE PDF MAPS
-
-pdf_map(ras.comb, colscheme = 'virid', dir = dir.out, env_name = env_driver, 
-        modtype = "HYCOM", strt=1980, stop=2020)
