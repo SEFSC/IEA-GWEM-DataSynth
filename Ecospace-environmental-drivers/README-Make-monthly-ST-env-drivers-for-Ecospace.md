@@ -14,10 +14,10 @@ Data to to produce the ST files are collected by MODIS and HYCOM.
 - MODIS (Moderate Resolution Imaging Spectroradiometer) is a satellite-based sensor that provides high-resolution oceanographic data, including measurements of sea surface temperature, chlorophyll-a concentration, and other important environmental variables over large spatial scales.
 - HYCOM (Hybrid Coordinate Ocean Model) is a numerical ocean model that integrates satellite observations, in situ measurements, and oceanographic data to simulate and forecast ocean currents, temperature, salinity, and other oceanographic variables with high spatial and temporal resolution.
 
-Spatial-temporal enviornmental drivers are incorporated in Ecospace with ASCII files. Since the data is geo-referenced, we convert the spatial information in such a way that the ASCII files contain one value per grid cell of our model area. The following README describes our work to get the relevant ST data and process it to make monthly ST files for Ecospoace. 
+Spatial-temporal environmental drivers are incorporated in Ecospace with external time series of maps that change spatially-explicit input values over time with data derived from external GIS data sources [(Steenbeek et al., 2013)](https://www.sciencedirect.com/science/article/pii/S0304380013002597?casa_token=vy7pmleLU54AAAAA:oYHkFWFcH9hnUZ2Qqpo7KzgZS4UdZJPoPLqpt-4B6t8Phhm-s5W4-EteILsoPT0sCRvYxc3r3w). These data files are gridded ASCII files. Since the data is geo-referenced, we convert the spatial information in such a way that the ASCII files contain one value per grid cell of our model area. The following README describes our work to get the relevant ST data and process it to make monthly ST files for Ecospoace. 
 
 ## A1 Get MODIS data from ERDDAP
-Downloads MODIS data from the NOAA ERDAP server (https://coastwatch.pfeg.noaa.gov/erddap/index.html) and makes depth-integrated Chl-A data.
+Downloads MODIS data from the [NOAA ERDAP server](https://coastwatch.pfeg.noaa.gov/erddap/index.html) and makes depth-integrated Chl-A data.
 
 ### Environmental drivers
 - Depth-integrated Chlorophyll-A (ChlA)
@@ -30,7 +30,7 @@ Downloads MODIS data from the NOAA ERDAP server (https://coastwatch.pfeg.noaa.go
 - rerddap
 
 ### Data source
-The NOAA ERDDAP server (Environmental Research Division's Data Access Program) provides access to a wide range of oceanographic and environmental datasets. The server offers a convenient interface to search, access, and retrieve data using various query parameters. [NOAA ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap/index.html)
+The NOAA ERDDAP server (Environmental Research Division's Data Access Program) provides access to a wide range of oceanographic and environmental datasets. The server offers a convenient interface to search, access, and retrieve data using various query parameters. 
 
 ### Code setup and usage
 1. Specifies the bounding box of the Gulf of Mexico (GOM) region and the directory where the MODIS data will be stored. The environmental variables of interest (cfl, chla, POC) are defined in the `vars` vector.
