@@ -77,3 +77,17 @@ This code generates monthly spatial-temporal maps from spatial-imagery MODIS dat
 5. The code automatically handles the scenario where MODIS data is unavailable before 1993. It creates monthly means for the years 1980 to December 1992 using the available data. Starting from 1993, the monthly data is used directly for mapping.
 6. A single global-average map is generated for each environmental driver using the `mean` function. These global-average maps represent the average value across all available data points for each driver and are saved as ASCII files. These files can be used to initialize Ecospace simulations.
 8. The code generates PDF maps using the `pdf_map` function, which visualizes the monthly maps for each year. The PDF maps are saved in the specified output directory (`dir.pdf.out`).
+
+## B1 Get HYCOM data
+This R script downloads HYCOM (Hybrid Coordinate Ocean Model) data from the hycom.org website. HYCOM provides oceanographic data such as temperature and salinity at different depths in the Gulf of Mexico region. This data can be used for various applications, including oceanographic research, ecosystem modeling, and climate studies. Specifically, we query HYCOM for netCDF files for temperature and salinity data. NetCDF (Network Common Data Form) is a file format commonly used for storing large scientific datasets. It allows for efficient storage and access of multidimensional data. Each netCDF file contains information on temperature or salinity at different depths for a specific time.
+
+### Set-up
+- Note that, due to the size of the netCDF files downloaded, I set the directory to download these to an external hard drive.
+- Our bounding box 'bbox.gom'  specifies the geographical extent of the data you want to download. This example uses a bounding box for the Gulf of Mexico.
+
+### Usage 
+1. Get list of HYCOM files on the FTP server. The code retrieves a list of HYCOM files available on the FTP server for different experiments and time periods.
+2.  Download HYCOM files. This section downloads the HYCOM files from the FTP server. It uses parallel processing to download multiple files simultaneously. The code sets up parallel processing using the makeSOCKcluster() function and the registerDoSNOW() function from the doSNOW package. It divides the files into chunks and assigns each chunk to a different core for downloading. It also displays a progress bar to track the download progress.
+3. Build temperature and salinity raster bricks from HYCOM netCDF files. The code converts the downloaded HYCOM netCDF files into raster bricks for temperature and salinity. The code loops through the downloaded files, reads them as raster bricks using the brick() function from the terra package, and extracts the surface, bottom, and average values for temperature and salinity. It then adds these values to daily raster stacks.
+4. Aggregate to month. Temperature and salinity values are extracted from the netCDF files as raster stacks with daily layers. These are aggregated by month. 
+5. Write out raster stacks. Finally, the code writes the temperature and salinity raster stacks to ASCII files for the next steps described below. 
