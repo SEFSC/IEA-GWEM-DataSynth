@@ -87,7 +87,15 @@ This R script downloads HYCOM (Hybrid Coordinate Ocean Model) data from the hyco
 
 ### Usage 
 1. Get list of HYCOM files on the FTP server. The code retrieves a list of HYCOM files available on the FTP server for different experiments and time periods.
-2.  Download HYCOM files. This section downloads the HYCOM files from the FTP server. It uses parallel processing to download multiple files simultaneously. The code sets up parallel processing using the makeSOCKcluster() function and the registerDoSNOW() function from the doSNOW package. It divides the files into chunks and assigns each chunk to a different core for downloading. It also displays a progress bar to track the download progress.
+2. Download HYCOM files. This section downloads the HYCOM files from the FTP server. It uses parallel processing to download multiple files simultaneously. The code sets up parallel processing using the makeSOCKcluster() function and the registerDoSNOW() function from the doSNOW package. It divides the files into chunks and assigns each chunk to a different core for downloading. It also displays a progress bar to track the download progress.
 3. Build temperature and salinity raster bricks from HYCOM netCDF files. The code converts the downloaded HYCOM netCDF files into raster bricks for temperature and salinity. The code loops through the downloaded files, reads them as raster bricks using the brick() function from the terra package, and extracts the surface, bottom, and average values for temperature and salinity. It then adds these values to daily raster stacks.
 4. Aggregate to month. Temperature and salinity values are extracted from the netCDF files as raster stacks with daily layers. These are aggregated by month. 
 5. Write out raster stacks. Finally, the code writes the temperature and salinity raster stacks to ASCII files for the next steps described below. 
+
+## Resample and smooth HYCOM data maps
+The objectives are to (1) crop and resample the HYCOM data maps to match the scale and resolution of the depth/base map and (2) smooth missing data caused by downscaling. 
+
+1. **Crop and resample**: The HYCOM data maps are cropped to match the scale and extent of the depth/base map, and then resampled to have the same cell size and resolution as the depth/base map. This ensures consistency in spatial alignment. This creates an issue, however, in that the coastlines for depth and HYCOM maps are no longer aligned. The issue is particularly apparent for Louisiana marshlands.  
+2. **Smoothing Missing Data**: To address this, a custom function called `smooth.na` is used.
+3. **Iteratively smooth data**. Run 'smooth.na' iteratively to fill in the missing values by averaging information from the neighboring cells.
+4. **Renaming and output**: Lastly, the rasters are checked and the code renames the layers in the processed stacks to match the original HYCOM data. The processed stacks are then written out as raster files for final processing in the next code section. 
