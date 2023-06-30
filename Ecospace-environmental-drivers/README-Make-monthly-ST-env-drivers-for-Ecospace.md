@@ -92,10 +92,32 @@ This R script downloads HYCOM (Hybrid Coordinate Ocean Model) data from the hyco
 4. Aggregate to month. Temperature and salinity values are extracted from the netCDF files as raster stacks with daily layers. These are aggregated by month. 
 5. Write out raster stacks. Finally, the code writes the temperature and salinity raster stacks to ASCII files for the next steps described below. 
 
-## Resample and smooth HYCOM data maps
+## B2 Resample and smooth HYCOM data maps
 The objectives are to (1) crop and resample the HYCOM data maps to match the scale and resolution of the depth/base map and (2) smooth missing data caused by downscaling. 
 
 1. **Crop and resample**: The HYCOM data maps are cropped to match the scale and extent of the depth/base map, and then resampled to have the same cell size and resolution as the depth/base map. This ensures consistency in spatial alignment. This creates an issue, however, in that the coastlines for depth and HYCOM maps are no longer aligned. The issue is particularly apparent for Louisiana marshlands.  
-2. **Smoothing Missing Data**: To address this, a custom function called `smooth.na` is used.
-3. **Iteratively smooth data**. Run 'smooth.na' iteratively to fill in the missing values by averaging information from the neighboring cells.
-4. **Renaming and output**: Lastly, the rasters are checked and the code renames the layers in the processed stacks to match the original HYCOM data. The processed stacks are then written out as raster files for final processing in the next code section. 
+2. **Function to smooth missing**: To address this, a custom function called `smooth.na` is used.
+3. **Iteratively smooth data**. Run `smooth.na` iteratively to fill in the missing values by averaging information from the neighboring cells. Inputs include stack and pixel size of smoother, i.e., `size=3` means '3x3'. Size must be an odd number: e.g., 3x3, 5x5, 7x7.
+```{r eval=FALSE}
+smooth.na <- function(s, size = 3){
+  middlecell = ceiling(size^2 / 2)
+  ## Internal function: if cell is NA, fill with mean of surrounding grid
+  fill.na <- function(x, i = middlecell) {
+    if(is.na(x)[i] ) {
+      return(mean(x, na.rm=TRUE))
+    } else {
+      return(x[i])
+    }
+  }  
+  ## Loop to make new raster
+  newstack = s
+  r = raster()
+  #for (i in 1:2){
+  for (i in 1:nlayers(s)){
+    newstack[[i]] = focal(s[[i]], w = matrix(1, size, size), fun = fill.na, 
+                          pad = TRUE, na.rm = FALSE)}
+  return(newstack)
+}
+```
+5. **Add land to maps**. Use `terra::mask()` to overlay land to the smoothed rasters. 
+6. **Renaming and output**: Lastly, the rasters are checked and the code renames the layers in the processed stacks to match the original HYCOM data. The processed stacks are then written out as raster files for final processing in the next code section. 
