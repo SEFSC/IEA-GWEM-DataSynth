@@ -121,3 +121,5 @@ smooth.na <- function(s, size = 3){
 ```
 5. **Add land to maps**. Use `terra::mask()` to overlay land to the smoothed rasters. 
 6. **Renaming and output**: Lastly, the rasters are checked and the code renames the layers in the processed stacks to match the original HYCOM data. The processed stacks are then written out as raster files for final processing in the next code section. 
+
+## B3 Make HYCOM maps: Temperature and Salinity
