@@ -1,6 +1,20 @@
 # US Gulf-Wide Ecospace Model (USGWEM) Environmental Drivers
 
-This project aims to generate spatial-temporal environmental drivers for the US Gulf-Wide Ecospace Model (USGWEM). 
+This project generates spatial-temporal environmental drivers for the US Gulf-Wide Ecospace Model (USGWEM).
+In Ecospace, spatial-temporal (ST) environmental drivers are used to provide dynamic environmental data for simulating and analyzing ecosystem dynamics. 
+
+By incorporating monthly ST files for these environmental variables, the USGWEM simulates the interactions between species and a dynamic environment. These help capture the temporal variability and spatial heterogeneity of environmental conditions, allowing for a more realistic representation of ecosystem processes and responses to changing environmental conditions. For example, this allows the modeling of downstream impacts in the marine ecosystem from climatic changes in temperature patterns, precipitation, and circulation patterns through their effects Chl-A concentration, sea temperature, and salinity. Changes in sea temperature will also directly impact the thermal habitat of species, affecting their distribution, behavior, and ecological interactions. Collectively, these can provide insight in understanding and predicting the responses of the marine ecosystem to future environmental changes and supporting effective decision-making to promote climate resilient fisheries.
+
+The US Gulf-Wide Ecospace Model (USGWEM) specifically incorporates monthly ST files for nutrients, temperature, and salinity:
+1. Chlorophyll-A (Chl-A) Concentration: Chl-A is a proxy for primary productivity and serves as an indicator of phytoplankton biomass. Monthly Chl-A concentration data provides information about the availability of nutrients and drives primary production in the EwE model.
+2. Sea temperature: Temperature influences the distribution and behavior of species, as well as the rates of biological processes. The USGWEM includes monthly surface, average, and bottom temperature data.
+3. Salinity: Monthly salinity data provides can drive spatial distribution of species based on their physiological responses.
+
+Data to to produce the ST files are collected by MODIS and HYCOM. 
+- MODIS (Moderate Resolution Imaging Spectroradiometer) is a satellite-based sensor that provides high-resolution oceanographic data, including measurements of sea surface temperature, chlorophyll-a concentration, and other important environmental variables over large spatial scales.
+- HYCOM (Hybrid Coordinate Ocean Model) is a numerical ocean model that integrates satellite observations, in situ measurements, and oceanographic data to simulate and forecast ocean currents, temperature, salinity, and other oceanographic variables with high spatial and temporal resolution.
+
+Spatial-temporal enviornmental drivers are incorporated in Ecospace with ASCII files. Since the data is geo-referenced, we convert the spatial information in such a way that the ASCII files contain one value per grid cell of our model area. The following README describes our work to get the relevant ST data and process it to make monthly ST files for Ecospoace. 
 
 ## A1 Get MODIS data from ERDDAP
 Downloads MODIS data from the NOAA ERDAP server (https://coastwatch.pfeg.noaa.gov/erddap/index.html) and makes depth-integrated Chl-A data.
