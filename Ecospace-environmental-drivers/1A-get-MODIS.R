@@ -1,8 +1,8 @@
 rm(list=ls());gc()
 
-library('curl')
-library('raster')
-library('rerddap')
+library(curl)
+library(raster)
+library(rerddap)
 
 ##------------------------------------------------------------------------------
 ## SETUP
