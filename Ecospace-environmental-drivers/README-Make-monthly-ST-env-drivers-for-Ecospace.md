@@ -21,23 +21,16 @@ The final outputs generage monthly ST files for 1980 to past 2016. We present a 
 The following README describes our work to query the relevant ST data, process it, and ultimately generate ST files for the Ecospoace USGWEM. 
 
 ## A1 Get MODIS data from ERDDAP
-Downloads MODIS data from the [NOAA ERDAP server](https://coastwatch.pfeg.noaa.gov/erddap/index.html) and makes depth-integrated Chl-A data. Note that we also download ST maps for Cfl and POC, although they currently are not used in the USGWEM.
+Downloads MODIS data from the [NOAA ERDAP server](https://coastwatch.pfeg.noaa.gov/erddap/index.html) and makes depth-integrated Chl-A data. Note that we also download ST maps for Cfl and POC, although they currently are not used in the USGWEM. The NOAA ERDDAP server (Environmental Research Division's Data Access Program) provides access to a wide range of oceanographic and environmental datasets. The server offers a convenient interface to search, access, and retrieve data using various query parameters. 
 
 ### Environmental drivers
 - Depth-integrated Chlorophyll-A (ChlA)
 - Normalized carbon flourescense (Cfl)
 - Particulate organic carbon (POC)
 
-### Dependencies
-- curl
-- raster
-- rerddap
-
-### Data source
-The NOAA ERDDAP server (Environmental Research Division's Data Access Program) provides access to a wide range of oceanographic and environmental datasets. The server offers a convenient interface to search, access, and retrieve data using various query parameters. 
-
 ### Code setup and usage
-1. Specifies the bounding box of the Gulf of Mexico (GOM) region and the directory where the MODIS data will be stored. The environmental variables of interest (Cfl, chla, POC) are defined in the `vars` vector.
+1. Dependencies: `curl`, `raster`, `rerddap`
+2. Specifies the bounding box of the Gulf of Mexico (GOM) region and the directory where the MODIS data will be stored. The environmental variables of interest (Cfl, chla, POC) are defined in the `vars` vector.
 
 ### Process MODIS Data from NOAA ERDDAP Server
 1. Loop over each environmental variable to retrieve monthly and daily composite imagery from the NOAA ERDDAP server. This is done using the `rerddap` package in R, which provides an interface to access and retrieve data from the NOAA ERDDAP data portal.
@@ -136,10 +129,39 @@ This code conducts the third and final processing to generate monthly ST HYCOM d
 - Single global-average map for each environmental driver.
 
 ### Make PDF and ASCII monthly maps
-1. **Data pprep**: The code takes in smooth and resampled raster stacks for surface, bottom, and average temperature, as well as surface, bottom, and average salinity. These stacks contain monthly raster layers begining in 1993. Directory paths in the code include setting `dir.in`, `dir.ras.out`, `fld.asc.out`, `dir.asc.avg`, and `dir.pdf.out`.
-2. **Global Mean Calculation**: The code calculates a global mean raster using the available HYCOM data. This global mean raster serves as an initial map for Ecospace analysis.
-3. **Monthly Mapping**: The code creates a list of the raster stacks and loops through each stack. It automatically handles scenarios where HYCOM data is unavailable before 1993. For the years 1980 to December 1992, monthly means are calculated using the available data. From 1993 onwards, the monthly data is used directly for mapping. ASCII files for Ecospace analysis will be created in the `fld.asc.out` directory, containing monthly average data from 1980 to 2022.
-4. **PDF Map Generation**: The code generates PDF maps using the `pdf_map` function to visualize the monthly maps for each year, and writes out the PDF to the specified output directory (`dir.pdf.out`). Map settings  can be customized by setting `colscheme`, `mintile`, and `maxtile`.
+1. **Data prep**: The code takes in smooth and resampled raster stacks for surface, bottom, and average temperature, as well as surface, bottom, and average salinity. These stacks contain monthly raster layers begining in 1993. Directory paths in the code include setting `dir.in`, `dir.ras.out`, `fld.asc.out`, `dir.asc.avg`, and `dir.pdf.out`.
+2. **Global mean**: Calculates a global mean raster for each environmental driver using the available HYCOM data. This global mean raster serves as an initial map for Ecospace analysis.
+3. **Loop to generate ASCII and PDF maps** The code creates a list of the raster stacks and loops through each stack. Setup:
+```R
+overwrite <- 'y'
+smoothed_stack_list <- list(t.surf.smoo, t.bot.smoo, t.avg.smoo, s.surf.smoo, s.bot.smoo, s.avg.smoo)
+hires_stack_list    <- list(t.surf.hycom, t.bot.hycom, t.avg.hycom, s.surf.hycom, s.bot.hycom, s.avg.hycom)
+env_dr_list <- c("Temp-surf", "Temp-bot", "Temp-avg", "Sal-surf", "Sal-bot", "Sal-avg")
+col_list <- c("turbo", "turbo", "turbo", "virid", "virid", "virid")
+```
+a. **Generate monthly averages before data collection**: The code automatically handles scenarios where HYCOM data is unavailable before 1993. For the years 1980 to December 1992, monthly means are calculated using the available data. From 1993 on, the monthly data is used directly for mapping. ASCII files for Ecospace analysis will be created in the `fld.asc.out` directory, containing monthly average data from 1980 to 2022.
+```R
+  ## Build data frame of years and months to be filled
+  enddummy = min(as.numeric(ras.dates$year))-1
+  yr = 1980:enddummy
+  dummy.dates = data.frame(year = character(), month = character())
+  for(y in yr){
+    for(m in mo){
+      dummy.dates = rbind(dummy.dates, c(y,m))
+    }
+  }
+  ## Generate monthly averages
+  colnames(dummy.dates) = c("year", "month")
+  dummy.dates$yrmo = paste(dummy.dates$year, dummy.dates$month, sep="-")
+  month.stack = stack()
+  for (month in mo){
+    subset.month = raster::subset(ras, grep(paste0('.', month), names(ras), value = T, fixed = T))
+    month.avg = calc(subset.month, mean)
+    names(month.avg) = paste0(env_driver, "_mo", month, "_avg", nlayers(subset.month),"y")
+    month.stack = addLayer(month.stack, month.avg)
+  }  
+```
+- **Make PDF Maps**: The code generates PDF maps using the `pdf_map` function to visualize the monthly maps for each year, and writes out the PDF to the specified output directory (`dir.pdf.out`). Map settings can be customized (see below).
    
 ## Generate PDFs: the pdf_map function
 
