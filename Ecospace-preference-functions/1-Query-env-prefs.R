@@ -8,6 +8,7 @@
 
 ##------------------------------------------------------------------------------
 ## Set up Aquamaps Package
+## First time running will need to install and set up aquamaps
 ## https://raquamaps.github.io/aquamapsdata/articles/intro.html
 
 ## install aquamapsdata from GitHub using devtools
@@ -31,12 +32,12 @@ library(stringr)
 fg         <- read.csv("./global-data/speciesListGoM_raw.csv") ## 'fg' represents Ecospace functional groups
 fg$Genus   <- word(fg$Sciname, 1)
 fg$Species <- word(fg$Sciname, 2)
-nrow(fg)
+nrow(fg) ## Check number of functional groups
 
 ## Use only rows with genus and species
 fg <- fg %>% filter(!is.na(Species)); nrow(fg)
 
-## QA/Qc: Periods in Sciname seem to break am_search_fuzzy. Also, all rows with 'sp' or 'spp' or 'spp.' are repeated
+## QA/QC: Periods in Sciname seem to break am_search_fuzzy. Also, all rows with 'sp' or 'spp' or 'spp.' are repeated
 rm_ls <- paste(c('spp.','sp.','spp', 'sp.', '-', '#', "/", "<", ">", "0", ","), collapse = '|')
 fg <- fg %>% filter(!grepl(rm_ls, Sciname)); nrow(fg)
 
@@ -73,7 +74,6 @@ for (i in 1:nrow(fg)) {
   row     <- cbind(row, key_df)
   long_fg <- rbind(long_fg, row)
 }
-
 
 ## Query aquamap preferences
 long_pref <- data.frame()

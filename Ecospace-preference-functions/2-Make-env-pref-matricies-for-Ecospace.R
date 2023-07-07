@@ -20,7 +20,7 @@ doublelogistic <- function(max = 400, steps = 400, range = 'wide', min_abs, min_
   r2  <- max_abs - max_prf 
   C1  <- min_abs + r1 / 2
   C2  <- max_prf + r2 / 2
-  B1  <- ifelse(range == 'wide', 1/sqrt(r1), 1/log10(r1)) ## Curve shape inversely proportional to range size
+  B1  <- ifelse(range == 'wide', 1/sqrt(r1), 1/log10(r1)) ## If range is 'wide', curve shape inversely proportional to range size
   B2  <- ifelse(range == 'wide', 1/sqrt(r2), 1/log10(r2))
   if(B1 < 0) B1 = Inf
   if(B2 < 0) B2 = Inf
@@ -47,8 +47,6 @@ doublelogistic <- function(max = 400, steps = 400, range = 'wide', min_abs, min_
 
 plot_pref_func <- function(p1, p2, p3, p4, fg_num, fg_name,
                            max = 400, xmin = 0, scale_xaxis = 'y', range = 'wide', driver = '') {
-  #j = 42; max = 400; xmin=0; scale_xaxis = 'y'; p1 = fg_pref$TempMin[j]; p2 = fg_pref$TempPrefMin[j]; p3 = fg_pref$TempPrefMax[j]; p4 = fg_pref$TempMax[j]; fg_num = fg_pref$EwE_num[j]; fg_name = fg_pref$EwE_name[j]
-  #range = 'wide'
   pref_func <- doublelogistic(max = max, steps = max, range = range, p1, p2, p3, p4)
   xlim <- ifelse(p4 < max, p4+p4*0.15, max)
   xmax <- ifelse(scale_xaxis == 'y', xlim, max)
@@ -195,17 +193,6 @@ for (i in 1:ncol(pref_mat)){
 ## Write out depth matrix for Ecospace
 write.csv(pref_mat, paste0(dir_out, driver, "-pref-func-", ncol(depth_mat), "fg-", "max", max, "-", n_steps, "L.csv"), row.names = T)
 
-
-
-
-
-
-
-
-
-
-
-
 ## -----------------------------------------------------------------------------
 ## Make plots
 nwide = 6
@@ -248,9 +235,6 @@ for(i in seq(1, n_plots, pg_plts)) {
 dev.off()
 
 
-
-
-
 par(mfrow=c(6,6))
 for(j in 1:12){
   plot_pref_func(fg_pref$DepthMin[j], fg_pref$DepthPrefMin[j], 
@@ -281,10 +265,6 @@ for(j in 1:12){
 
 ## Plot depth with varying X-axis (depth) --------------------------------------
 max = 400
-
-
-
-
 w = 8.5
 h = 11 
 pdf("./Ecospace-preference-functions/figures/Depth-pref-dbl-logistic_xaxis-set.pdf", width = w, height = h, 

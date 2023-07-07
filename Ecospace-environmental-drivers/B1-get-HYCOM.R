@@ -311,7 +311,7 @@ plot(t.surf.m[[1:12]], col = terrain.colors(100), ylim = c(15,32))
 
 ## -----------------------------------------------------------------------------
 ##
-## 5) Write out rasterstacks 
+## 4) Write out rasterstacks 
 
 dir.out = "./maps/HYCOM/Bricks/"
 
