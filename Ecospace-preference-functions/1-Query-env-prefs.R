@@ -6,24 +6,29 @@
 ## Code:    Query Aquamaps database
 ##          Make environmental preference functions for Ecospace
 
-##------------------------------------------------------------------------------
-## Set up Aquamaps Package
-## First time running will need to install and set up aquamaps
-## https://raquamaps.github.io/aquamapsdata/articles/intro.html
 
-## install aquamapsdata from GitHub using devtools
-## initial run-once step required to install remote db locally
-
-#remotes::install_github("raquamaps/aquamapsdata", dependencies = TRUE)
-#library(aquamapsdata)
-#download_db(force = TRUE)
-#default_db("sqlite")
-
-##------------------------------------------------------------------------------
 rm(list=ls()); gc(); windows()
-library(aquamapsdata); default_db("sqlite")
 library(dplyr)
 library(stringr)
+
+##------------------------------------------------------------------------------
+## Set up Aquamaps Package
+## https://raquamaps.github.io/aquamapsdata/articles/intro.html
+
+## First time running will need to install and set up aquamaps
+## initial run-once step required to install remote db locally
+
+rm(list=ls()); gc(); windows()
+
+install.packages("devtools") 
+library("devtools")
+install_gitub("raquamaps/aquamapsdata", dependencies = TRUE)
+
+## initial run-once step required to install remote db locally
+library(aquamapsdata)
+download_db(force = TRUE)
+default_db("sqlite")
+
 
 ##------------------------------------------------------------------------------
 ## QA/QC species list and get query aquamaps key
