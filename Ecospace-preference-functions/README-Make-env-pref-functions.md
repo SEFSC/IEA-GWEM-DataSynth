@@ -1,6 +1,6 @@
 # Make Ecospace Environmental Preference Functions
 
-## Query data from Aquamaps: 
+# Query data from Aquamaps: 1-Query-env-prefs.R
 This code quueries the Aquamaps database. With further processing, we generate environmental preference functions for the Gulf-wide Ecospace Model. 
 
 [AquaMaps](https://www.aquamaps.org/main/AboutAquaMaps.php) is a tool for generating model-based, large-scale predictions of natural occurrences of species. To date, they have standardized distribution maps for over 17,300 species of fishes, marine mammals, and invertebrates. The AquaMaps approach combines occurrence records, expert knowledge, and environmental data to compensate for biases and gaps in existing occurrence data sets. 
@@ -10,22 +10,46 @@ The environmental envelopes are matched against local environmental conditions t
 
 For the USGWEM, we use parameters queried from Aquamaps HSPEN files to develop environmental preference functions for **depth**, **temperature**, and **salinity**.
 
-### Usage for 1-Query-env-prefs.R
-1. Setup the [Aquamaps Package](https://raquamaps.github.io/aquamapsdata/articles/intro.html):
+## Usage  
+1. **Setup.** If this is an initial run, you'll need to setup the [Aquamaps Package](https://raquamaps.github.io/aquamapsdata/articles/intro.html):
    - Install the `aquamapsdata` package from GitHub using `remotes::install_github()`.
    - Download the Aquamaps database locally using `download_db(force = TRUE)`.
    - Set the default database to SQLite using `default_db("sqlite")`.
    - Additional library dependencies: `dplyr` and `stringr`
 
-2. QA/QC Species List and Get Aquamaps Keys:
-   - Read in the species list from a CSV file. 
-   - Define genus and species names. Filter out rows without species names. Periods in the scientific names (`fg$Sciname`) seem to break `am_search_fuzzy`. Also, all rows with 'sp' or 'spp' or 'spp.' are repeated
-   - Query the Aquamaps database to obtain species keys for each species. 
+2. **QA/QC Species List and Get Aquamaps Keys:**
+   - First, read in the species list from a CSV file. 
+   - Define genus and species names. Filter out rows without species names: `fg <- fg %>% filter(!is.na(Species)); nrow(fg)`
+   - Periods in the scientific names (`fg$Sciname`) seem to break `am_search_fuzzy`. Also, filter out all rows where 'sp', 'sp.','spp','spp.' etc. are included.
+     ```R
+     rm_ls <- paste(c('spp.','sp.','spp', 'sp.', '-', '#', "/", "<", ">", "0", ","), collapse = '|')
+     fg <- fg %>% filter(!grepl(rm_ls, Sciname)); nrow(fg)
+     ```
+   - Query the Aquamaps database with `am_search_fuzzy` to get species keys for each species.
+     ```R
+     for (i in 1:nrow(fg)){
+      fg$Key[i] <- paste(am_search_fuzzy(fg$Sciname[i]) %>% pull(key) %>% as.array(), collapse = ' | ')
+     }
+     ```
    - Perform QA/QC checks to remove unwanted characters and duplicated rows. Also remove rows without keys or with duplicate keys
    - Write out the QA/QC species list with Aquamaps keys to a CSV file in "./global-data/".
 
-3. Query HSPEN Environmental Preferences:
-   - Create a long dataframe `long_fg` with a unique key for each species.
+3. **Query HSPEN Environmental Preferences:** 
+   - First, make a long dataframe `long_fg` with a unique key for each species.
+     ```R 
+     for (i in 1:nrow(fg)) {
+        #i = 4
+        row = fg[i, ]
+        key_ls  <- as.list(scan(text=fg$Key[i], what=""))
+        key_ls  <- key_ls[key_ls != "|"]
+        row$Key <- NULL
+        row     <- row %>% slice(rep(1:n(), each = length(key_ls)))
+        key_df  <- do.call(rbind.data.frame, key_ls)
+        names(key_df) <- "Key"
+        row     <- cbind(row, key_df)
+        long_fg <- rbind(long_fg, row)
+      }
+     ```    
    - Query the HSPEN environmental preferences for each species from the Aquamaps database.
      ```R
         for (i in 1:nrow(long_fg)) {
@@ -44,7 +68,7 @@ For the USGWEM, we use parameters queried from Aquamaps HSPEN files to develop e
         }
         ```
    - Some species have multiple entries. Without information to differentiate them, I've decided to average them. Aggregate the preferences by species, calculating the mean of numeric preference values. Merge the preferences with the species list by species ID.
-   - Finally, we wggregate the preferences by Ecospace functional groups, calculating the mean and count of preferences for each group.
+   - Finally, we aggregate the preferences by Ecospace functional groups, calculating the mean and count of preferences for each group.
    - Write out the preference parameters for each functional group in a CSV file.
 
 ### References for Aquamaps
