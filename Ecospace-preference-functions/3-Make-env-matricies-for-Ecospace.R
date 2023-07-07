@@ -2,6 +2,10 @@
 ##
 ## Make matrices for Ecospace
 
+fg_pref <- read.csv("./Ecospace-preference-functions/intermediate-ouput/fg-env-preference-parameters-adjusted.csv")
+dir_out <- "./Ecospace-preference-functions/output-for-Ecospace/"
+source("./Ecospace-preference-functions/2-Doublelogistic-env-pref-functions.R")
+
 ## Depth -----------------------------------------------------------------------
 driver = "Depth"
 range = "wide"
@@ -15,19 +19,19 @@ fg_pref$EwE_name; nrow(fg_pref)
 depth_mat = matrix(nrow = 1203, ncol = nrow(fg_pref))
 row.names(depth_mat) = c("Name", "Left_limit", "Right_limit", 1:1200)
 colnames(depth_mat) = fg_pref$EwE_name
-#maxmapdepth = 1083
 
 ## Loop through functional groupos
 for (i in 1:ncol(depth_mat)){
-  #  i = 2
+  
+  ## Set the four HSPEN parameters
   absmin = fg_pref$DepthMin[i]
   prfmin = fg_pref$DepthPrefMin[i]
   prfmax = fg_pref$DepthPrefMax[i]
   absmax = fg_pref$DepthMax[i]
-  
+  ## Run double logistic function
   pref_func <- doublelogistic(max = max, steps = n_steps, range = range, 
                               absmin, prfmin, prfmax, absmax)
-  
+  ## Name column header
   name = paste0(driver, "_", fg_pref$EwE_num[i], "_", 
                 gsub("[[:space:]]", "-", fg_pref$EwE_name[i]))
   print(name)

@@ -1,7 +1,5 @@
 
 rm(list=ls()); gc()
-fg_pref <- read.csv("./Ecospace-preference-functions/intermediate-ouput/fg-env-preference-parameters-adjusted.csv")
-dir_out <- "./Ecospace-preference-functions/output-for-Ecospace/"
 
 ## -----------------------------------------------------------------------------
 ##
@@ -62,7 +60,8 @@ plot_pref_func <- function(p1, p2, p3, p4, fg_num, fg_name,
 }
 
 ## Test preference functions -------------------------
-j = 65
+fg_pref <- read.csv("./Ecospace-preference-functions/intermediate-ouput/fg-env-preference-parameters-adjusted.csv")
+j = 65 ## Can be set to any functional group. Shrimp are a good one to see responses.
 par(mfrow=c(1,3))
 plot_pref_func(fg_pref$DepthMin[j], fg_pref$DepthPrefMin[j], 
                fg_pref$DepthPrefMax[j], fg_pref$DepthMax[j], 
