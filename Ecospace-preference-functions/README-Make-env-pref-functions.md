@@ -165,7 +165,7 @@ plot_pref_func <- function(p1, p2, p3, p4, fg_num, fg_name,
 Verticle dashed lines are automatically added to denote Min<sub>abs</sub>, Min<sub>pref</sub>, Max<sub>pref</sub>, and Max<sub>pref</sub>, respectively. Red dashed lines indicate absolute limits, and blue dashed lines indicate the preferred range. 
 
 The resulting plots will look like the following example for white shrimp (group 69). 
-![Plot](./figures/Example-preference-envelope-white-shrimp.png)
+![Plot](./figures/Example-white-shrimp.png)
 
 # 3-Make-env-matrices-for-Ecospace
 Here we apply the functions for making the double-logistic functions for making environmental preference envelopes for **depth**, **temperature**, and **salinity** to the Ecopath functional groups.
@@ -224,3 +224,4 @@ Lastly, we create a series of plots to visualize preference functions for Ecospa
 - Nested loops iterate over the total number of plots to be generated (`n_plots`). For each plot, it calls the `plot_pref_func()` function to create the plot for Depth, Temperature, and Salinity.
 - `plot_pref_func()` inputs include the minimum and maximum preference values for the function, the functional group number and name, the maximum value for scaling the X-axis, and the driver of the function.
 - Outputs include multi-page PDF files with the x-axis scaled or set for depth, temperature, salinity, and all three.
+- All plots are stored in `pdf_dir`. For example, this ![link](./figures/Pref-functions_depth-temp-sal_byFG_xaxis-scaled.pdf) shows the mult-page PDF file for all three environmental variables with the x-axis scaled. 
