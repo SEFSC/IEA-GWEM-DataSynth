@@ -6,7 +6,6 @@ rm(list=ls()); gc()
 ## Logistic function
 
 doublelogistic <- function(max = 400, steps = 400, range = 'wide', min_abs, min_prf, max_prf, max_abs){ 
-
   #j = 42; max = 30; steps = 1200; range = 'nar'; min_abs = fg_pref$SalinityMin[j]; min_prf = fg_pref$SalinityPrefMin[j]; max_prf = fg_pref$SalinityPrefMax[j]; max_abs = fg_pref$SalinityMax[j]
   #j = 39; max = 30; steps = 1200; range = 'wide'; min_abs = fg_pref$DepthMin[j]; min_prf = fg_pref$DepthPrefMin[j]; max_prf = fg_pref$DepthPrefMax[j]; max_abs = fg_pref$DepthMax[j]
   mid_prf <- min_prf + (max_prf - min_prf) / 2 ## Midpoint. Change from increasing to decreasing logistic function

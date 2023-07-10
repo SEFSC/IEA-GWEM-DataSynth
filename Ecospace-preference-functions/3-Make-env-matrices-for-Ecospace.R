@@ -194,12 +194,29 @@ for(i in seq(from = 1, to = n_plots, by = pg_plts)) {
 }
 dev.off()
 
-## Plot depth with varying X-axis (depth) --------------------------------------
+## Plot depth ------------------------------------------------------------------
+n_rows = n_cols = 5
 n_plots = nrow(fg_pref) 
-pdf(paste0(dir_pdf, "Pref_depth_xaxis-scaled.pdf"), width = w, height = h, onefile = T)
+
+pdf(paste0(dir_pdf, "Depth-pref-funcs_xaxis-scaled.pdf"), width = w, height = h, onefile = T)
 for(i in seq(from = 1, to = n_plots, by = pg_plts)) {
+  par(mfrow=c(n_rows, n_cols))
   for(j in seq(from = i, to = i+(n_rows * n_cols - 1))) {
-    ## Plot depth
+    plot_pref_func(fg_pref$DepthMin[j], fg_pref$DepthPrefMin[j], 
+                   fg_pref$DepthPrefMax[j], fg_pref$DepthMax[j], 
+                   fg_num = fg_pref$EwE_num[j], 
+                   fg_name = fg_pref$EwE_name[j],
+                   max = max_depth, scale_xaxis = 'y', 
+                   range = 'wide',
+                   driver = "Depth")
+  }
+}
+dev.off()
+
+pdf(paste0(dir_pdf, "Depth-pref-funcs_xaxis-set.pdf"), width = w, height = h, onefile = T)
+for(i in seq(from = 1, to = n_plots, by = pg_plts)) {
+  par(mfrow=c(n_rows, n_cols))
+  for(j in seq(from = i, to = i+(n_rows * n_cols - 1))) {
     plot_pref_func(fg_pref$DepthMin[j], fg_pref$DepthPrefMin[j], 
                    fg_pref$DepthPrefMax[j], fg_pref$DepthMax[j], 
                    fg_num = fg_pref$EwE_num[j], 
@@ -211,98 +228,64 @@ for(i in seq(from = 1, to = n_plots, by = pg_plts)) {
 }
 dev.off()
 
-
-
-
-
-for(j in 1:36){
-  p1 <- fg_pref$DepthMin[j] 
-  p2 <- fg_pref$DepthPrefMin[j] 
-  p3 <- fg_pref$DepthPrefMax[j] 
-  p4 <- fg_pref$DepthMax[j] 
-  plot_pref_function(p1, p2, p3, p4, 
-                           fg_num = fg_pref$EwE_num[j], 
-                           fg_name = fg_pref$EwE_name[j],
-                           max = max, scale_xaxis = 'n', range = 'wide')
-}
-
-for(j in 37:72){
-  p1 <- fg_pref$DepthMin[j] 
-  p2 <- fg_pref$DepthPrefMin[j] 
-  p3 <- fg_pref$DepthPrefMax[j] 
-  p4 <- fg_pref$DepthMax[j] 
-  plot_pref_function(p1, p2, p3, p4, 
-                           fg_num = fg_pref$EwE_num[j], 
-                           fg_name = fg_pref$EwE_name[j],
-                           max = max, 
-                           scale_xaxis = 'n')
-}
-dev.off()
-
-
-
 ## Temperature -----------------------------------------------------------------
-pdf("./Ecospace-preference-functions/figures/Temp-pref-dbl-logistic.pdf", width = w, height = h, 
-    onefile = T)
-
-max = 34
-par(mfrow=c(6,6))
-for(j in 1:36){
-  p1 <- fg_pref$TempMin[j] 
-  p2 <- fg_pref$TempPrefMin[j] 
-  p3 <- fg_pref$TempPrefMax[j] 
-  p4 <- fg_pref$TempMax[j] 
-  plot_pref_function(p1, p2, p3, p4, 
-                           fg_num = fg_pref$EwE_num[j], 
-                           fg_name = fg_pref$EwE_name[j],
-                           max = max, 
-                           scale_xaxis = 'n')
-}
-
-for(j in 37:72){
-  p1 <- fg_pref$TempMin[j] 
-  p2 <- fg_pref$TempPrefMin[j] 
-  p3 <- fg_pref$TempPrefMax[j] 
-  p4 <- fg_pref$TempMax[j] 
-  plot_pref_function(p1, p2, p3, p4, 
-                           fg_num = fg_pref$EwE_num[j], 
-                           fg_name = fg_pref$EwE_name[j],
-                           max = max, 
-                           scale_xaxis = 'n')
+pdf(paste0(dir_pdf, "Temp-pref-funcs_xaxis-scaled.pdf"), width = w, height = h, onefile = T)
+for(i in seq(from = 1, to = n_plots, by = pg_plts)) {
+  par(mfrow=c(n_rows, n_cols))
+  for(j in seq(from = i, to = i+(n_rows * n_cols - 1))) {
+    plot_pref_func(fg_pref$TempMin[j], fg_pref$TempPrefMin[j], 
+                   fg_pref$TempPrefMax[j], fg_pref$TempMax[j], 
+                   fg_num = fg_pref$EwE_num[j], 
+                   fg_name = fg_pref$EwE_name[j],
+                   max = max_temp, scale_xaxis = 'y', 
+                   range = 'nar',
+                   driver = "Temp")
+  }
 }
 dev.off()
 
-
-## Salinity -----------------------------------------------------------------
-pdf("./Ecospace-preference-functions/figures/Salinity-pref-dbl-logistic.pdf", width = w, height = h, 
-    onefile = T)
-
-max(fg_pref$SalinityMax[j])
-max = 38
-par(mfrow=c(6,6))
-for(j in 1:36){
-  p1 <- fg_pref$SalinityMin[j] 
-  p2 <- fg_pref$SalinityPrefMin[j] 
-  p3 <- fg_pref$SalinityPrefMax[j] 
-  p4 <- fg_pref$SalinityMax[j] 
-  plot_pref_function(p1, p2, p3, p4, 
-                           fg_num = fg_pref$EwE_num[j], 
-                           fg_name = fg_pref$EwE_name[j],
-                           max = max, xmin = 15,
-                           scale_xaxis = 'y')
-}
-
-for(j in 37:72){
-  p1 <- fg_pref$SalinityMin[j] 
-  p2 <- fg_pref$SalinityPrefMin[j] 
-  p3 <- fg_pref$SalinityPrefMax[j] 
-  p4 <- fg_pref$SalinityMax[j] 
-  plot_pref_function(p1, p2, p3, p4, 
-                           fg_num = fg_pref$EwE_num[j], 
-                           fg_name = fg_pref$EwE_name[j],
-                           max = max, xmin = 15,
-                           scale_xaxis = 'y')
+pdf(paste0(dir_pdf, "Temp-pref-funcs_xaxis-set.pdf"), width = w, height = h, onefile = T)
+for(i in seq(from = 1, to = n_plots, by = pg_plts)) {
+  par(mfrow=c(n_rows, n_cols))
+  for(j in seq(from = i, to = i+(n_rows * n_cols - 1))) {
+    plot_pref_func(fg_pref$TempMin[j], fg_pref$TempPrefMin[j], 
+                   fg_pref$TempPrefMax[j], fg_pref$TempMax[j], 
+                   fg_num = fg_pref$EwE_num[j], 
+                   fg_name = fg_pref$EwE_name[j],
+                   max = max_temp, scale_xaxis = 'n', 
+                   range = 'nar',
+                   driver = "Temp")
+  }
 }
 dev.off()
 
+## Salinity --------------------------------------------------------------------
+pdf(paste0(dir_pdf, "Sal-pref-funcs_xaxis-scaled.pdf"), width = w, height = h, onefile = T)
+for(i in seq(from = 1, to = n_plots, by = pg_plts)) {
+  par(mfrow=c(n_rows, n_cols))
+  for(j in seq(from = i, to = i+(n_rows * n_cols - 1))) {
+    plot_pref_func(fg_pref$SalinityMin[j], fg_pref$SalinityPrefMin[j], 
+                   fg_pref$SalinityPrefMax[j], fg_pref$SalinityMax[j], 
+                   fg_num = fg_pref$EwE_num[j], 
+                   fg_name = fg_pref$EwE_name[j],
+                   max = max_sal, scale_xaxis = 'y', 
+                   range = 'nar',
+                   driver = "Sal")
+  }
+}
+dev.off()
 
+pdf(paste0(dir_pdf, "Sal-pref-funcs_xaxis-set.pdf"), width = w, height = h, onefile = T)
+for(i in seq(from = 1, to = n_plots, by = pg_plts)) {
+  par(mfrow=c(n_rows, n_cols))
+  for(j in seq(from = i, to = i+(n_rows * n_cols - 1))) {
+    plot_pref_func(fg_pref$SalinityMin[j], fg_pref$SalinityPrefMin[j], 
+                   fg_pref$SalinityPrefMax[j], fg_pref$SalinityMax[j], 
+                   fg_num = fg_pref$EwE_num[j], 
+                   fg_name = fg_pref$EwE_name[j],
+                   max = max_sal, scale_xaxis = 'n', 
+                   range = 'nar',
+                   driver = "Sal")
+  }
+}
+dev.off()
