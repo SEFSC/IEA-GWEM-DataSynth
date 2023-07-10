@@ -164,6 +164,9 @@ plot_pref_func <- function(p1, p2, p3, p4, fg_num, fg_name,
 ```
 Verticle dashed lines are automatically added to denote Min<sub>abs</sub>, Min<sub>pref</sub>, Max<sub>pref</sub>, and Max<sub>pref</sub>, respectively. Red dashed lines indicate absolute limits, and blue dashed lines indicate the preferred range. 
 
+The resulting plots will look like the following example for white shrimp (group 69). 
+![Plot](./figures/Example-preference-envelope-white-shrimp.png)
+
 # 3-Make-env-matrices-for-Ecospace
 Here we apply the functions for making the double-logistic functions for making environmental preference envelopes for **depth**, **temperature**, and **salinity** to the Ecopath functional groups.
 
