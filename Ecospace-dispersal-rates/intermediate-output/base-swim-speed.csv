@@ -1,1 +1,296 @@
-"Sciname","Group","Common","EwE_name","EwE_num","AspectRatio","CommonLength"
+"Sciname","EwE_num","EwE_name","Common","Genus","Species","Key","ID_sp","AspectRatio","CommonLength"
+"alopias superciliosus","10","Large oceanic sharks","shark, bigeye thresher","alopias","superciliosus","Fis-23898","Sp_023",2.48568,350
+"alopias vulpinus","10","Large oceanic sharks","shark, thresher","alopias","vulpinus","Fis-23899","Sp_027",1.81491,450
+"carcharhinus longimanus","10","Large oceanic sharks","oceanic whitetip shark","carcharhinus","longimanus","Fis-23061","Sp_022",2.47044,270
+"isurus oxyrinchus","10","Large oceanic sharks","shark, shortfin mako","isurus","oxyrinchus","Fis-58485","Sp_026",3.76133,270
+"prionace glauca","10","Large oceanic sharks","blue shark","prionace","glauca","Fis-23222","Sp_021",2.084243333,335
+"rhizoprionodon terraenovae","11","Atlantic sharpnose shark","atlantic sharpnose shark","rhizoprionodon","terraenovae","Fis-23244","Sp_029",1.55083,70
+"carcharhinus porosus","12","Small coastal sharks","smalltail shark","carcharhinus","porosus","Fis-23067","Sp_035",2.01366,90
+"mustelus canis","12","Small coastal sharks","smooth dogfish","mustelus","canis","Fis-24132","Sp_036",1.12661,100
+"mustelus norrisi","12","Small coastal sharks","florida smoothhound","mustelus","norrisi","Fis-30325","Sp_034",0.899067,80
+"thunnus albacares","13","Yellowfin tuna","tuna, yellowfin","thunnus","albacares","Fis-22833","Sp_046",6.01356,150
+"thunnus thynnus","14","Bluefin tuna","bluefin tuna","thunnus","thynnus","Fis-49220","Sp_047",6.34195,200
+"katsuwonus pelamis","15","Other tunas","skipjack tuna","katsuwonus","pelamis","Fis-22777","Sp_052",6.49814,80
+"thunnus atlanticus","15","Other tunas","blackfin tuna","thunnus","atlanticus","Fis-22834","Sp_051",5.80817,72
+"istiophorus albicans","16","Billfish","atlantic sailfish","istiophorus","albicans","Fis-22765","Sp_055",8.5019,240
+"istiophorus platypterus","16","Billfish","sailfish","istiophorus","platypterus","Fis-22766","Sp_054",5.92139,270
+"makaira nigricans","16","Billfish","blue marlin","makaira","nigricans","Fis-29447","Sp_053",7.829445,290
+"xiphias gladius","17","Swordfish","swordfish","xiphias","gladius","Fis-29576","Sp_056",7.052415,300
+"ablennes hians","18","Pelagic coastal piscivores","flat needlefish","ablennes","hians","Fis-22975","Sp_077",1.98231,70
+"acanthocybium solandri","18","Pelagic coastal piscivores","wahoo","acanthocybium","solandri","Fis-22735","Sp_092",5.61927,170
+"auxis thazard","18","Pelagic coastal piscivores","frigate mackerel","auxis","thazard","Fis-22739","Sp_078",5.799133333,60
+"carangoides bartholomaei","18","Pelagic coastal piscivores","yellow jack","carangoides","bartholomaei","Fis-13595","Sp_095",3.61365,50
+"caranx crysos","18","Pelagic coastal piscivores","blue runner","caranx","crysos","Fis-23414","Sp_067",3.36228,40
+"caranx hippos","18","Pelagic coastal piscivores","crevalle jack","caranx","hippos","Fis-22744","Sp_075",3.41328,75
+"caranx latus","18","Pelagic coastal piscivores","horse-eye jack","caranx","latus","Fis-22184","Sp_079",3.5336,60
+"caranx lugubris","18","Pelagic coastal piscivores","black jack","caranx","lugubris","Fis-22185","Sp_066",6.26087,70
+"caranx ruber","18","Pelagic coastal piscivores","bar jack","caranx","ruber","Fis-23428","Sp_064",4.22826,50
+"centropomus pectinatus","18","Pelagic coastal piscivores","tarpon snook","centropomus","pectinatus","Fis-29788","Sp_090",1.05246,40
+"centropomus undecimalis","18","Pelagic coastal piscivores","common snook","centropomus","undecimalis","Fis-22857","Sp_074",1.90693,50
+"coryphaena equiselis","18","Pelagic coastal piscivores","pompano dolphinfish","coryphaena","equiselis","Fis-29358","Sp_100",3.913205,50
+"coryphaena hippurus","18","Pelagic coastal piscivores","dolphin","coryphaena","hippurus","Fis-22215","Sp_076",2.235185,100
+"echeneis neucratoides","18","Pelagic coastal piscivores","whitefin sharksucker","echeneis","neucratoides","Fis-29927","Sp_093",0.27624,50
+"elagatis bipinnulata","18","Pelagic coastal piscivores","rainbow runner","elagatis","bipinnulata","Fis-47571","Sp_085",3.29454,90
+"elops saurus","18","Pelagic coastal piscivores","ladyfish","elops","saurus","Fis-29369","Sp_081",0.899151,60
+"euthynnus alletteratus","18","Pelagic coastal piscivores","little tunny","euthynnus","alletteratus","Fis-22759","Sp_082",4.18356,80
+"hemicaranx amblyrhynchus","18","Pelagic coastal piscivores","bluntnose jack","hemicaranx","amblyrhynchus","Fis-23148","Sp_069",2.61853,25
+"lobotes surinamensis","18","Pelagic coastal piscivores","tripletail","lobotes","surinamensis","Fis-23606","Sp_091",1.70522,80
+"megalops atlanticus","18","Pelagic coastal piscivores","atlantic tarpon","megalops","atlanticus","Fis-2518","Sp_062",1.91985,130
+"morone saxatilis","18","Pelagic coastal piscivores","bass, striped","morone","saxatilis","Fis-22911","Sp_065",1.885946667,120
+"naucrates ductor","18","Pelagic coastal piscivores","pilotfish","naucrates","ductor","Fis-23192","Sp_084",2.97237,40
+"pomatomus saltatrix","18","Pelagic coastal piscivores","bluefish","pomatomus","saltatrix","Fis-22935","Sp_068",2.390475,60
+"remora brachyptera","18","Pelagic coastal piscivores","spearfish remora","remora","brachyptera","Fis-24930","Sp_089",1.0561615,25
+"remora remora","18","Pelagic coastal piscivores","remora","remora","remora","Fis-23759 | Fis-24929 | Fis-24930 | Fis-24931 | Fis-7669","Sp_087",1.32447,40
+"sarda sarda","18","Pelagic coastal piscivores","atlantic bonito","sarda","sarda","Fis-1099 | Fis-21631 | Fis-22815 | Fis-22817 | Fis-22818 | W-Msc-420819","Sp_059",5.75763,50
+"seriola rivoliana","18","Pelagic coastal piscivores","almaco jack","seriola","rivoliana","Fis-22208","Sp_058",3.74422,90
+"seriola zonata","18","Pelagic coastal piscivores","banded rudderfish","seriola","zonata","Fis-23808","Sp_063",2.36285,50
+"strongylura marina","18","Pelagic coastal piscivores","atlantic needlefish","strongylura","marina","Fis-23290","Sp_061",1.34209,60
+"strongylura timucu","18","Pelagic coastal piscivores","timucu","strongylura","timucu","Fis-23291","Sp_114",0.477829,35
+"tylosurus crocodilus","18","Pelagic coastal piscivores","houndfish","tylosurus","crocodilus","Fis-58684","Sp_080",2.05648,90
+"seriola dumerili","19","Amberjack","amberjack, greater","seriola","dumerili","Fis-23806","Sp_125",2.83157,100
+"seriola fasciata","19","Amberjack","amberjack, lesser","seriola","fasciata","Fis-23807","Sp_126",3.90277,50
+"rachycentron canadum","20","Cobia","cobia","rachycentron","canadum","Fis-24927","Sp_128",0.987476,110
+"scomberomorus cavalla","21,22","King mackerel (0-1yr)","king mackerel","scomberomorus","cavalla","Fis-22819","Sp_129",5.81506,70
+"pristis pectinata","25","Skates-rays","sawfish, smalltooth","pristis","pectinata","Fis-47467","Sp_140",1.11582,550
+"pristis pristis","25","Skates-rays","largetooth sawfish","pristis","pristis","Fis-27224 | Fis-30521 | Fis-32599 | Fis-47336 | Fis-47467 | W-Bry-470866 | W-Hyd-220588","Sp_136",1.11582,250
+"mycteroperca microlepis","26,27","Gag grouper (0-3yr)","gag","mycteroperca","microlepis","Fis-23649","Sp_160",1.43463,50
+"epinephelus morio","28,29","Red grouper (0-3yr)","grouper, red","epinephelus","morio","Fis-22721","Sp_161",1.185605,50
+"hyporthodus flavolimbatus","30,31","Yellowedge grouper (0-3yr)","yellowedge grouper (age 0-3)","hyporthodus","flavolimbatus","Fis-163777","Sp_162",1.242165,50
+"epinephelus itajara","32","Goliath grouper","goliath grouper","epinephelus","itajara","Fis-22720","Sp_163",1.18781,150
+"hyporthodus niveatus","33","Deep-water grouper","snowy grouper","hyporthodus","niveatus","Fis-163781","Sp_166",1.262028,60
+"cephalopholis cruentata","34","Shallow-water grouper","graysby","cephalopholis","cruentata","Fis-22703","Sp_175",2.42931,20
+"epinephelus adscensionis","34","Shallow-water grouper","hind, rock","epinephelus","adscensionis","Fis-22704","Sp_171",1.1998225,35
+"mycteroperca interstitialis","34","Shallow-water grouper","grouper, yellowmouth","mycteroperca","interstitialis","Fis-23648","Sp_170",1.275185,40
+"mycteroperca phenax","34","Shallow-water grouper","scamp","mycteroperca","phenax","Fis-30327","Sp_173",1.508025,30
+"mycteroperca tigris","34","Shallow-water grouper","tiger grouper","mycteroperca","tigris","Fis-23651","Sp_174",1.39914,40
+"mycteroperca venenosa","34","Shallow-water grouper","grouper, yellowfin","mycteroperca","venenosa","Fis-23652","Sp_169",1.325203333,50
+"lutjanus campechanus","35,36,37","Red snapper (0yr)","red snapper","lutjanus","campechanus","Fis-23622","Sp_177",1.43242,60
+"rhomboplites aurorubens","38","Vermilion snapper","snapper, vermilion","rhomboplites","aurorubens","Fis-22946","Sp_178",2.772,35
+"lutjanus analis","39","Mutton snapper","mutton snapper","lutjanus","analis","Fis-23611","Sp_179",1.6903,50
+"apsilus dentatus","40","Other snapper","black snapper","apsilus","dentatus","Fis-22219","Sp_180",2.06907,40
+"etelis oculatus","40","Other snapper","queen snapper","etelis","oculatus","Fis-23494","Sp_186",1.458,64
+"lutjanus buccanella","40","Other snapper","blackfin snapper","lutjanus","buccanella","Fis-23621","Sp_181",1.0181,50
+"lutjanus cyanopterus","40","Other snapper","cubera snapper","lutjanus","cyanopterus","Fis-23625","Sp_182",2.25197,90
+"lutjanus griseus","40","Other snapper","gray snapper","lutjanus","griseus","Fis-22895","Sp_184",1.77717,40
+"lutjanus jocu","40","Other snapper","dog snapper","lutjanus","jocu","Fis-22781","Sp_183",1.38693,60
+"lutjanus mahogoni","40","Other snapper","mahogany snapper","lutjanus","mahogoni","Fis-22787","Sp_185",2.01138,38
+"lutjanus purpureus","40","Other snapper","snapper caribbean red","lutjanus","purpureus","Fis-22220","Sp_188",1.58402,65
+"lutjanus vivanus","40","Other snapper","silk snapper","lutjanus","vivanus","Fis-22802","Sp_187",0.594011,45
+"pristipomoides aquilonaris","40","Other snapper","wenchman","pristipomoides","aquilonaris","Fis-22810","Sp_189",3.31596,20
+"cynoscion arenarius","42","Sea trout","sand seatrout","cynoscion","arenarius","Fis-29882","Sp_194",1.1701,35
+"cynoscion jamaicensis","42","Sea trout","jamaican weakfish","cynoscion","jamaicensis","Fis-23457","Sp_199",1.53201,35
+"cynoscion nebulosus","42","Sea trout","seatrout, spotted","cynoscion","nebulosus","Fis-23098","Sp_195",1.48035,36
+"cynoscion nothus","42","Sea trout","silver seatrout","cynoscion","nothus","Fis-23460","Sp_196",1.14626,25
+"cynoscion regalis","42","Sea trout","weakfish","cynoscion","regalis","Fis-23099","Sp_197",1.4529,50
+"alepisaurus ferox","43","Oceanic piscivores","longnose lancetfish","alepisaurus","ferox","Fis-29263","Sp_205",1.611065,150
+"brama caribbea","43","Oceanic piscivores","caribbean pomfret","brama","caribbea","Fis-22216","Sp_208",0.499286,21.8
+"gempylus serpens","43","Oceanic piscivores","snake mackerel","gempylus","serpens","Fis-30041","Sp_203",1.47497,60
+"lepidocybium flavobrunneum","43","Oceanic piscivores","escolar","lepidocybium","flavobrunneum","Fis-23582","Sp_211",5.26363,150
+"merluccius albidus","43","Oceanic piscivores","offshore hake","merluccius","albidus","Fis-23634","Sp_214",1.60087,30
+"ruvettus pretiosus","43","Oceanic piscivores","oilfish","ruvettus","pretiosus","Fis-30588","Sp_218",2.13546,150
+"taractes rubescens","43","Oceanic piscivores","pomfret","taractes","rubescens","Fis-27813","Sp_219",3.20198,30
+"trichiurus lepturus","43","Oceanic piscivores","atlantic cutlassfish","trichiurus","lepturus","Fis-30742","Sp_201",1.3545,100
+"cyclopsetta chittendeni","44","Benthic piscivores","mexican flounder","cyclopsetta","chittendeni","Fis-29360","Sp_241",1.22829,25
+"cyclopsetta fimbriata","44","Benthic piscivores","spotfin flounder","cyclopsetta","fimbriata","Fis-24533","Sp_238",1.20408,25
+"paralichthys albigutta","44","Benthic piscivores","gulf flounder","paralichthys","albigutta","Fis-29470","Sp_228",1.475535,35
+"paralichthys lethostigma","44","Benthic piscivores","southern flounder","paralichthys","lethostigma","Fis-29471","Sp_237",1.09752,50
+"saurida brasiliensis","44","Benthic piscivores","largescale lizardfish","saurida","brasiliensis","Fis-30603","Sp_230",1.58273,15
+"saurida normani","44","Benthic piscivores","shortjaw lizardfish","saurida","normani","Fis-30605","Sp_252",2.54076,30
+"synodus foetens","44","Benthic piscivores","inshore lizardfish","synodus","foetens","Fis-24362","Sp_229",1.88281,30
+"synodus intermedius","44","Benthic piscivores","sand diver","synodus","intermedius","Fis-24363","Sp_233",1.56079,40
+"synodus synodus","44","Benthic piscivores","red lizardfish","synodus","synodus","Fis-134146 | Fis-142912 | Fis-171604 | Fis-24362 | Fis-24363 | Fis-24364 | Fis-24365 | Fis-25602 | Fis-26525 | Fis-26776 | Fis-30706 | Fis-32290 | Fis-32337 | Fis-32591 | Fis-32592 | Fis-32722 | Fis-32759 | Fis-33869 | Fis-34110 | Fis-34111 | Fis-34112 | Fis-34131 | Fis-35278 | Fis-35406 | Fis-35747 | Fis-35750 | Fis-35751 | Fis-55988","Sp_232",1.82809,20
+"holocentrus adscensionis","45","Reef piscivores","squirrelfish","holocentrus","adscensionis","Fis-21249","Sp_269",2.109165,25
+"holocentrus rufus","45","Reef piscivores","longspine squirrelfish","holocentrus","rufus","Fis-23554","Sp_265",2.31449,25
+"myripristis jacobus","45","Reef piscivores","blackbar soldierfish","myripristis","jacobus","Fis-30333","Sp_275",2.76841,20
+"anisotremus surinamensis","46","Reef invertebrate feeders","black margate","anisotremus","surinamensis","Fis-23367","Sp_283",2.21793,45
+"anisotremus virginicus","46","Reef invertebrate feeders","porkfish","anisotremus","virginicus","Fis-23368","Sp_312",1.77369,25
+"archosargus probatocephalus","46","Reef invertebrate feeders","sheepshead","archosargus","probatocephalus","Fis-23013","Sp_327",1.44066,35
+"archosargus rhomboidalis","46","Reef invertebrate feeders","sea bream","archosargus","rhomboidalis","Fis-23374","Sp_326",2.34927,20
+"aulostomus maculatus","46","Reef invertebrate feeders","trumpetfish","aulostomus","maculatus","Fis-29301","Sp_343",1.2398,60
+"bodianus pulchellus","46","Reef invertebrate feeders","spotfin hogfish","bodianus","pulchellus","Fis-23396","Sp_338",1.4208,18
+"bodianus rufus","46","Reef invertebrate feeders","spanish hogfish","bodianus","rufus","Fis-23397","Sp_336",1.61543,28
+"calamus bajonado","46","Reef invertebrate feeders","jolthead porgy","calamus","bajonado","Fis-23403","Sp_302",2.73233,54
+"calamus calamus","46","Reef invertebrate feeders","saucereye porgy","calamus","calamus","Fis-22263 | Fis-23403 | Fis-23404 | Fis-23405 | Fis-24473 | Fis-26853 | Fis-29744 | Fis-29746 | Fis-29747 | Fis-29748 | Fis-29749 | W-Msc-344507","Sp_321",3.01125,30
+"calamus leucosteus","46","Reef invertebrate feeders","porgy, whitebone","calamus","leucosteus","Fis-29747","Sp_311",2.52755,30
+"calamus nodosus","46","Reef invertebrate feeders","knobbed porgy","calamus","nodosus","Fis-29748","Sp_303",3.70011,35
+"calamus pennatula","46","Reef invertebrate feeders","sheepshead porgy","calamus","pennatula","Fis-22263","Sp_329",3.79916,30
+"calamus proridens","46","Reef invertebrate feeders","littlehead porgy","calamus","proridens","Fis-29749","Sp_306",2.75681,37
+"centropristis striata","46","Reef invertebrate feeders","black sea bass","centropristis","striata","Fis-22858","Sp_284",1.0318845,30
+"decodon puellaris","46","Reef invertebrate feeders","red hogfish","decodon","puellaris","Fis-24537","Sp_315",1.48092,22
+"equetus lanceolatus","46","Reef invertebrate feeders","jackknife-fish","equetus","lanceolatus","Fis-24559","Sp_301",1.1987,15
+"haemulon album","46","Reef invertebrate feeders","margate","haemulon","album","Fis-22232","Sp_307",2.73664,50
+"haemulon aurolineatum","46","Reef invertebrate feeders","tomtate","haemulon","aurolineatum","Fis-30084","Sp_342",2.10255,18
+"haemulon bonariense","46","Reef invertebrate feeders","black grunt","haemulon","bonariense","Fis-22234","Sp_364",2.558075,30
+"haemulon carbonarium","46","Reef invertebrate feeders","caesar grunt","haemulon","carbonarium","Fis-22235","Sp_292",2.67007,20
+"haemulon chrysargyreum","46","Reef invertebrate feeders","smallmouth grunt","haemulon","chrysargyreum","Fis-22236","Sp_333",1.44823,17
+"haemulon flavolineatum","46","Reef invertebrate feeders","french grunt","haemulon","flavolineatum","Fis-23525","Sp_297",2.310482917,17
+"haemulon macrostomum","46","Reef invertebrate feeders","spanish grunt","haemulon","macrostomum","Fis-53542","Sp_335",2.15596,25
+"haemulon melanurum","46","Reef invertebrate feeders","cottonwick","haemulon","melanurum","Fis-23526","Sp_293",1.73541,25
+"haemulon parra","46","Reef invertebrate feeders","sailors choice","haemulon","parra","Fis-16335","Sp_320",2.27492,30
+"haemulon plumierii","46","Reef invertebrate feeders","white grunt","haemulon","plumierii","Fis-148979","Sp_365",2.99803,30
+"haemulon sciurus","46","Reef invertebrate feeders","bluestriped grunt","haemulon","sciurus","Fis-23529","Sp_288",2.4678,25
+"haemulon striatum","46","Reef invertebrate feeders","striped grunt","haemulon","striatum","Fis-23531","Sp_339",2.75208,17
+"halichoeres radiatus","46","Reef invertebrate feeders","puddingwife","halichoeres","radiatus","Fis-23532","Sp_313",1.49584,40
+"hemanthias leptus","46","Reef invertebrate feeders","bass, longtail","hemanthias","leptus","Fis-24665","Sp_280",1.255993,35
+"heteropriacanthus cruentatus","46","Reef invertebrate feeders","glasseye","heteropriacanthus","cruentatus","Fis-23742","Sp_367",1.83525,20
+"lachnolaimus maximus","46","Reef invertebrate feeders","hogfish","lachnolaimus","maximus","Fis-23577","Sp_300",3.9567,35
+"lutjanus apodus","46","Reef invertebrate feeders","schoolmaster","lutjanus","apodus","Fis-23612","Sp_322",1.77557,35
+"lutjanus synagris","46","Reef invertebrate feeders","lane snapper","lutjanus","synagris","Fis-22798","Sp_304",1.46359,25
+"ocyurus chrysurus","46","Reef invertebrate feeders","snapper, yellowtail","ocyurus","chrysurus","Fis-22804","Sp_334",1.73696,40
+"paranthias furcifer","46","Reef invertebrate feeders","creole-fish","paranthias","furcifer","Fis-23713","Sp_294",2.55241,20
+"pareques acuminatus","46","Reef invertebrate feeders","highhat","pareques","acuminatus","Fis-9630","Sp_376",1.24935,18
+"pareques umbrosus","46","Reef invertebrate feeders","cubbyu","pareques","umbrosus","Fis-54212","Sp_377",1.26941,15
+"pomadasys crocro","46","Reef invertebrate feeders","burro grunt","pomadasys","crocro","Fis-23735","Sp_290",1.72994,25
+"priacanthus arenatus","46","Reef invertebrate feeders","bigeye","priacanthus","arenatus","Fis-30518","Sp_282",2.04264,35
+"pristigenys alta","46","Reef invertebrate feeders","short bigeye","pristigenys","alta","Fis-24918","Sp_330",1.25797,20
+"scorpaena plumieri","46","Reef invertebrate feeders","scorpionfish, spotted","scorpaena","plumieri","Fis-53536","Sp_324",0.822696,30
+"serranus atrobranchus","46","Reef invertebrate feeders","blackear bass","serranus","atrobranchus","Fis-24992","Sp_285",1.03866,9
+"serranus phoebe","46","Reef invertebrate feeders","tattler","serranus","phoebe","Fis-30660","Sp_340",1.255775,15
+"xyrichtys novacula","46","Reef invertebrate feeders","pearly razorfish","xyrichtys","novacula","Fis-25198","Sp_397",1.37048,20
+"alectis ciliaris","47","Demersal coastal invertebrate feeders","african pompano","alectis","ciliaris","Fis-22977","Sp_399",4.40876,100
+"ariopsis felis","47","Demersal coastal invertebrate feeders","hardhead sea catfish","ariopsis","felis","Fis-204","Sp_435",1.87561,25
+"bagre marinus","47","Demersal coastal invertebrate feeders","gafftopsail catfish","bagre","marinus","Fis-23037","Sp_411",2.47999,50
+"calamus arctifrons","47","Demersal coastal invertebrate feeders","grass porgy","calamus","arctifrons","Fis-29744","Sp_412",1.9222,20
+"chloroscombrus chrysurus","47","Demersal coastal invertebrate feeders","atlantic bumper","chloroscombrus","chrysurus","Fis-22861","Sp_400",3.24179,25
+"conodon nobilis","47","Demersal coastal invertebrate feeders","barred grunt","conodon","nobilis","Fis-23096","Sp_406",1.256145,25
+"diapterus auratus","47","Demersal coastal invertebrate feeders","irish pompano","diapterus","auratus","Fis-22224","Sp_414",1.33198,20
+"diapterus rhombeus","47","Demersal coastal invertebrate feeders","caitipa mojarra","diapterus","rhombeus","Fis-23473","Sp_446",0.817827,30
+"eucinostomus argenteus","47","Demersal coastal invertebrate feeders","spotfin mojarra","eucinostomus","argenteus","Fis-22225","Sp_429",2.35299,15
+"eucinostomus gula","47","Demersal coastal invertebrate feeders","silver jenny","eucinostomus","gula","Fis-23498","Sp_426",2.13154,15
+"eucinostomus havana","47","Demersal coastal invertebrate feeders","bigeye mojarra","eucinostomus","havana","Fis-23499","Sp_407",1.90184,14
+"eugerres plumieri","47","Demersal coastal invertebrate feeders","striped mojarra","eugerres","plumieri","Fis-23501","Sp_450",0.916782,30
+"galeichthys feliceps","47","Demersal coastal invertebrate feeders","white barbel","galeichthys","feliceps","Fis-29396","Sp_451",1.85501,35
+"gerres cinereus","47","Demersal coastal invertebrate feeders","yellowfin mojarra","gerres","cinereus","Fis-23508","Sp_433",2.45534,30
+"larimus fasciatus","47","Demersal coastal invertebrate feeders","banded drum","larimus","fasciatus","Fis-30188","Sp_404",1.36443,16
+"leiostomus xanthurus","47","Demersal coastal invertebrate feeders","spot","leiostomus","xanthurus","Fis-29428","Sp_428",1.54116,25
+"menticirrhus americanus","47","Demersal coastal invertebrate feeders","southern kingfish","menticirrhus","americanus","Fis-23187","Sp_427",1.29627,30
+"menticirrhus littoralis","47","Demersal coastal invertebrate feeders","gulf kingfish","menticirrhus","littoralis","Fis-23188","Sp_413",1.05793,30
+"menticirrhus saxatilis","47","Demersal coastal invertebrate feeders","northern kingfish","menticirrhus","saxatilis","Fis-23189","Sp_419",1.28396,30
+"micropogonias furnieri","47","Demersal coastal invertebrate feeders","atlantic croaker","micropogonias","furnieri","Fis-26612","Sp_401",1.79041,45
+"micropogonias undulatus","47","Demersal coastal invertebrate feeders","atlantic croaker","micropogonias","undulatus","Fis-23190","Sp_402",1.25815,30
+"mulloidichthys martinicus","47","Demersal coastal invertebrate feeders","yellow goatfish","mulloidichthys","martinicus","Fis-23645","Sp_463",2.25711,28
+"oligoplites saurus","47","Demersal coastal invertebrate feeders","leatherjack","oligoplites","saurus","Fis-23673","Sp_415",3.35261,27
+"orthopristis chrysoptera","47","Demersal coastal invertebrate feeders","pigfish","orthopristis","chrysoptera","Fis-22701","Sp_422",1.82519,30
+"pagrus pagrus","47","Demersal coastal invertebrate feeders","porgy, red","pagrus","pagrus","Fis-23093 | Fis-23707 | Fis-25173 | Fis-26110 | Fis-31224 | Fis-31225","Sp_423",2.01971,35
+"pogonias cromis","47","Demersal coastal invertebrate feeders","black drum","pogonias","cromis","Fis-23219","Sp_408",1.24731,50
+"porichthys plectrodon","47","Demersal coastal invertebrate feeders","atlantic midshipman","porichthys","plectrodon","Fis-30515","Sp_475",0.407236,20
+"pseudupeneus maculatus","47","Demersal coastal invertebrate feeders","spotted goatfish","pseudupeneus","maculatus","Fis-23754","Sp_431",2.20615,22
+"selene setapinnis","47","Demersal coastal invertebrate feeders","atlantic moonfish","selene","setapinnis","Fis-22957","Sp_403",3.53148,25
+"selene vomer","47","Demersal coastal invertebrate feeders","lookdown","selene","vomer","Fis-23805","Sp_418",3.71308,35
+"stellifer lanceolatus","47","Demersal coastal invertebrate feeders","star drum","stellifer","lanceolatus","Fis-23835","Sp_432",1.367068364,13
+"stenotomus caprinus","47","Demersal coastal invertebrate feeders","longspine porgy","stenotomus","caprinus","Fis-30675","Sp_417",2.14593,15
+"synagrops bellus","47","Demersal coastal invertebrate feeders","blackmouth bass","synagrops","bellus","Fis-25016","Sp_486",1.43279,20
+"trachinotus carolinus","47","Demersal coastal invertebrate feeders","florida pompano","trachinotus","carolinus","Fis-22966","Sp_410",2.54818,40
+"trachinotus falcatus","47","Demersal coastal invertebrate feeders","permit","trachinotus","falcatus","Fis-23864","Sp_421",2.86958,94
+"trachinotus goodei","47","Demersal coastal invertebrate feeders","palometa","trachinotus","goodei","Fis-22213","Sp_420",2.39325,35
+"umbrina coroides","47","Demersal coastal invertebrate feeders","sand drum","umbrina","coroides","Fis-22295","Sp_494",2.17568,25
+"upeneus parvus","47","Demersal coastal invertebrate feeders","dwarf goatfish","upeneus","parvus","Fis-22297","Sp_498",2.03752,20
+"sciaenops ocellatus","48","Red drum","drum, red","sciaenops","ocellatus","Fis-23796","Sp_499",1.48766,100
+"achirus lineatus","49","Benthic coastal invertebrate feeders","lined sole","achirus","lineatus","Fis-24400","Sp_522",1.21399,17
+"bothus ocellatus","49","Benthic coastal invertebrate feeders","eyed flounder","bothus","ocellatus","Fis-24470","Sp_544",1.04347,12
+"brotula barbata","49","Benthic coastal invertebrate feeders","bearded brotula","brotula","barbata","Fis-23041","Sp_504",1.081732,50
+"ctenogobius boleosoma","49","Benthic coastal invertebrate feeders","darter goby","ctenogobius","boleosoma","Fis-150636","Sp_552",0.42897,4
+"dactylopterus volitans","49","Benthic coastal invertebrate feeders","flying gurnard","dactylopterus","volitans","Fis-23467","Sp_514",1.47427,38
+"diplectrum bivittatum","49","Benthic coastal invertebrate feeders","dwarf sand perch","diplectrum","bivittatum","Fis-24540","Sp_512",1.4157,12
+"diplectrum formosum","49","Benthic coastal invertebrate feeders","sand perch","diplectrum","formosum","Fis-23474","Sp_529",1.879315,16
+"etropus crossotus","49","Benthic coastal invertebrate feeders","fringed flounder","etropus","crossotus","Fis-30810","Sp_557",1.291,15
+"lepophidium profundorum","49","Benthic coastal invertebrate feeders","fawn cusk eel","lepophidium","profundorum","Fis-25617","Sp_571",1.081732,22
+"microgobius gulosus","49","Benthic coastal invertebrate feeders","clown goby","microgobius","gulosus","Fis-24779","Sp_583",0.436166,5.35
+"polydactylus octonemus","49","Benthic coastal invertebrate feeders","atlantic threadfin","polydactylus","octonemus","Fis-23729","Sp_501",2.62913,25
+"polydactylus virginicus","49","Benthic coastal invertebrate feeders","barbu threadfin","polydactylus","virginicus","Fis-23731","Sp_600",0.85452,20
+"scorpaena brasiliensis","49","Benthic coastal invertebrate feeders","barbfish","scorpaena","brasiliensis","Fis-30617","Sp_503",1.03634,20
+"syacium gunteri","49","Benthic coastal invertebrate feeders","shoal flounder","syacium","gunteri","Fis-30894","Sp_530",1.52055,15
+"syacium papillosum","49","Benthic coastal invertebrate feeders","dusky flounder","syacium","papillosum","Fis-25010","Sp_511",1.4472,20
+"trinectes maculatus","49","Benthic coastal invertebrate feeders","hogchoker","trinectes","maculatus","Fis-25037","Sp_520",1.303895,11
+"urophycis cirrata","49","Benthic coastal invertebrate feeders","gulf hake","urophycis","cirrata","Fis-23884","Sp_517",0.861191,40
+"urophycis floridana","49","Benthic coastal invertebrate feeders","southern hake","urophycis","floridana","Fis-23886","Sp_531",0.590734,25
+"urophycis regia","49","Benthic coastal invertebrate feeders","spotted codling","urophycis","regia","Fis-23887","Sp_615",0.859439,17
+"caulolatilus chrysops","50","Tilefish","tilefish, goldface","caulolatilus","chrysops","Fis-23073","Sp_620",2.01309,44
+"caulolatilus cyanops","50","Tilefish","blackline tilefish","caulolatilus","cyanops","Fis-22177","Sp_616",1.7919,30
+"caulolatilus microps","50","Tilefish","blueline tilefish","caulolatilus","microps","Fis-29317","Sp_617",1.95094,55
+"lopholatilus chamaeleonticeps","50","Tilefish","tilefish","lopholatilus","chamaeleonticeps","Fis-29435","Sp_619",1.27675,90
+"malacanthus plumieri","50","Tilefish","sand tilefish","malacanthus","plumieri","Fis-24763","Sp_618",1.24958,50
+"balistes capriscus","51","Gray triggerfish","gray triggerfish","balistes","capriscus","Fis-32303","Sp_622",1.602070667,44
+"acanthostracion polygonius","52","Coastal omnivores","honeycomb cowfish","acanthostracion","polygonius","Fis-49970","Sp_625",0.375069,25
+"acanthostracion quadricornis","52","Coastal omnivores","scrawled cowfish","acanthostracion","quadricornis","Fis-22736","Sp_632",1.36959,20
+"aluterus monoceros","52","Coastal omnivores","unicorn filefish","aluterus","monoceros","Fis-24409","Sp_638",1.541265,40
+"aluterus scriptus","52","Coastal omnivores","scrawled filefish","aluterus","scriptus","Fis-24410","Sp_633",0.864597,55
+"cantherhines pullus","52","Coastal omnivores","orangespotted filefish","cantherhines","pullus","Fis-23408","Sp_640",2.01759,14
+"chaetodipterus faber","52","Coastal omnivores","atlantic spadefish","chaetodipterus","faber","Fis-23431","Sp_623",3.23259,50.4
+"diodon holocanthus","52","Coastal omnivores","ballonfish","diodon","holocanthus","Fis-31054","Sp_624",0.787045,15
+"diodon hystrix","52","Coastal omnivores","porcupinefish","diodon","hystrix","Fis-29912","Sp_629",1.53265,40
+"lactophrys bicaudalis","52","Coastal omnivores","spotted trunkfish","lactophrys","bicaudalis","Fis-24724","Sp_636",1.352806,20
+"lactophrys trigonus","52","Coastal omnivores","trunkfish","lactophrys","trigonus","Fis-23578","Sp_637",1.2715,30
+"lagocephalus laevigatus","52","Coastal omnivores","smooth puffer","lagocephalus","laevigatus","Fis-23579","Sp_634",1.77673,60
+"lagodon rhomboides","52","Coastal omnivores","pinfish","lagodon","rhomboides","Fis-24727","Sp_628",2.21993,18
+"monacanthus ciliatus","52","Coastal omnivores","fringed filefish","monacanthus","ciliatus","Fis-24788","Sp_645",1.45086,10
+"stephanolepis setifer","52","Coastal omnivores","pygmy filefish","stephanolepis","setifer","Fis-23838","Sp_648",0.80885,10
+"abudefduf saxatilis","53","Reef omnivores","sergeant major","abudefduf","saxatilis","Fis-23318","Sp_668",1.53883,15
+"abudefduf taurus","53","Reef omnivores","night sergeant","abudefduf","taurus","Fis-23319","Sp_671",1.45573,20
+"acanthurus bahianus","53","Reef omnivores","ocean surgeon","acanthurus","bahianus","Fis-173416","Sp_661",2.42851,25
+"acanthurus chirurgus","53","Reef omnivores","doctorfish","acanthurus","chirurgus","Fis-22976","Sp_655",1.867165,35
+"acanthurus coeruleus","53","Reef omnivores","blue tang","acanthurus","coeruleus","Fis-29261","Sp_653",3.48929,25
+"balistes vetula","53","Reef omnivores","queen triggerfish","balistes","vetula","Fis-29302","Sp_665",2.785615,30
+"chromis multilineata","53","Reef omnivores","brown chromis","chromis","multilineata","Fis-23438","Sp_675",1.56268,12
+"holacanthus bermudensis","53","Reef omnivores","blue angelfish","holacanthus","bermudensis","Fis-30117","Sp_651",1.19066,35
+"holacanthus ciliaris","53","Reef omnivores","queen angelfish","holacanthus","ciliaris","Fis-24677","Sp_663",0.802962,30
+"holacanthus tricolor","53","Reef omnivores","rock beauty","holacanthus","tricolor","Fis-24678","Sp_667",1.10038,30
+"kyphosus incisor","53","Reef omnivores","yellow chub","kyphosus","incisor","Fis-23576","Sp_670",2.868075,45
+"kyphosus sectatrix","53","Reef omnivores","bermuda chub","kyphosus","sectatrix","Fis-24078","Sp_650",2.7147,50
+"pomacanthus arcuatus","53","Reef omnivores","gray angelfish","pomacanthus","arcuatus","Fis-23732","Sp_659",2.06313,45
+"pomacanthus paru","53","Reef omnivores","french angelfish","pomacanthus","paru","Fis-23733","Sp_658",1.82706,28
+"scarus iseri","53","Reef omnivores","striped parrotfish","scarus","iseri","Fis-145135","Sp_683",1.31655,18
+"scarus taeniopterus","53","Reef omnivores","princess parrotfish","scarus","taeniopterus","Fis-30608","Sp_662",1.05368,22
+"cheilopogon cyanopterus","54","Surface pelagics","margined flyingfish","cheilopogon","cyanopterus","Fis-26644","Sp_693",2.49332,25
+"cheilopogon melanurus","54","Surface pelagics","atlantic flyingfish","cheilopogon","melanurus","Fis-23466","Sp_694",2.880775,25
+"cypselurus comatus","54","Surface pelagics","clearwing flyingfish","cypselurus","comatus","Fis-23464","Sp_697",3.467285,15
+"exocoetus obtusirostris","54","Surface pelagics","oceanic two-wing flyingfish","exocoetus","obtusirostris","Fis-30017","Sp_699",2.06374,20
+"exocoetus volitans","54","Surface pelagics","flyingfish","exocoetus","volitans","Fis-30018","Sp_700",1.798375,20
+"hemiramphus balao","54","Surface pelagics","balao","hemiramphus","balao","Fis-30094","Sp_690",2.62357,35
+"hemiramphus brasiliensis","54","Surface pelagics","ballyhoo","hemiramphus","brasiliensis","Fis-23537","Sp_691",2.34456,35
+"hirundichthys affinis","54","Surface pelagics","fourwing flyingfish","hirundichthys","affinis","Fis-26550","Sp_701",3.037035,24
+"hirundichthys rondeletii","54","Surface pelagics","atlantic black wing flyingfish","hirundichthys","rondeletii","Fis-23550","Sp_703",2.913446667,20
+"hyporhamphus unifasciatus","54","Surface pelagics","silverstripe halfbeak","hyporhamphus","unifasciatus","Fis-23561","Sp_692",2.0737,20
+"parexocoetus brachypterus","54","Surface pelagics","sailfin flyingfish","parexocoetus","brachypterus","Fis-23715","Sp_705",3.00754,16
+"scomberesox saurus","54","Surface pelagics","atlantic saury","scomberesox","saurus","Fis-58405","Sp_708",2.16753,32
+"cetorhinus maximus","55","Large oceanic planktivores","basking shark","cetorhinus","maximus","Fis-22747","Sp_710",3.16209,700
+"alosa chrysochloris","57","Sardine-herring-scad","skipjack herring","alosa","chrysochloris","Fis-23330","Sp_730",3.36921,37.5
+"decapterus macarellus","57","Sardine-herring-scad","mackerel scad","decapterus","macarellus","Fis-23106","Sp_721",4.4389,30
+"decapterus punctatus","57","Sardine-herring-scad","round scad","decapterus","punctatus","Fis-23107","Sp_724",2.68693,18
+"decapterus tabl","57","Sardine-herring-scad","redtail scad","decapterus","tabl","Fis-22187","Sp_722",4.13456,25
+"dorosoma cepedianum","57","Sardine-herring-scad","gizzard shad","dorosoma","cepedianum","Fis-23481","Sp_720",2.22035,35
+"dorosoma petenense","57","Sardine-herring-scad","shad, threadfin","dorosoma","petenense","Fis-23482","Sp_729",2.902375,10
+"etrumeus sadina","57","Sardine-herring-scad","red-eye round herring","etrumeus","sadina","Fis-586","Sp_741",1.97225,25
+"harengula clupeola","57","Sardine-herring-scad","false pilchard","harengula","clupeola","Fis-23533","Sp_719",1.63819,10
+"harengula humeralis","57","Sardine-herring-scad","redear herring","harengula","humeralis","Fis-23534","Sp_743",2.54586,15
+"harengula jaguana","57","Sardine-herring-scad","scaled sardine","harengula","jaguana","Fis-30087","Sp_726",3.39567,12
+"opisthonema oglinum","57","Sardine-herring-scad","atlantic thread herring","opisthonema","oglinum","Fis-23682","Sp_716",1.1929,20
+"sardinella aurita","57","Sardine-herring-scad","sardine, spanish","sardinella","aurita","Fis-30592","Sp_725",1.59116,25
+"sardinella brasiliensis","57","Sardine-herring-scad","brazilian sardinella","sardinella","brasiliensis","Fis-23768","Sp_752",1.06558,20
+"trachurus lathami","57","Sardine-herring-scad","rough scad","trachurus","lathami","Fis-22214","Sp_723",1.85523,30
+"brevoortia patronus","58,59,60,61,62","Menhaden (0yr)","gulf menhaden","brevoortia","patronus","Fis-29740","Sp_760",1.51921,20
+"carcharhinus limbatus","6","Blacktip shark","blacktip shark","carcharhinus","limbatus","Fis-23060","Sp_007",2.000455,150
+"anchoa cayorum","63","Anchovy-silverside-killifish","key anchovy","anchoa","cayorum","Fis-23343","Sp_767",1.37548,8
+"anchoa hepsetus","63","Anchovy-silverside-killifish","striped anchovy","anchoa","hepsetus","Fis-23349","Sp_770",2.88003,11
+"anchoa lyolepis","63","Anchovy-silverside-killifish","dusky anchovy","anchoa","lyolepis","Fis-23351","Sp_764",1.03963,9
+"anchoa mitchilli","63","Anchovy-silverside-killifish","bay anchovy","anchoa","mitchilli","Fis-22983","Sp_763",3.39229,5.95
+"atherinomorus stipes","63","Anchovy-silverside-killifish","hardhead silverside","atherinomorus","stipes","Fis-24449","Sp_765",2.56911,7.5
+"dormitator maculatus","63","Anchovy-silverside-killifish","fat sleeper","dormitator","maculatus","Fis-24543","Sp_777",0.841647,14.5
+"hypoatherina harringtonensis","63","Anchovy-silverside-killifish","reef silverside","hypoatherina","harringtonensis","Fis-24689","Sp_786",1.35899,6
+"lucania parva","63","Anchovy-silverside-killifish","rainwater killifish","lucania","parva","Fis-24749","Sp_787",1.56345,3.65
+"menidia beryllina","63","Anchovy-silverside-killifish","inland silverside","menidia","beryllina","Fis-24770","Sp_766",1.3888,7.75
+"mugil cephalus","64","Mullet","mullet, striped (liza)","mugil","cephalus","Fis-29454","Sp_791",2.279495,50
+"mugil curema","64","Mullet","mullet, white","mugil","curema","Fis-22157","Sp_792",1.90961,30
+"mugil trichodon","64","Mullet","fantail mullet","mugil","trichodon","Fis-22193","Sp_790",1.91617,15
+"peprilus paru","65","Butterfish","american harvestfish","peprilus","paru","Fis-64153","Sp_797",2.399115,18
+"carcharhinus obscurus","7","Dusky shark","dusky shark","carcharhinus","obscurus","Fis-23064","Sp_008",3.36021,250
+"carcharhinus plumbeus","8","Sandbar shark","sandbar shark","carcharhinus","plumbeus","Fis-23066","Sp_009",3.178275,200
+"carcharhinus altimus","9","Large coastal sharks","bignose shark","carcharhinus","altimus","Fis-23045","Sp_010",2.519605,250
+"carcharhinus brevipinna","9","Large coastal sharks","shark, spinner","carcharhinus","brevipinna","Fis-23051","Sp_016",5.87939,250
+"carcharhinus falciformis","9","Large coastal sharks","shark, silky","carcharhinus","falciformis","Fis-23054","Sp_015",2.02629,250
+"carcharhinus leucas","9","Large coastal sharks","bull shark","carcharhinus","leucas","Fis-23059","Sp_011",1.44355,260
+"carcharhinus signatus","9","Large coastal sharks","night shark","carcharhinus","signatus","Fis-23069","Sp_013",1.63793,200
+"carcharias taurus","9","Large coastal sharks","sand tiger","carcharias","taurus","Fis-29388","Sp_020",1.614265,250
+"galeocerdo cuvier","9","Large coastal sharks","shark, tiger","galeocerdo","cuvier","Fis-23129","Sp_017",1.385944,500
+"hexanchus griseus","9","Large coastal sharks","sixgill shark","hexanchus","griseus","Fis-23157","Sp_018",1.5699765,300
+"negaprion brevirostris","9","Large coastal sharks","lemon shark","negaprion","brevirostris","Fis-23194","Sp_012",1.07344,240

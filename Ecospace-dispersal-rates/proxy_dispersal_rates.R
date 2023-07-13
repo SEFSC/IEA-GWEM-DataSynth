@@ -8,7 +8,7 @@ fishbase = read.csv("./global-data/fishbaseSppEcolMatrix.csv")
 fishbase = fishbase[, c('Sciname', 'AspectRatio', 'CommonLength')]
 fishbase$Sciname = tolower(fishbase$Sciname)
 
-fg = read.csv("./global-data/speciesListGoM.csv") ## 'fg' represents Ecospace functional groups
+fg = read.csv("./global-data/speciesListGoM_QAQC_AMkeys.csv") ## 'fg' represents Ecospace functional groups
 fg$Sciname = tolower(fg$Sciname)
 
 disp = merge(fg, fishbase, by = 'Sciname', all.x = TRUE)
