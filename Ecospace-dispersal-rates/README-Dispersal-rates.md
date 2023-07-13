@@ -44,7 +44,7 @@ Dispersal rates were estimated for 325 GoM species and 65 functional groups. Est
 
 The dispersal rate estimates from our approach give reasonable estimates for and are largely consistent with the “300-30-3” heuristic. Individual movement for such species are notoriously variable. For example, seven of nine shortfin mako sharks (Isurus oxyrinchus) tagged in the northern Gulf of Mexico moved less than approximately 600 km from their tagging location, while two individuals conducted seasonal migrations and traveled over 2500 km per year (Gibson et al. 2021).
 
-![Plot](Ecospace-dispersal-rates/plot-dispersal-3panel.png)
+![Plot](plot-dispersal-3panel.png)
 **Figure 1** – Annual dispersal rates for estimated for functional groups of fishes in the Gulf of Mexico Ecosystem Model. Panels A, B, and C are separated by dispersal rate ranges with different corresponding y-axes. Mean values are shown and the number of species per functional group with error bars to indicate confidence intervals of 1.96×SE. The number of species in a given functional group is indicated by the number at the base of the plot. 
 
 **Table 1** – Relative swim speed and scaled dispersal rates per species based on common length, tail aspect ratio, and swim mode. 
