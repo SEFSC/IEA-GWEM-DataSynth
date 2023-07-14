@@ -38,5 +38,11 @@ dispersal_table = scaled %>%
     SD = sd(Scaled_avg),
   )
 
-## Write out table for Ecospace
+## Write out CSV table for Ecospace
 write.csv(dispersal_table, "./Ecospace-dispersal-rates/output-for-Ecospace/scaled-dipersal-rates.csv", row.names = FALSE)
+
+## Write out markdown table
+library(knitr)
+dispersal_md <- kable(dispersal_table, format = "markdown")
+writeLines(dispersal_md, "./Ecospace-dispersal-rates/output-for-Ecospace/dispersal_table.md")
+writeLines(dispersal_md, "./Ecospace-dispersal-rates/output-for-Ecospace/scaled-dispersal-rates-all-spp.md")
