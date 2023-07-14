@@ -1,0 +1,325 @@
+"Sciname" "Group" "Common" "EwE_name" "EwE_num" "AspectRatio" "CommonLength" "Swim_mode" "Base_rate" "Scaled_RD" "Scaled_SS" "Scaler_Snook" "Scaled_avg" "Scaler_sd"
+"1" "carcharhinus limbatus" "blacktip shark" "SHARK, BLACKTIP" "Blacktip shark" "06" 2.00046 150 1 0 0 0 0 0 0
+"2" "carcharhinus obscurus" "dusky shark" "DUSKY SHARK" "Dusky shark" "07" 3.36021 250 1 36.89214 757 665 658 693 19
+"3" "carcharhinus plumbeus" "sandbar shark" "SHARK, SANDBAR" "Sandbar shark" "08" 3.17828 200 1 31.51232 647 568 562 592 16
+"4" "carcharhinus altimus" "large coastal sharks" "BIGNOSE SHARK" "Large coastal sharks" "09" 2.51961 250 1 33.37698 685 601 596 627 17
+"5" "carcharhinus brevipinna" "large coastal sharks" "SHARK, SPINNER" "Large coastal sharks" "09" 5.87939 250 1 44.81644 920 807 800 842 23
+"6" "carcharhinus falciformis" "large coastal sharks" "SILKY SHARK" "Large coastal sharks" "09" 2.02629 250 1 30.94101 635 557 552 582 16
+"7" "carcharhinus leucas" "large coastal sharks" "BULL SHARK" "Large coastal sharks" "09" 1.44355 260 1 28.17526 578 508 503 530 14
+"8" "carcharhinus signatus" "large coastal sharks" "NIGHT SHARK" "Large coastal sharks" "09" 1.63793 200 1 25.02362 514 451 447 470 13
+"9" "carcharias taurus" "large coastal sharks" "SAND TIGER" "Large coastal sharks" "09" 1.61427 250 1 28.58889 587 515 510 537 14
+"10" "galeocerdo cuvier" "large coastal sharks" "TIGER SHARK" "Large coastal sharks" "09" 1.38594 500 1 41.65633 855 750 744 783 21
+"11" "hexanchus griseus" "large coastal sharks" "SIXGILL SHARK" "Large coastal sharks" "09" 1.56998 300 1 31.69976 651 571 566 596 16
+"12" "negaprion brevirostris" "large coastal sharks" "SHARK, LEMON" "Large coastal sharks" "09" 1.07344 240 1 24.18708 497 436 432 455 12
+"13" "sphyrna lewini" "large coastal sharks" "SCALLOPED HAMMERHEAD" "Large coastal sharks" "09" 1.80809 360 1 37.27745 765 672 665 701 19
+"14" "sphyrna mokarran" "large coastal sharks" "GREAT HAMMERHEAD" "Large coastal sharks" "09" 1.85353 370 1 38.24442 785 689 683 719 19
+"15" "alopias superciliosus" "large oceanic sharks" "BIGEYE THRESHER" "Large oceanic sharks" "10" 2.48568 350 1 40.92045 840 737 730 769 21
+"16" "alopias vulpinus" "large oceanic sharks" "COMMON THRESHER SHARK" "Large oceanic sharks" "10" 1.81491 450 1 42.8608 880 772 765 806 22
+"17" "carcharhinus longimanus" "large oceanic sharks" "OCEANIC WHITETIP SHARK" "Large oceanic sharks" "10" 2.47044 270 1 34.76801 714 626 621 654 18
+"18" "isurus oxyrinchus" "large oceanic sharks" "SHARK, SHORTFIN MAKO" "Large oceanic sharks" "10" 3.76133 270 1 40.24174 826 725 718 756 20
+"19" "prionace glauca" "large oceanic sharks" "BLUE SHARK" "Large oceanic sharks" "10" 2.08424 335 1 37.4583 769 675 669 704 19
+"20" "rhizoprionodon terraenovae" "atlantic sharpnose shark" "ATLANTIC SHARPNOSE SHARK" "Atlantic sharpnose shark" "11" 1.55083 70 1 12.81153 263 231 229 241 6
+"21" "carcharhinus porosus" "small coastal sharks" "SMALLTAIL SHARK" "Small coastal sharks" "12" 2.01366 90 1 16.39363 337 295 293 308 8
+"22" "mustelus canis" "small coastal sharks" "SMOOTH DOGFISH" "Small coastal sharks" "12" 1.12661 100 1 14.29904 294 258 255 269 7
+"23" "mustelus norrisi" "small coastal sharks" "FLORIDA SMOOTHHOUND" "Small coastal sharks" "12" 0.89907 80 1 11.51287 236 207 205 216 6
+"24" "sphyrna tiburo" "small coastal sharks" "SHARK, BONNETHEAD" "Small coastal sharks" "12" 1.7744 80 1 14.58393 299 263 260 274 7
+"25" "thunnus albacares" "yellowfin tuna" "YELLOWFIN TUNA" "Yellowfin tuna" "13" 6.01356 150 1 32.91457 676 593 587 619 17
+"26" "thunnus thynnus" "bluefin tuna" "TUNA, BLUEFIN" "Bluefin tuna" "14" 6.34195 200 1 40.0711 823 722 715 753 20
+"27" "katsuwonus pelamis" "other tuna" "SKIPJACK TUNA" "Other tunas" "15" 6.49814 80 1 22.90565 470 413 409 431 12
+"28" "thunnus atlanticus" "other tuna" "BLACKFIN TUNA" "Other tunas" "15" 5.80817 72 1 20.6365 424 372 368 388 10
+"29" "istiophorus albicans" "billfish" "ATLANTIC SAILFISH" "Billfish" "16" 8.5019 240 1 49.67805 1020 895 887 934 25
+"30" "istiophorus platypterus" "billfish" "INDO-PACIFIC SAILFISH" "Billfish" "16" 5.92139 270 1 47.12181 967 849 841 886 24
+"31" "makaira nigricans" "billfish" "BLUE MARLIN" "Billfish" "16" 7.82945 290 1 54.2802 1114 978 969 1020 27
+"32" "tetrapturus pfluegeri" "billfish" "LONGBILL SPEARFISH" "Billfish" "16" 6.41985 165 1 35.7199 733 644 638 671 18
+"33" "xiphias gladius" "swordfish" "SWORDFISH" "Swordfish" "17" 7.05242 300 1 53.45351 1097 963 954 1005 27
+"34" "ablennes hians" "pelagic coastal piscivores" "FLAT NEEDLEFISH" "Pelagic coastal piscivores" "18" 1.98231 70 1 13.95337 286 251 249 262 7
+"35" "acanthocybium solandri" "pelagic coastal piscivores" "WAHOO" "Pelagic coastal piscivores" "18" 5.61927 170 1 34.7396 713 626 620 653 18
+"36" "auxis thazard" "pelagic coastal piscivores" "FRIGATE MACKEREL" "Pelagic coastal piscivores" "18" 5.79913 60 1 18.42215 378 332 329 346 9
+"37" "carangoides bartholomaei" "pelagic coastal piscivores" "YELLOW JACK" "Pelagic coastal piscivores" "18" 3.61365 50 1 13.95839 287 251 249 262 7
+"38" "caranx crysos" "pelagic coastal piscivores" "RUNNER, BLUE" "Pelagic coastal piscivores" "18" 3.36228 40 1 11.85495 243 214 212 223 6
+"39" "caranx hippos" "pelagic coastal piscivores" "CREVALLE JACK" "Pelagic coastal piscivores" "18" 3.41328 75 1 17.5924 361 317 314 331 9
+"40" "caranx latus" "pelagic coastal piscivores" "JACK, HORSE-EYE" "Pelagic coastal piscivores" "18" 3.5336 60 1 15.50645 318 279 277 291 8
+"41" "caranx lugubris" "pelagic coastal piscivores" "BLACK JACK" "Pelagic coastal piscivores" "18" 6.26087 70 1 20.81576 427 375 372 391 11
+"42" "caranx ruber" "pelagic coastal piscivores" "BAR JACK" "Pelagic coastal piscivores" "18" 4.22826 50 1 14.74215 303 266 263 277 7
+"43" "centropomus pectinatus" "coastal piscivores" "TARPON SNOOK" "Pelagic coastal piscivores" "18" 1.05246 40 0 1.48717 31 27 27 28 1
+"44" "centropomus undecimalis" "coastal piscivores" "SNOOK" "Pelagic coastal piscivores" "18" 1.90693 50 0 2.09982 43 38 37 39 1
+"45" "coryphaena equiselis" "pelagic coastal piscivores" "POMPANO DOLPHINFISH" "Pelagic coastal piscivores" "18" 3.91321 50 1 14.35042 295 259 256 270 7
+"46" "coryphaena hippurus" "pelagic coastal piscivores" "COMMON DOLPHINFISH" "Pelagic coastal piscivores" "18" 2.23519 100 1 18.14643 373 327 324 341 9
+"47" "echeneis neucratoides" "pelagic coastal piscivores" "WHITEFIN SHARKSUCKER" "Pelagic coastal piscivores" "18" 0.27624 50 1 5.7077 117 103 102 107 3
+"48" "elagatis bipinnulata" "pelagic coastal piscivores" "RAINBOW RUNNER" "Pelagic coastal piscivores" "18" 3.29454 90 0 3.65542 75 66 65 69 2
+"49" "elops saurus" "coastal piscivores" "LADYFISH" "Pelagic coastal piscivores" "18" 0.89915 60 1 9.63353 198 174 172 181 5
+"50" "euthynnus alletteratus" "pelagic coastal piscivores" "LITTLE TUNNY" "Pelagic coastal piscivores" "18" 4.18356 80 1 19.65297 403 354 351 369 10
+"51" "hemicaranx amblyrhynchus" "pelagic coastal piscivores" "BLUNTNOSE JACK" "Pelagic coastal piscivores" "18" 2.61853 25 1 8.12202 167 146 145 153 4
+"52" "lobotes surinamensis" "pelagic coastal piscivores" "TRIPLETAIL" "Pelagic coastal piscivores" "18" 1.70522 80 1 14.38361 295 259 257 270 7
+"53" "megalops atlanticus" "coastal piscivores" "TARPON" "Pelagic coastal piscivores" "18" 1.91985 130 0 3.80469 78 69 68 72 2
+"54" "morone saxatilis" "coastal piscivores" "STRIPED BASS" "Pelagic coastal piscivores" "18" 1.88595 120 0 3.59824 74 65 64 68 2
+"55" "naucrates ductor" "pelagic coastal piscivores" "PILOT FISH" "Pelagic coastal piscivores" "18" 2.97237 40 0 2.13394 44 38 38 40 1
+"56" "pomatomus saltatrix" "pelagic coastal piscivores" "BLUEFISH" "Pelagic coastal piscivores" "18" 2.39048 60 0 2.54319 52 46 45 48 1
+"57" "remora brachyptera" "pelagic coastal piscivores" "SPEARFISH REMORA" "Pelagic coastal piscivores" "18" 1.05616 25 0 1.1128 23 20 20 21 1
+"58" "remora remora" "pelagic coastal piscivores" "REMORA" "Pelagic coastal piscivores" "18" 1.32447 40 0 1.61095 33 29 29 30 1
+"59" "sarda sarda" "pelagic coastal piscivores" "ATLANTIC BONITO" "Pelagic coastal piscivores" "18" 5.75763 50 1 16.41325 337 296 293 309 8
+"60" "seriola rivoliana" "pelagic coastal piscivores" "ALMACO JACK" "Pelagic coastal piscivores" "18" 3.74422 90 1 20.3406 418 366 363 382 10
+"61" "seriola zonata" "pelagic coastal piscivores" "BANDED RUDDERFISH" "Pelagic coastal piscivores" "18" 2.36285 50 1 12.04101 247 217 215 226 6
+"62" "strongylura marina" "pelagic coastal piscivores" "NEEDLEFISH, ATLANTIC" "Pelagic coastal piscivores" "18" 1.34209 60 0 2.08058 43 37 37 39 1
+"63" "strongylura timucu" "pelagic coastal piscivores" "TIMUCU" "Pelagic coastal piscivores" "18" 0.47783 35 0 1.04029 21 19 19 20 1
+"64" "tylosurus crocodilus" "pelagic coastal piscivores" "HOUNDFISH" "Pelagic coastal piscivores" "18" 2.05648 90 0 3.1028 64 56 55 58 2
+"65" "seriola dumerili" "amberjacks" "AMBERJACK, GREATER" "Amberjack" "19" 2.83157 100 1 19.70222 404 355 352 370 10
+"66" "seriola fasciata" "amberjacks" "AMBERJACK, LESSER" "Amberjack" "19" 3.90277 50 1 14.3371 294 258 256 270 7
+"67" "rachycentron canadum" "cobia" "COBIA" "Cobia" "20" 0.98748 110 1 14.48916 297 261 259 272 7
+"68" "scomberomorus cavalla" "0-3 king mackerel" "KING MACKEREL (JUVENILE)" "King mackerel (1+yr)" "21,22" 5.81506 70 1 20.28779 416 366 362 381 10
+"69" "pristis pectinata" "skates-rays" "SMALLTOOTH SAWFISH" "Skates-rays" "25" 1.11582 550 1 40.98094 841 738 731 770 21
+"70" "pristis pristis" "skates-rays" "LARGETOOTH SAWFISH" "Skates-rays" "25" 1.11582 250 1 25.14299 516 453 449 473 13
+"71" "mycteroperca microlepis" "0-3 gag grouper" "GAG GROUPER (AGE 0-3)" "Gag grouper (0-3yr)" "26,27" 1.43463 50 0 1.90194 39 34 34 36 1
+"72" "epinephelus morio" "red grouper" "GROUPER, RED" "Red grouper (0-3yr)" "28,29" 1.18561 50 0 1.77991 37 32 32 33 1
+"73" "hyporthodus flavolimbatus" "0-3 yellowedge grouper" "YELLOWEDGE GROUPER (AGE 0-3)" "Yellowedge grouper (0-3yr)" "30,31" 1.24217 50 0 1.809 37 33 32 34 1
+"74" "epinephelus itajara" "goliath grouper" "GOLIATH GROUPER" "Goliath grouper" "32" 1.18781 150 0 3.51806 72 63 63 66 2
+"75" "hyporthodus niveatus" "deep-water grouper" "SNOWY GROUPER" "Deep-water grouper" "33" 1.26203 60 0 2.03655 42 37 36 38 1
+"76" "cephalopholis cruentata" "shallow-water grouper" "GRAYSBY" "Shallow-water grouper" "34" 2.42931 20 0 1.29476 27 23 23 24 1
+"77" "epinephelus adscensionis" "shallow-water grouper" "HIND, ROCK" "Shallow-water grouper" "34" 1.19982 35 0 1.43292 29 26 26 27 1
+"78" "epinephelus guttatus" "shallow-water grouper" "HIND, RED" "Shallow-water grouper" "34" 0.97658 40 0 1.44896 30 26 26 27 1
+"79" "mycteroperca bonaci" "shallow-water grouper" "GROUPER, BLACK" "Shallow-water grouper" "34" 1.52446 70 0 2.39282 49 43 43 45 1
+"80" "mycteroperca interstitialis" "shallow-water grouper" "YELLOWMOUTH GROUPER" "Shallow-water grouper" "34" 1.27519 40 0 1.58984 33 29 28 30 1
+"81" "mycteroperca phenax" "shallow-water grouper" "SCAMP" "Shallow-water grouper" "34" 1.50803 30 0 1.41018 29 25 25 27 1
+"82" "mycteroperca tigris" "shallow-water grouper" "TIGER GROUPER" "Shallow-water grouper" "34" 1.39914 40 0 1.64198 34 30 29 31 1
+"83" "mycteroperca venenosa" "shallow-water grouper" "YELLOWFIN GROUPER" "Shallow-water grouper" "34" 1.3252 50 0 1.85017 38 33 33 35 1
+"84" "lutjanus campechanus" "red snapper" "RED SNAPPER" "Red snapper (0yr)" "35,36,37" 1.43242 60 0 2.12826 44 38 38 40 1
+"85" "rhomboplites aurorubens" "vermilion snapper" "VERMILION SNAPPER" "Vermilion snapper" "38" 2.772 35 0 1.91738 39 35 34 36 1
+"86" "lutjanus analis" "mutton snapper" "MUTTON SNAPPER" "Mutton snapper" "39" 1.6903 50 0 2.01357 41 36 36 38 1
+"87" "apsilus dentatus" "other snapper" "BLACK SNAPPER" "Other snapper" "40" 2.06907 40 0 1.88132 39 34 34 35 1
+"88" "etelis oculatus" "other snapper" "SNAPPER, QUEEN" "Other snapper" "40" 1.458 64 0 2.22876 46 40 40 42 1
+"89" "lutjanus buccanella" "other snapper" "SNAPPER, BLACKFIN" "Other snapper" "40" 1.0181 50 0 1.68807 35 30 30 32 1
+"90" "lutjanus cyanopterus" "other snapper" "SNAPPER, CUBERA" "Other snapper" "40" 2.25197 90 0 3.20236 66 58 57 60 2
+"91" "lutjanus griseus" "other snapper" "GRAY SNAPPER" "Other snapper" "40" 1.77717 40 0 1.7844 37 32 32 34 1
+"92" "lutjanus jocu" "other snapper" "DOG SNAPPER" "Other snapper" "40" 1.38693 60 0 2.1045 43 38 38 40 1
+"93" "lutjanus mahogoni" "other snapper" "SNAPPER, MAHOGANY" "Other snapper" "40" 2.01138 38 0 1.80463 37 33 32 34 1
+"94" "lutjanus purpureus" "other snapper" "SNAPPER CARIBBEAN RED" "Other snapper" "40" 1.58402 65 0 2.3161 48 42 41 44 1
+"95" "lutjanus vivanus" "other snapper" "SNAPPER, SILK" "Other snapper" "40" 0.59401 45 0 1.31116 27 24 23 25 1
+"96" "pristipomoides aquilonaris" "other snapper" "WENCHMAN" "Other snapper" "40" 3.31596 20 0 1.44273 30 26 26 27 1
+"97" "cynoscion arenarius" "seatrout" "SAND SEATROUT" "Sea trout" "42" 1.1701 35 0 1.42047 29 26 25 27 1
+"98" "cynoscion jamaicensis" "seatrout" "JAMAICAN WEAKFISH" "Sea trout" "42" 1.53201 35 0 1.56005 32 28 28 29 1
+"99" "cynoscion nebulosus" "seatrout" "SEATROUT, SPOTTED" "Sea trout" "42" 1.48035 36 0 1.56869 32 28 28 29 1
+"100" "cynoscion nothus" "seatrout" "SILVER SEATROUT" "Sea trout" "42" 1.14626 25 0 1.14494 24 21 20 22 1
+"101" "cynoscion regalis" "seatrout" "WEAKFISH" "Sea trout" "42" 1.4529 50 0 1.91033 39 34 34 36 1
+"102" "alepisaurus ferox" "oceanic piscivores" "LONGSNOUTED LANCETFISH" "Oceanic piscivores" "43" 1.61107 150 0 3.91147 80 70 70 74 2
+"103" "brama caribbea" "oceanic piscivores" "CARIBBEAN POMFRET" "Oceanic piscivores" "43" 0.49929 21.8 0 0.78776 16 14 14 15 0
+"104" "gempylus serpens" "oceanic piscivores" "SNAKE MACKEREL" "Oceanic piscivores" "43" 1.47497 60 0 2.15003 44 39 38 40 1
+"105" "lepidocybium flavobrunneum" "oceanic piscivores" "ESCOLAR" "Oceanic piscivores" "43" 5.26363 150 0 5.90431 121 106 105 111 3
+"106" "merluccius albidus" "oceanic piscivores" "OFFSHORE HAKE" "Oceanic piscivores" "43" 1.60087 30 0 1.43979 30 26 26 27 1
+"107" "ruvettus pretiosus" "oceanic piscivores" "OILFISH" "Oceanic piscivores" "43" 2.13546 150 0 4.31423 89 78 77 81 2
+"108" "taractes rubescens" "oceanic piscivores" "POMFRET" "Oceanic piscivores" "43" 3.20198 30 0 1.83235 38 33 33 34 1
+"109" "trichiurus lepturus" "oceanic piscivores" "CUTLASSFISH" "Oceanic piscivores" "43" 1.3545 100 0 2.86439 59 52 51 54 1
+"110" "astroscopus y-graecum" "benthic piscivores" "SOUTHERN STARGAZER" "Benthic piscivores" "44" 0.72489 35 0 1.20256 25 22 21 23 1
+"111" "cyclopsetta chittendeni" "benthic piscivores" "MEXICAN FLOUNDER" "Benthic piscivores" "44" 1.22829 25 0 1.1728 24 21 21 22 1
+"112" "cyclopsetta fimbriata" "benthic piscivores" "SPOTFIN FLOUNDER" "Benthic piscivores" "44" 1.20408 25 0 1.1647 24 21 21 22 1
+"113" "paralichthys albigutta" "benthic piscivores" "GULF FLOUNDER" "Benthic piscivores" "44" 1.47554 35 0 1.5398 32 28 27 29 1
+"114" "paralichthys lethostigma" "benthic piscivores" "SOUTHERN FLOUNDER" "Benthic piscivores" "44" 1.09752 50 0 1.73276 36 31 31 33 1
+"115" "saurida brasiliensis" "benthic piscivores" "LARGESCALE LIZARDFISH" "Benthic piscivores" "44" 1.58273 15 0 0.93338 19 17 17 18 0
+"116" "saurida normani" "benthic piscivores" "SHORTJAW LIZARDFISH" "Benthic piscivores" "44" 2.54076 30 0 1.69072 35 30 30 32 1
+"117" "synodus foetens" "benthic piscivores" "INSHORE LIZARDFISH" "Benthic piscivores" "44" 1.88281 30 0 1.52336 31 27 27 29 1
+"118" "synodus intermedius" "benthic piscivores" "SAND DIVER" "Benthic piscivores" "44" 1.56079 40 0 1.70562 35 31 30 32 1
+"119" "synodus synodus" "benthic piscivores" "DIAMOND LIZARDFISH" "Benthic piscivores" "44" 1.82809 20 0 1.17285 24 21 21 22 1
+"120" "holocentrus adscensionis" "reef-rubble-associated piscivores" "SQUIRRELFISH" "Reef piscivores" "45" 2.10917 25 0 1.41543 29 26 25 27 1
+"121" "holocentrus rufus" "reef-rubble-associated piscivores" "LONGSPINE SQUIRRELFISH" "Reef piscivores" "45" 2.31449 25 0 1.46191 30 26 26 27 1
+"122" "myripristis jacobus" "reef-rubble-associated piscivores" "BLACKBAR SOLDIERFISH" "Reef piscivores" "45" 2.76841 20 0 1.35496 28 24 24 25 1
+"123" "sphyraena barracuda" "reef-rubble-associated piscivores" "GREAT BARRACUDA" "Reef piscivores" "45" 2.45371 140 0 4.33832 89 78 77 82 2
+"124" "sphyraena guachancho" "reef-rubble-associated piscivores" "GUAGUANCHE" "Reef piscivores" "45" 2.18647 70 0 2.7126 56 49 48 51 1
+"125" "sphyraena picudilla" "reef-rubble-associated piscivores" "SOUTHERN SENNET" "Reef piscivores" "45" 1.84005 36 0 1.69197 35 30 30 32 1
+"126" "anisotremus surinamensis" "reef-rubble-associated invertebrate feeders" "BLACK MARGATE" "Reef invertebrate feeders" "46" 2.21793 45 0 2.07325 43 37 37 39 1
+"127" "anisotremus virginicus" "reef-rubble-associated invertebrate feeders" "PORKFISH" "Reef invertebrate feeders" "46" 1.77369 25 0 1.33267 27 24 24 25 1
+"128" "archosargus probatocephalus" "reef-rubble-associated invertebrate feeders" "SHEEPSHEAD" "Reef invertebrate feeders" "46" 1.44066 35 0 1.52705 31 28 27 29 1
+"129" "archosargus rhomboidalis" "reef-rubble-associated invertebrate feeders" "WESTERN ATLANTIC SEA BREAM" "Reef invertebrate feeders" "46" 2.34927 20 0 1.27976 26 23 23 24 1
+"130" "aulostomus maculatus" "reef-rubble-associated invertebrate feeders" "TRUMPETFISH" "Reef invertebrate feeders" "46" 1.2398 60 0 2.024 42 36 36 38 1
+"131" "bodianus pulchellus" "reef-rubble-associated invertebrate feeders" "SPOTFIN HOGFISH" "Reef invertebrate feeders" "46" 1.4208 18 0 1.00651 21 18 18 19 1
+"132" "bodianus rufus" "reef-rubble-associated invertebrate feeders" "SPANISH HOGFISH" "Reef invertebrate feeders" "46" 1.61543 28 0 1.38389 28 25 25 26 1
+"133" "calamus bajonado" "reef-rubble-associated invertebrate feeders" "PORGY, JOLTHEAD" "Reef invertebrate feeders" "46" 2.73233 54 0 2.49584 51 45 45 47 1
+"134" "calamus calamus" "reef-rubble-associated invertebrate feeders" "SAUCEREYE PORGY" "Reef invertebrate feeders" "46" 3.01125 30 0 1.79363 37 32 32 34 1
+"135" "calamus leucosteus" "reef-rubble-associated invertebrate feeders" "WHITEBONE PORGY" "Reef invertebrate feeders" "46" 2.52755 30 0 1.68765 35 30 30 32 1
+"136" "calamus nodosus" "reef-rubble-associated invertebrate feeders" "KNOBBED PORGY" "Reef invertebrate feeders" "46" 3.70011 35 0 2.11997 44 38 38 40 1
+"137" "calamus pennatula" "reef-rubble-associated invertebrate feeders" "SHEEPSHEAD PORGY" "Reef invertebrate feeders" "46" 3.79916 30 0 1.94464 40 35 35 37 1
+"138" "calamus proridens" "reef-rubble-associated invertebrate feeders" "LITTLEHEAD PORGY" "Reef invertebrate feeders" "46" 2.75681 37 0 1.98076 41 36 35 37 1
+"139" "centropristis striata" "reef-rubble-associated invertebrate feeders" "SEA BASS, BLACK" "Reef invertebrate feeders" "46" 1.03188 30 0 1.23585 25 22 22 23 1
+"140" "decodon puellaris" "reef-rubble-associated invertebrate feeders" "RED HOGFISH" "Reef invertebrate feeders" "46" 1.48092 22 0 1.15631 24 21 21 22 1
+"141" "equetus lanceolatus" "reef-rubble-associated invertebrate feeders" "JACKKNIFE-FISH" "Reef invertebrate feeders" "46" 1.1987 15 0 0.84739 17 15 15 16 0
+"142" "haemulon album" "reef-rubble-associated invertebrate feeders" "WHITE MARGATE" "Reef invertebrate feeders" "46" 2.73664 50 0 2.38093 49 43 42 45 1
+"143" "haemulon aurolineatum" "reef-rubble-associated invertebrate feeders" "TOMTATE" "Reef invertebrate feeders" "46" 2.10255 18 0 1.1535 24 21 21 22 1
+"144" "haemulon bonariense" "reef-rubble-associated invertebrate feeders" "BLACK GRUNT" "Reef invertebrate feeders" "46" 2.55808 30 0 1.69471 35 31 30 32 1
+"145" "haemulon carbonarium" "reef-rubble-associated invertebrate feeders" "CAESAR GRUNT" "Reef invertebrate feeders" "46" 2.67007 20 0 1.33802 27 24 24 25 1
+"146" "haemulon chrysargyreum" "reef-rubble-associated invertebrate feeders" "SMALLMOUTH GRUNT" "Reef invertebrate feeders" "46" 1.44823 17 0 0.97797 20 18 17 18 0
+"147" "haemulon flavolineatum" "reef-rubble-associated invertebrate feeders" "FRENCH GRUNT" "Reef invertebrate feeders" "46" 2.31048 17 0 1.15049 24 21 21 22 1
+"148" "haemulon macrostomum" "reef-rubble-associated invertebrate feeders" "SPANISH GRUNT" "Reef invertebrate feeders" "46" 2.15596 25 0 1.42628 29 26 25 27 1
+"149" "haemulon melanurum" "reef-rubble-associated invertebrate feeders" "COTTONWICK" "Reef invertebrate feeders" "46" 1.73541 25 0 1.3226 27 24 24 25 1
+"150" "haemulon parra" "reef-rubble-associated invertebrate feeders" "SAILORS CHOICE" "Reef invertebrate feeders" "46" 2.27492 30 0 1.62696 33 29 29 31 1
+"151" "haemulon plumierii" "reef-rubble-associated invertebrate feeders" "WHITE GRUNT" "Reef invertebrate feeders" "46" 2.99803 30 0 1.79089 37 32 32 34 1
+"152" "haemulon sciurus" "reef-rubble-associated invertebrate feeders" "BLUESTRIPED GRUNT" "Reef invertebrate feeders" "46" 2.4678 25 0 1.49489 31 27 27 28 1
+"153" "haemulon striatum" "reef-rubble-associated invertebrate feeders" "STRIPED GRUNT" "Reef invertebrate feeders" "46" 2.75208 17 0 1.22264 25 22 22 23 1
+"154" "halichoeres radiatus" "reef-rubble-associated invertebrate feeders" "PUDDINGWIFE" "Reef invertebrate feeders" "46" 1.49584 40 0 1.68059 34 30 30 32 1
+"155" "hemanthias leptus" "reef-rubble-associated invertebrate feeders" "BASS, LONGTAIL" "Reef invertebrate feeders" "46" 1.25599 35 0 1.4559 30 26 26 27 1
+"156" "heteropriacanthus cruentatus" "reef-rubble-associated invertebrate feeders" "GLASSEYE" "Reef invertebrate feeders" "46" 1.83525 20 0 1.17444 24 21 21 22 1
+"157" "lachnolaimus maximus" "reef-rubble-associated invertebrate feeders" "HOGFISH" "Reef invertebrate feeders" "46" 3.9567 35 0 2.16999 45 39 39 41 1
+"158" "lutjanus apodus" "reef-rubble-associated invertebrate feeders" "SCHOOLMASTER SNAPPER" "Reef invertebrate feeders" "46" 1.77557 35 0 1.64219 34 30 29 31 1
+"159" "lutjanus synagris" "reef-rubble-associated invertebrate feeders" "SNAPPER, LANE" "Reef invertebrate feeders" "46" 1.46359 25 0 1.24651 26 22 22 23 1
+"160" "morone mississippiensis" "reef-rubble-associated invertebrate feeders" "YELLOW BASS" "Reef invertebrate feeders" "46" 1.56278 23.9 0 1.2402 25 22 22 23 1
+"161" "ocyurus chrysurus" "reef-rubble-associated invertebrate feeders" "YELLOWTAIL SNAPPER" "Reef invertebrate feeders" "46" 1.73696 40 0 1.77025 36 32 32 33 1
+"162" "paranthias furcifer" "reef-rubble-associated invertebrate feeders" "CREOLE-FISH" "Reef invertebrate feeders" "46" 2.55241 20 0 1.31721 27 24 24 25 1
+"163" "pareques acuminatus" "reef-rubble-associated invertebrate feeders" "HIGHHAT" "Reef invertebrate feeders" "46" 1.24935 18 0 0.96248 20 17 17 18 0
+"164" "pareques umbrosus" "reef-rubble-associated invertebrate feeders" "CUBBYU" "Reef invertebrate feeders" "46" 1.26941 15 0 0.86445 18 16 15 16 0
+"165" "pomadasys crocro" "reef-rubble-associated invertebrate feeders" "BURRO GRUNT" "Reef invertebrate feeders" "46" 1.72994 25 0 1.32115 27 24 24 25 1
+"166" "pontinus longispinis" "reef-rubble-associated invertebrate feeders" "LONGSPINE SCORPIONFISH" "Reef invertebrate feeders" "46" 1.43694 20 0 1.07864 22 19 19 20 1
+"167" "priacanthus arenatus" "reef-rubble-associated invertebrate feeders" "BIGEYE" "Reef invertebrate feeders" "46" 2.04264 35 0 1.72421 35 31 31 32 1
+"168" "pristigenys alta" "reef-rubble-associated invertebrate feeders" "SHORT BIGEYE" "Reef invertebrate feeders" "46" 1.25797 20 0 1.02987 21 19 18 19 1
+"169" "scorpaena plumieri" "reef-rubble-associated invertebrate feeders" "SPOTTED SCORPIONFISH" "Reef invertebrate feeders" "46" 0.8227 30 0 1.14221 23 21 20 21 1
+"170" "serranus atrobranchus" "reef-rubble-associated invertebrate feeders" "BLACKEAR BASS" "Reef invertebrate feeders" "46" 1.03866 9 0 0.58746 12 11 10 11 0
+"171" "serranus phoebe" "reef-rubble-associated invertebrate feeders" "TATTLER" "Reef invertebrate feeders" "46" 1.25578 15 0 0.86121 18 16 15 16 0
+"172" "xyrichtys novacula" "reef-rubble-associated invertebrate feeders" "PEARLY RAZORFISH" "Reef invertebrate feeders" "46" 1.37048 20 0 1.06102 22 19 19 20 1
+"173" "alectis ciliaris" "demersal coastal invertebrate feeders" "AFRICAN POMPANO" "Demersal coastal invertebrate feeders" "47" 4.40876 100 0 4.31811 89 78 77 81 2
+"174" "ariopsis felis" "demersal coastal invertebrate feeders" "HARDHEAD SEA CATFISH" "Demersal coastal invertebrate feeders" "47" 1.87561 25 0 1.35882 28 24 24 26 1
+"175" "bagre marinus" "demersal coastal invertebrate feeders" "GAFFTOPSAIL CATFISH" "Demersal coastal invertebrate feeders" "47" 2.47999 50 0 2.30076 47 41 41 43 1
+"176" "bairdiella chrysoura" "demersal coastal invertebrate feeders" "SILVER PERCH" "Demersal coastal invertebrate feeders" "47" 1.56165 20 0 1.11032 23 20 20 21 1
+"177" "calamus arctifrons" "demersal coastal invertebrate feeders" "GRASS PORGY" "Demersal coastal invertebrate feeders" "47" 1.9222 20 0 1.1935 24 22 21 22 1
+"178" "chloroscombrus chrysurus" "demersal coastal invertebrate feeders" "ATLANTIC BUMPER" "Demersal coastal invertebrate feeders" "47" 3.24179 25 0 1.64367 34 30 29 31 1
+"179" "conodon nobilis" "demersal coastal invertebrate feeders" "BARRED GRUNT" "Demersal coastal invertebrate feeders" "47" 1.25615 25 0 1.18198 24 21 21 22 1
+"180" "diapterus auratus" "demersal coastal invertebrate feeders" "IRISH POMPANO" "Demersal coastal invertebrate feeders" "47" 1.33198 20 0 1.05055 22 19 19 20 1
+"181" "diapterus rhombeus" "demersal coastal invertebrate feeders" "SAND MOJARRA" "Demersal coastal invertebrate feeders" "47" 0.81783 30 0 1.13985 23 21 20 21 1
+"182" "eucinostomus argenteus" "demersal coastal invertebrate feeders" "SPOTFIN MOJARRA" "Demersal coastal invertebrate feeders" "47" 2.35299 15 0 1.07141 22 19 19 20 1
+"183" "eucinostomus gula" "demersal coastal invertebrate feeders" "SILVER JENNY" "Demersal coastal invertebrate feeders" "47" 2.13154 15 0 1.0352 21 19 18 19 1
+"184" "eucinostomus havana" "demersal coastal invertebrate feeders" "BIGEYE MOJARRA" "Demersal coastal invertebrate feeders" "47" 1.90184 14 0 0.95332 20 17 17 18 0
+"185" "eugerres plumieri" "demersal coastal invertebrate feeders" "STRIPED MOJARRA" "Demersal coastal invertebrate feeders" "47" 0.91678 30 0 1.18604 24 21 21 22 1
+"186" "galeichthys feliceps" "demersal coastal invertebrate feeders" "WHITE BARBEL" "Demersal coastal invertebrate feeders" "47" 1.85501 35 0 1.66738 34 30 30 31 1
+"187" "gerres cinereus" "demersal coastal invertebrate feeders" "YELLOWFIN MOJARRA" "Demersal coastal invertebrate feeders" "47" 2.45534 30 0 1.67073 34 30 30 31 1
+"188" "larimus fasciatus" "demersal coastal invertebrate feeders" "BANDED DRUM" "Demersal coastal invertebrate feeders" "47" 1.36443 16 0 0.92259 19 17 16 17 0
+"189" "leiostomus xanthurus" "demersal coastal invertebrate feeders" "SPOT CROAKER" "Demersal coastal invertebrate feeders" "47" 1.54116 25 0 1.2691 26 23 23 24 1
+"190" "menticirrhus americanus" "demersal coastal invertebrate feeders" "SOUTHERN KINGCROAKER" "Demersal coastal invertebrate feeders" "47" 1.29627 30 0 1.33789 27 24 24 25 1
+"191" "menticirrhus littoralis" "demersal coastal invertebrate feeders" "GULF KINGFISH" "Demersal coastal invertebrate feeders" "47" 1.05793 30 0 1.24661 26 22 22 23 1
+"192" "menticirrhus saxatilis" "demersal coastal invertebrate feeders" "NORTHERN KINGFISH" "Demersal coastal invertebrate feeders" "47" 1.28396 30 0 1.33346 27 24 24 25 1
+"193" "micropogonias furnieri" "demersal coastal invertebrate feeders" "WHITEMOUTH CROAKER" "Demersal coastal invertebrate feeders" "47" 1.79041 45 0 1.92445 40 35 34 36 1
+"194" "micropogonias undulatus" "demersal coastal invertebrate feeders" "ATLANTIC CROAKER" "Demersal coastal invertebrate feeders" "47" 1.25815 30 0 1.32407 27 24 24 25 1
+"195" "mulloidichthys martinicus" "demersal coastal invertebrate feeders" "YELLOW GOATFISH" "Demersal coastal invertebrate feeders" "47" 2.25711 28 0 1.55462 32 28 28 29 1
+"196" "oligoplites saurus" "demersal coastal invertebrate feeders" "LEATHERJACKET" "Demersal coastal invertebrate feeders" "47" 3.35261 27 0 1.74422 36 31 31 33 1
+"197" "orthopristis chrysoptera" "demersal coastal invertebrate feeders" "PIGFISH" "Demersal coastal invertebrate feeders" "47" 1.82519 30 0 1.50698 31 27 27 28 1
+"198" "pagrus pagrus" "demersal coastal invertebrate feeders" "RED PORGY" "Demersal coastal invertebrate feeders" "47" 2.01971 35 0 1.71745 35 31 31 32 1
+"199" "pogonias cromis" "demersal coastal invertebrate feeders" "BLACK DRUM" "Demersal coastal invertebrate feeders" "47" 1.24731 50 0 1.8116 37 33 32 34 1
+"200" "porichthys plectrodon" "demersal coastal invertebrate feeders" "ATLANTIC MIDSHIPMAN" "Demersal coastal invertebrate feeders" "47" 0.40724 20 0 0.6957 14 13 12 13 0
+"201" "pseudupeneus maculatus" "demersal coastal invertebrate feeders" "SPOTTED GOATFISH" "Demersal coastal invertebrate feeders" "47" 2.20615 22 0 1.32825 27 24 24 25 1
+"202" "selene setapinnis" "demersal coastal invertebrate feeders" "MOONFISH, ATLANTIC" "Demersal coastal invertebrate feeders" "47" 3.53148 25 0 1.69334 35 31 30 32 1
+"203" "selene vomer" "demersal coastal invertebrate feeders" "LOOKDOWN" "Demersal coastal invertebrate feeders" "47" 3.71308 35 0 2.12255 44 38 38 40 1
+"204" "stellifer lanceolatus" "demersal coastal invertebrate feeders" "STAR DRUM" "Demersal coastal invertebrate feeders" "47" 1.36707 13 0 0.81176 17 15 14 15 0
+"205" "stenotomus caprinus" "demersal coastal invertebrate feeders" "LONGSPINE PORGY" "Demersal coastal invertebrate feeders" "47" 2.14593 15 0 1.03763 21 19 19 20 1
+"206" "synagrops bellus" "demersal coastal invertebrate feeders" "BLACKMOUTH BASS" "Demersal coastal invertebrate feeders" "47" 1.43279 20 0 1.07755 22 19 19 20 1
+"207" "trachinotus carolinus" "demersal coastal invertebrate feeders" "POMPANO, FLORIDA" "Demersal coastal invertebrate feeders" "47" 2.54818 40 1 10.76523 221 194 192 202 5
+"208" "trachinotus falcatus" "demersal coastal invertebrate feeders" "PERMIT" "Demersal coastal invertebrate feeders" "47" 2.86958 94 1 19.04931 391 343 340 358 10
+"209" "trachinotus goodei" "demersal coastal invertebrate feeders" "PALOMETA POMPANO" "Demersal coastal invertebrate feeders" "47" 2.39325 35 1 9.69654 199 175 173 182 5
+"210" "umbrina coroides" "demersal coastal invertebrate feeders" "SAND DRUM" "Demersal coastal invertebrate feeders" "47" 2.17568 25 0 1.4308 29 26 26 27 1
+"211" "upeneus parvus" "demersal coastal invertebrate feeders" "DWARF GOATFISH" "Demersal coastal invertebrate feeders" "47" 2.03752 20 0 1.21793 25 22 22 23 1
+"212" "sciaenops ocellatus" "red drum" "DRUM, RED" "Red drum" "48" 1.48766 100 0 2.95935 61 53 53 56 1
+"213" "achirus lineatus" "benthic coastal invertebrate feeders" "LINED SOLE" "Benthic coastal invertebrate feeders" "49" 1.21399 17 0 0.91976 19 17 16 17 0
+"214" "bothus ocellatus" "benthic coastal invertebrate feeders" "EYED FLOUNDER" "Benthic coastal invertebrate feeders" "49" 1.04347 12 0 0.70321 14 13 13 13 0
+"215" "brotula barbata" "benthic coastal invertebrate feeders" "BROTULA" "Benthic coastal invertebrate feeders" "49" 1.08173 50 0 1.72405 35 31 31 32 1
+"216" "citharichthys spilopterus" "benthic coastal invertebrate feeders" "BAY WHIFF" "Benthic coastal invertebrate feeders" "49" 1.27967 15 0 0.86687 18 16 15 16 0
+"217" "ctenogobius boleosoma" "benthic coastal invertebrate feeders" "DARTER GOBY" "Benthic coastal invertebrate feeders" "49" 0.42897 4 0 0.26133 5 5 5 5 0
+"218" "dactylopterus volitans" "benthic coastal invertebrate feeders" "FLYING GURNARD" "Benthic coastal invertebrate feeders" "49" 1.47427 38 0 1.61981 33 29 29 30 1
+"219" "diplectrum bivittatum" "benthic coastal invertebrate feeders" "DWARF SAND PERCH" "Benthic coastal invertebrate feeders" "49" 1.4157 12 0 0.78193 16 14 14 15 0
+"220" "diplectrum formosum" "benthic coastal invertebrate feeders" "SAND PERCH" "Benthic coastal invertebrate feeders" "49" 1.87932 16 0 1.03126 21 19 18 19 1
+"221" "etropus crossotus" "benthic coastal invertebrate feeders" "FRINGED FLOUNDER" "Benthic coastal invertebrate feeders" "49" 1.291 15 0 0.86953 18 16 16 16 0
+"222" "gobiosoma robustum" "benthic coastal invertebrate feeders" "CODE GOBY" "Benthic coastal invertebrate feeders" "49" 0.73036 2.9 0 0.25766 5 5 5 5 0
+"223" "lepophidium profundorum" "benthic coastal invertebrate feeders" "FAWN CUSK EEL" "Benthic coastal invertebrate feeders" "49" 1.08173 22 0 1.03665 21 19 19 19 1
+"224" "microgobius gulosus" "benthic coastal invertebrate feeders" "CLOWN GOBY" "Benthic coastal invertebrate feeders" "49" 0.43617 5.35 0 0.31475 6 6 6 6 0
+"225" "polydactylus octonemus" "benthic coastal invertebrate feeders" "ATLANTIC THREADFIN" "Benthic coastal invertebrate feeders" "49" 2.62913 25 0 1.52818 31 28 27 29 1
+"226" "polydactylus virginicus" "benthic coastal invertebrate feeders" "BARBU THREADFIN" "Benthic coastal invertebrate feeders" "49" 0.85452 20 0 0.90027 18 16 16 17 0
+"227" "scorpaena brasiliensis" "benthic coastal invertebrate feeders" "BARBFISH" "Benthic coastal invertebrate feeders" "49" 1.03634 20 0 0.96274 20 17 17 18 0
+"228" "syacium gunteri" "benthic coastal invertebrate feeders" "SHOAL FLOUNDER" "Benthic coastal invertebrate feeders" "49" 1.52055 15 0 0.92046 19 17 16 17 0
+"229" "syacium papillosum" "benthic coastal invertebrate feeders" "DUSKY FLOUNDER" "Benthic coastal invertebrate feeders" "49" 1.4472 20 0 1.08131 22 19 19 20 1
+"230" "trinectes maculatus" "benthic coastal invertebrate feeders" "HOGCHOKER" "Benthic coastal invertebrate feeders" "49" 1.3039 11 0 0.71999 15 13 13 14 0
+"231" "urophycis cirrata" "benthic coastal invertebrate feeders" "GULF HAKE" "Benthic coastal invertebrate feeders" "49" 0.86119 40 0 1.38696 28 25 25 26 1
+"232" "urophycis floridana" "benthic coastal invertebrate feeders" "SOUTHERN HAKE" "Benthic coastal invertebrate feeders" "49" 0.59073 25 0 0.90919 19 16 16 17 0
+"233" "urophycis regia" "benthic coastal invertebrate feeders" "SPOTTED HAKE" "Benthic coastal invertebrate feeders" "49" 0.85944 17 0 0.81565 17 15 15 15 0
+"234" "caulolatilus chrysops" "tilefish" "TILEFISH, GOLDFACE" "Tilefish" "50" 2.01309 44 0 1.97682 41 36 35 37 1
+"235" "caulolatilus cyanops" "tilefish" "BLACKLINE TILEFISH" "Tilefish" "50" 1.7919 30 0 1.49736 31 27 27 28 1
+"236" "caulolatilus microps" "tilefish" "BLUELINE TILEFISH" "Tilefish" "50" 1.95094 55 0 2.24531 46 40 40 42 1
+"237" "lopholatilus chamaeleonticeps" "tilefish" "GOLDEN TILEFISH" "Tilefish" "50" 1.27675 90 0 2.62877 54 47 47 49 1
+"238" "malacanthus plumieri" "tilefish" "SAND TILEFISH" "Tilefish" "50" 1.24958 50 0 1.81274 37 33 32 34 1
+"239" "balistes capriscus" "gray triggerfish" "GRAY TRIGGERFISH" "Gray triggerfish" "51" 1.60207 44 0 1.82588 37 33 33 34 1
+"240" "acanthostracion polygonius" "coastal omnivores" "HONEYCOMB COWFISH" "Coastal omnivores" "52" 0.37507 25 0 0.77632 16 14 14 15 0
+"241" "acanthostracion quadricornis" "coastal omnivores" "SCRAWLED COWFISH" "Coastal omnivores" "52" 1.36959 20 0 1.06078 22 19 19 20 1
+"242" "aluterus monoceros" "coastal omnivores" "UNICORN FILEFISH" "Coastal omnivores" "52" 1.54127 40 0 1.69817 35 31 30 32 1
+"243" "aluterus schoepfii" "coastal omnivores" "ORANGE FILEFISH" "Coastal omnivores" "52" 0.66221 40 0 1.26584 26 23 23 24 1
+"244" "aluterus scriptus" "coastal omnivores" "SCRAWLED FILEFISH" "Coastal omnivores" "52" 0.8646 55 0 1.69181 35 30 30 32 1
+"245" "cantherhines pullus" "coastal omnivores" "ORANGESPOTTED FILEFISH" "Coastal omnivores" "52" 2.01759 14 0 0.97311 20 18 17 18 0
+"246" "chaetodipterus faber" "coastal omnivores" "ATLANTIC SPADEFISH" "Coastal omnivores" "52" 3.23259 50.4 0 2.53541 52 46 45 48 1
+"247" "diodon holocanthus" "coastal omnivores" "LONGSPINE PORCUPINEFISH" "Coastal omnivores" "52" 0.78705 15 0 0.73204 15 13 13 14 0
+"248" "diodon hystrix" "coastal omnivores" "SPOT-FIN PORCUPINEFISH" "Coastal omnivores" "52" 1.53265 40 0 1.69486 35 31 30 32 1
+"249" "lactophrys bicaudalis" "coastal omnivores" "SPOTTED TRUNKFISH" "Coastal omnivores" "52" 1.35281 20 0 1.05624 22 19 19 20 1
+"250" "lactophrys trigonus" "coastal omnivores" "BUFFALO TRUNKFISH" "Coastal omnivores" "52" 1.2715 30 0 1.32894 27 24 24 25 1
+"251" "lagocephalus laevigatus" "coastal omnivores" "SMOOTH PUFFER" "Coastal omnivores" "52" 1.77673 60 0 2.29383 47 41 41 43 1
+"252" "lagodon rhomboides" "coastal omnivores" "PINFISH" "Coastal omnivores" "52" 2.21993 18 0 1.1755 24 21 21 22 1
+"253" "monacanthus ciliatus" "coastal omnivores" "FRINGED FILEFISH" "Coastal omnivores" "52" 1.45086 10 0 0.70439 14 13 13 13 0
+"254" "sphoeroides dorsalis" "coastal omnivores" "MARBLED PUFFER" "Coastal omnivores" "52" 1.6972 18 0 1.0707 22 19 19 20 1
+"255" "sphoeroides nephelus" "coastal omnivores" "SOUTHERN PUFFER" "Coastal omnivores" "52" 1.6972 20 0 1.14293 23 21 20 21 1
+"256" "sphoeroides spengleri" "coastal omnivores" "BANDTAIL PUFFER" "Coastal omnivores" "52" 1.97225 12 0 0.8775 18 16 16 16 0
+"257" "sphoeroides testudineus" "coastal omnivores" "CHECKERED PUFFER" "Coastal omnivores" "52" 1.42214 20 0 1.07476 22 19 19 20 1
+"258" "stephanolepis setifer" "coastal omnivores" "PYGMY FILEFISH" "Coastal omnivores" "52" 0.80885 10 0 0.57485 12 10 10 11 0
+"259" "abudefduf saxatilis" "reef omnivores" "SERGEANT MAJOR" "Reef omnivores" "53" 1.53883 15 0 0.9243 19 17 16 17 0
+"260" "abudefduf taurus" "reef omnivores" "NIGHT SERGEANT" "Reef omnivores" "53" 1.45573 20 0 1.08352 22 20 19 20 1
+"261" "acanthurus bahianus" "reef omnivores" "OCEAN SURGEON" "Reef omnivores" "53" 2.42851 25 0 1.48657 31 27 27 28 1
+"262" "acanthurus chirurgus" "reef omnivores" "DOCTORFISH" "Reef omnivores" "53" 1.86717 35 0 1.67117 34 30 30 31 1
+"263" "acanthurus coeruleus" "reef omnivores" "BLUE TANG" "Reef omnivores" "53" 3.48929 25 0 1.68627 35 30 30 32 1
+"264" "balistes vetula" "reef omnivores" "QUEEN TRIGGERFISH" "Reef omnivores" "53" 2.78562 30 0 1.74569 36 31 31 33 1
+"265" "chromis multilineata" "reef omnivores" "BROWN CHROMIS" "Reef omnivores" "53" 1.56268 12 0 0.80926 17 15 14 15 0
+"266" "holacanthus bermudensis" "reef omnivores" "BLUE ANGELFISH" "Reef omnivores" "53" 1.19066 35 0 1.4291 29 26 26 27 1
+"267" "holacanthus ciliaris" "reef omnivores" "QUEEN ANGELFISH" "Reef omnivores" "53" 0.80296 30 0 1.1326 23 20 20 21 1
+"268" "holacanthus tricolor" "reef omnivores" "ROCK BEAUTY" "Reef omnivores" "53" 1.10038 30 0 1.26378 26 23 23 24 1
+"269" "kyphosus incisor" "reef omnivores" "YELLOW CHUB" "Reef omnivores" "53" 2.86808 45 0 2.26715 47 41 40 43 1
+"270" "kyphosus sectatrix" "reef omnivores" "BERMUDA SEA CHUB" "Reef omnivores" "53" 2.7147 50 0 2.37427 49 43 42 45 1
+"271" "melichthys niger" "reef omnivores" "BLACK DURGON" "Reef omnivores" "53" 2.27712 30 0 1.62751 33 29 29 31 1
+"272" "microspathodon chrysurus" "reef omnivores" "YELLOWTAIL DAMSELFISH" "Reef omnivores" "53" 1.08705 15 0 0.81906 17 15 15 15 0
+"273" "pomacanthus arcuatus" "reef omnivores" "GRAY ANGELFISH" "Reef omnivores" "53" 2.06313 45 0 2.02173 42 36 36 38 1
+"274" "pomacanthus paru" "reef omnivores" "FRENCH ANGELFISH" "Reef omnivores" "53" 1.82706 28 0 1.44443 30 26 26 27 1
+"275" "scarus iseri" "reef omnivores" "STRIPED PARROTFISH" "Reef omnivores" "53" 1.31655 18 0 0.98018 20 18 17 18 0
+"276" "scarus taeniopterus" "reef omnivores" "PRINCESS PARROTFISH" "Reef omnivores" "53" 1.05368 22 0 1.02722 21 19 18 19 1
+"277" "sparisoma aurofrenatum" "reef omnivores" "REDBAND PARROTFISH" "Reef omnivores" "53" 1.20148 20 0 1.01355 21 18 18 19 1
+"278" "sparisoma chrysopterum" "reef omnivores" "REDTAIL PARROTFISH" "Reef omnivores" "53" 1.35053 25 0 1.21214 25 22 22 23 1
+"279" "sparisoma radians" "reef omnivores" "BUCKTOOTH PARROTFISH" "Reef omnivores" "53" 1.12435 15 0 0.82872 17 15 15 16 0
+"280" "sparisoma viride" "reef omnivores" "STOPLIGHT PARROTFISH" "Reef omnivores" "53" 1.12955 38 0 1.4765 30 27 26 28 1
+"281" "cheilopogon cyanopterus" "surface pelagics" "MARGINED FLYINGFISH" "Surface pelagics" "54" 2.49332 25 0 1.50025 31 27 27 28 1
+"282" "cheilopogon melanurus" "surface pelagics" "ATLANTIC FLYINGFISH" "Surface pelagics" "54" 2.88078 25 1 8.39617 172 151 150 158 4
+"283" "cypselurus comatus" "surface pelagics" "CLEARWING FLYINGFISH" "Surface pelagics" "54" 3.46729 15 1 6.52551 134 118 116 123 3
+"284" "exocoetus obtusirostris" "surface pelagics" "OCEANIC TWO-WING FLYINGFISH" "Surface pelagics" "54" 2.06374 20 1 6.51111 134 117 116 122 3
+"285" "exocoetus volitans" "surface pelagics" "TROPICAL TWO-WING FLYINGFISH" "Surface pelagics" "54" 1.79838 20 1 6.20677 127 112 111 117 3
+"286" "hemiramphus balao" "surface pelagics" "BALAO" "Surface pelagics" "54" 2.62357 35 1 10.01141 206 180 179 188 5
+"287" "hemiramphus brasiliensis" "surface pelagics" "BALLYHOO HALFBEAK" "Surface pelagics" "54" 2.34456 35 1 9.62746 198 173 172 181 5
+"288" "hirundichthys affinis" "surface pelagics" "FOURWING FLYINGFISH" "Surface pelagics" "54" 3.03704 24 1 8.33825 171 150 149 157 4
+"289" "hirundichthys rondeletii" "surface pelagics" "ATLANTIC BLACK WING FLYINGFISH" "Surface pelagics" "54" 2.91345 20 1 7.34073 151 132 131 138 4
+"290" "hyporhamphus unifasciatus" "surface pelagics" "COMMON HALFBEAK" "Surface pelagics" "54" 2.0737 20 1 6.52202 134 118 116 123 3
+"291" "parexocoetus brachypterus" "surface pelagics" "SAILFIN FLYINGFISH" "Surface pelagics" "54" 3.00754 16 1 6.4639 133 116 115 122 3
+"292" "scomberesox saurus" "surface pelagics" "ATLANTIC SAURY" "Surface pelagics" "54" 2.16753 32 1 8.86216 182 160 158 167 4
+"293" "cetorhinus maximus" "large oceanic planktivores" "BASKING SHARK" "Large oceanic planktivores" "55" 3.16209 700 1 68.36185 1403 1232 1220 1285 35
+"294" "alosa chrysochloris" "sardine-herring-scad" "SKIPJACK HERRING" "Sardine-herring-scad" "57" 3.36921 37.5 1 11.3984 234 205 203 214 6
+"295" "decapterus macarellus" "sardine-herring-scad" "MACKEREL SCAD" "Sardine-herring-scad" "57" 4.4389 30 1 10.92564 224 197 195 205 6
+"296" "decapterus punctatus" "sardine-herring-scad" "ROUND SCAD" "Sardine-herring-scad" "57" 2.68693 18 1 6.68594 137 120 119 126 3
+"297" "decapterus tabl" "sardine-herring-scad" "REDTAIL SCAD" "Sardine-herring-scad" "57" 4.13456 25 1 9.52046 195 172 170 179 5
+"298" "dorosoma cepedianum" "sardine-herring-scad" "AMERICAN GIZZARD SHAD" "Sardine-herring-scad" "57" 2.22035 35 1 9.44691 194 170 169 178 5
+"299" "dorosoma petenense" "sardine-herring-scad" "THREADFIN SHAD" "Sardine-herring-scad" "57" 2.90238 10 1 4.7714 98 86 85 90 2
+"300" "etrumeus sadina" "sardine-herring-scad" "RED-EYE ROUND HERRING" "Sardine-herring-scad" "57" 1.97225 25 1 7.35955 151 133 131 138 4
+"301" "harengula clupeola" "sardine-herring-scad" "FALSE HERRING" "Sardine-herring-scad" "57" 1.63819 10 1 3.91071 80 70 70 74 2
+"302" "harengula humeralis" "sardine-herring-scad" "REDEAR SARDINE" "Sardine-herring-scad" "57" 2.54586 15 1 5.86078 120 106 105 110 3
+"303" "harengula jaguana" "sardine-herring-scad" "SCALED SARDINE" "Sardine-herring-scad" "57" 3.39567 12 1 5.64179 116 102 101 106 3
+"304" "opisthonema oglinum" "sardine-herring-scad" "THREAD HERRING" "Sardine-herring-scad" "57" 1.1929 20 1 5.38098 110 97 96 101 3
+"305" "sardinella aurita" "sardine-herring-scad" "ROUND SARDINELLA" "Sardine-herring-scad" "57" 1.59116 25 1 6.82998 140 123 122 128 3
+"306" "sardinella brasiliensis" "sardine-herring-scad" "BRAZILIAN SARDINELLA" "Sardine-herring-scad" "57" 1.06558 20 1 5.17384 106 93 92 97 3
+"307" "trachurus lathami" "sardine-herring-scad" "ROUGH SCAD" "Sardine-herring-scad" "57" 1.85523 30 1 8.06628 166 145 144 152 4
+"308" "brevoortia patronus" "menhaden" "GULF MENHADEN" "Menhaden (0yr)" "58,59,60,61,62" 1.51921 20 1 5.85309 120 105 104 110 3
+"309" "anchoa cayorum" "anchovies-silversides-killifish" "KEY ANCHOVY" "Anchovy-silverside-killifish" "63" 1.37548 8 1 3.20486 66 58 57 60 2
+"310" "anchoa hepsetus" "anchovies-silversides-killifish" "STRIPED ANCHOVY" "Anchovy-silverside-killifish" "63" 2.88003 11 1 5.04807 104 91 90 95 3
+"311" "anchoa lyolepis" "anchovies-silversides-killifish" "DUSKY ANCHOVY" "Anchovy-silverside-killifish" "63" 1.03963 9 1 3.12766 64 56 56 59 2
+"312" "anchoa mitchilli" "anchovies-silversides-killifish" "BAY ANCHOVY" "Anchovy-silverside-killifish" "63" 3.39229 5.95 1 3.65171 75 66 65 69 2
+"313" "atherinomorus stipes" "anchovies-silversides-killifish" "HARDHEAD SILVERSIDE" "Anchovy-silverside-killifish" "63" 2.56911 7.5 1 3.82658 79 69 68 72 2
+"314" "cyprinodon variegatus variegatus" "anchovies-silversides-killifish" "SHEEPSHEAD MINNOW" "Anchovy-silverside-killifish" "63" 1.40865 3 1 1.75986 36 32 31 33 1
+"315" "dormitator maculatus" "anchovies-silversides-killifish" "FAT SLEEPER" "Anchovy-silverside-killifish" "63" 0.84165 14.5 1 3.9052 80 70 70 73 2
+"316" "fundulus grandis" "anchovies-silversides-killifish" "GULF KILLIFISH" "Anchovy-silverside-killifish" "63" 1.26754 10.4 1 3.66492 75 66 65 69 2
+"317" "hypoatherina harringtonensis" "anchovies-silversides-killifish" "REEF SILVERSIDE" "Anchovy-silverside-killifish" "63" 1.35899 6 1 2.67039 55 48 48 50 1
+"318" "lucania parva" "anchovies-silversides-killifish" "RAINWATER KILLIFISH" "Anchovy-silverside-killifish" "63" 1.56345 3.65 1 2.06063 42 37 37 39 1
+"319" "menidia beryllina" "anchovies-silversides-killifish" "INLAND SILVERSIDE" "Anchovy-silverside-killifish" "63" 1.3888 7.75 1 3.15298 65 57 56 59 2
+"320" "mugil cephalus" "mullet" "STRIPED MULLET" "Mullet" "64" 2.2795 50 0 2.23428 46 40 40 42 1
+"321" "mugil curema" "mullet" "WHITE MULLET" "Mullet" "64" 1.90961 30 0 1.53086 31 28 27 29 1
+"322" "mugil trichodon" "mullet" "FANTAIL MULLET" "Mullet" "64" 1.91617 15 0 0.99755 20 18 18 19 1
+"323" "peprilus paru" "butterfish" "AMERICAN HARVESTFISH" "Butterfish" "65" 2.39912 18 0 1.20767 25 22 22 23 1
+"324" "peprilus triacanthus" "butterfish" "BUTTERFISH" "Butterfish" "65" 2.83357 20 0 1.36597 28 25 24 26 1
