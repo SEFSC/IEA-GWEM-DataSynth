@@ -30,10 +30,8 @@ for (depth in depth_list){
   writeRaster(depth, paste0(dir_depth, '/ASCII/depthmap_', map_params), format='ascii', NAflag=0, overwrite=T)
 }
 ```
-
 Different resolutions appear as such:
 ![Plot](./Depth_maps/4depthmaps-res-04-08-16-32-min.png)
-
 For the USGWEM Ecospace, we use 08 minute resolution and a maximum depth of 400 m, making all cells over 400m deep equal to 400m.
 ``` R
 ## -----------------------------------------------------------------------------
@@ -43,17 +41,9 @@ min          = paste0(round(res(depth)[1]*60,0),'min')
 dims         = paste0(dim(depth)[1],'x',dim(depth)[2])
 cellarea_km2 = paste0(round(sqrt(mean(getValues(area(depth))))), 'sqkm') ## Get surface area of each cell in km2
 map_params   = paste(min, cellarea_km2, dims, sep='-'); map_params
-
-## -----------------------------------------------------------------------------
-## Set max depth for Ecospace base map  
-depth_maxed <- raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
-depth_maxed[depth_maxed > 400] = 400 ## Make all cells over 400 m deep equal to 400 m
-min          = paste0(round(res(depth_maxed)[1]*60,0),'min') 
-dims         = paste0(dim(depth_maxed)[1],'x',dim(depth_maxed)[2])
-cellarea_km2 = paste0(round(sqrt(mean(getValues(area(depth_maxed))))), 'sqkm') ## Get surface area of each cell in km2
-map_params   = paste(min, cellarea_km2, dims, sep='-'); map_params
-writeRaster(depth_maxed, paste0(dir_depth, '/ecospace_basemap_400max_', map_params), format='ascii', NAflag=0, overwrite=T)
 ```
+The final depth and logged depth maps appear as such:
+![Plot!](./Depth_maps/log10_depthmap_8min-14sqkm-52x131.png)
 
 # Make_reef_maps.R
 
