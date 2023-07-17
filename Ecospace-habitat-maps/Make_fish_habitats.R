@@ -18,7 +18,8 @@ dir_fig = "./Ecospace-habitat-maps/Figures/"
 
 depth = raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
 
-## Seabed sediment values ------------------------------------------------------
+##------------------------------------------------------------------------------
+## Seabed sediment composition 
 seabed  = sf::st_read(paste0(dir_in, "Sediments/usSEABED_GOM_Sediments.shp"))
 
 ## The attributes are denoted by the grid filenames: 
@@ -80,8 +81,7 @@ plot(rckv, colNA = "gray", main = "Rock"); plot(gvlv, colNA = "gray", main = "Gr
 plot(sndv, colNA = "gray", main = "Sand");  plot(mudv, colNA = "gray", main = "Mud");  
 dev.off()
 
-################################################################################
-## 
+##------------------------------------------------------------------------------
 ## Corals Essential Fish Habitat
 
 shp_corals <- sf::st_read("./Ecospace-habitat-maps/Data-inputs/NCEI-GOM-data-atlas/Corals-EFH/Coral_EFH_GOM.shp")
@@ -98,8 +98,7 @@ png(paste0(dir_fig, "Ecospace-coral-hab.png"),
 plot(coral_ras, main="Coral habitat")
 dev.off()
 
-################################################################################
-## 
+##------------------------------------------------------------------------------
 ## Seagrass
 shp_sav <- sf::st_read("./Ecospace-habitat-maps/Data-inputs/NCEI-GOM-data-atlas/SAV/Seagrass_ALFLMSTX.shp")
 shp_sav$const = 1
@@ -117,9 +116,10 @@ png(paste0(dir_fig, "Ecospace-seagrass-hab.png"),
 plot(sav_ras, main="Seagrass habitat")
 dev.off()
 
-################################################################################
-## 
+##------------------------------------------------------------------------------
 ## HMS
+## Currently not working or used
+
 shp_hms <- sf::st_read("./Ecospace-habitat-maps/Data-inputs/NCEI-GOM-data-atlas/HMS-EFH/ahms_efh.shp")
 shp_hms$const = 1
 plot(shp_hms["DDBOX"])
