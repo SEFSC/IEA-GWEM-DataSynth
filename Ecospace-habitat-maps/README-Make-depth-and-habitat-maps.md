@@ -65,7 +65,14 @@ scaled_HB = calc(resamp_HB, fun = function(x) { ## Scale to one
 })
 ```
 Finally, these are written out as ASCII files for Ecospoace and PNG images. The maps appear as follows:
-![Plot!](./Figures/Ecospace-hardbottom-ARs.png)
+```R
+png(paste0(dir_fig, "Ecospace-hardbottom-ARs.png"), width = 8.5, height = 11, units = "in", res=1200) ## Write out plots
+par(mfrow=c(2,1))
+plot(scaled_AR, main = "Artificial reefs (scaled inverse distance)", colNA = 'gray')
+plot(scaled_HB, main = "Hard bottom (scaled inverse distance squared)", colNA = 'gray')
+dev.off()
+```
+![Plot](./Figures/Ecospace-hardbottom-ARs.png)
 
 # Make_fish_habitats.R
 We use data collated by the [NOAA Gulf of Mexico Data Atlas](https://www.ncei.noaa.gov/products/gulf-mexico-data-atlas) This data atlas provides information about the physical environment, marine resources, socioeconomic activity, and other aspects of the Gulf of Mexico that can be used to identify baseline conditions, status, and trends of the ecosystem. It includes data from all five Gulf States (Alabama, Florida, Louisiana, Mississippi, and Texas), and its seaward boundaries extend to the Yucatan Channel and the Straits of Florida. We generate habitat maps for **rock**, **gravel**, **sand**, **mud**, **coral**, and **seagrasses**. 
@@ -94,13 +101,37 @@ rckv <- rckv / max(values(rckv), na.rm=T)
 ## Write out ASCII files for ecospace
 raster::writeRaster(rckv, paste0(dir_out, "/seabed-sedcomp-rock"),   format = 'ascii', overwrite=TRUE)
 ```
-
-## Coral fish habitat
+The PNG images for these ASCII files are as follows:
+```R
+png(paste0(dir_fig, "Ecospace-seabed-types.png"), 
+    width = 9, height = 6, units = "in", res=1200)
+par(mfrow=c(2,2))
+plot(rckv, colNA = "gray", main = "Rock"); plot(gvlv, colNA = "gray", main = "Gravel")
+plot(sndv, colNA = "gray", main = "Sand");  plot(mudv, colNA = "gray", main = "Mud");  
+dev.off()
+```
+![Plot](./Figures/Ecospace-seabed-types.png)
 
 ## Seagrasses
 Submerged aquatic vegetation (SAV or seagrasses) in the Gulf of Mexico region are crucial benthic habitats that sustain a wide range of ecological functions and human activities. Seagrass ecosystems provide critical habitat for finfish, shellfish, and crustaceans, as well as numerous threatened and endangered species such as sea turtles and bottlenose dolphins. The root and rhizome system of seagrass forms an intertwined mat underground, which stabilizes the seabed. It also helps in maintaining water clarity and reducing wave energy by trapping sediment and reducing the overgrowth of algae, thereby enhancing water quality. The health and productivity of seagrass habitats directly impact key industries in the Gulf region, such as commercial and recreational fisheries and tourism. These industries contribute hundreds of millions of dollars to local communities, thereby underlining the economic significance of seagrass ecosystems.
 
 More info: Handley L. Submerged Aquatic Vegetation In Gulf of Mexico Data Atlas [Internet]. Stennis Space Center (MS): National Centers for Environmental Information; 2011. [1 screen]. Available from: https://gulfatlas.noaa.gov/.
 
-The code to create the ASCII habitat file from the NCEI shape file is relatively staightfoward: 
+The code to create the rasterized ASCII habitat file from the NCEI shape file is relatively straightforward: 
+```R
+shp_sav <- sf::st_read("./Ecospace-habitat-maps/Data-inputs/NCEI-GOM-data-atlas/SAV/Seagrass_ALFLMSTX.shp")
+shp_sav$const = 1
+shp_sav2 <- shp_sav[!st_is_empty(shp_sav),,drop=FALSE] ## Need to remove NAs
+sav_ras <- terra::rasterize(shp_sav2, depth, field = "const")
+raster::writeRaster(sav_ras, paste0(dir_out, "/seagrass-hab"), format = 'ascii', overwrite=TRUE) ## Write out ASCII files for ecospace
+```
+And the PNG image is as follows:
+![Plot](./Figures/Ecospace-seagrass-hab.png)
 
+
+## Coral fish habitat
+The [coral essential fish habitat (EFH)](https://www.fisheries.noaa.gov/resource/map/coral-essential-fish-habitat-efh-map-gis-data) map was developed by NOAA Fisheries. EFH are designated by NOAA Fisheries and the regional fishery management councils for species managed under the Magnuson-Stevens Fishery Conservation and Management Act. EFH for coral consists of the total distribution of coral species and life stages throughout the Gulf of Mexico, including the East and West Flower Garden Banks, Florida Middle Grounds, southwest tip of the Florida reef tract, and predominant patchy hard bottom offshore of Florida from approximately Crystal River south to the Keys, and scattered along the pinnacles and banks from Texas to Mississippi, at the shelf edge. 
+Thes map and corresponding Geographic Information Systems (GIS) shapefile data represent EFH in the Gulf of Mexico. The 2005 Generic EFH Fishery Management Plan Amendment (see link below) should be consulted for specific information on habitats identified as EFH. 
+
+The code for converting the SHP file into an ASCII file for Ecospace follows the same structure as that for seagrasses. The PNG image appears as follows:
+![Plot](./Figures/Ecospace-coral-hab.png)
