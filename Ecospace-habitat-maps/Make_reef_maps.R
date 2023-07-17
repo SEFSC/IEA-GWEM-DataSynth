@@ -6,9 +6,7 @@
 ## Code:    Make hardbottom reef map 
 ##          ouputs of AR and NR habitat maps for Ecospace model
 
-
 rm(list=ls()); graphics.off(); windows()
-
 library(sf)
 library(ggplot2)
 library(raster)
@@ -17,7 +15,6 @@ library(cowplot)
 dir_in = "./Ecospace-habitat-maps/Data-inputs/GRSC-hardbottom-maps/"
 dir_out = "./Ecospace-habitat-maps/Output-for-ecospace/"
 dir_fig = "./Ecospace-habitat-maps/Figures/"
-
 
 ## Shape files
 hb  = st_read(paste0(dir_in, "hardbottom_proj.shp"))
@@ -52,7 +49,6 @@ png(paste0(dir_fig, "Plots-HB-ARs-wrecks-platforms.png"),
 plot_grid(plot_hb, plot_ars, plot_wrecks, plot_platforms, nrow = 2)
 dev.off(); windows()
 
-
 ##------------------------------------------------------------------------------
 ## Distance rasters
 
@@ -66,8 +62,8 @@ dim(depth);extent(depth)
 
 ## Take inverse distance
 inv_AR = calc(dist_to_AR, fun = function(x) {1 / x}) 
-#inv_HB = calc(dist_to_HB, fun = function(x) {1 / sqrt(x)})
-inv_HB = calc(dist_to_HB, fun = function(x) {1 / x})
+inv_HB = calc(dist_to_HB, fun = function(x) {1 / sqrt(x)})
+#inv_HB = calc(dist_to_HB, fun = function(x) {1 / x})
 
 ##--> ARs use 1/x proxy
 ##--> HBs use 1/sqrt(x) proxy
@@ -84,7 +80,6 @@ par(mfrow=c(2,1))
 plot(resamp_AR,  main = "ARs (cropped and resampled)", colNA = 'gray')
 plot(resamp_HB,  main = "HB (cropped and resampled)", colNA = 'gray')
 
-
 ## Scale to one
 scaled_AR = calc(resamp_AR, fun = function(x) {
   x / max(values(resamp_AR), na.rm=TRUE)
@@ -94,12 +89,10 @@ scaled_HB = calc(resamp_HB, fun = function(x) {
   x / max(values(resamp_HB), na.rm=TRUE)
 })
 
-
 ## Write out habitat maps------------------------------------------------------
 dir_out = "./Ecospace-habitat-maps/Output-for-ecospace/"
 writeRaster(scaled_AR, paste0(dir_out, "scaled-inv-dist-AR_div-x"), format = "ascii", overwrite=T)
 writeRaster(scaled_HB, paste0(dir_out, "scaled-inv-dist-HB_div-x"), format = "ascii", overwrite=T)
-
 
 ## Plots ------------------------------------------------------------------------
 par(mfrow=c(2,2))
@@ -115,5 +108,3 @@ par(mfrow=c(2,1))
 plot(scaled_AR, main = "Artificial reefs (scaled inverse distance)", colNA = 'gray')
 plot(scaled_HB, main = "Hard bottom (scaled inverse distance squared)", colNA = 'gray')
 dev.off()
-
-
