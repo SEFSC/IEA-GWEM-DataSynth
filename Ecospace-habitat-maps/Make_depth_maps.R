@@ -16,8 +16,7 @@ rm(list=ls()); graphics.off()
 library('marmap')
 library('raster')
 
-dir_depth = "./Ecospace-habitat-maps/Depth_maps/ASCII/"
-
+dir_depth = "./Ecospace-habitat-maps/Depth_maps/"
 
 ## Parameters: bounded area and resoluations
 bbox = c(-98,-80.5, 24,31)    ## xmin, xmax, ymin, ymax
@@ -66,7 +65,6 @@ for (depth in depth_list){
   writeRaster(depth, paste0(dir_depth, '/ASCII/depthmap_', map_params), format='ascii', NAflag=0, overwrite=T)
 }
 
-
 ## -----------------------------------------------------------------------------
 ## Use 08 min resolution for Ecospace
 depth = depth08
@@ -81,6 +79,7 @@ par(mfrow = c(2,1))
 plot(depth, colNA='black', col = topo.colors(30, rev=T))
 plot(log10(depth), colNA='black', col = topo.colors(30, rev=T))
 dev.off()
+par(mfrow = c(1,1))
 
 ## Write out ASCII
 writeRaster(depth, paste0(dir_depth, '/ecospace_basemap_', map_params), format='ascii', NAflag=0, overwrite=T)
@@ -95,5 +94,8 @@ cellarea_km2 = paste0(round(sqrt(mean(getValues(area(depth_maxed))))), 'sqkm') #
 map_params   = paste(min, cellarea_km2, dims, sep='-'); map_params
 writeRaster(depth_maxed, paste0(dir_depth, '/ecospace_basemap_400max_', map_params), format='ascii', NAflag=0, overwrite=T)
 
+## Write out plot
+png(paste0(dir_depth, "Depthmap_", map_params, ".png"), width = 9, height = 5, units = "in", res = 2000)
 depth_maxed[depth_maxed == 0] = NA
-plot(depth_maxed, colNA = "gray", col = topo.colors(30, rev=T))
+plot(depth_maxed, main = "US Gulf-wide Depth / Base Map", colNA = "darkgray", col = topo.colors(30, rev=T))
+dev.off()

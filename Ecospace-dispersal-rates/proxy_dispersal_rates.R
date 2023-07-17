@@ -27,7 +27,7 @@ write.csv(disp, "./Ecospace-dispersal-rates/intermediate-output/base-swim-speed.
 ##   caudal fin aspect ratio and body length of fishes. International Center for Living Aquatic Resources Management.
 ## Second, swim speeds are scaled to dispersal rates for known species
 
-scaled = read.csv("./Ecospace-dispersal-rates/intermediate-output/scaled-dispersal-rates-all-spp.csv")
+scaled = read.csv("./Ecospace-dispersal-rates/scaled-dispersal-rates-all-spp.csv")
 
 ## Aggregate
 dispersal_table = scaled %>% 
@@ -45,4 +45,3 @@ write.csv(dispersal_table, "./Ecospace-dispersal-rates/output-for-Ecospace/scale
 library(knitr)
 dispersal_md <- kable(dispersal_table, format = "markdown")
 writeLines(dispersal_md, "./Ecospace-dispersal-rates/output-for-Ecospace/dispersal_table.md")
-writeLines(dispersal_md, "./Ecospace-dispersal-rates/output-for-Ecospace/scaled-dispersal-rates-all-spp.md")
