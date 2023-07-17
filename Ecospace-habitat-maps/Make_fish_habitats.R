@@ -5,7 +5,6 @@
 ## Contact: Holden Earl Harris | holden.harris@noaa.gov
 ## Code:    
 
-
 rm(list=ls()); graphics.off(); windows()
 
 library(sf)
