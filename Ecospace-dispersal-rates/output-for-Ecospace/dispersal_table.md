@@ -1,6 +1,6 @@
 |EwE_num        |EwE_name                              | Scaled_dispersal| n_spp|         SD|
 |:--------------|:-------------------------------------|----------------:|-----:|----------:|
-|06             |Blacktip shark                        |          0.00000|     1|         NA|
+|06             |Blacktip shark                        |        422.00000|     1|         NA|
 |07             |Dusky shark                           |        693.00000|     1|         NA|
 |08             |Sandbar shark                         |        592.00000|     1|         NA|
 |09             |Large coastal sharks                  |        622.00000|    11| 126.076961|
