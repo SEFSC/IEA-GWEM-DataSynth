@@ -8,18 +8,18 @@ Our efforts build off of previous work to develop the U.S. Gulf-wide Ecopath wit
 
 This repository shows our data and synthesis to develop a USGWEM in Ecospace. It's divided into four sections: **dispersal**, **habitat**, **environmental drivers**, and **preference functions**. Broadly, the spatial data outputs for habitat (static ) and environmental drivers (spatially dynamic) represent drivers in the spatially dynamic model. Preference functions define how functional groups respond to these, and dispersal rates define how rapidly functional groups can move in the model to find preferred habitats or conditions. Each section contains a README file that describes the data, method, and code.
 ![Plot!](./Ecospace-habitat-maps/Depth_maps/Depthmap_8min-14sqkm-53x131.png)
-## 1. [Dispersal rates](https://github.com/SEFSC/IEA-GWEM-DataSynth/tree/main/Ecospace-dispersal-rates)
+## 1. Dispersal rates [(repository)](https://github.com/SEFSC/IEA-GWEM-DataSynth/tree/main/Ecospace-dispersal-rates)
 We show an empirically-derived approach for estimating dispersal rates for Ecospace. First, relative swimming speed is calculated based on the physiological characteristics of a species. Second, relative swimming speeds are scaled to known home ranges for species within the model. In total, dispersal rates were estimated for 325 GoM species and 65 functional groups. Estimated dispersal rates ranged two orders of magnitude from less than 10 km y-1 (three species of Gobiidae) to over 1,000 km y-1 (Basking shark Cetorhinus maximus, Blue marlin Makaira nigricans, and Swordfish Xiphias gladius). The dispersal rate estimates from our approach appear reasonable are largely consistent with the “300-30-3” heuristic. The slowest-moving fish groups had dispersal rates above 15 km per y and generally represented aggregated groups of about 10 to 50 species for small reef demersal fishes. 
 ![Plot](./Ecospace-dispersal-rates/plot-dispersal-3panel.png)
 Annual dispersal rates for estimated for functional groups of fishes in the Gulf of Mexico Ecosystem Model. Panels A, B, and C are separated by dispersal rate ranges with different corresponding y-axes. Mean values are shown and the number of species per functional group with error bars to indicate confidence intervals of 1.96×SE. The number of species in a given functional group is indicated by the number at the base of the plot. 
-## 2. [Depth and habitat maps](https://github.com/SEFSC/IEA-GWEM-DataSynth/blob/main/Ecospace-habitat-maps/README-Make-depth-and-habitat-maps.md)
+## 2. Depth and habitat maps [(repository)](https://github.com/SEFSC/IEA-GWEM-DataSynth/blob/main/Ecospace-habitat-maps/README-Make-depth-and-habitat-maps.md)
 The script to make the base/depthmap for Ecospace fetches bathymetric data from the NOAA server, converts it into rasters, and generates depth maps with different grid-cell resolutions. The bounding box and resolutions are parameters that can be customized to fit different regions and scale requirements. For the USGWEM Ecospace, we use 08 minute resolution and a maximum depth of 400 m.
 
 Scaled hardbottom maps are developed from the rasters identifying distances to artificial reefs and natural hardbottom. We make habitat maps for Ecopsace by taking the inverse distance. Specifically, proxy distances to ARs are taken as the inverse distance and proxy distances to natural hardbottom use the inverse squared distance. This estimates a faster habitat decline from artificial reef and a longer, more gradual decline away from a natural reef area.
 
 Lastly, we use data collated by the [NOAA Gulf of Mexico Data Atlas](https://www.ncei.noaa.gov/products/gulf-mexico-data-atlas) to generate habitat maps for **rock**, **gravel**, **sand**, **mud**, **coral**, and **seagrasses**. 
 ![Plot](./Ecospace-habitat-maps/Figures/Ecospace-seabed-types.png)
-## 3. [Spatial-temporal environmental drivers](https://github.com/SEFSC/IEA-GWEM-DataSynth/tree/main/Ecospace-environmental-drivers)
+## 3. Spatial-temporal environmental drivers [(repository)](https://github.com/SEFSC/IEA-GWEM-DataSynth/tree/main/Ecospace-environmental-drivers)
 The USGWEM uses monthly spatial-temporal files for nutrients, temperature, and salinity to help model environmental impacts on marine ecosystems. These impacts may result from changes in temperature, precipitation, and circulation patterns due to climate change. The environmental variables include:
 - Chlorophyll-A (Chl-A) Concentration: This is an indicator of phytoplankton biomass and helps determine nutrient availability.
 - Sea Temperature: This influences species distribution, behavior, and biological processes rates.
@@ -27,7 +27,7 @@ The USGWEM uses monthly spatial-temporal files for nutrients, temperature, and s
 
 Data for these variables are collected via MODIS (a satellite-based sensor providing oceanographic data) and HYCOM (a numerical ocean model simulating and forecasting various oceanographic variables). These data sources help generate monthly spatial-temporal files from 1980 to past 2016. To address the lack of data prior to the starting years of MODIS (2003) and HYCOM (1993), monthly averages calculated from the entire available data set are used.
 
-## 4. [Preference functions](https://github.com/SEFSC/IEA-GWEM-DataSynth/tree/main/Ecospace-preference-functions)
+## 4. Preference functions [(repository)](https://github.com/SEFSC/IEA-GWEM-DataSynth/tree/main/Ecospace-preference-functions)
 This code queries the Aquamaps database and, with further processing, we generate environmental preference functions for the Gulf-wide Ecospace Model. Data to make these preference functions comes from the [AquaMaps](https://www.aquamaps.org/main/AboutAquaMaps.php), a tool for generating model-based, large-scale predictions of natural occurrences of species. Preferences for each environmental driver are parameterized with values for absolute and preferred minima and maxima from AquaMaps: 
 1. Min<sub>abs</sub>  = absolute minimum in extracted data or 25th percentile - 1.5 × interquartile (whichever is lesser)
 2. Min<sub>pref</sub> = 10th percentile of observed variation in an environmental predictor
