@@ -24,7 +24,7 @@ source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call pd
 ## ChlA represents near-surface concentration of chlorophyll-a (chlor_a) in mg m-3, calculated using an empirical relationship derived from in situ measurements of chlor_a and blue-to-green band ratios of in situ remote sensing reflectances (Rrs).
 
 env_driver = "ChlA"
-overwrite  = 'y'
+overwrite  = 'n'
 dir.asc.out = paste0(fld.asc.out, env_driver, "/")
 if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
 
@@ -139,7 +139,7 @@ writeRaster(mean, paste0(dir.asc.avg, 'Avg_', env_driver),
 ## Fluorescence Line Height, Aqua MODIS
 
 env_driver = "Cfl"
-overwrite  = 'y'
+overwrite  = 'n'
 dir.asc.out = paste0(fld.asc.out, env_driver, "/")
 if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
 

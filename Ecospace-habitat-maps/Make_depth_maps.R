@@ -37,7 +37,6 @@ depth32[depth32 > 0] = NA; depth32 = depth32 * -1 # replace land with NA and mak
 
 depth_list = list(depth04, depth08, depth16, depth32)
 
-
 ## Make figures of different resolutions ---------------------------------------
 png(paste0(dir_depth, "4depthmaps-res-04-08-16-32-min.png"), width = 9.5, height = 6, units = "in", res = 1600)
 par(mfrow=c(2,2))

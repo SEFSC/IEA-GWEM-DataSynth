@@ -1,5 +1,5 @@
 ## ---------------------------------setup---------------------------------------
-rm(list=ls());graphics.off();rm(.SavedPlots);gc();windows(record=T)
+#rm(list=ls());graphics.off();rm(.SavedPlots);gc();windows(record=T)
 library(raster)
 
 datelabel <-  "1993-01 to 2020-12"
