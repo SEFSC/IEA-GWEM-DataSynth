@@ -18,8 +18,6 @@ library(stringr)
 ## First time running will need to install and set up aquamaps
 ## initial run-once step required to install remote db locally
 
-rm(list=ls()); gc(); windows()
-
 install.packages("devtools") 
 library("devtools")
 install_gitub("raquamaps/aquamapsdata", dependencies = TRUE)
@@ -28,7 +26,6 @@ install_gitub("raquamaps/aquamapsdata", dependencies = TRUE)
 library(aquamapsdata)
 download_db(force = TRUE)
 default_db("sqlite")
-
 
 ##------------------------------------------------------------------------------
 ## QA/QC species list and get query aquamaps key
