@@ -2,20 +2,29 @@ rm(list=ls());rm(.SavedPlots);graphics.off();gc();windows(record=T)
 
 library(terra)
 library(stringr)
-library(viridis)
+source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call pdf_map function
 
 ##------------------------------------------------------------------------------
 ##
 ## Set up directory paths
 
 dir.ras.in   <- "./Ecospace-environmental-drivers/MODIS/"
-dir.ras.out  <- "./Ecospace-environmental-drivers/Outputs/Bricks/"
-fld.asc.out  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/"
-dir.asc.avg  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/Averages/"
-dir.pdf.out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/"
+dir.ras.out  <- "./Ecospace-environmental-drivers/TestOutputs/Bricks/"
+fld.asc.out  <- "./Ecospace-environmental-drivers/TestOutputs/ASCII-for-ecospace/"
+dir.asc.avg  <- "./Ecospace-environmental-drivers/TestOutputs/ASCII-for-ecospace/Averages/"
+dir.pdf.out  <- "./Ecospace-environmental-drivers/TestOutputs/PDF-maps/"
 depth08min   <- raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
 date_coord_range <- "-98_-80.5_24_31_200301-202207"
-source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call pdf_map function
+
+
+## Make directories
+overwrite = 'y'
+dirs = c(dir.ras.out, fld.asc.out, dir.asc.avg, dir.pdf.out)
+for (i in 1:length(dirs)){
+  dir = dirs[i]
+  if(overwrite == 'y') unlink(dir, recursive = TRUE)
+  dir.create(dir)
+}
 
 ##------------------------------------------------------------------------------
 ##
@@ -24,7 +33,7 @@ source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call pd
 ## ChlA represents near-surface concentration of chlorophyll-a (chlor_a) in mg m-3, calculated using an empirical relationship derived from in situ measurements of chlor_a and blue-to-green band ratios of in situ remote sensing reflectances (Rrs).
 
 env_driver = "ChlA"
-overwrite  = 'n'
+overwrite  = 'y'
 dir.asc.out = paste0(fld.asc.out, env_driver, "/")
 if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
 
@@ -34,12 +43,15 @@ ras_hires = stack(paste0(dir.ras.in, tolower(env_driver), "/", tolower(env_drive
 ## First, crop and resample to basemap grid 
 ras = crop(ras_hires, depth08min)
 ras = resample(ras, depth08min)
-dim(depth08min); dim(ras) ## Dimensions should match
+dim(depth08min); dim(ras) ## Check that dimensions should match but with different number of layers
 
 ## Plotcheck
-par(mfrow=c(2,1))
-plot(depth08min, colNA = 'black')
-plot(ras[[1]], colNA = 'black')
+n_months = dim(ras)[3]
+par(mfrow=c(2,2))
+plot(depth08min, colNA = 'black', main = "Depth")
+plot(ras[[1]], colNA = 'black', main = paste("First month", names(ras[[1]])))
+plot(ras[[100]], colNA = 'black', main = paste("100th month", names(ras[[100]])))
+plot(ras[[n_months]], colNA = 'black', main = paste("Last month", names(ras[[n_months]])))
 par(mfrow=c(1,1))
 
 ## Determine which ones need to be written out
@@ -242,8 +254,6 @@ writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names
 ## ASCII global average
 writeRaster(mean, paste0(dir.asc.avg, 'Avg_', env_driver),
             bylayer=F, format='ascii', overwrite=T)
-
-
 
 
 ## -----------------------------------------------------------------------------
