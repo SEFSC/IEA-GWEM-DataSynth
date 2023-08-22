@@ -3,26 +3,19 @@
 ## FUNCTION: PLOT SPATIAL-TEMPORAL ENVIRONMENTAL DRIVERS 
 ##           AND MAKE MULIT-PAGE PDFs
 
+library(terra)
+library(stringr)
+library(viridis)
+
 ## Function to make PDF of maps with each page showing 12 months in that year
 pdf_map = function(plt.stack, colscheme = 'brks', dir = './', env_name = '', modtype = '', 
                    mintile = 0.01, maxtile = 0.99){
-  #  plt.stack = ras.comb
-  #  colscheme = 'virid'
-  #  dir = dir.out
-  #  env_name = env_driver
-  #  modtype = "MODIS"
-  #  mintile = 0; maxtile = .99
-  
-  library(terra)
-  library(stringr)
-  library(viridis)
-  
+
   maxval = as.numeric(quantile(values(plt.stack), maxtile, na.rm=T)) 
   minval = ifelse (mintile == 'zero', 0,
                    as.numeric(quantile(values(plt.stack), mintile, na.rm=T)))
   print(paste(env_name, "plotting range:", minval, "-", maxval))
-  #maxval = 40
-  
+
   ## Determine color scheme
   brks = seq(0, maxval, maxval/50)
   if(colscheme == 'turbo'){
@@ -61,7 +54,7 @@ pdf_map = function(plt.stack, colscheme = 'brks', dir = './', env_name = '', mod
       plot(plt.yr[[i]], legend=F, col=color, colNA='darkgray', zlim=c(minval, maxval), breaks=brks,
            main = names(plt.yr)[i])
     }
-    ##Add legend
+    ## Add legend
     par(mfrow=c(1,1), mar=c(0,0,0,0), oma=c(0,0,0,1))
     fields::image.plot(plt.yr,legend.only=T, zlim=c(minval, maxval),col=color,add=T,legend.width=1,
                        legend.mar=4,legend.line=3,
