@@ -7,22 +7,20 @@ source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call pd
 ##------------------------------------------------------------------------------
 ##
 ## Set up directory paths
-
+overwrite = 'n'
 dir.ras.in   <- "./Ecospace-environmental-drivers/MODIS/"
-dir.ras.out  <- "./Ecospace-environmental-drivers/TestOutputs/Bricks/"
-fld.asc.out  <- "./Ecospace-environmental-drivers/TestOutputs/ASCII-for-ecospace/"
-dir.asc.avg  <- "./Ecospace-environmental-drivers/TestOutputs/ASCII-for-ecospace/Averages/"
-dir.pdf.out  <- "./Ecospace-environmental-drivers/TestOutputs/PDF-maps/"
+dir.ras.out  <- "./Ecospace-environmental-drivers/Outputs/Bricks/"
+fld.asc.out  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/"
+dir.asc.avg  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/Averages/"
+dir.pdf.out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/"
 depth08min   <- raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
-date_coord_range <- "-98_-80.5_24_31_200301-202207"
-
+date_coord_range <- gsub("^[^_]*_|\\.gri$", "", list.files(paste0(dir.ras.in, "/chla"), pattern = "\\.gri$")[1])
 
 ## Make directories
-overwrite = 'y'
 dirs = c(dir.ras.out, fld.asc.out, dir.asc.avg, dir.pdf.out)
 for (i in 1:length(dirs)){
   dir = dirs[i]
-  if(overwrite == 'y') unlink(dir, recursive = TRUE)
+  if(overwrite == 'y') unlink(dir, recursive = TRUE) ## Overwrite if 'y'
   dir.create(dir)
 }
 
