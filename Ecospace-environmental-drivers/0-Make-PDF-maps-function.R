@@ -3,10 +3,6 @@
 ## FUNCTION: PLOT SPATIAL-TEMPORAL ENVIRONMENTAL DRIVERS 
 ##           AND MAKE MULIT-PAGE PDFs
 
-library(terra)
-library(stringr)
-library(viridis)
-
 ## Function to make PDF of maps with each page showing 12 months in that year
 pdf_map = function(plt.stack, colscheme = 'brks', dir = './', env_name = '', modtype = '', 
                    mintile = 0.01, maxtile = 0.99){
@@ -16,6 +12,10 @@ pdf_map = function(plt.stack, colscheme = 'brks', dir = './', env_name = '', mod
   #  env_name = env_driver
   #  modtype = "MODIS"
   #  mintile = 0; maxtile = .99
+  
+  library(terra)
+  library(stringr)
+  library(viridis)
   
   maxval = as.numeric(quantile(values(plt.stack), maxtile, na.rm=T)) 
   minval = ifelse (mintile == 'zero', 0,
