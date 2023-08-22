@@ -3,30 +3,38 @@ rm(list=ls());gc()
 library(curl)
 library(raster)
 library(rerddap)
+library(ncdf4)
 
 ##------------------------------------------------------------------------------
-## SETUP
+## Set-up variable list to query ERDDAP
 
 bbox.gom = c(-98, -80.5, 24, 31)
 bbox = bbox.gom
 
 dir.modis = "./Ecospace-environmental-drivers/MODIS/"
 vars = c("cfl", "chla", "PIC", "POC")
-overwrite = 'y' ## Do we want to over write?
+overwrite = 'n' ## Do we want to over write?
 
-for (i in 1:length(vars)){
+for (i in 1:length(vars)) {
   dir = paste0(dir.modis, vars[i])
-  if(overwrite == 'y') unlink(dir, recursive = TRUE)
-  dir.create(dir)
-}
+  if(file.exists(dir) & overwrite == 'n') print(paste("Already exists: ", dir))
+  else {
+    unlink(dir, recursive = TRUE)
+    dir.create(dir)
+    print(paste("Make file: ", dir))
+   }
+ }
 
 dir.vars  = list.dirs(dir.modis, recursive=F)
 varlist   = data.frame(var = basename (dir.vars), dir=dir.vars)
 print(varlist$var)
 
-varlist$datasetID_month = c('erdMH1cflhmday', 'erdMH1chlamday', 'erdMPICmday', 'erdMPOCmday', 'erdMH1sstdmdayR20190SQ')
-varlist$datasetID_day =   c('erdMH1cflh1day', 'erdMH1chla1day', 'erdMPIC1day', 'erdMPOC1day', 'erdMH1sstd1dayR20190SQ')
-varlist = varlist[-nrow(varlist),] 
+varlist$datasetID_month = c('erdMH1chlamday', 'erdMH1cflhmday', 'erdMPICmday', 'erdMPOCmday')
+varlist$datasetID_day =   c('erdMH1chla1day', 'erdMH1cflh1day', 'erdMPIC1day', 'erdMPOC1day')
+
+#varlist$datasetID_month = c('erdMH1cflhmday', 'erdMH1chlamday', 'erdMPICmday')
+#varlist$datasetID_day =   c('erdMH1cflh1day', 'erdMH1chla1day', 'erdMPIC1day')
+#varlist = varlist[-nrow(varlist),] 
 print(varlist)
 
 
@@ -37,6 +45,8 @@ print(varlist)
 for(i in 1:nrow(varlist)){
   #  i=1
   varname = varlist$var[i]
+  print(paste("ERRDAP pull: ", varname, "| Start time: ", format(Sys.time(), "%H:%M")))
+  
   dir.out = varlist$dir[i]
   dat.id.m = varlist$datasetID_month[i]
   dat.id.d = varlist$datasetID_day[i]
@@ -59,6 +69,7 @@ for(i in 1:nrow(varlist)){
   ## Monthly raster stack
   s.m = stack(erd1$summary$filename,quick=T)#,varname='chlorophyll'
   names(s.m) = erd.time1$yrmo
+  head(erd.time1$yrmo); tail(erd.time1$yrmo) ## Check dates
   
   ## Daily imagery---------------------------------------------------------------
   erd.info2 <- griddap(info(dat.id.d),
