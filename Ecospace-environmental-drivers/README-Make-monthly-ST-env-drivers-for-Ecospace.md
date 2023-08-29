@@ -84,10 +84,101 @@ This R script downloads HYCOM (Hybrid Coordinate Ocean Model) data from the hyco
 
 ### Usage 
 1. Get list of HYCOM files on the FTP server. The code retrieves a list of HYCOM files available on the FTP server for different experiments and time periods.
-2. Download HYCOM files. This section downloads the HYCOM files from the FTP server. It uses parallel processing to download multiple files simultaneously. The code sets up parallel processing using the makeSOCKcluster() function and the registerDoSNOW() function from the doSNOW package. It divides the files into chunks and assigns each chunk to a different core for downloading. It also displays a progress bar to track the download progress.
-3. Build temperature and salinity raster bricks from HYCOM netCDF files. The code converts the downloaded HYCOM netCDF files into raster bricks for temperature and salinity. The code loops through the downloaded files, reads them as raster bricks using the brick() function from the terra package, and extracts the surface, bottom, and average values for temperature and salinity. It then adds these values to daily raster stacks.
-4. Aggregate to month. Temperature and salinity values are extracted from the netCDF files as raster stacks with daily layers. These are aggregated by month. 
-5. Write out raster stacks. Finally, the code writes the temperature and salinity raster stacks to ASCII files for the next steps described below. 
+```R
+## ------------------           ---------------             ---------------
+## GOMu0.04/expt_50.1           1993.01.01-2012.12.31       1993.01-2012.12
+## GOMl0.04/expt_31.0           2009.04-2014.07.31          2013.01-2014.03  *overlap with 32.5
+## GOMl0.04/expt_32.5           2014.04.01-2019.02.03       2014.04-2016.12
+## GOMu0.04/expt_90.1m000       2017.01-2021 current        2017.01-current
+```
+3. Download HYCOM files. This section downloads the HYCOM files from the FTP server. It uses parallel processing to download multiple files simultaneously. The code sets up parallel processing using the makeSOCKcluster() function and the registerDoSNOW() function from the doSNOW package. It divides the files into chunks and assigns each chunk to a different core for downloading. It also displays a progress bar to track the download progress.
+```R
+ ## Set up parallel processing to download the daily netcdf files for month 
+  ## USE NO MORE THAN 10 CORES OR HYCOM WILL BLOCK YOU!!!
+  cl <- makeSOCKcluster(7)
+  clusterExport(cl,"nc.files.sub")
+  registerDoSNOW(cl)
+  pbar <- winProgressBar(paste("Getting HYCOM data from ftp..."), label=paste("N files ",length(nc.files.sub),sep=""),max=100)
+  progress<-function(n) setWinProgressBar(pbar,(n/length(nc.files.sub)*100),label=paste("File", n,"of", length(nc.files.sub),"Completed"))
+  opts<-list(progress=progress)
+  hcom = foreach(i=4150:length(nc.files.sub),.packages='curl',.options.snow=opts) %dopar% {
+    curl::curl_download(nc.files.sub[i], destfile = paste0(dir.hycom, basename(nc.files.sub[i])))
+  }
+  close(pbar)
+  stopCluster(cl)
+```
+5. Build temperature and salinity raster bricks from HYCOM netCDF files. The code converts the downloaded HYCOM netCDF files into raster bricks for temperature and salinity. The code loops through the downloaded files, reads them as raster bricks using the brick() function from the terra package, and extracts the surface, bottom, and average values for temperature and salinity. It then adds these values to daily raster stacks.
+```R
+## Convert netcdf to raster brick
+    file  = paste0(dir.hycom, basename(mofiles$file[j]))
+    yr = as.numeric(substr(ym, 1, 4))
+    if(yr == 2013 | yr == 2014 | yr == 2015 | yr == 2016) {
+      t.brick  = brick(file, varname='temperature', stopIfNotEqualSpaced = FALSE)
+      t.brick  = crop(t.brick, t.surf.m)
+      t.brick  = resample(t.brick, t.surf.m)
+
+      s.brick  = brick(file, varname='salinity', stopIfNotEqualSpaced = FALSE)
+      s.brick  = crop(s.brick, s.surf.m)
+      s.brick  = resample(s.brick, s.surf.m)
+      
+    } else {
+      t.brick  = brick(file, varname='water_temp')
+      s.brick  = brick(file, varname='salinity')
+    }
+    
+    ## Fill down to last level, so easier to extract bottom values
+    t.brick2 = approxNA(t.brick, method='constant', rule=2)
+    s.brick2 = approxNA(s.brick, method='constant', rule=2)
+    
+    ## Get surface, bottom, and average (temp and sal)
+    t.surf = raster(t.brick,layer=1)
+    t.bot  = raster(t.brick2,layer=nlayers(t.brick))
+    t.avg  = calc(t.brick,mean,na.rm=T)
+    s.surf = raster(s.brick,layer=1)
+    s.bot  = raster(s.brick2,layer=nlayers(t.brick))
+    s.avg  = calc(s.brick,mean,na.rm=T)
+    
+    ## Add to daily stack
+    t.surf.d = addLayer(t.surf.d, t.surf)
+    t.bot.d  = addLayer(t.bot.d,t.bot)
+    t.avg.d  = addLayer(t.avg.d,t.avg)
+    s.surf.d = addLayer(s.surf.d,s.surf)
+    s.bot.d  = addLayer(s.bot.d,s.bot)
+    s.avg.d  = addLayer(s.avg.d,s.avg)
+    
+    #housekeeping
+    rm(t.brick, t.brick2, t.surf, t.bot, t.avg, s.brick, s.brick2, s.surf, s.bot, s.avg)
+    gc(); flush.console()
+  } ## Finish building daily brick for that ym
+```
+7. Aggregate to month. Temperature and salinity values are extracted from the netCDF files as raster stacks with daily layers. These are aggregated by month.
+```R
+  ## Monthly avg ---------------------------------------------------------------
+  t.surf.m = addLayer(t.surf.m, calc(t.surf.d, mean))
+  t.bot.m  = addLayer(t.bot.m, calc(t.bot.d, mean))
+  t.avg.m  = addLayer(t.avg.m,calc(t.avg.d, mean))
+  s.surf.m = addLayer(s.surf.m,calc(s.surf.d,mean))
+  s.bot.m  = addLayer(s.bot.m,calc(s.bot.d,mean))
+  s.avg.m  = addLayer(s.avg.m,calc(s.avg.d,mean))
+  
+  names(t.surf.m)[i] = names(t.bot.m)[i] = names(t.avg.m)[i] = ym
+  names(s.surf.m)[i] = names(s.bot.m)[i] = names(s.avg.m)[i] = ym
+```
+9. Write out raster stacks. Finally, the code writes the temperature and salinity raster stacks to ASCII files for the next steps described below.
+```R
+dir.out = "./maps/HYCOM/Bricks/"
+
+## Write full GoM raster stacks to file
+datelabel = "1993-01 to 2020-12"
+
+## Write out monthly stacks
+writeRaster(t.surf.m, paste0(dir.out, 'HYCOM GOM temp surface ', datelabel), overwrite=TRUE)
+writeRaster(t.bot.m,  paste0(dir.out, 'HYCOM GOM temp bottom ', datelabel), overwrite=TRUE)
+writeRaster(t.avg.m,  paste0(dir.out, 'HYCOM GOM temp avg ', datelabel), overwrite=TRUE)
+writeRaster(s.surf.m, paste0(dir.out, 'HYCOM GOM salinity surface ', datelabel), overwrite=TRUE)
+writeRaster(s.bot.m,  paste0(dir.out, 'HYCOM GOM salinity bottom ', datelabel), overwrite=TRUE)
+writeRaster(s.avg.m,  paste0(dir.out, 'HYCOM GOM salinity avg ', datelabel), overwrite=TRUE)
+```
 
 ## B2 Resample and smooth HYCOM data maps
 The objectives are to (1) crop and resample the HYCOM data maps to match the scale and resolution of the depth/base map and (2) smooth missing data caused by downscaling. 
@@ -164,7 +255,6 @@ a. **Generate monthly averages before data collection**: The code automatically 
 - **Make PDF Maps**: The code generates PDF maps using the `pdf_map` function to visualize the monthly maps for each year, and writes out the PDF to the specified output directory (`dir.pdf.out`). Map settings can be customized (see below).
    
 ## Generate PDFs: the pdf_map function
-
 This function, `pdf_map`, allows you to generate multi-page PDF maps (each page shows one year) to visualize. The plotting range are set by the minimum and maximum percentiles for all values in the data. The default for `mintile` and `maxtile` are 0.01 and 0.99, respectively, and may need to be adjusted to avoid anomalous values or excessive NAs.  
 
 - Dependencies: `terra`, `stringr`, and `viridis`.
