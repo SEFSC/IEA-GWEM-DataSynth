@@ -5,6 +5,7 @@
 rm(list=ls()); rm(.SavedPlots); graphics.off(); gc(); windows(record=T)
 library(raster)
 library(viridis)
+options(scipen=10)
 
 ##------------------------------------------------------------------------------
 ##
@@ -130,7 +131,7 @@ for (i in 1:length(smoothed_stack_list)){
     names(xx) = paste0(year, "_", stringr::str_sub(labels(month.stack), start=-11))
     rep.stack = addLayer(rep.stack, xx)
   }
-  ras.comb = stack(rep.stack, ras)
+  ras.comb = raster::stack(rep.stack, ras)
   
   ## Write out raster
   start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
