@@ -2,6 +2,7 @@ rm(list=ls());rm(.SavedPlots);graphics.off();gc();windows(record=T)
 
 library(terra)
 library(stringr)
+library(raster)
 source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call pdf_map function
 
 ##------------------------------------------------------------------------------
@@ -132,7 +133,7 @@ writeRaster(ras.comb, paste0(dir.ras.out, 'EwE_Maps_', env_driver, '_', start, '
 ## Make PDF of plots
 ## Set plotting maximum to maximum of 99th percentile by month
 pdf_map(ras.comb, colscheme = 'virid', dir = dir.pdf.out, 
-        env_name = env_driver, mintile = 'zero', maxtile = 0.99, modtype = "MODIS")
+        env_name = env_driver, mintile = 'zero', maxtile = 0.9990, modtype = "MODIS")
 
 ## ASCII files by month
 writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), 
@@ -149,7 +150,7 @@ writeRaster(mean, paste0(dir.asc.avg, 'Avg_', env_driver),
 ## Fluorescence Line Height, Aqua MODIS
 
 env_driver = "Cfl"
-overwrite  = 'n'
+overwrite  = 'y'
 dir.asc.out = paste0(fld.asc.out, env_driver, "/")
 if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
 
