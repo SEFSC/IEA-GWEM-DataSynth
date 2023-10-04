@@ -4,11 +4,12 @@ library(terra)
 library(stringr)
 library(raster)
 source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call pdf_map function
+options(scipen=10)
 
 ##------------------------------------------------------------------------------
 ##
 ## Set up directory paths
-overwrite = 'n'
+overwrite = 'n' ## !!! Setting to 'y' overwrites all the directories !!!
 dir.ras.in   <- "./Ecospace-environmental-drivers/MODIS/"
 dir.ras.out  <- "./Ecospace-environmental-drivers/Outputs/Bricks/"
 fld.asc.out  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/"
@@ -17,7 +18,7 @@ dir.pdf.out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/"
 depth08min   <- raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
 date_coord_range <- gsub("^[^_]*_|\\.gri$", "", list.files(paste0(dir.ras.in, "/chla"), pattern = "\\.gri$")[1])
 
-## Make directories
+## Make directories 
 dirs = c(dir.ras.out, fld.asc.out, dir.asc.avg, dir.pdf.out)
 for (i in 1:length(dirs)){
   dir = dirs[i]
@@ -32,7 +33,7 @@ for (i in 1:length(dirs)){
 ## ChlA represents near-surface concentration of chlorophyll-a (chlor_a) in mg m-3, calculated using an empirical relationship derived from in situ measurements of chlor_a and blue-to-green band ratios of in situ remote sensing reflectances (Rrs).
 
 env_driver = "ChlA"
-overwrite  = 'y'
+overwrite  = 'n'
 dir.asc.out = paste0(fld.asc.out, env_driver, "/")
 if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
 
@@ -132,7 +133,7 @@ writeRaster(ras.comb, paste0(dir.ras.out, 'EwE_Maps_', env_driver, '_', start, '
 
 ## Make PDF of plots
 ## Set plotting maximum to maximum of 99th percentile by month
-pdf_map(ras.comb, colscheme = 'virid', dir = dir.pdf.out, 
+pdf_map(ras.comb, colscheme = 'brks', dir = dir.pdf.out, 
         env_name = env_driver, mintile = 'zero', maxtile = 0.9990, modtype = "MODIS")
 
 ## ASCII files by month
@@ -150,7 +151,7 @@ writeRaster(mean, paste0(dir.asc.avg, 'Avg_', env_driver),
 ## Fluorescence Line Height, Aqua MODIS
 
 env_driver = "Cfl"
-overwrite  = 'y'
+overwrite  = 'n'
 dir.asc.out = paste0(fld.asc.out, env_driver, "/")
 if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
 
@@ -262,7 +263,7 @@ writeRaster(mean, paste0(dir.asc.avg, 'Avg_', env_driver),
 ## https://modis.gsfc.nasa.gov/data/dataprod/poc.php
 
 env_driver = "POC"
-overwrite  = 'y'
+overwrite  = 'n'
 dir.asc.out = paste0(fld.asc.out, env_driver, "/")
 if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
 
