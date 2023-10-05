@@ -77,7 +77,7 @@ Climate variables that can be specified include the following:
 
 ```{python}
 ## Set list of specifiers to query ISIMIP database
-clim_var = ['chl', 'tos', 'tob', 'phyc', 'so', 'o2', 'ph']
+clim_var = ['chl', 'tos', 'tob', 'phyc', 'so', 'o2', 'ph', 'zooc', 'intpp']
 query_list = []  # Initialize an empty list to store the queries
 
 for var in clim_var:
@@ -93,39 +93,35 @@ for var in clim_var:
                             climate_variable=var)
     query_list.append(query)  # Append each query to the list
 
-```
-  
-Check the number of results we obtained from our query. Queries with >1 result are stored as a list. 
-
-```{python}
+## Check the number of results we obtained from our query. Queries with >1 result are stored as a list. 
 for query in query_list: 
     query['results'][0]['specifiers']['climate_variable']
     query['count']
 
 ```
-Extract URLs to download the data from our queries
 
+Extract URLs to download the data from our queries
 ```{python}
-#Empty lists to save URLs linking to files
+## Empty lists to save URLs linking to files
 urls = []
 urls_sub = []
 
-#Looping through each entry available in search results
+## Loop through each entry available in search results
 for query in query_list: 
   for datasets in query['results']:
     for paths in datasets['files']:
       urls.append(paths['file_url'])
       urls_sub.append(paths['path'])
+      
 
-```
-
-Check URLs
-``` {python}
+## Check URLs
 len(urls)
 for url in urls:
     print(url)  
+
 ```
-### Set to spatial extent of GOM
+
+## Set to spatial extent of GOM
 The files in the search results include data for the entire planet as the earth system models are global in extent.
 
 Check bounding box from Ecospace depth/base map
@@ -138,7 +134,8 @@ region_bbox <- st_bbox(region_shp)
 bbox_GOM <- c(region_bbox$ymin, region_bbox$ymax, region_bbox$xmin, region_bbox$xmax)
 print(bbox_GOM)
 ```
-### Set bounding box for the data downloads
+
+## Set bounding box for the data downloads
 ```{python}
 GOM_data_URL = client.cutout(urls_sub, bbox = [24., 31., -98., -80.5]) #Use the cutout function to create a bounding box for our dataset
 print(GOM_data_URL)
@@ -187,224 +184,17 @@ for (i in 1:num_vars){
 }
 ```
 
-
-
-
-
-
-
-
-
-  
-We can check some metadata for all the results with the following code.
-  
-#```{python}
-for ds in query['results']:
-  print(ds['name'], ds['files'])
-
-#```
-  
-
-It is worth noting that the files in the search results include data for the entire planet as the earth system models are global in extent. If you are interested in extracting data for a specific region, you can subset the global data to the area of your interest. Before extracting the regional data, we will need the URL for the location of the datasets. 
-  
-For this example, we will use the boundaries of the Hawaiian Longline region, which we have provided in the `data` folder.
-  
-#```{python}
-#Empty lists to save URLs linking to files
-urls = []
-urls_sub = []
-
-#Looping through each entry available in search results
-for datasets in query['results']:
-  for paths in datasets['files']:
-    urls.append(paths['file_url'])
-    urls_sub.append(paths['path'])
-#```
-  
-### Extracting data for a region
-First, we will load the Hawaiian Longline region and extract the bounding box. We will use the `sf` library to do this. Then, we will use this region to subset the data we need with the `isimip-client` library.
-
-  
-#```{r}
-##Loading region of interest
-#region_shp <- read_sf("../data/HawaiianLongline_BordersClip.shp")
-#Getting bounding box (max and min coordinates)
-#region_bbox <- st_bbox(region_shp)
-#bbox <- c(region_bbox$ymin, region_bbox$ymax, region_bbox$xmin, region_bbox$xmax)
-#```
-  
-```{r} 
-library(rgdal)
-region_asc <- raster::raster("C:/Users/User/OneDrive - University of Florida/Research/24 Gulfwide EwE/FishMIP_Model_Data/data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
-region_shp <- rasterToPolygons(region_asc, fun = function(x) {x > 0}, dissolve = TRUE)
-region_bbox <- st_bbox(region_shp)
-
-bbox_GOM <- c(region_bbox$ymin, region_bbox$ymax, region_bbox$xmin, region_bbox$xmax)
-print(bbox_GOM)
-
-#rgdal::writeOGR(obj=region_shp, dsn="path_to_save_directory", layer="output_filename_without_extension", driver="ESRI Shapefile")
-
-```
-
-
-### Extract information for the GOM only
-
-```{python}
-#We use the cutout function to create a bounding box for our dataset
-urls = []
-urls_sub = []
-GOM_data_URL = client.cutout(urls_sub, bbox = [24., 31., -98., -80.5])
-```
-
-## Downloading data to disk
-We will download the data and store it into the `data` folder. First we will make sure a `data` folder exists and if it does not exist, we will create one.
-
-```{python}
-#Importing library to check if folder exists
-import os
-
-#Creating a data folder if one does not already exist
-if os.path.exists('../MOM6/') == False:
-  os.makedirs('../MOM6/')
-else:
-  print('Folder already exists')
-
-```
-Use the `client.download()` function to save data to disk. 
-  
-```{python eval = F}
-#To download the subsetted data
-client.download(url = GOM_data_URL['file_url'], \
-                path = '../MOM6/', validate = False, \
-                extract = True)
-
-```
-  
-To download global data we use the same function, but we need to point at the correct variable storing the URL to the global dataset.  
-  
-```{python eval = F}
-client.download(url = urls[0], \
-                path = '../MOM6/', validate = False, \
-                extract = True)
-                
-```
-  
-# R-based code
-You are now ready to load the dataset into `R` to make any calculations and visualise results.  
-  
-## Inspecting contents of netcdf file
-For a quick overview of the content of the dataset we just downloaded, we can make use of the `metR` package.  
-
+## Check plots
 ```{r}
-#Provide file path to netcdf that was recently downloaded.
-data_file <- list.files(path = "../MOM6/", pattern = "nc$", full.names = T)
+for (i in 1:num_vars){
+  xx <- brick(data_file[i], level = 1)
+  title <- attributes(xx)$title
+  plot(xx[[1]], main = title)
+}
 
-#Check contents of netcdf
-library(ncdf4)
-GlanceNetCDF(data_file[1])
-GlanceNetCDF(data_file[2])
-```
-  
-This output, however, does not give you information about `No Data Values`. So we will load the first timestep included in our dataset to obtain this information.  
-  
-We will also plot the data to inspect it quickly.  
-  
-```{r}
-#Loading the first timestep as raster
-sst_raster <- brick(data_file[2], band = 1)
-
-#Extracting missing values
-NA_val <- sst_raster@file@nodatavalue
-
-#Plotting first time step of raster
-plot(sst_raster[[1]])
-```
-We can see that a `No Data Values` is included in the dataset to mark areas where no values have been collected because all land areas have the same value.  
-  
-We can create a mask for the `No Data Values` and plot the raster again.
-
-```{r}
-#Changing values larger than No Data Value to NA
-sst_raster[sst_raster >= NA_val] <- NA
-
-#Plotting result
-plot(sst_raster[[1]])
-```
-  
-## Masking temperature using region shapefile
-This will allow us to keep data grid cells inside the boundaries of our region of interest.  
-  
-```{r}
-raster_crop <- mask(sst_raster, region_shp)
-
-#Plotting result
-plot(raster_crop[[1]])
-```
-  
-## Loading dataset as dataframe for easy manipulation
-Data frame allow us to perform calculations easily using the `tidyverse`. We will also need to decode the time steps for the raster. If you look at the results of `GlanceNetCDF(data_file)` above, you will see that time was given as `months since 1901-01-01 00:00:00`. In this step, we transform the number of months to a date before calculating a time series for this region.  
-  
-```{r}
-#Turning raster into a matrix
-sst_hi <- rasterToPoints(raster_crop) %>% 
-  #Changing to data frame
-  as.data.frame() %>% 
-  #Reshaping data frame
-  pivot_longer(cols = -c(x, y), names_to = "months_from_date") %>% 
-  #Removing the X before the number of months and turning into numeric data
-  mutate(months_from_date = as.numeric(str_remove(months_from_date, "X")),
-         #Calculate date
-         date = ymd("1901-01-01") %m+% months(months_from_date)) %>% 
-  #Removing the months column
-  dplyr::select(!months_from_date)
-
-#Checking results
-head(sst_hi)
-```
-  
-## Calculating climatology
-We will use all data between `r year(min(sst_hi$date))` and `r `year(max(sst_hi$date))` to calculate the monthly SST mean for the Hawaiian Longline region.  
-  
-```{r}
-clim_sst <- sst_hi %>% 
-  #Calculating climatological mean for total catch per pixel
-  group_by(date) %>% 
-  summarise(mean_sst = mean(value, na.rm = F))
-
-#Checking results
-head(clim_sst)
-```
-
-## Plotting climatology
-
-```{r}
-#Plotting data
-clim_sst %>% 
-  #Show date in x axis and SST in y axis
-  ggplot(aes(x = date, y = mean_sst))+
-  #We will use a line plot
-  geom_line(color = 'blue')+
-  #and a dot plot
-  geom_point()+
-  #We will change the dates to show as month and year every 2 years
-  scale_x_date(date_labels="%b-%Y", date_breaks = "2 years")+
-  #We will change the axes labels and title
-  labs(x = NULL, y = expression("Mean monthly SST  " (degree~C)),
-       main = "Mean monthly sea surface temperature for the Gulf of Mexico")+
-  #We will apply a predetermined theme that removes background
-  theme_bw()+
-  #Showing axis label at an angle
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-```
-
-## Write out raster stack
-
-```{r}
-clim_var = 'chl'
-tail(sst_hi$date)
-start = "1961-01"
-end   = "2010-12"
-dir_out = "./out/"
-raster::writeRaster(sst_raster, filename = paste0(dir_out, "./MOM6_", clim_var, "_1961-01_2010-12"), overwrite=TRUE)
 
 ```
+
+
+
+
