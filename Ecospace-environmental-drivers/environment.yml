@@ -1,0 +1,21 @@
+name: fishmip
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - h5netcdf
+  - scipy
+  - xarray
+  - cartopy
+  - seaborn
+  - matplotlib
+  - zarr
+  - dask
+  - cftime
+  - bottleneck
+  - netcdf4
+  - jupyter
+  - pandas
+  - numpy
+  - pip:
+      - isimip-client==1.0.1
