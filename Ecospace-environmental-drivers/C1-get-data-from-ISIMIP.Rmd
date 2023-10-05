@@ -36,11 +36,10 @@ We will use the `reticulate` package to call `Python` in this notebook. Before y
 ```{r warnings = F, message = F}
 #Calling a specific conda environment
 use_condaenv("fishmip", conda = "C:/Users/User/miniconda3/envs/fishmip")
-use_condaenv("fishmip")
+use_condaenv("fishmip") 
 ```
-
 ## Loading ISIMIP Client script
-We can call the `isimip-client` library and load it into `R` as shown below. We can then use the `$` sign to call the different modules available in the library.  
+Call the `isimip-client` library and load it into R 
   
 ```{r}
 #Loading isimip-client into R
@@ -56,34 +55,29 @@ client = cl.ISIMIPClient()
 ```
 
 ## Starting an `isimip-client` session
-By starting a session we can query the ISIMIP database. We will look for climate data (considered as Input Data) from the ISIMIP3a simulation. We will search for monthly sea surface temperature (`tos`) outputs from the GFDL-MOM6-COBALT2 earth system model.  
+Start a session to query the ISIMIP database. We will look for climate data (considered as Input Data) from the ISIMIP3a simulation. 
   
-There are several parameters available to perform a search. Parameters available in the ISIMIP Repository website: [here](https://data.isimip.org/datasets/d7aca05a-27de-440e-a5b2-2c21ba831bcd/) for the results of the search described here. The parameters used here can be seen under the `Specifiers` section in the link above.  
-  
-```{python}
-#Starting a query - Looking for climate inputs from the ISIMIP3a simulation
+Parameters available in the ISIMIP Repository website: [here](https://data.isimip.org/datasets/d7aca05a-27de-440e-a5b2-2c21ba831bcd/). The climate variable parameters used here can be seen under `Specifiers`. 
 
-#clim_var = 'chl'
-clim_var = c('chl','tos','tob')
-
-for var in clim_var {
-
-query = client.datasets(simulation_round = 'ISIMIP3a',\
-                           product = 'InputData',\
-                           category = 'climate',
-                           climate_forcing = 'gfdl-mom6-cobalt2',\
-                           climate_scenario = 'obsclim',\
-                           subcategory = 'ocean',\
-                           region = 'global',\
-                           time_step = 'monthly',\
-                           resolution = '15arcmin',\
-                           climate_variable = clim_var)
-
-}
-
-```
+Climate variables that can be specified include the following:
+ - chl: Chlorophyll concentration
+ - expc-bot: Export production at the bottom
+ - intpoc: Integrated particulate organic carbon
+ - intpp, intppdiat, intppdiaz, intpppico: Integrated primary production (total, diatoms, diazotrophs, picophytoplankton)
+ - o2, o2-bot, o2-surf: Oxygen concentration (general, at the bottom, at the surface)
+ - ph, ph-bot, ph-surf: pH level (general, at the bottom, at the surface)
+ - phyc, phyc-vint, phydiat, phydiat-vint, phydiaz, phydiaz-vint, phypico, phypico-vint: Phytoplankton concentration (various types and vertical integrals)
+ - siconc: Sea ice concentration
+ - so, so-bot, so-surf: Salinity (general, at the bottom, at the surface)
+ - thetao: Potential temperature of sea water
+ - thkcello: Ocean model layer thickness
+ - tob: Temperature at the bottom
+ - tos: Temperature at the surface
+ - uo, vo: Zonal (east-west) and meridional (north-south) ocean velocities
+ - zmeso, zmeso-vint, zmicro, zmicro-vint, zooc, zooc-vint: Different groups/types of zooplankton and their vertical integrals.
 
 ```{python}
+## Set list of specifiers to query ISIMIP database
 clim_var = ['chl', 'tos', 'tob', 'phyc', 'so', 'o2', 'ph']
 query_list = []  # Initialize an empty list to store the queries
 
@@ -102,32 +96,106 @@ for var in clim_var:
 
 ```
   
-We can check the number of results we obtained from our query.  If our query produced two or more results, these are stored as a list. We can check the information included in our query by typing `query$results`. But for now, we will check the names of the variables included in our search.  
-  
+Check the number of results we obtained from our query. Queries with >1 result are stored as a list. 
+
 ```{python}
 for query in query_list: 
     query['results'][0]['specifiers']['climate_variable']
     query['count']
 
 ```
+Extract URLs to download the data from our queries
+
 ```{python}
-query_list[0] 
+#Empty lists to save URLs linking to files
+urls = []
+urls_sub = []
+
+#Looping through each entry available in search results
+for query in query_list: 
+  for datasets in query['results']:
+    for paths in datasets['files']:
+      urls.append(paths['file_url'])
+      urls_sub.append(paths['path'])
+
 ```
+
+Check URLs
+``` {python}
+len(urls)
+for url in urls:
+    print(url)  
+```
+
+The files in the search results include data for the entire planet as the earth system models are global in extent.
+
+### Check bounding box from Ecospace depth/base map
+```{r} 
+library(rgdal)
+region_asc <- raster::raster("C:/Users/User/OneDrive - University of Florida/Research/24 Gulfwide EwE/FishMIP_Model_Data/data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
+region_shp <- rasterToPolygons(region_asc, fun = function(x) {x > 0}, dissolve = TRUE)
+region_bbox <- st_bbox(region_shp)
+
+bbox_GOM <- c(region_bbox$ymin, region_bbox$ymax, region_bbox$xmin, region_bbox$xmax)
+print(bbox_GOM)
+```
+### Set bounding box for the data downloads
+```{python}
+GOM_data_URL = client.cutout(urls_sub, bbox = [24., 31., -98., -80.5]) #Use the cutout function to create a bounding box for our dataset
+```
+
+## Downloading data to disk
+We will download the data and store it into the `MOM6/data_downloads` folder. First we will make sure a `data` folder exists and if it does not exist, we will create one.
+
+```{python}
+#Importing library to check if folder exists
+import os
+
+#Creating a data folder if one does not already exist
+if os.path.exists('../MOM6/data_downloads/') == False:
+  os.makedirs('../MOM6/data_downloads/')
+else:
+  print('Folder already exists')
+
+```
+Use the `client.download()` function to save data to disk. 
+  
+```{python eval = F}
+#To download the subsetted data
+client.download(url = GOM_data_URL['file_url'], \
+                path = '../MOM6/', validate = False, \
+                extract = True)
+
+```
+  
+To download global data we use the same function, but we need to point at the correct variable storing the URL to the global dataset.  
+  
+```{python eval = F}
+client.download(url = urls[0], \
+                path = '../MOM6/', validate = False, \
+                extract = True)
+                
+```
+
+
+
+
+
   
 We can check some metadata for all the results with the following code.
   
-```{python}
+#```{python}
 for ds in query['results']:
   print(ds['name'], ds['files'])
 
-```
+#```
   
 
 It is worth noting that the files in the search results include data for the entire planet as the earth system models are global in extent. If you are interested in extracting data for a specific region, you can subset the global data to the area of your interest. Before extracting the regional data, we will need the URL for the location of the datasets. 
   
 For this example, we will use the boundaries of the Hawaiian Longline region, which we have provided in the `data` folder.
   
-```{python}
+#```{python}
 #Empty lists to save URLs linking to files
 urls = []
 urls_sub = []
@@ -137,7 +205,7 @@ for datasets in query['results']:
   for paths in datasets['files']:
     urls.append(paths['file_url'])
     urls_sub.append(paths['path'])
-```
+#```
   
 ### Extracting data for a region
 First, we will load the Hawaiian Longline region and extract the bounding box. We will use the `sf` library to do this. Then, we will use this region to subset the data we need with the `isimip-client` library.
@@ -165,10 +233,12 @@ print(bbox_GOM)
 ```
 
 
-Extract information for the GOM only
+### Extract information for the GOM only
 
 ```{python}
 #We use the cutout function to create a bounding box for our dataset
+urls = []
+urls_sub = []
 GOM_data_URL = client.cutout(urls_sub, bbox = [24., 31., -98., -80.5])
 ```
 
@@ -191,7 +261,7 @@ Use the `client.download()` function to save data to disk.
 ```{python eval = F}
 #To download the subsetted data
 client.download(url = GOM_data_URL['file_url'], \
-                path = '../data/', validate = False, \
+                path = '../MOM6/', validate = False, \
                 extract = True)
 
 ```
@@ -200,7 +270,7 @@ To download global data we use the same function, but we need to point at the co
   
 ```{python eval = F}
 client.download(url = urls[0], \
-                path = '../data/', validate = False, \
+                path = '../MOM6/', validate = False, \
                 extract = True)
                 
 ```
@@ -213,7 +283,7 @@ For a quick overview of the content of the dataset we just downloaded, we can ma
 
 ```{r}
 #Provide file path to netcdf that was recently downloaded.
-data_file <- list.files(path = "../data/", pattern = "nc$", full.names = T)
+data_file <- list.files(path = "../MOM6/", pattern = "nc$", full.names = T)
 
 #Check contents of netcdf
 library(ncdf4)
