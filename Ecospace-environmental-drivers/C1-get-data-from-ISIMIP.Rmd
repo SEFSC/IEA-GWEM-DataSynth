@@ -26,8 +26,7 @@ library(metR)
 library(lubridate)
 library(raster)
 library(sf)
-
-clim_var = c('chl', 'tos')
+library(ncdf4)
 ```
 
 ## Using Python in an R notebook
@@ -126,10 +125,10 @@ len(urls)
 for url in urls:
     print(url)  
 ```
-
+### Set to spatial extent of GOM
 The files in the search results include data for the entire planet as the earth system models are global in extent.
 
-### Check bounding box from Ecospace depth/base map
+Check bounding box from Ecospace depth/base map
 ```{r} 
 library(rgdal)
 region_asc <- raster::raster("C:/Users/User/OneDrive - University of Florida/Research/24 Gulfwide EwE/FishMIP_Model_Data/data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
@@ -142,10 +141,11 @@ print(bbox_GOM)
 ### Set bounding box for the data downloads
 ```{python}
 GOM_data_URL = client.cutout(urls_sub, bbox = [24., 31., -98., -80.5]) #Use the cutout function to create a bounding box for our dataset
+print(GOM_data_URL)
 ```
 
 ## Downloading data to disk
-We will download the data and store it into the `MOM6/data_downloads` folder. First we will make sure a `data` folder exists and if it does not exist, we will create one.
+We will download the data and store it into the `MOM6/data_downloads/` folder. First we will make sure a folder exists and if it does not exist, we will create one.
 
 ```{python}
 #Importing library to check if folder exists
@@ -158,24 +158,38 @@ else:
   print('Folder already exists')
 
 ```
+
+## Download from ISIMAP
 Use the `client.download()` function to save data to disk. 
-  
+
 ```{python eval = F}
 #To download the subsetted data
 client.download(url = GOM_data_URL['file_url'], \
-                path = '../MOM6/', validate = False, \
+                path = '../MOM6/data_downloads/', validate = False, \
                 extract = True)
 
 ```
   
-To download global data we use the same function, but we need to point at the correct variable storing the URL to the global dataset.  
-  
-```{python eval = F}
-client.download(url = urls[0], \
-                path = '../MOM6/', validate = False, \
-                extract = True)
-                
+## Inspect contents of netcdf files
+
+```{r}
+#Provide file path to netcdf that was recently downloaded.
+data_file <- list.files(path = '../MOM6/data_downloads/', pattern = "nc$", full.names = T)
+num_vars = length(data_file)
+
+library(ncdf4)
+
+#Check contents of netcdf
+for (i in 1:num_vars){
+  glance = GlanceNetCDF(data_file[i])
+  if (i == 1) print (glance$dims) ## These are the same for all of the variables
+  print(glance$vars)
+}
 ```
+
+
+
+
 
 
 
