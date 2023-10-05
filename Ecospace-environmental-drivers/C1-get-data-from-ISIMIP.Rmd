@@ -77,7 +77,7 @@ Climate variables that can be specified include the following:
 
 ```{python}
 ## Set list of specifiers to query ISIMIP database
-clim_var = ['chl', 'tos', 'tob', 'phyc', 'so', 'o2', 'ph', 'zooc', 'intpp']
+clim_var = ['chl', 'tos', 'tob', 'phyc', 'so', 'o2', 'ph']
 query_list = []  # Initialize an empty list to store the queries
 
 for var in clim_var:
