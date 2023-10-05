@@ -1,0 +1,16 @@
+The following commands were used to create the files in this container:
+
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_chl_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_chl_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_tos_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_tos_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_tob_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_tob_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_phyc_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_phyc_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_phyc-vint_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_phyc-vint_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_so_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_so_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_so-bot_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_so-bot_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_so-surf_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_so-surf_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_o2_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_o2_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_o2-bot_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_o2-bot_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_o2-surf_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_o2-surf_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_ph_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_ph_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_ph-bot_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_ph-bot_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
+ncks -O -h -d lat,24.000000,31.000000 -d lon,-98.000000,-80.500000 gfdl-mom6-cobalt2_obsclim_ph-surf_15arcmin_global_monthly_1961_2010.nc gfdl-mom6-cobalt2_obsclim_ph-surf_15arcmin_lat24.0to31.0lon-98.0to-80.5_monthly_1961_2010.nc
