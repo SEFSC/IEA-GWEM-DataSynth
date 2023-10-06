@@ -9,7 +9,7 @@ library(viridis)
 
 ## Function to make PDF of maps with each page showing 12 months in that year
 pdf_map = function(plt.stack, colscheme = 'brks', dir = './', env_name = '', modtype = '', 
-                   mintile = 0.01, maxtile = 0.99){
+                   mintile = 0.01, maxtile = 0.99, ylab_name = ''){
 
   maxval = as.numeric(quantile(values(plt.stack), maxtile, na.rm=T)) 
   minval = ifelse (mintile == 'zero', 0,
@@ -58,7 +58,7 @@ pdf_map = function(plt.stack, colscheme = 'brks', dir = './', env_name = '', mod
     par(mfrow=c(1,1), mar=c(0,0,0,0), oma=c(0,0,0,1))
     fields::image.plot(plt.yr,legend.only=T, zlim=c(minval, maxval),col=color,add=T,legend.width=1,
                        legend.mar=4,legend.line=3,
-                       legend.lab = env_name)
+                       legend.lab = paste(env_name, ylab_name))
   }
   dev.off()
 }
