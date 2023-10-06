@@ -17,7 +17,7 @@ dir.ras.out  <- "./Ecospace-environmental-drivers/Outputs/Bricks/"
 fld.asc.out  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/"
 dir.asc.avg  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/Averages/"
 dir.pdf.out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/"
-source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call PDF-map function
+source("./Ecospace-environmental-drivers/0-Functions.R") ## Call PDF-map function
 
 ## HIRES monthly stacks
 t.surf.hycom = stack( paste0(dir.in, 'HYCOM GOM temp surface ', datelabel))
