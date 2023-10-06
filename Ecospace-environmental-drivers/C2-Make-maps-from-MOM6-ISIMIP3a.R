@@ -6,17 +6,20 @@ rm(list=ls())
 library(raster)
 library(viridis)
 library(tidyverse)
+source("./Ecospace-environmental-drivers/0-Functions.R") 
 
-## Set up directory paths
-model     = "MOM6"
-datelabel = "1960-01 to 2010-12"
-dir_in   <- "./Ecospace-environmental-drivers/MOM6/data_downloads/"
-dir_ras_out  <- "./Ecospace-environmental-drivers/Outputs/Bricks/"
-fld_asc_out  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/"
-dir_asc_avg  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/Averages/"
-dir_pdf_out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/MOM6-ISIMIP3a/"
-source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") 
-source("./Ecospace-environmental-drivers/0-Smoth-NA-function.R")
+## Set directory paths
+model_name <-  "MOM6-ISIMIP3a"
+dir_in     <- "./Ecospace-environmental-drivers/MOM6/data_downloads/"
+dir_out    <- "./Ecospace-environmental-drivers/Outputs/"
+
+## Set overwrite preferences
+overwrite_pdf   <- FALSE
+overwrite_avg   <- TRUE
+overwrite_ascii <- FALSE
+
+## -----------------------------------------------------------------------------
+## Set-up
 
 ## Read in depth/base map
 depth <- raster("./global-data/shorelinecorrected-basemap-depth-131x53-08 min-14sqkm.asc")
@@ -42,12 +45,8 @@ print(var_names)
 ##
 ## Loop along list
 
-col_list <- c("brks", "turbo", "turbo", "virid", "virid", "virid")
-overwrite <- 'y'
-i = 8
-
-##
 for (i in 1:num_vars){
+  options(scipen=10) ## Seems to fix: Error in if (getOption("scipen") <= min(digits)) { : missing value where TRUE/FALSE needed
   ras_orig = raster_list[[i]]
   var = var_names[i]
   var_desc <- attributes(ras_orig)$title
@@ -105,18 +104,44 @@ for (i in 1:num_vars){
   ras_subset <- subset(ras_msk, index_X1980_01:nlayers(ras_msk))
   head(names(ras_subset)); tail(names(ras_subset))
   
+  ## Calculate average to intialize Ecospace -------------------------------------
+  avg_ras = calc(ras_subset, mean)
+  plot(avg_ras, colNA='black', main=paste(var))
+  
   ## ----------------------------------------------------------------------------
   ## Write out files
   ## Make PDF of plots
-  ## Set plotting maximum to maximum of 99th percentile by month
-  pdf_map(ras_subset, colscheme = "turbo", dir = dir_pdf_out, 
-          env_name = var, mintile = 0.0001, maxtile = 0.9999, modtype = model, ylab_name = var_desc)
   
-  ## Save raster
-  #writeRaster(ras.comb, paste0(dir.ras.out, 'EwE_Maps_', env_driver, '_', start, '-', stop), overwrite=T)
+  ## Set output directories
+  dir_pdf_out <- paste0(dir_out, "PDF-maps/", model_name,"/")
+  dir_ras_out <- paste0(dir_out, "Bricks/", model_name,"/")
+  fld_asc_out <- paste0(dir_out, "ASCII-for-ecospace/", model_name,"/")
+  dir_asc_avg <- paste0(dir_out, "ASCII-for-ecospace/Averages/", model_name,"/")
   
-  ## ASCII files by month
-  #writeRaster(ras.comb, paste0(dir.asc.out, env_driver), bylayer=T, suffix = names(ras.comb), 
-  #            format = 'ascii', overwrite=T)
+  ## Function to get make date labels (YYYY-YYYY) from a raster stack
+  date_label <- get_year_range(ras_subset)
   
+  ## Write out glboal average ASCII
+  check_directory(dir_asc_avg)
+  filename <- paste("Avg", var, model_name, date_label, sep = "_")
+  raster::writeRaster(avg_ras, filename = paste0(dir_asc_avg, filename), format = 'ascii', overwrite = overwrite_avg)
+  
+  ## Save raster brick
+  check_directory(dir_ras_out)
+  filename <- paste("EwE_Maps", var, model_name, date_label, sep = "_")
+  raster::writeRaster(avg_ras, filename = paste0(dir_ras_out, filename), overwrite = TRUE)
+  
+  ## Write out monthly ASCII files for Ecospace
+  check_directory(fld_asc_out)
+  asc_folder <- paste0(fld_asc_out, var)
+  check_directory(asc_folder, overwrite_ascii)
+  dates_ras <- sub("^X", "", gsub("\\.", "-", names(ras_subset))) ## Get dates as YYYY-MM format
+  asc_names <- paste(dates_ras, var, model_name, sep = "_") ## Starting with YYYY-MM allows Ecospace to set "Time" from file name (set to "year-month" in dropdown)
+  raster::writeRaster(ras_subset, filename = paste0(asc_folder, "/", asc_names), bylayer=T, 
+                      suffix = dates_ras, format = 'ascii', overwrite = overwrite_ascii)
+              
+  ## Make PDF maps
+  check_directory(dir_pdf_out)
+  pdf_map(ras_subset, colscheme = "turbo", dir = dir_pdf_out, env_name = var, 
+          mintile = 0.0001, maxtile = 0.9999, modtype = model_name, ylab_name = var_desc)
 }
