@@ -3,7 +3,7 @@ rm(list=ls());rm(.SavedPlots);graphics.off();gc();windows(record=T)
 library(terra)
 library(stringr)
 library(raster)
-source("./Ecospace-environmental-drivers/0-Make-PDF-maps-function.R") ## Call pdf_map function
+source("./Ecospace-environmental-drivers/0-Functions.R") ## Call pdf_map function
 options(scipen=10)
 
 ##------------------------------------------------------------------------------
