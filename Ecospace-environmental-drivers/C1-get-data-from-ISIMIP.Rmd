@@ -1,6 +1,6 @@
 ---
 title: "Accessing data from ISIMIP repository"
-author: "Denisse Fierro Arcos"
+author: "Denisse Fierro Arcos | Adapted by Holden Earl Harris" 
 date: "2023-08-19"
 output: 
   github_document:
@@ -9,15 +9,11 @@ output:
 ---
 
 # Introduction
-This notebook will accessing data from the [Inter-Sectoral Impact Model Intercomparison Project (ISIMIP) Repository](https://data.isimip.org/). There are various datasets available, but as example we will be accessing Input Data > Climate Forcing > ISIMIP3a simulation round. We will use the sea surface temperature (`tos`) monthly global output from the GFDL-MOM6-COBALT2 model.  
+This downloads data from the [Inter-Sectoral Impact Model Intercomparison Project (ISIMIP) Repository](https://data.isimip.org/). We use `Python` to make use of some functions from the `isimip-client` library. 
 
-In this notebook, we will use `Python` to make use of some functions from the `isimip-client` library, which you should have already installed in your local machine if you followed the instructions in the `README` file. If you have not done this yet, make sure you follow these instructions before running this notebook.  
-  
-After we have downloaded the data we need with the `isimip-client` library, we will then move to `R` to visualise the data.
+This needs have already installed in your local machine if you followed the instructions in the `README` file developed by Denisse Fierro Arccos. 
 
 ## Loading R libraries
-All libraries used in this notebook should already be installed in your local machine. Make sure you follow the instructions in the `README` file before running this notebook.  
-
 ```{r results = "hide", warnings = F, message = F}
 rm(list=ls());rm(.SavedPlots)
 library(reticulate)
@@ -185,16 +181,12 @@ for (i in 1:num_vars){
 ```
 
 ## Check plots
-```{r}
+```{r echo = FALSE}
 for (i in 1:num_vars){
   xx <- brick(data_file[i], level = 1)
   title <- attributes(xx)$title
-  plot(xx[[1]], main = title)
+  plot(xx[[1]], main = title, colNA = 'black')
 }
-
-
 ```
-
-
-
-
+## ISIMIP Citation
+Xiao Liu, Charles Stock, John Dunne, Minjin Lee, Elena Shevliakova, Sergey Malyshev, Paul C.D. Milly, Matthias Büchner (2022): ISIMIP3a ocean physical and biogeochemical input data [GFDL-MOM6-COBALT2 dataset] (v1.0). ISIMIP Repository.  https://doi.org/10.48364/ISIMIP.920945
