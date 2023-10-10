@@ -14,9 +14,9 @@ dir_in     <- "./Ecospace-environmental-drivers/MOM6/data_downloads/"
 dir_out    <- "./Ecospace-environmental-drivers/Outputs/"
 
 ## Set overwrite preferences
-overwrite_pdf   <- FALSE
+overwrite_pdf   <- TRUE
 overwrite_avg   <- TRUE
-overwrite_ascii <- FALSE
+overwrite_ascii <- TRUE
 
 ## -----------------------------------------------------------------------------
 ## Set-up
@@ -30,7 +30,7 @@ num_vars = length(data_file)
 print(data_file)
 
 ## Open these as a list of raster brcks
-raster_list <- lapply(data_file, brick) ## We just need level 1 so we can ignore the warning that "level" is set to 1
+raster_list <- lapply(data_file, brick) ## ignore the warning that "level" is set to 1. We just need one level. 
 
 ## Extract variable names
 var_names <- character(num_vars)
@@ -41,17 +41,21 @@ for(i in 1:num_vars){
 }
 print(var_names)
 
+var_info <- data.frame(var_names = var_names, var_desc = NA)
+
 ## -----------------------------------------------------------------------------
 ##
 ## Loop along list
 
 for (i in 1:num_vars){
+#for (i in 1:1){
   options(scipen=10) ## Seems to fix: Error in if (getOption("scipen") <= min(digits)) { : missing value where TRUE/FALSE needed
   ras_orig = raster_list[[i]]
   var = var_names[i]
   var_desc <- attributes(ras_orig)$title
-  print(var); print(var_desc)
-  
+  var_info$var_desc[i] <- var_desc
+  print(var_info[i,])
+
   ## Make dataframe/tibble object from raster stack
   df_ras <- rasterToPoints(ras_orig) %>% 
     as.data.frame() %>%   #Changing to data frame
@@ -80,11 +84,13 @@ for (i in 1:num_vars){
   ras_smoo = ras ## Initialize
   stepsneeded = 4
   smoothsize = 3
-  
+
   for (j in 1:stepsneeded){
     print(paste(var, "smoothing - step", j, "-", format(Sys.time(), "%H:%M:%S")))
     ras_smoo = smooth.na(ras_smoo, smoothsize)
   }
+  
+#  ras_smoo <- ras
   
   ## Mask smoothed rasters with depth map ----------------------------------------
   depthNA = depth
@@ -106,7 +112,8 @@ for (i in 1:num_vars){
   
   ## Calculate average to intialize Ecospace -------------------------------------
   avg_ras = calc(ras_subset, mean)
-  plot(avg_ras, colNA='black', main=paste(var))
+  par(mfrow=c(1,1))
+  plot(avg_ras, colNA='black', main=paste("Global average", var, sep = " - "))
   
   ## ----------------------------------------------------------------------------
   ## Write out files
@@ -121,10 +128,11 @@ for (i in 1:num_vars){
   ## Function to get make date labels (YYYY-YYYY) from a raster stack
   date_label <- get_year_range(ras_subset)
   
-  ## Write out glboal average ASCII
+  ## Write out global average ASCII
   check_directory(dir_asc_avg)
   filename <- paste("Avg", var, model_name, date_label, sep = "_")
-  raster::writeRaster(avg_ras, filename = paste0(dir_asc_avg, filename), format = 'ascii', overwrite = overwrite_avg)
+  raster::writeRaster(avg_ras, filename = paste0(dir_asc_avg, filename), format = 'ascii', 
+                      overwrite = overwrite_avg, NAflag = 0)
   
   ## Save raster brick
   check_directory(dir_ras_out)
@@ -138,10 +146,10 @@ for (i in 1:num_vars){
   dates_ras <- sub("^X", "", gsub("\\.", "-", names(ras_subset))) ## Get dates as YYYY-MM format
   asc_names <- paste(dates_ras, var, model_name, sep = "_") ## Starting with YYYY-MM allows Ecospace to set "Time" from file name (set to "year-month" in dropdown)
   raster::writeRaster(ras_subset, filename = paste0(asc_folder, "/", asc_names), bylayer=T, 
-                      suffix = dates_ras, format = 'ascii', overwrite = overwrite_ascii)
+                      suffix = dates_ras, format = 'ascii', overwrite = overwrite_ascii, NAflag = -9999)
               
   ## Make PDF maps
   check_directory(dir_pdf_out)
   pdf_map(ras_subset, colscheme = "turbo", dir = dir_pdf_out, env_name = var, 
           mintile = 0.0001, maxtile = 0.9999, modtype = model_name, ylab_name = var_desc)
-}
+}; print(var_info)
