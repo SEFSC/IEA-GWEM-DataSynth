@@ -29,7 +29,8 @@ data_file <- list.files(path = './MOM6/data_downloads/', pattern = "nc$", full.n
 num_vars = length(data_file)
 print(data_file)
 
-## Open these as a list of raster brcks
+## Open these as a list of raster bricks
+print(paste("*** Ignore the warning that level is set to 1. We just need one level ***"))
 raster_list <- lapply(data_file, brick) ## ignore the warning that "level" is set to 1. We just need one level. 
 
 ## Extract variable names
@@ -48,7 +49,7 @@ var_info <- data.frame(var_names = var_names, var_desc = NA)
 ## Loop along list
 
 for (i in 1:num_vars){
-#for (i in 1:1){
+#for (i in 8:8){
   options(scipen=10) ## Seems to fix: Error in if (getOption("scipen") <= min(digits)) { : missing value where TRUE/FALSE needed
   ras_orig = raster_list[[i]]
   var = var_names[i]
@@ -75,12 +76,16 @@ for (i in 1:num_vars){
   end_date <- df_ras$YM[nrow(df_ras)]
   n_months <- length(unique(df_ras$YM))
   
+  ## Subset of months that match Ecospace simulation period --------------------
+  index_X1980_01 <- grep("X1980.01", names(ras_orig))
+  ras_subset_after1980 <- subset(ras_orig, index_X1980_01:nlayers(ras_orig))
+  
   ## Crop and resample to basemap grid 
-  ras = crop(ras_orig, depth)
+  ras = crop(ras_subset_after1980, depth)
   ras = resample(ras, depth)
   dim(depth); dim(ras) ## Check that dimensions should match but with different number of layers
   
-  ## Iteratively run smooth.na function ------------------------------------------
+  ## Iteratively run smooth.na function ----------------------------------------
   ras_smoo = ras ## Initialize
   stepsneeded = 4
   smoothsize = 3
@@ -90,28 +95,70 @@ for (i in 1:num_vars){
     ras_smoo = smooth.na(ras_smoo, smoothsize)
   }
   
-#  ras_smoo <- ras
-  
-  ## Mask smoothed rasters with depth map ----------------------------------------
+  ## Mask smoothed rasters with depth map --------------------------------------
   depthNA = depth
   depthNA[depthNA==0] = NA
   ras_msk = mask(ras_smoo, depthNA)
-  names(ras_msk) = names(ras_orig)
+  names(ras_msk) = names(ras)
   
   ## Plotcheck
   par(mfrow=c(2,2))
-  plot(depthNA, colNA='black')
-  plot(ras_orig[[1]], colNA='black')
-  plot(ras_smoo[[1]], colNA='black')
-  plot(ras_msk[[1]], colNA = 'black')
+  plot(depthNA, colNA='black', main = "Depth")
+  plot(ras_orig[[1]], colNA='black', main = "Original")
+  plot(ras_smoo[[1]], colNA='black', main = "Smoothed")
+  plot(ras_msk[[1]], colNA = 'black', main = "Smoothed w/ Land Mask")
+  par(mfrow=c(1,1))
   
-  ## Subset of months that match Ecospace simulation period
-  index_X1980_01 <- grep("X1980.01", names(ras_msk))
-  ras_subset <- subset(ras_msk, index_X1980_01:nlayers(ras_msk))
+  ## ---------------------------------------------------------------------------
+  ## Get monthly averages for missing data (2010-2016 for MOM6)
+  
+  ## Make dataframe of dates from raster layers --------------------------------
+  dates_ras = data.frame(year=substr(names(ras),2,5), month=substr(names(ras),7,8))
+  dates_ras$yrmo = paste0(dates_ras$year, "-", dates_ras$month)
+  head(dates_ras); tail(dates_ras)
+  mo = unique(dates_ras$month)
+  
+  ## Make dataframe of year months after MOM6 ends
+  startdummy = max(as.numeric(dates_ras$year))+1
+  yr = startdummy:2016
+  dummy_dates = data.frame(year = character(), month = character())
+  for(y in yr){
+    for(m in mo) dummy_dates = rbind(dummy_dates, c(y,m))
+  }
+  colnames(dummy_dates) = c("year", "month")
+  dummy_dates$yrmo = paste(dummy_dates$year, dummy_dates$month, sep="-")
+  head(dummy_dates); tail(dummy_dates)
+  
+  ## Get monthly averages -------------------------------------------------------
+  month_stack = stack()
+  for (month in mo){
+    #month = "01"
+    subset_month = raster::subset(ras_msk, grep(paste0('.', month), names(ras_msk), value = T, fixed = T))
+    month_avg = calc(subset_month, mean)
+    names(month_avg) = paste0(var, "_mo", month, "_avg", nlayers(subset_month),"y")
+    month_stack = addLayer(month_stack, month_avg)
+  }  
+  
+  ## Plot check
+  par(mfrow=c(3,4))
+  plot(month_stack, colNA = 'black', zlim=c(min(values(month_stack), na.rm=T), max(values(month_stack), na.rm=T)))
+  par(mfrow=c(1,1))
+  
+  ## Combine data (1980-2010) and dummy raster set (2010-2016) 
+  rep_stack = stack()
+  for (year in yr){
+    #year = 1980
+    xx = month_stack
+    names(xx) = paste0(year, "_", stringr::str_sub(labels(month_stack), start=-11))
+    rep_stack = addLayer(rep_stack, xx)
+  }
+  
+  ## Append averaged months on end 
+  ras_subset <- raster::stack(ras_msk, rep_stack) 
   head(names(ras_subset)); tail(names(ras_subset))
   
-  ## Calculate average to intialize Ecospace -------------------------------------
-  avg_ras = calc(ras_subset, mean)
+  ## Calculate average to intialize Ecospace -----------------------------------
+  avg_ras = calc(ras_msk, mean)
   par(mfrow=c(1,1))
   plot(avg_ras, colNA='black', main=paste("Global average", var, sep = " - "))
   
