@@ -44,7 +44,7 @@ for (depth in depth_list){
   ## Get paramaters of depth map
   min         = paste0(round(res(depth)[1]*60,0),' min.') 
   dims         = paste0(dim(depth)[1],'x',dim(depth)[2])
-  cellarea_km2 = paste0('~', round(sqrt(mean(getValues(area(depth))))), ' sq.km') ## Get surface area of each cell in km2
+  cellarea_km2 = paste0('~', round(sqrt(mean(getValues(area(depth))))), ' km') ## Get surface area of each cell in km2
   
   ## Plot
   plot(depth,colNA='black', main =paste(min, cellarea_km2, dims, sep = ' / '),

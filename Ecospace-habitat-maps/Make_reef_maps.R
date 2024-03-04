@@ -6,7 +6,8 @@
 ## Code:    Make hardbottom reef map 
 ##          ouputs of AR and NR habitat maps for Ecospace model
 
-rm(list=ls()); graphics.off(); windows()
+#rm(list=ls())
+graphics.off(); windows()
 library(sf)
 library(ggplot2)
 library(raster)
@@ -91,8 +92,8 @@ scaled_HB = calc(resamp_HB, fun = function(x) {
 
 ## Write out habitat maps------------------------------------------------------
 dir_out = "./Ecospace-habitat-maps/Output-for-ecospace/"
-writeRaster(scaled_AR, paste0(dir_out, "scaled-inv-dist-AR_div-x"), format = "ascii", overwrite=T)
-writeRaster(scaled_HB, paste0(dir_out, "scaled-inv-dist-HB_div-x"), format = "ascii", overwrite=T)
+writeRaster(scaled_AR, paste0(dir_out, "scaled-inv-dist-AR_div-x"), format = "ascii", overwrite=F)
+writeRaster(scaled_HB, paste0(dir_out, "scaled-inv-dist-HB_div-x"), format = "ascii", overwrite=F)
 
 ## Plots ------------------------------------------------------------------------
 par(mfrow=c(2,2))

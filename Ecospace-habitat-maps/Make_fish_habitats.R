@@ -5,7 +5,8 @@
 ## Contact: Holden Earl Harris | holden.harris@noaa.gov
 ## Code:    
 
-rm(list=ls()); graphics.off(); windows()
+#rm(list=ls())
+graphics.off(); windows()
 
 library(sf)
 library(ggplot2)
@@ -95,7 +96,7 @@ raster::writeRaster(coral_ras, paste0(dir_out, "/coral-hab"),   format = 'ascii'
 ## Figure
 png(paste0(dir_fig, "Ecospace-coral-hab.png"), 
     width = 6, height = 4, units = "in", res=1200)
-plot(coral_ras, main="Coral habitat")
+plot(coral_ras, main="Coral habitat",  legend = FALSE, col='green3', colNA = 'gray95')
 dev.off()
 
 ##------------------------------------------------------------------------------
@@ -113,8 +114,36 @@ raster::writeRaster(sav_ras, paste0(dir_out, "/seagrass-hab"),
 ## Figure
 png(paste0(dir_fig, "Ecospace-seagrass-hab.png"), 
     width = 6, height = 4, units = "in", res=1200)
-plot(sav_ras, main="Seagrass habitat")
+plot(sav_ras, main="Seagrass habitat", legend = FALSE, col='green3', colNA = 'gray95')
 dev.off()
+
+
+##------------------------------------------------------------------------------
+## Make figure with all the habitat layers
+
+colna <- "gray95"
+x <- 5 ## Number of breaks
+color_palette <- colorRampPalette(c("blue", "green", "yellow", "red"))(x)
+breaks <- seq(0, 1, length.out = x + 1)
+
+
+png(paste0(dir_fig, "Ecospace-habitat-layers.png"), 
+    width = 6, height = 6, units = "in", res=2000)
+
+ inner_margin <- c(1, 1, 1, 1) # Set smaller margins (bottom, left, top, right) in lines
+ outer_margin <- c(0.5, 0.5, 0.5, 0.5) # Set the outer margin to have less white space around the plots 
+ par(mfrow=c(4,2), mar=inner_margin, oma=outer_margin, bty="n")
+
+ plot(mudv,      main = "(A) Mud",    colNA = colna,  breaks = breaks, col = color_palette, axes = F, bty = "n")  
+ plot(sndv,      main = "(B) Sand",   colNA = colna,  breaks = breaks, col = color_palette, axes = F)
+ plot(gvlv,      main = "(C) Gravel", colNA = colna,  breaks = breaks, col = color_palette, axes = F)
+ plot(sav_ras,   main = "(D) Seagrass",         colNA = colna, breaks = breaks, col = color_palette, axes = F)
+ plot(coral_ras, main = "(E) Coral",            colNA = colna, breaks = breaks, col = color_palette, axes = F)
+ plot(scaled_HB, main = "(F) Natural reefs",    colNA = colna, breaks = breaks, col = color_palette, axes = F)
+ plot(scaled_AR, main = "(G) Artificial reefs", colNA = colna, breaks = breaks, col = color_palette, axes = F)
+ par(mfrow=c(1,1))
+dev.off()
+
 
 ##------------------------------------------------------------------------------
 ## HMS
