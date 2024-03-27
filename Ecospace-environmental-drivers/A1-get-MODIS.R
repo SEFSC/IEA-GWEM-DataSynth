@@ -146,4 +146,3 @@ for(i in 1:nrow(varlist)){
 ## Morel, A. and Maritorena, S., 2001. 
 ## Bio‐optical properties of oceanic waters: A reappraisal. Journal of Geophysical Research: Oceans, 106(C4), pp.7163-7180.
 ## https://doi.org/10.1029/2000JC000319
-
