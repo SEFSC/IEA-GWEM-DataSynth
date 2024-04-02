@@ -6,6 +6,7 @@ bbox.gom = c(-98, -80.5, 24, 31) ## xmin, xmax, ymin, ymax
 bbox.wfs = c(-88, -80.5, 25, 30.5)
 bbox = bbox.gom
 dir.hycom = "D:/HYCOM satelite imagery/"
+
 ##--> Sets download to external hard drive due to space requirements
 ##
 ## -----------------------------------------------------------------------------
