@@ -20,12 +20,12 @@ dir.pdf.out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/"
 source("./Ecospace-environmental-drivers/0-Functions.R") ## Call PDF-map function
 
 ## HIRES monthly stacks
-t.surf.hycom = stack( paste0(dir.in, 'HYCOM GOM temp surface ', datelabel))
-t.bot.hycom  = stack( paste0(dir.in, 'HYCOM GOM temp bottom ', datelabel))
-t.avg.hycom  = stack( paste0(dir.in, 'HYCOM GOM temp avg ', datelabel))
-s.surf.hycom = stack( paste0(dir.in, 'HYCOM GOM salinity surface ', datelabel))
-s.bot.hycom  = stack( paste0(dir.in, 'HYCOM GOM salinity bottom ', datelabel))
-s.avg.hycom  = stack( paste0(dir.in, 'HYCOM GOM salinity avg ', datelabel))
+#t.surf.hycom = stack( paste0(dir.in, 'HYCOM GOM temp surface ', datelabel))
+#t.bot.hycom  = stack( paste0(dir.in, 'HYCOM GOM temp bottom ', datelabel))
+#t.avg.hycom  = stack( paste0(dir.in, 'HYCOM GOM temp avg ', datelabel))
+#s.surf.hycom = stack( paste0(dir.in, 'HYCOM GOM salinity surface ', datelabel))
+#s.bot.hycom  = stack( paste0(dir.in, 'HYCOM GOM salinity bottom ', datelabel))
+#s.avg.hycom  = stack( paste0(dir.in, 'HYCOM GOM salinity avg ', datelabel))
 
 ## Resampled and smoothed stacks
 t.surf.smoo  = stack( paste0(dir.in, "Resamp-smoothed HYCOM GOM temp surface 1993-01 to 2020-12.grd"))
@@ -34,6 +34,16 @@ t.avg.smoo   = stack( paste0(dir.in, "Resamp-smoothed HYCOM GOM temp avg 1993-01
 s.surf.smoo  = stack( paste0(dir.in, "Resamp-smoothed HYCOM GOM salinity surface 1993-01 to 2020-12.grd"))
 s.bot.smoo   = stack( paste0(dir.in, "Resamp-smoothed HYCOM GOM salinity bottom 1993-01 to 2020-12.grd"))
 s.avg.smoo   = stack( paste0(dir.in, "Resamp-smoothed HYCOM GOM salinity avg 1993-01 to 2020-12.grd"))
+
+## Subset to start at 1996 rather than 1993
+start_mo = (1996 - 1993) * 12 + 1
+end_mo = nlayers(t.surf.smoo)
+t.surf.smoo  = raster::subset(t.surf.smoo, start_mo:end_mo)
+t.bot.smoo   = raster::subset(t.bot.smoo, start_mo:end_mo)
+t.avg.smoo   = raster::subset(t.avg.smoo, start_mo:end_mo)
+s.surf.smoo  = raster::subset(s.surf.smoo, start_mo:end_mo)
+s.bot.smoo   = raster::subset(s.bot.smoo, start_mo:end_mo)
+s.avg.smoo   = raster::subset(s.avg.smoo, start_mo:end_mo)
 
 ## Calculate average to intialize Ecospace -------------------------------------
 avg.t.surf = calc(t.surf.smoo, mean)
@@ -87,7 +97,7 @@ for (i in 1:length(smoothed_stack_list)){
   print(paste("Env. driver = ", env_driver, "| Folder:", dir.asc.out))
   
   ## Make dataframe of dates from raster layers --------------------------------
-  ras.dates = data.frame(year=substr(names(hires),2,5),month=substr(names(hires),7,8))
+  ras.dates = data.frame(year=substr(names(ras),2,5),month=substr(names(ras),7,8))
   ras.dates$yrmo = paste0(ras.dates$year, "-", ras.dates$month)
   head(ras.dates); tail(ras.dates)
   mo = unique(ras.dates$month)
@@ -121,9 +131,8 @@ for (i in 1:length(smoothed_stack_list)){
        zlim=c(min(values(month.stack), na.rm=T), max(values(month.stack), na.rm=T))
   )
   par(mfrow=c(1,1))
-  names(ras.comb)
   
-  ## Combine dummy raster set (1980-1992) and data (1993-2022)
+  ## Combine dummy raster set (1980-1992) and data (1996-2022)
   rep.stack = stack()
   for (year in yr){
     #year = 1980
@@ -132,6 +141,7 @@ for (i in 1:length(smoothed_stack_list)){
     rep.stack = addLayer(rep.stack, xx)
   }
   ras.comb = raster::stack(rep.stack, ras)
+  names(ras.comb)
   
   ## Write out raster
   start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
