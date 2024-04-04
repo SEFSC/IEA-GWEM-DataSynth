@@ -82,7 +82,7 @@ writeRaster(avg.s.avg,  paste0(dir.asc.avg,"Avg_saln_avg"),  format='ascii', ove
 ## Loop along list
 overwrite <- 'y'
 smoothed_stack_list <- list(t.surf.smoo, t.bot.smoo, t.avg.smoo, s.surf.smoo, s.bot.smoo, s.avg.smoo)
-hires_stack_list    <- list(t.surf.hycom, t.bot.hycom, t.avg.hycom, s.surf.hycom, s.bot.hycom, s.avg.hycom)
+#hires_stack_list    <- list(t.surf.hycom, t.bot.hycom, t.avg.hycom, s.surf.hycom, s.bot.hycom, s.avg.hycom)
 env_dr_list <- c("Temp-surf", "Temp-bot", "Temp-avg", "Sal-surf", "Sal-bot", "Sal-avg")
 col_list <- c("turbo", "turbo", "turbo", "virid", "virid", "virid")
 
@@ -91,7 +91,7 @@ for (i in 1:length(smoothed_stack_list)){
   ## Input parameters-----------------------------------------------------------
   env_driver = env_dr_list[i]
   ras   = stack(smoothed_stack_list[i])
-  hires = stack(hires_stack_list[i])
+#  hires = stack(hires_stack_list[i])
   dir.asc.out = paste0(fld.asc.out, env_driver, "/")
   if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
   print(paste("Env. driver = ", env_driver, "| Folder:", dir.asc.out))
