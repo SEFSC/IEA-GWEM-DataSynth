@@ -19,14 +19,6 @@ dir.asc.avg  <- "./Ecospace-environmental-drivers/Outputs/ASCII-for-ecospace/Ave
 dir.pdf.out  <- "./Ecospace-environmental-drivers/Outputs/PDF-maps/"
 source("./Ecospace-environmental-drivers/0-Functions.R") ## Call PDF-map function
 
-## HIRES monthly stacks
-#t.surf.hycom = stack( paste0(dir.in, 'HYCOM GOM temp surface ', datelabel))
-#t.bot.hycom  = stack( paste0(dir.in, 'HYCOM GOM temp bottom ', datelabel))
-#t.avg.hycom  = stack( paste0(dir.in, 'HYCOM GOM temp avg ', datelabel))
-#s.surf.hycom = stack( paste0(dir.in, 'HYCOM GOM salinity surface ', datelabel))
-#s.bot.hycom  = stack( paste0(dir.in, 'HYCOM GOM salinity bottom ', datelabel))
-#s.avg.hycom  = stack( paste0(dir.in, 'HYCOM GOM salinity avg ', datelabel))
-
 ## Resampled and smoothed stacks
 t.surf.smoo  = stack( paste0(dir.in, "Resamp-smoothed HYCOM GOM temp surface 1993-01 to 2020-12.grd"))
 t.bot.smoo   = stack( paste0(dir.in, "Resamp-smoothed HYCOM GOM temp bottom 1993-01 to 2020-12.grd"))
@@ -91,7 +83,6 @@ for (i in 1:length(smoothed_stack_list)){
   ## Input parameters-----------------------------------------------------------
   env_driver = env_dr_list[i]
   ras   = stack(smoothed_stack_list[i])
-#  hires = stack(hires_stack_list[i])
   dir.asc.out = paste0(fld.asc.out, env_driver, "/")
   if(overwrite == 'y') {unlink(dir.asc.out, recursive = TRUE); dir.create(dir.asc.out)} 
   print(paste("Env. driver = ", env_driver, "| Folder:", dir.asc.out))
@@ -132,7 +123,8 @@ for (i in 1:length(smoothed_stack_list)){
   )
   par(mfrow=c(1,1))
   
-  ## Combine dummy raster set (1980-1992) and data (1996-2022)
+  ## Combine raster stacks -------------------------------------------------------
+  ## Make raster stack for 1980-1996 with monthly averages 
   rep.stack = stack()
   for (year in yr){
     #year = 1980
@@ -140,8 +132,19 @@ for (i in 1:length(smoothed_stack_list)){
     names(xx) = paste0(year, "_", stringr::str_sub(labels(month.stack), start=-11))
     rep.stack = addLayer(rep.stack, xx)
   }
-  ras.comb = raster::stack(rep.stack, ras)
-  names(ras.comb)
+  
+  ## There are three months of missing HYCOM data for Oct, Nov, and Dec 2017
+  ## We fill these in with those monthly averages
+  ras.missing <- month.stack[[10:12]]
+  names(ras.missing) <- paste0("1997_", sub("^[^_]*_", "", names(ras.missing))) ## Extracts text after the first underscore
+  
+  ## Combine raster stacks to make final, combined stack
+  split_index <- which(names(ras) == "X2017.09") # Split the raster stack into two parts: before and after the missing months
+  ras.before <- ras[[1:split_index]]
+  ras.after <- ras[[(split_index+1):nlayers(ras)]]
+  
+  ras.comb = raster::stack(rep.stack, ras.before, ras.missing, ras.after) ## Merge the stacks back together in the correct chronological order
+  names(ras.comb) ## Check month names
   
   ## Write out raster
   start = as.numeric(str_sub(names(ras.comb)[1], 2, 5))
